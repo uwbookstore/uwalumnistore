@@ -1,0 +1,55 @@
+{
+  "name": "uwalumnistore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w --no-source-map",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "sass css/style.prefix.css css/style.min.css --style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "build:js": "babel src -d build",
+    "uglify:js": "uglifyjs-folder build -eo js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UBS-Madison/uwalumnistore.git"
+  },
+  "author": "Clayton Dewey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UBS-Madison/uwalumnistore/issues"
+  },
+  "homepage": "https://github.com/UBS-Madison/uwalumnistore#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "concat": "^1.0.3",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-jquery": "^3.0.0",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "node-sass": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.3.1",
+    "postcss": "^8.2.12",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.2.1",
+    "uglify-js": "^3.15.1",
+    "uglifyjs-folder": "^3.2.0"
+  },
+  "dependencies": {
+    "holderjs": "^2.9.9",
+    "live-server": "^1.1.0"
+  }
+}
