@@ -1,0 +1,55 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* For IE 6/7 */
+}
+
+html,
+body {
+  margin: 0px auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  background: $white;
+  color: $black;
+}
+
+body {
+  position: relative;
+}
+
+.entry-content {
+  font-size: 1.8rem;
+
+  ul {
+    list-style-type: none;
+    font-size: inherit;
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+    margin-left: 2rem;
+
+    li {
+      margin-bottom: 0.8rem;
+
+      &::before {
+        content: "-";
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

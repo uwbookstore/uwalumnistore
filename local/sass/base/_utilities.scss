@@ -1,0 +1,133 @@
+.u-menu-spacer {
+  visibility: hidden;
+  opacity: 0;
+
+  @media #{$mq-medium} {
+    margin: 0 0 0 1rem;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.u-mobi-hide {
+  display: none;
+
+  @media #{$mq-small} {
+    display: block;
+  }
+}
+
+.u-dt-hide {
+  display: block;
+
+  @media #{$mq-small} {
+    display: none;
+  }
+}
+
+.u-rwd-break {
+  display: block;
+
+  @media #{$mq-medium} {
+    display: none;
+  }
+}
+
+// BOOTSTRAP PADDING/MARGIN UTILITIES
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer,
+    ),
+    2: (
+      $spacer * 2,
+    ),
+    3: (
+      $spacer * 3,
+    ),
+    4: (
+      $spacer * 4,
+    ),
+    5: (
+      $spacer * 5,
+    ),
+  ),
+  $spacers
+);
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
+.m-auto {
+  margin: auto !important;
+}
+.my-auto,
+.mt-auto {
+  margin-top: auto !important;
+}
+.my-auto,
+.mb-auto {
+  margin-bottom: auto !important;
+}
+.mx-auto,
+.ml-auto {
+  margin-left: auto !important;
+}
+.mx-auto,
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.mt-sm {
+  margin-top: 1rem;
+}
+
+.mt-md {
+  margin-top: 2rem;
+}
+
+.mt-lg {
+  margin-top: 4rem;
+}
+
+.mt-hg {
+  margin-top: 6rem;
+}
+
+.dml-30 {
+  margin-left: 0;
+
+  @media #{$mq-medium} {
+    margin-left: 3rem;
+  }
+}

@@ -1,0 +1,180 @@
+// Create some space under the
+// iCM editor menu since we use
+// a negative top margin on the
+// hero images.
+#modMenu {
+  margin-bottom: 5rem;
+}
+
+#dv_Logo input#imgLogo {
+  max-width: 20rem;
+}
+
+#ContainDiv {
+  margin: 4rem 0 0;
+  padding: 0 1rem;
+
+  @media #{$mq-small} {
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#dv_Logo {
+  #imgLogo {
+    max-width: 30rem;
+    display: block;
+    margin: auto;
+  }
+}
+
+#hScript,
+#fScript {
+  font-family: Monaco, monospace;
+  font-size: 1.4rem;
+  width: 100%;
+}
+
+body header:first-of-type,
+#leftSection {
+  display: none;
+}
+
+#contentSection {
+  width: 100%;
+}
+
+.promo-banner {
+  line-height: 4.5rem;
+  min-height: 4.5rem;
+  background: $primary-color;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.8rem;
+  display: block;
+
+  span {
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 1.5rem;
+  }
+
+  &:hover,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+a.promo-banner {
+    text-decoration: none;
+    color: #fff;
+}
+
+// HIDE ALL UNNECESSARY MBS ELEMENTS
+#h_nav,
+#Cart,
+#div_privacy,
+.firstBackward,
+.lastForward,
+.help.textr,
+.prev_link,
+.custLogoutHelpWrapper,
+.lostPasswordHelp,
+#Server,
+#custBillMI,
+#custShipMiddle,
+a#goToTop,
+.disco,
+footer {
+  display: none !important;
+}
+
+// .searchGiftEventText, .eventMonthSelect, .eventYearSelect, #giftRegistry_eventDate, .giftRegDateText, p.giftRegMessageText, #giftRegistry_Message {
+//     display: none;
+// }
+
+// .displayn {
+//     display: none;
+// }
+
+// .faa-shake.animated {
+//     animation: none;
+// }
+
+// MBS apparently thinks folks will
+// only want to use the colors MBS
+// chooses.
+
+/*.radioButton,*/
+input[class^="radio"] {
+  & + span {
+    &::before {
+      width: 1.2rem;
+      height: 1.2rem;
+      vertical-align: 0;
+    }
+  }
+
+  &:checked {
+    & + span {
+      &::before {
+        background-color: $primary-color;
+      }
+    }
+  }
+}
+
+// .copy-clip {
+//   width: 100%;
+
+//   .input-group {
+//     width: 100%;
+//   }
+
+//   .input-group-addon {
+//     width: 4rem !important;
+//     cursor: pointer;
+//     padding: 0;
+
+//     button {
+//       margin: 0;
+//       border: none !important;
+//       background: transparent;
+//     }
+
+//     img {
+//       width: 1.3rem;
+//     }
+
+//     .btn-copy {
+//       padding: 0.6rem 1.2rem;
+//     }
+//   }
+// }
+
+#success-msg,
+#error-msg {
+  display: none;
+}
+
+.wl-share {
+  .ib {
+    div {
+      display: inline-block;
+    }
+  }
+  a.btn {
+    display: inline-block;
+    margin: 1.5rem 0;
+
+    &:first-child {
+      margin-right: 2rem;
+    }
+  }
+}
