@@ -1,0 +1,100 @@
+<!-- Google Ecommerce Code -->
+<!-- Google tag (gtag.js) -->
+<script async src=https://www.googletagmanager.com/gtag/js?id=G-EZF6VJ4T99></script>
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-EZF6VJ4T99'); </script>
+<script>
+  // var order_id = $('h2.thankYouSubHeader').textContent.match(/\d+/);
+  // var order_total = $('span#paymentTotalText').textContent;
+  // var order_tax = $('span#paymentEstimatedText').textContent.replace('$', '');
+  // var order_tax = parseFloat(order_tax);
+  // var order_shipping = $('span.shipChargeText').textContent.replace('$', '');
+  // var order_shipping = parseFloat(order_shipping);
+
+
+  // gtm_products = [];
+
+  // $('.merchPanel.panel.panel-info').each(function () {
+  //   gtm_products.push({
+  //     'id': $(this).find('span.oneMerchNumText').textContent.trim() + '-' + $(this).find('span.oneMerchOptionText').textContent,
+  //     'sku': $(this).find('span.oneMerchNumText').textContent.trim(),
+  //     'name': $(this).find('span.oneMerchDescText').textContent,
+  //     'category': $(this).find('span.oneMerchOptionText').textContent,
+  //     'price': $(this).find('span.oneMerchTotalText').textContent,
+  //     'quantity': $(this).find('span.oneMerchQTYText').textContent
+  //   });
+  // });
+
+  // console.log(order_id[0]);
+  // console.log(order_total);
+  // console.log(order_tax);
+  // console.log(order_shipping);
+  // console.log(gtm_products);
+
+  // dataLayer.push({
+  //   'event': 'gtmUWAS.orderComplete',
+  //   'transactionId': + order_id,
+  //   'transactionAffiliation': 'University Book Store',
+  //   'transactionTotal': <<<ORDERTOTAL>>>,
+  //   'transactionTax': order_tax,
+  //   'transactionShipping': order_shipping,
+  //   'transactionProducts': gtm_products,
+  // });
+  //     console.log(dataLayer);
+
+  const order_id = document.querySelector('h2.thankYouSubHeader').textContent.split(' ')[4];
+  const order_total = document.querySelector('span#paymentTotalText').textContent;
+  let order_tax = document.querySelector('span#paymentEstimatedText').textContent.replace('$', '');
+  order_tax = parseFloat(order_tax);
+  let order_shipping = document.querySelector('span.shipChargeText').textContent.replace('$', '');
+  order_shipping = parseFloat(order_shipping);
+
+
+  gtm_products = [];
+
+  document.querySelectorAll('.merchPanel.panel.panel-info').forEach((el) => {
+    let item_id, item_category;
+    if (el.querySelector('span.oneMerchOptionText')) {
+      item_id = el.querySelector('span.oneMerchNumText').textContent.trim() + '-' + el.querySelector('span.oneMerchOptionText').textContent.trim();
+      item_category = el.querySelector('span.oneMerchOptionText').textContent.trim();
+    } else {
+      item_id = el.querySelector('span.oneMerchNumText').textContent.trim();
+      item_category = null;
+    }
+    
+    gtm_products.push({
+      item_id,
+      item_name: el.querySelector('span.oneMerchDescText').textContent.trim(),
+      item_category,
+      price: el.querySelector('span.oneMerchTotalText').textContent.trim(),
+      quantity: el.querySelector('span.oneMerchQTYText').textContent.trim()
+    });
+  });
+
+  // gtm_products.forEach((el) => console.log(el))
+
+  gtag("event", "gtmUWAS.orderComplete", {
+    transaction_id: order_id,
+    // eslint-disable-next-line
+    value: <<<ORDERTOTAL>>>,
+    tax: order_tax,
+    shipping: order_shipping,
+    currency: "USD",
+    items: gtm_products
+  });
+
+</script>
+<!-- Google Tag Manager -->
+<!-- <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+      w[l].push({"gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "G-EZF6VJ4T99");
+</script> -->
+<!-- End Google Tag Manager -->
+
