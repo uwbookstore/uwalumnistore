@@ -3,19 +3,81 @@
     border-color: #e7e7e7;
     border-bottom: 1px solid $secondary-color;
     box-sizing: border-box;
-    min-height: 11.2rem;
-    position: relative;
     text-transform: uppercase;
-    padding: 0;
-    color: $secondary-color;
     background-color: $white;
+    color: $secondary-color;
+    position: relative;
+    height: 11.2rem;
+    padding: 0;
 
-    @media #{$mq-small} {
+    &-nav {
+      background-color: $white;
+      margin: 0;
+
+      li {
+        a {
+          border-bottom: 1px solid #ccc;
+          padding: 1.4rem;
+          font-size: 1.3rem;
+          color: $black;
+          text-decoration: none;
+          display: block;
+          width: 100%;
+          font-weight: 100;
+          position: relative;
+        }
+      }
+
+      @media #{$mq-medium} {
+        li {
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+
+          a {
+            border-bottom: none;
+            padding: 0;
+            font-size: 1.2rem;
+            font-weight: 400;
+
+            &:hover,
+            &:focus {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &-collapse {
+      position: absolute;
+      top: 11.2rem;
+      width: 100%;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    @media #{$mq-medium} {
+      align-items: stretch;
       font-size: 1.2rem;
       border: none;
       background: url('https://www.uwalumnistore.com/SiteImages/11-SchoolImages/11-WAA/11-header-bg.png')
         repeat-x;
       border-bottom: none;
+
+      &-collapse {
+        position: initial;
+      }
+
+      &-left {
+        padding: 0 1rem 1rem 3rem;
+      }
     }
 
     &-brand {
@@ -128,5 +190,119 @@
         }
       }
     }
+  }
+
+  .dropdown {
+    position: static;
+    background-color: $light-gray-3;
+
+    &-toggle {
+      &::after {
+        display: none;
+      }
+    }
+
+    &-menu {
+      position: static;
+      margin: 0;
+      padding: 0;
+      background-color: $light-gray-2;
+      font-size: 1.2rem;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.25);
+
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+    }
+
+    &-header {
+      font-size: 1.24em;
+      padding: 0;
+
+      a {
+        font-weight: 700 !important;
+      }
+    }
+
+    @media #{$mq-medium} {
+      background-color: transparent;
+
+      &-menu {
+        position: absolute;
+        background-color: $light-gray-3;
+        padding: 2.5rem 1rem 0;
+        top: 8.2rem;
+        left: 0;
+        right: 0;
+
+        .row {
+          padding: 0;
+          margin: 0;
+        }
+
+        .col-md-3 {
+          padding-left: 2rem;
+          padding-right: 0;
+        }
+
+        li {
+          a {
+            line-height: 1.4;
+            padding: 5px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .menu-spacer {
+    visibility: hidden;
+
+    @media #{$mq-medium} {
+      color: $secondary-color;
+      margin: 0 0 0 8px;
+      visibility: visible;
+      opacity: 1;
+      font-style: italic;
+    }
+  }
+
+  .show-all {
+    text-align: center;
+    a {
+      &:link {
+        font-weight: 700;
+        transition: color 0.25s ease-in-out;
+        font-size: 2rem;
+        padding: 1.4rem;
+        line-height: 1;
+        border-top: 1px solid $light-gray-2;
+      }
+    }
+    @media #{$mq-medium} {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.search {
+  border-bottom: 1px solid $medium-gray;
+  text-align: center;
+
+  &-field {
+    border: none;
+    background-color: $light-gray-3;
+    display: block;
+    width: 100%;
+    margin: 0;
+    height: 3.9rem;
+    box-shadow: none;
+    padding-left: 4rem;
+    font-size: 1.4rem;
+    font-weight: 100;
   }
 }
