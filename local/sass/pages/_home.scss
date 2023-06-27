@@ -1,0 +1,67 @@
+.home-hero {
+  width: 100%;
+  z-index: 10;
+  margin: -4rem auto 0;
+  max-width: $default-page-width;
+  position: relative;
+
+  &__banner {
+    @include absCenter;
+    width: 100%;
+
+    @media #{$mq-small} {
+      top: 60%;
+      width: 50%;
+      left: 20rem;
+    }
+
+    @media #{$mq-medium} {
+      top: 65%;
+      left: 4rem;
+      width: auto;
+      transform: translate(0);
+    }
+
+    &--headline {
+      margin: 0;
+
+      @media #{$mq-small} {
+      }
+
+      @media #{$mq-medium} {
+        margin-left: 2rem;
+      }
+
+      span {
+        display: block;
+        color: $primary-color;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-style: italic;
+        padding: 1.5rem 2.5rem;
+        background-color: $white;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 3rem;
+
+        @media #{$mq-medium} {
+          width: auto;
+          display: inline-block;
+          line-height: 3rem;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      br {
+        display: none;
+
+        @media #{$mq-medium} {
+          display: block;
+        }
+      }
+    }
+  }
+}

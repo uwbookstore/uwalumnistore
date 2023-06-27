@@ -15,6 +15,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7292020/6907632/css/fonts.css" />
 
+  <style>
+    #ContainDiv {
+      padding: 0 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,6 +28,27 @@
     <!-- Static navbar -->
 
     <nav class="navbar navbar-expand-lg">
+
+      <!-- <div class="navbar-header pull-right">
+        <ul class="nav pull-left">
+          <li class="cart-toggle pull-right">
+            <a href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="117" height="88.17" viewBox="0 0 117 88.17"
+                class="cart--icon">
+                <path
+                  d="M98.5,73h-55a3.5,3.5,0,0,1-3.27-2.24L16.1,8H4.5a3.5,3.5,0,0,1,0-7h14a3.5,3.5,0,0,1,3.27,2.24L45.9,66H98.5a3.5,3.5,0,0,1,0,7Z"
+                  transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
+                <path
+                  d="M100.5,53.33H36.17a3.5,3.5,0,0,1,0-7H97.94l9.79-31H36.5a3.5,3.5,0,0,1,0-7h76a3.5,3.5,0,0,1,3.5,3.5,3.39,3.39,0,0,1-.16,1.05l-12,38A3.5,3.5,0,0,1,100.5,53.33Z"
+                  transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
+                <circle cx="50.5" cy="83.5" r="4.67"></circle>
+                <circle cx="91.83" cy="82.83" r="4.67"></circle>
+              </svg>
+              <span id="ItemCount" class="Count hidden">0</span></a>
+          </li>
+        </ul>
+      </div> -->
+
 
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-uwfaa"
         aria-controls="navbar-uwfaa" aria-expanded="false" aria-label="Toggle navigation">
@@ -311,10 +337,10 @@
           </li>
         </ul>
 
-        <ul class="navbar-right">
+        <ul class="navbar-nav navbar-right">
           <li class="search">
             <input id="searchinput" type="search" class="search-field form-control" placeholder="Search...">
-            <span id="searchclear" class="glyphicon glyphicon-remove-circle" style="display: none;"></span>
+            <span id="searchclear" class="glyphicon glyphicon-remove-circle"></span>
             <label>
               <input type="submit" class="search-submit" value="Go">
               <svg xmlns="http://www.w3.org/2000/svg" width="69.76" height="117.91" viewBox="0 0 69.76 117.91"
@@ -325,9 +351,9 @@
               </svg>
             </label>
           </li>
-          <li class="dropdown account-toggle">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false" title="My Account">
+          <li class="nav-item dropdown account-toggle">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              title="My Account">
               <svg xmlns="http://www.w3.org/2000/svg" width="69.77" height="83" viewBox="0 0 69.77 83"
                 class="account-img">
                 <path
@@ -337,12 +363,19 @@
                   d="M4.68,83a4.8,4.8,0,0,1-1.55-.26,4.67,4.67,0,0,1-2.87-6v0L7.27,57a14.17,14.17,0,0,1,13.35-9.45H51.69A11.79,11.79,0,0,1,63,55.74l6.62,20.63a4.68,4.68,0,0,1-8.91,2.86L54,58.63a2.48,2.48,0,0,0-2.35-1.72h-31a4.8,4.8,0,0,0-4.52,3.2l-7,19.76A4.68,4.68,0,0,1,4.68,83Z"
                   transform="translate(0.01)"></path>
               </svg>
-              <span>&nbsp;&nbsp;My Account</span>
+              <span>&nbsp;&nbsp;My Account</span><span class="caret"></span>
             </a>
-            <ul id="login" class="dropdown-menu my-account">
-              <li><a href="https://secure2.mbsbooks.com//CustomerRegister?s=www.uwalumnistore.com">Register</a></li>
-              <li><a href="https://www.uwalumnistore.com/login">Login</a></li>
-            </ul>
+            <div id="login" class="dropdown-menu my-account">
+              <div class="row">
+                <div class="col">
+                  <ul>
+                    <li><a href="https://secure2.mbsbooks.com//CustomerRegister?s=www.uwalumnistore.com">Register</a>
+                    </li>
+                    <li><a href="https://www.uwalumnistore.com/login">Login</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </div>
@@ -355,7 +388,22 @@
 
   <div id="ContainDiv" class="container">
 
-    <h1 class="text-center">Hello there</h1>
+    <div class="home-hero">
+      <img alt="Fashion Forward" src="https://i.univbkstr.com/uwalumnistore/images/home/homepage_hero.jpg?v=26272023"
+        class="img-fluid u-mobi-hide home-hero-img">
+      <img alt="Fashion Forward" src="https://i.univbkstr.com/uwalumnistore/images/home/homepage_hero-sm.jpg?v=26272023"
+        class="img-fluid u-dt-hide home-hero-img-sm">
+      <img alt="Fashion Forward"
+        src="https://i.univbkstr.com/uwalumnistore/images/home/homepage_hero-sm2.jpg?v=26272023"
+        class="img-fluid u-dt-hide home-hero-img-sm2">
+      <div class="home-hero__banner">
+        <h2 class="home-hero__banner--headline">
+          <span>Make it a Badger</span>
+          <br>
+          <span>Red-Hot Summer</span>
+        </h2>
+      </div>
+    </div>
 
   </div>
 
