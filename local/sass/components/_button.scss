@@ -1,0 +1,165 @@
+.btn {
+  padding: 0 1.2rem;
+  border: 2px solid transparent;
+  border-radius: 0;
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: inherit;
+
+  &-primary {
+    background-color: transparent;
+    border-color: $primary-color;
+    color: $primary-color;
+    &:link,
+    &:visited {
+    }
+
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus,
+    &-inverted {
+      border-color: $primary-color;
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    &-inverted {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $white;
+      }
+    }
+  }
+
+  &-success {
+    background-color: transparent;
+    border-color: $success-color;
+    color: $success-color;
+    &:link,
+    &:visited {
+      color: $success-color;
+    }
+
+    &:hover,
+    &:active,
+    &:active:hover,
+    &:focus,
+    &:active:focus,
+    &-inverted {
+      border-color: $success-color;
+      background-color: $success-color;
+      color: $white;
+    }
+  }
+
+  &-default {
+    border-color: $secondary-color;
+    color: $secondary-color;
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    //pointer-events: none;
+    background-color: $disabled;
+    border: 1px solid $secondary-color;
+    box-shadow: none;
+    color: $white;
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      cursor: not-allowed;
+      background-color: $disabled;
+      border: 1px solid $secondary-color;
+      box-shadow: none;
+      color: $white;
+    }
+  }
+
+  &-secondary {
+    background-color: transparent;
+    border-color: $secondary-color;
+    color: $secondary-color;
+
+    &:link,
+    &:visited {
+      color: $secondary-color;
+    }
+
+    &:hover,
+    &:active,
+    &:active:focus {
+      color: $white;
+      border-color: $primary-color;
+      background-color: $primary-color;
+    }
+  }
+
+  &-text {
+    &:link,
+    &:visited {
+      font-weight: normal;
+      font-size: inherit;
+      margin-bottom: 1.5rem;
+      transition: all 0.2s ease-in-out;
+      text-transform: capitalize;
+    }
+
+    &:hover,
+    &:active {
+      color: $primary-color;
+      text-decoration: underline;
+      box-shadow: none;
+    }
+
+    i,
+    em {
+      font-size: 1rem;
+    }
+  }
+
+  @media #{$mq-medium} {
+    border-width: 1px;
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  &-rnd {
+    border-radius: 10rem;
+    padding: 0;
+    width: 5rem;
+
+    @media #{$mq-medium} {
+      width: 3rem;
+    }
+
+    i {
+      font-size: 3.5rem;
+      padding-top: 0.5rem;
+
+      @media #{$mq-medium} {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &-container {
+    button {
+      border: none;
+      background-color: transparent;
+      color: $primary-color;
+      border-bottom: 1px solid $primary-color;
+      margin-bottom: 1rem;
+    }
+  }
+}
