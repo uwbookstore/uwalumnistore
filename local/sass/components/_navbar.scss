@@ -54,6 +54,11 @@
       top: 11.2rem;
       width: 100%;
       z-index: 20;
+
+      @media #{$mq-medium} {
+        top: 4.2rem;
+        z-index: initial;
+      }
     }
 
     &-right {
@@ -65,8 +70,7 @@
 
       @media #{$mq-medium} {
         flex-direction: row;
-        padding: 0 3rem 1rem 1rem;
-        margin-right: 4.5rem;
+        padding: 0 4rem 1rem 1rem;
       }
     }
 
@@ -78,9 +82,9 @@
         repeat-x;
       border-bottom: none;
 
-      &-collapse {
-        position: initial;
-      }
+      // &-collapse {
+      //   position: initial;
+      // }
 
       &-left {
         padding: 0 1rem 1rem 3rem;
@@ -131,7 +135,7 @@
         color: $white;
         text-transform: uppercase;
         text-decoration: none;
-        z-index: 200;
+        // z-index: 200;
         text-align: center;
 
         @media #{$mq-small} {
@@ -242,7 +246,7 @@
         position: absolute;
         background-color: $light-gray-3;
         padding: 2.5rem 1rem 0;
-        top: 8.2rem;
+        top: 5.2rem;
         left: 0;
         right: 0;
 
@@ -413,6 +417,63 @@
 
       @media #{$mq-medium} {
         position: static;
+      }
+    }
+  }
+
+  .cart {
+    &-toggle {
+      display: none;
+
+      @media #{$mq-medium} {
+        display: block;
+
+        a {
+          padding: 0.7rem 1.5rem;
+
+          svg {
+            fill: #777;
+            width: 2.65rem;
+            height: 2rem;
+            transition: fill 0.25s ease-in-out;
+          }
+
+          &:hover {
+            svg {
+              fill: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &-mobile {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        padding: 1rem 2rem;
+
+        svg {
+          fill: #777;
+          width: 2.65rem;
+          height: 2rem;
+          transition: fill 0.25s ease-in-out;
+        }
+
+        &:hover {
+          svg {
+            fill: $primary-color;
+          }
+        }
+      }
+
+      @media #{$mq-medium} {
+        display: none;
       }
     }
   }
