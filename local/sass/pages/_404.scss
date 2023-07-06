@@ -1,0 +1,57 @@
+.pnf__wrapper {
+  &-outer {
+    min-height: 60rem;
+    background-image: url(../../img/404_bucky_bg.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    .cloud {
+      display: none;
+    }
+
+    @media #{$mq-medium} {
+      min-height: 65rem;
+
+      .cloud {
+        display: block;
+      }
+    }
+  }
+
+  &-inner {
+    margin: 10rem auto 5rem;
+    max-width: 30rem;
+    min-height: 40rem;
+    text-align: center;
+
+    h1 {
+      color: $primary-color;
+      font-family: mrs-eaves-xl-serif, serif;
+      font-size: 40.5px;
+      font-weight: bod;
+      font-style: italic;
+      text-shadow: inherit;
+      margin-bottom: 3rem;
+
+      &::after {
+        display: block;
+        margin: 3rem auto;
+        position: relative;
+        height: 8px;
+        width: calc(6rem);
+        background-color: $primary-color;
+        content: '';
+      }
+    }
+
+    p {
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+
+    @media #{$mq-medium} {
+      max-width: 70rem;
+    }
+  }
+}
