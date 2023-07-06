@@ -155,3 +155,4 @@ inSite/index.html
 /local/sass/.sass-cache
 /local/img
 /local/css
+/local/sass/components/_test.scss
