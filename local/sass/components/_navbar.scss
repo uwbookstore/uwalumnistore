@@ -246,7 +246,7 @@
         position: absolute;
         background-color: $light-gray-3;
         padding: 2.5rem 1rem 0;
-        top: 5.2rem;
+        top: 4rem !important;
         left: 0;
         right: 0;
 
@@ -284,16 +284,13 @@
 
   .show-all {
     text-align: center;
-    a {
-      &:link {
-        font-weight: 700;
-        transition: color 0.25s ease-in-out;
-        font-size: 2rem;
-        padding: 1.4rem;
-        line-height: 1;
-        border-top: 1px solid $light-gray-2;
-      }
-    }
+    font-weight: 700 !important;
+    transition: color 0.25s ease-in-out;
+    font-size: 2rem !important;
+    padding: 1.4rem !important;
+    line-height: 1;
+    border-top: 1px solid $light-gray-2;
+
     @media #{$mq-medium} {
       margin-top: 3rem;
     }
@@ -477,4 +474,9 @@
       }
     }
   }
+}
+
+.navbar-nav > li.open > a {
+  color: $black;
+  background-color: transparent;
 }
