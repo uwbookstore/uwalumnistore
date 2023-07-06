@@ -1,0 +1,51 @@
+.menu {
+  &__grid {
+    margin-bottom: 2.5rem;
+    justify-content: center;
+
+    &--item {
+      &:link,
+      &:visited {
+        flex: 1 1 100%;
+        height: 5rem;
+        line-height: 5rem;
+        background-color: $light-gray-2;
+        color: $black;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 0 0 2rem 0;
+        font-style: italic;
+        transition: opacity 0.25s ease-in-out;
+        text-align: center;
+        font-weight: 700;
+        z-index: 10;
+
+        @media #{$mq-medium} {
+          margin: 0 1rem 1.5rem 1rem;
+        }
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+        opacity: 0.75;
+      }
+
+      &.main-cat {
+        display: none;
+      }
+
+      @media #{$mq-medium} {
+        &:link,
+        &:visited {
+          flex: 0 0 47%;
+        }
+      }
+
+      em {
+        font-size: 1rem;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
