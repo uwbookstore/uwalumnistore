@@ -1,0 +1,67 @@
+.accordion {
+  h3 {
+    position: relative;
+    color: $black;
+    background-color: $light-gray;
+    border: 1px solid $light-gray-2;
+    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    line-height: 1;
+    margin: 1rem 0;
+    font-size: inherit;
+    font-weight: 400;
+    cursor: pointer;
+    height: auto;
+
+    &::before {
+      font-family: fontawesome;
+      float: right;
+      font-size: 2rem;
+      position: absolute;
+      content: '\f067';
+      right: 1rem;
+      display: block;
+      transition: transform 0.25s ease-in-out;
+
+      @media #{$mq-small} {
+        font-size: 1.6rem;
+      }
+    }
+
+    &.active::before {
+      transform: rotate(45deg);
+      transition: transform 0.25s ease-in-out;
+    }
+
+    @media #{$mq-medium} {
+      padding: 1rem;
+    }
+  }
+
+  & > div {
+    padding: 1.5rem;
+    border: 1px solid $light-gray-2;
+    margin-top: -1rem;
+    border-top: none;
+
+    ul {
+      margin: 0;
+    }
+  }
+
+  @media #{$mq-small} {
+    div {
+      &.phone {
+        display: inline;
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+
+  table {
+    @media #{$mq-small} {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+}
