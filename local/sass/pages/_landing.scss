@@ -1,0 +1,142 @@
+.hero {
+  width: 100%;
+  z-index: 10;
+  margin: -4rem auto 1rem;
+  max-width: 90rem;
+  min-height: 17.5rem;
+  position: relative;
+
+  @media #{$mq-medium} {
+    min-height: 37rem;
+  }
+
+  &__banner {
+    @include absCenter;
+    background-color: $white;
+    padding: 1rem;
+    text-align: center;
+    width: 95%;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
+
+    @media #{$mq-medium} {
+      padding: 1.5rem 0.5rem 2rem;
+      width: 47.5rem;
+      transform: translateX(-50%);
+    }
+
+    &--headline {
+      display: block;
+      color: $primary-color;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-style: italic;
+
+      @media #{$mq-medium} {
+        line-height: 3rem;
+      }
+    }
+
+    span {
+      display: block;
+      margin-top: 1rem;
+      flex: 1.6rem;
+      line-height: 2rem;
+    }
+
+    &--sub {
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $white;
+      padding: 1rem;
+      text-align: center;
+      width: 95%;
+      margin-bottom: 1rem;
+      box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
+
+      &--headline {
+        padding: 0;
+        margin: 0;
+        font-size: 2.4rem;
+        color: $primary-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-style: italic;
+      }
+
+      @media #{$mq-medium} {
+        transform: translateX(0);
+        width: auto;
+        left: 2.6rem;
+        padding: 1.5rem 5px 2rem;
+        bottom: 1rem;
+        margin-bottom: 0;
+
+        &--headline {
+          line-height: 3rem;
+          font-size: 3rem;
+        }
+      }
+    }
+
+    &--offset {
+      bottom: 5%;
+      top: auto;
+      transform: translate(-50%, 0);
+
+      @media #{$mq-medium} {
+        transform: translate(0, 40%);
+        left: 1.5rem;
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.sub-category {
+  &__grid {
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 auto;
+
+    &--item {
+      &:first-child {
+        display: none;
+
+        @media #{$mq-medium} {
+          display: block;
+          flex: 0 0 27rem;
+
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      flex: 1;
+
+      @media #{$mq-medium} {
+        flex: 0 0 52.5rem;
+      }
+
+      .menu__grid--item {
+        &:link,
+        &:visited {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+}
+
+#shipping {
+  table {
+    @media #{$mq-small} {
+      width: 75%;
+      margin: 1rem auto;
+    }
+  }
+}
