@@ -1,0 +1,39 @@
+.customer {
+  h4 {
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  &__faq {
+    margin-top: 5rem;
+  }
+
+  &__returns {
+    &-merch {
+      margin-top: 2rem;
+    }
+  }
+
+  &__clearance {
+    margin-top: 5rem;
+  }
+
+  &__sizes {
+    margin-top: 5rem;
+
+    table {
+      margin: 2rem auto;
+
+      &.table > tbody > tr > td {
+        padding: 0.3rem;
+      }
+
+      @media #{$mq-medium} {
+        width: 70%;
+        &.table > tbody > tr > td {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+}
