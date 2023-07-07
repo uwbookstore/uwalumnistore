@@ -1,0 +1,239 @@
+/*------------------------------------*\
+  COLORBOX
+\*------------------------------------*/
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+  clear: left;
+}
+
+#cboxContent {
+  position: relative;
+}
+
+#cboxLoadedContent {
+  overflow: auto;
+}
+
+#cboxTitle {
+  margin: 0;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  cursor: pointer;
+}
+
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+}
+
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+#colorbox,
+#cboxContent,
+#cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+// User Style:
+// Change the following styles to modify the appearance of ColorBox.  They are
+// ordered & tabbed in a way that represents the nesting of the generated HTML.
+
+#cboxOverlay {
+  background: $white;
+}
+
+div#colorbox button {
+  border: none;
+  margin: 0;
+}
+
+#cboxTopLeft {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: $white;
+}
+
+#cboxTopCenter {
+  height: 1.4rem;
+  background: $white;
+}
+
+#cboxTopRight {
+  width: 1.4rem;
+  height: 1.4rem;
+  background: $white;
+}
+
+#cboxBottomLeft {
+  width: 1.4rem;
+  height: 4.3rem;
+  background: $white;
+}
+
+#cboxBottomCenter {
+  height: 4.3rem;
+  background: $white;
+}
+
+#cboxBottomRight {
+  width: 1.4rem;
+  height: 4.3rem;
+  background: $white;
+}
+
+#cboxMiddleLeft {
+  width: 1.4rem;
+  background: $white;
+}
+
+#cboxMiddleRight {
+  width: 1.4rem;
+  background: $white;
+}
+
+#cboxContent {
+  background: $white;
+  overflow: visible;
+}
+
+.cboxIframe {
+  background: $white;
+}
+
+#cboxError {
+  padding: 5rem;
+  border: 1px solid $medium-gray;
+}
+
+#cboxLoadedContent {
+  margin-bottom: 0.5rem;
+}
+
+// #cboxLoadingOverlay {
+//     background:url(https://i.univbkstr.com/css/img/cbox/loading_background.png) no-repeat center center;
+// }
+
+#cboxLoadingGraphic {
+  background: url(https://i.univbkstr.com/css/img/cbox/loading.gif) no-repeat
+    center center;
+}
+
+#cboxTitle {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  color: $secondary-color;
+}
+
+#cboxCurrent {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 5.8rem;
+  font-weight: 700;
+  color: $secondary-color;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow {
+  position: absolute;
+  bottom: -2.9rem;
+  background: url(https://i.univbkstr.com/css/img/cbox/controls.png) no-repeat 0
+    0;
+  width: 2.3rem;
+  height: 2.3rem;
+  text-indent: -9999px;
+}
+
+#cboxPrevious {
+  left: 0px;
+  background-position: -5.1rem -2.5rem;
+}
+
+#cboxPrevious:hover {
+  background-position: -5.1rem 0;
+}
+
+#cboxNext {
+  left: 2.7rem;
+  background-position: -7.5rem -2.5rem;
+}
+
+#cboxNext:hover {
+  background-position: -7.5rem 0;
+}
+
+#cboxClose {
+  right: 0;
+  background-position: -10rem -2.5rem;
+}
+
+#cboxClose:hover {
+  background-position: -10rem 0;
+}
+
+.cboxSlideshow_on #cboxSlideshow {
+  background-position: -12.5rem 0;
+  right: 2.7rem;
+}
+
+.cboxSlideshow_on #cboxSlideshow:hover {
+  background-position: -15rem 0;
+}
+
+.cboxSlideshow_off #cboxSlideshow {
+  background-position: -15rem -2.5rem;
+  right: 2.7rem;
+}
+
+.cboxSlideshow_off #cboxSlideshow:hover {
+  background-position: -12.5rem 0;
+}
