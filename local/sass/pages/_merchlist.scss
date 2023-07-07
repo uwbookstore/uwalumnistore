@@ -1,0 +1,631 @@
+.searchCatWrap,
+.sortCatWrap {
+  display: none;
+}
+
+.merchColumn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.merchItem {
+  flex: 0 0 47%;
+
+  @media #{$mq-nav} {
+    flex: 0 0 33%;
+  }
+}
+
+a.merchLink {
+  p.merchTitle {
+    color: $black;
+  }
+}
+
+p.merchTitle {
+  font-weight: 700;
+  font-size: inherit;
+  margin: 0 0 1rem;
+  font-style: italic;
+}
+
+span.regularPriceTitle,
+span.salePriceTitle {
+  display: none;
+}
+
+span.merchPriceRegular {
+  text-decoration: line-through;
+}
+
+p.merchRegular,
+p.merchPrice {
+  display: inline;
+  font-weight: normal;
+}
+
+p.merchNumber {
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.merch {
+  &__card {
+    margin-bottom: 2rem;
+    justify-content: center;
+
+    &-item {
+      padding: 2.5rem;
+      text-align: center;
+      font-style: italic;
+      transition: opacity 0.25s ease-in-out;
+      position: relative;
+      // box-shadow: 0 2px 2px rgba($medium-gray-3, 0.6);
+      margin: 1rem 0;
+      flex: 0 0 100%;
+
+      a,
+      h2 {
+        text-align: center;
+      }
+
+      a:focus {
+        outline-offset: 0;
+        outline: 2px auto rgba(35, 82, 124, 0.5);
+      }
+
+      @media #{$mq-small} {
+        flex: 0 0 50%;
+      }
+
+      @media #{$mq-medium} {
+        flex: 0 0 33.3333%;
+      }
+
+      @media #{$mq-ie} {
+        flex: 0 0 27%;
+      }
+
+      &-small {
+        flex: 0 0 50%;
+
+        @media #{$mq-medium} {
+          flex: 0 0 16.666%;
+        }
+      }
+
+      // &:hover {
+      //     opacity: 0.7;
+      //     transition: opacity 0.25s ease-in-out;
+      // }
+    }
+
+    &-special,
+    &-restock {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      font-size: 1.4rem;
+    }
+
+    &-special {
+      background-color: $primary-color;
+      color: $white;
+    }
+
+    &-restock {
+      background-color: $warning-color;
+      color: #3e3e3e;
+      z-index: 20;
+    }
+
+    &-new {
+      position: absolute;
+      background-color: $dark-gray;
+      color: $white;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      z-index: 20;
+    }
+
+    &-in-cart {
+      @include absCenter;
+      background-color: rgba($white, 0.8);
+      padding: 0.5rem 1.5rem;
+      border: 1px solid currentColor;
+      width: auto;
+
+      img {
+        margin-right: 0.5rem;
+      }
+
+      @media #{$mq-medium} {
+        font-size: 1.4rem;
+      }
+    }
+
+    &--header {
+      display: none;
+
+      @media #{$mq-medium} {
+        display: block;
+        &:hover {
+          opacity: 1;
+        }
+
+        img {
+          max-height: 25rem;
+        }
+      }
+    }
+
+    &-title {
+      font-weight: 700;
+      font-size: inherit;
+      margin: 0 0 1rem;
+      display: block;
+      color: $black;
+    }
+
+    &-img {
+      margin-bottom: 2rem;
+    }
+
+    &-link {
+      &:link,
+      &:visited {
+        display: block;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__filter {
+    width: 100%;
+    display: flex;
+    padding: 0 0 3rem;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    @media #{$mq-medium} {
+      flex-direction: row;
+    }
+
+    h2 {
+      flex: 1;
+      align-self: flex-start;
+      margin-bottom: 2rem;
+
+      @media #{$mq-medium} {
+        align-self: flex-end;
+        margin-bottom: 0;
+      }
+    }
+
+    &--item {
+      align-self: flex-start;
+      width: 100%;
+
+      label {
+        color: $tertiary-color;
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 2;
+        text-transform: uppercase;
+      }
+
+      a {
+        width: 100%;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+
+      @media #{$mq-medium} {
+        align-self: flex-end;
+        width: auto;
+
+        a {
+          width: auto;
+        }
+
+        &:not(:last-child) {
+          margin-right: 1rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.prevBackward {
+  margin-right: 4rem;
+
+  @media #{$mq-medium} {
+    margin-right: 2rem;
+  }
+
+  i {
+    padding-right: 2px;
+  }
+}
+
+.nextForward {
+  i {
+    padding-left: 2px;
+  }
+}
+
+.merchResultsSelect {
+  margin: 0;
+}
+
+.merchLink {
+  &:link,
+  &:visited {
+    h2 {
+    }
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+    transition: opacity 0.25s ease-in-out;
+    text-decoration: none;
+  }
+}
+
+.scroll__container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  &-card {
+    text-align: center;
+    width: 25rem;
+    flex: 0 0 auto;
+    position: relative;
+    padding: 1.5rem;
+
+    a {
+      color: $black;
+      display: block;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 15rem;
+      display: block;
+      margin: 1rem auto 2rem;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: inherit;
+      margin: 0 0 1rem;
+      display: block;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      top: 1rem;
+      right: 3rem;
+      font-size: 3rem;
+      padding: 5px;
+    }
+  }
+
+  //   &::-webkit-scrollbar {
+  //     display: none;
+  //   }
+}
+
+/***************************************
+ ***************************************
+ In the event that everything goes bad
+ when we switch over to the new LCS
+ options, style the default inSite pages
+ ***************************************
+ ***************************************/
+
+.pageHelp,
+.searchCatWrap,
+.merchTop,
+.viewfiltersDiv,
+.bottomButtons,
+.backCart {
+  display: none;
+}
+
+.sortCatWrap {
+  width: 100%;
+}
+
+.merchItem {
+  margin-bottom: 3.5rem;
+}
+
+.merchItem.col-xs-12 {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media #{$mq-medium} {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .merchImage.col-sm-2.col-xs-12 {
+    flex: 1 100%;
+    z-index: 99999;
+
+    @media #{$mq-medium} {
+      flex: 1 60%;
+    }
+  }
+
+  .merchInfo.col-sm-10.col-xs-12 {
+    flex: 1 100%;
+    font-size: 1.6rem;
+
+    @media #{$mq-medium} {
+      flex: 1 40%;
+      padding-left: 2rem;
+    }
+
+    .merchTitle {
+      margin: 1.5rem auto;
+      font-size: 2.4rem;
+      font-style: italic;
+      font-weight: 700;
+      color: $primary-color;
+
+      @media #{$mq-medium} {
+        font-size: 2rem;
+      }
+    }
+
+    .merchDesc {
+      margin: 1.5rem auto;
+      padding: 1rem 0 2rem;
+      border-top: 1px solid #4d4d4d;
+      border-bottom: 1px solid #4d4d4d;
+      position: relative;
+      line-height: 1.6;
+    }
+  }
+
+  p.merchItem,
+  p.merchPrice {
+    margin-bottom: 1rem;
+  }
+
+  p.merchPrice {
+    display: block;
+  }
+
+  p.merchSizeTitle,
+  p.merchLogoTitle {
+    margin-bottom: 0;
+  }
+
+  .lcsSizeWrapper,
+  .lcsLogoWrapper {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $black;
+  }
+
+  .lcsSizeWrapper {
+    margin-bottom: 1rem;
+  }
+
+  .lcsLogoWrapper {
+    margin-bottom: 2rem;
+  }
+
+  .addToCartButton {
+    margin-bottom: 2rem;
+  }
+
+  .addToCartTypes {
+    vertical-align: top;
+  }
+}
+
+p.merchSalePrice.red,
+p.merchPrice.red {
+  color: $primary-color;
+  font-style: italic;
+  font-weight: normal;
+  display: inline;
+  margin-left: 1rem;
+}
+
+.img-empty {
+  background-color: $light-gray;
+  border: 1px solid $light-gray-3;
+  width: 100%;
+  height: 20rem;
+  max-width: 60rem;
+  color: $black;
+  position: relative;
+
+  @media #{$mq-medium} {
+    height: 60rem;
+  }
+
+  p {
+    @include absCenter;
+    font-size: 4.5rem;
+    text-align: center;
+
+    @media #{$mq-medium} {
+      font-size: 10rem;
+    }
+  }
+}
+
+.empty-results {
+  margin: 2rem 0;
+
+  h1 {
+    color: $primary-color;
+    font-weight: 700;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+// BREADCRUMBS
+.breadcrumb {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb li a.small {
+  font-size: 1.2rem;
+}
+
+li.attribute {
+  a {
+    cursor: default;
+    color: darken($dark-gray, 5%);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.newBadge {
+  position: absolute;
+  background-color: $dark-gray;
+  color: $white;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  z-index: 20;
+
+  &::after {
+    display: none;
+  }
+}
+
+.saleBadge {
+  position: absolute;
+  background-color: $primary-color;
+  color: $white;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+
+  &::after {
+    display: none;
+  }
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  font-size: 2.5rem;
+  padding: 2rem;
+
+  @media #{$mq-medium} {
+    font-size: 1.8rem;
+    padding: 4px 8px;
+  }
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: $primary-color;
+  border-color: $primary-color;
+}
+
+// Previously Viewed Items
+.card.previousDynamic .card-header {
+  font-size: 2.5rem;
+  margin: 0 0 2.5rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $black;
+  display: block;
+  text-align: center;
+
+  span {
+    display: inline-block;
+    background-color: $white;
+    padding: 1rem;
+    background-color: inherit;
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1rem;
+    align-items: center;
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 0;
+    background: none;
+
+    span {
+      padding: 0;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      display: block;
+      // background-color: $light-gray-2;
+      background-color: currentColor;
+    }
+  }
+}
+
+.card.previousDynamic {
+  max-width: 117rem;
+  margin: 2rem auto 0;
+  border: none;
+}
+
+.dynamicLeftArrow {
+  left: 0;
+
+  @media #{$mq-medium} {
+    left: 2rem;
+  }
+}
+
+.dynamicRightArrow {
+  right: 0;
+
+  @media #{$mq-medium} {
+    right: 2rem;
+  }
+}
