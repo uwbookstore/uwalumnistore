@@ -29,6 +29,7 @@
       }
 
       @media #{$mq-nav} {
+        flex-direction: row;
         li {
           &:not(:last-child) {
             margin-right: 1rem;
@@ -56,6 +57,8 @@
       z-index: 20;
 
       @media #{$mq-nav} {
+        display: flex;
+        align-items: center;
         top: 4.2rem;
         z-index: initial;
       }
@@ -115,7 +118,7 @@
         left: 50%;
         transform: translateX(-50%);
 
-        @media #{$mq-small} {
+        @media #{$mq-nav} {
           top: 3.1rem;
         }
       }
@@ -138,7 +141,7 @@
         // z-index: 200;
         text-align: center;
 
-        @media #{$mq-small} {
+        @media #{$mq-nav} {
           top: 9.5rem;
           bottom: auto;
         }
@@ -186,7 +189,7 @@
         transform-origin: 10% 90%;
       }
 
-      @media #{$mq-small} {
+      @media #{$mq-nav} {
         display: none;
       }
 
@@ -367,7 +370,7 @@
   }
 
   .my-account {
-    @media #{$mq-small} {
+    @media #{$mq-nav} {
       width: 30rem;
       left: 60rem;
       padding: 2.5rem 0;
@@ -406,7 +409,7 @@
         }
 
         span {
-          @media #{$mq-small} {
+          @media #{$mq-nav} {
             display: none;
           }
         }
