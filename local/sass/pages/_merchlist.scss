@@ -629,3 +629,10 @@ li.attribute {
     right: 2rem;
   }
 }
+
+.card-body {
+  .col-xs-12 {
+    display: flex;
+    justify-content: center;
+  }
+}
