@@ -1,0 +1,116 @@
+.tabs {
+  font-size: 1.6rem;
+
+  @media #{$mq-small} {
+    font-size: 1.4rem;
+  }
+
+  &__nav {
+    display: table;
+    text-align: center;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: block;
+
+    @media #{$mq-small} {
+      display: inline-block;
+      width: auto;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: block;
+      width: 100%;
+      font-size: 1.2rem;
+      background-color: #ddd;
+      border-bottom: 0.4rem solid transparent;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2rem;
+      position: relative;
+      text-align: center;
+      color: $black;
+      height: 6rem;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &-active {
+      &:link,
+      &:visited {
+        border-bottom-color: $primary-color;
+        opacity: 1;
+        background-color: $light-gray-3;
+      }
+    }
+
+    i {
+      margin-right: 1rem;
+
+      &.fa.fa-exclamation-triangle {
+        color: $primary-color;
+      }
+    }
+
+    @media #{$mq-small} {
+      &:link,
+      &:visited {
+        background: transparent;
+        padding: 1rem;
+        height: auto;
+      }
+
+      &:hover,
+      &:active {
+        opacity: 0.7;
+        text-decoration: none;
+      }
+
+      &-active {
+        &:link,
+        &:visited {
+          opacity: 1;
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  &__container {
+    & > div {
+      margin: 2rem 0 3rem;
+      padding: 0 2rem;
+
+      span {
+        color: $primary-color;
+        font-weight: 700;
+      }
+
+      ol {
+        margin-left: 3rem;
+
+        @media #{$mq-small} {
+          margin: 1rem auto;
+          width: 75%;
+        }
+      }
+    }
+
+    #shipping {
+      @media #{$mq-medium} {
+        height: 30rem;
+        overflow-y: scroll;
+      }
+    }
+  }
+}
