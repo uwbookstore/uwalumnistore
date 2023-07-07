@@ -16,12 +16,16 @@ Author URI: http://www.uwbookstore.comm
 @import 'components/accordion';
 @import 'components/button';
 @import 'components/card';
+@import 'components/form';
 @import 'components/menu';
 @import 'components/navbar';
 
 @import 'layout/footer';
+@import 'layout/grid';
 
 @import 'pages/404';
 @import 'pages/help';
 @import 'pages/home';
 @import 'pages/landing';
+@import 'pages/merchdetail';
+@import 'pages/merchlist';
