@@ -1,0 +1,623 @@
+.flexslider {
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $light-gray-2;
+
+  @media #{$mq-medium} {
+    position: relative;
+    display: flex;
+    margin: 0;
+    border-bottom: none;
+  }
+}
+
+span.btn-default,
+button.btn-default.typeCodeOption {
+  width: 47%;
+  margin: 0 0.5rem 3rem;
+
+  &:hover,
+  &.typeSelected {
+    border-width: 1px !important;
+    border-color: $primary-color !important;
+    color: $white;
+    background-color: $primary-color;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    background: url('https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png');
+    background-size: 100% 100%;
+    background-color: transparent;
+    color: rgba(100, 100, 100, 0.5);
+    border-color: rgba(100, 100, 100, 0.5);
+  }
+
+  @media #{$mq-medium} {
+    width: 5rem;
+    font-weight: normal;
+    font-size: 1.2rem;
+
+    &.btn-w-auto {
+      width: auto;
+      padding: 0 1rem;
+    }
+  }
+}
+
+span.btn-default.typeSelected {
+  &:hover {
+    cursor: default;
+  }
+}
+
+.flex-control {
+  &-nav {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 1.5rem;
+
+    li {
+      width: 10rem;
+      height: 10rem;
+      margin: 0 1rem 0 0;
+      padding: 0;
+      float: left;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+
+      img {
+        cursor: pointer;
+        opacity: 0.5;
+        display: block;
+        max-width: 100%;
+        height: auto;
+
+        &.flex-active {
+          cursor: default;
+          opacity: 1;
+        }
+      }
+    }
+
+    @media #{$mq-medium} {
+      flex: 1 20%;
+      margin-top: 3rem;
+
+      li {
+        margin-bottom: 2rem;
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+}
+
+.rankImageWrapper span.ranking {
+  color: $white;
+}
+
+.merch {
+  &__detail {
+    margin: 0 auto 2rem;
+    padding: 0 5px;
+
+    &-slides {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    &-images {
+      width: 100%;
+
+      @supports (display: flex) {
+        width: auto;
+        flex: 1 100%;
+        z-index: 10;
+      }
+    }
+
+    &-img {
+      display: block;
+      width: 100%;
+      max-width: 60rem;
+      height: auto;
+      margin: auto;
+    }
+
+    &-info {
+      width: 100%;
+      font-size: 1.6rem;
+
+      @supports (display: flex) {
+        width: auto;
+        flex: 1 100%;
+      }
+
+      .message_merch_promo {
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        border: 1px solid darken($success-color, 20%);
+      }
+    }
+
+    &-title {
+      margin: 1.5rem auto;
+      font-size: 2.4rem;
+      font-style: italic;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primary-color;
+
+      &-small {
+        font-size: 2.4rem;
+        font-weight: 700;
+      }
+    }
+
+    &-price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+
+      .original {
+        text-decoration: line-through;
+        margin-right: 1rem;
+      }
+
+      .sale {
+        color: $primary-color;
+      }
+    }
+
+    &-description {
+      margin: 1.5rem auto;
+      padding: 1rem 0 2rem;
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+      position: relative;
+      line-height: 1.6;
+
+      ul,
+      ol {
+        list-style-position: outside;
+        margin-left: 2rem;
+
+        ul,
+        ol {
+          padding-left: 4rem;
+        }
+      }
+
+      &-open {
+        line-height: 1.6;
+      }
+    }
+
+    &-sku span {
+      font-weight: 700;
+    }
+
+    &-size {
+      margin: 1.5rem auto;
+      padding: 0 0 1.5rem;
+      border-bottom: 1px solid $black;
+      position: relative;
+
+      &-link {
+        &:link,
+        &:visited {
+          text-decoration: underline;
+          font-size: 1.6rem;
+          text-transform: lowercase;
+          margin-left: 0.5rem;
+          color: $black;
+        }
+      }
+
+      &-label {
+        margin-bottom: 3rem;
+      }
+
+      &-picker {
+        margin-bottom: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0;
+
+        div {
+          width: 47%;
+          height: 5rem;
+          text-align: center;
+          margin: 0 0.5rem 3rem;
+          font-size: 1.6rem;
+          position: relative;
+
+          input {
+            display: none;
+
+            &:checked + label {
+              background-color: $primary-color;
+              color: $white;
+              font-weight: 700;
+              cursor: default;
+              border-color: $primary-color;
+            }
+          }
+
+          label {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1.5rem;
+            margin: 0;
+            line-height: 1.5;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            border: 1px solid $black;
+            cursor: pointer;
+            font-weight: 400;
+            width: 100%;
+            transition: all 0.25s ease;
+          }
+
+          &.disabled {
+            label {
+              cursor: not-allowed;
+              background: url('https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png');
+              background-size: 100% 100%;
+              background-color: transparent;
+              color: rgba(100, 100, 100, 0.5);
+              border-color: rgba(100, 100, 100, 0.5);
+            }
+          }
+        }
+
+        @media #{$mq-medium} {
+          justify-content: initial;
+        }
+      }
+    }
+
+    &-add {
+      flex-direction: column;
+
+      &-btn {
+        a {
+          margin-bottom: 2rem;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          width: 100%;
+        }
+      }
+    }
+
+    &-qty {
+      margin-bottom: 3rem;
+
+      label {
+        display: block;
+        margin-bottom: 1.5rem;
+      }
+
+      input {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        line-height: 5rem;
+        height: 5rem;
+      }
+    }
+
+    &-overflow {
+      display: none;
+    }
+
+    @media #{$mq-medium} {
+      &-slides {
+        flex: 1 80%;
+        order: 2;
+      }
+
+      &-images {
+        width: 60%;
+
+        @supports (display: flex) {
+          width: auto;
+          flex: 1 60%;
+        }
+      }
+
+      &-info {
+        width: 40%;
+        padding-left: 2rem;
+
+        @supports (display: flex) {
+          width: auto;
+          flex: 1 40%;
+        }
+      }
+
+      &-title {
+        font-size: 2rem;
+
+        &-small {
+          font-size: 1.4rem;
+        }
+      }
+
+      &-price {
+        font-size: 1.4rem;
+      }
+
+      &-description {
+      }
+
+      &-size {
+        &-link {
+          &:link,
+          &:visited {
+            font-size: 1.2rem;
+          }
+        }
+
+        &-label {
+          margin-bottom: 1.5rem;
+        }
+
+        &-picker {
+          div {
+            width: 10rem;
+            height: 3rem;
+            margin-bottom: 2rem;
+            line-height: 2;
+
+            label {
+              padding: 0.5rem;
+            }
+
+            &.picker {
+              width: 5rem;
+            }
+          }
+
+          .btn {
+            padding: 0;
+          }
+        }
+      }
+
+      &-add {
+        flex-direction: row;
+        &-btn {
+          display: flex;
+          flex: 1 1 85%;
+          flex-direction: row;
+          padding-left: 0.5rem;
+          font-size: 1.5rem;
+
+          @media #{$mq-ie} {
+            flex: 1 1 84%;
+          }
+
+          a {
+            margin-bottom: 0;
+            width: 50%;
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      &-qty {
+        flex: 1 1 15%;
+        flex-direction: inherit;
+        margin-bottom: 0;
+        padding-right: 0.5rem;
+
+        @media #{$mq-ie} {
+          flex: 1 1 13%;
+        }
+
+        label {
+          display: none;
+        }
+
+        input {
+          height: 3rem;
+          width: 100%;
+          font-size: 1.4rem;
+          line-height: 3rem;
+          padding: 0 0.5rem 0;
+        }
+      }
+    }
+
+    @media #{$mq-medium} {
+      padding: 0;
+    }
+  }
+}
+
+.suggestedItem.merch__card-item {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity 0.25s ease-in-out;
+  }
+}
+
+.suggestedLink.merch__card-link {
+  text-decoration: none;
+}
+
+.addedToCart {
+  font-size: 1.6rem;
+  margin-left: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  padding: 0.5rem;
+
+  @media #{$mq-medium} {
+    font-size: 1.2rem;
+    padding: 0 0 0 1.5rem;
+    margin-bottom: 0;
+    line-height: 1.2;
+    width: 50%;
+    font-size: 1.4rem;
+  }
+}
+
+#item-disclaimer span.normal em {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin: 0 0.5rem;
+  line-height: 0.5;
+}
+
+.merchDisclaimerError,
+.merchSelectError,
+.addGiftErrorLCS,
+.addGiftError,
+#wishlist-error {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  z-index: 2000;
+  background: rgba(#f2dede, 0.9);
+  padding: 2rem;
+  color: #a94442;
+  border: 1px solid #ebccd1;
+
+  i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1rem;
+    cursor: pointer;
+    font-size: 3rem;
+
+    @media #{$mq-medium} {
+      top: 1rem;
+      transform: translateY(0);
+      font-size: 1.6rem;
+    }
+  }
+
+  @media #{$mq-medium} {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30rem;
+    right: 10rem;
+    left: initial;
+    bottom: initial;
+  }
+}
+
+.suggestedImg {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heatgear,
+.coldgear,
+.storm,
+.sideline {
+  display: block;
+  height: 2.4rem;
+  width: 10rem;
+  margin-bottom: 5px;
+}
+
+.heatgear {
+  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/heatgear.png')
+    no-repeat;
+}
+.coldgear {
+  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/coldgear.png')
+    no-repeat;
+}
+.storm {
+  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/storm.png')
+    no-repeat;
+}
+.sideline {
+  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/sideline.png')
+    no-repeat;
+}
+
+.regLink {
+  margin: 2rem 0;
+}
+
+.giftRegDropdown {
+  margin-bottom: 1rem;
+}
+
+.addGiftRegButton,
+.addSingleReg,
+.btn-wishlist {
+  i {
+    margin-right: 0.5rem;
+  }
+}
+
+.addSingleReg {
+  &.pulse {
+    animation-iteration-count: infinite;
+  }
+}
+
+#wl-grid {
+  .btn {
+    width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media #{$mq-medium} {
+    justify-content: space-between;
+
+    .btn {
+      width: 48%;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+p.sale-info {
+  font-weight: bold;
+  color: $primary-color;
+  margin: 5px 0;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+input.merchDisclaimer {
+  margin-right: 5px;
+}
+
+.modal-body {
+  .addedToCartDeposit,
+  .addedToCartSKU,
+  .addedToCartQTY {
+    display: none;
+  }
+}
