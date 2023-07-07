@@ -28,7 +28,7 @@
         }
       }
 
-      @media #{$mq-medium} {
+      @media #{$mq-nav} {
         li {
           &:not(:last-child) {
             margin-right: 1rem;
@@ -55,7 +55,7 @@
       width: 100%;
       z-index: 20;
 
-      @media #{$mq-medium} {
+      @media #{$mq-nav} {
         top: 4.2rem;
         z-index: initial;
       }
@@ -68,13 +68,13 @@
       padding: 0;
       list-style-type: none;
 
-      @media #{$mq-medium} {
+      @media #{$mq-nav} {
         flex-direction: row;
         padding: 0 4rem 1rem 1rem;
       }
     }
 
-    @media #{$mq-medium} {
+    @media #{$mq-nav} {
       align-items: stretch;
       font-size: 1.2rem;
       border: none;
@@ -239,7 +239,7 @@
       }
     }
 
-    @media #{$mq-medium} {
+    @media #{$mq-nav} {
       background-color: transparent;
 
       &-menu {
@@ -273,7 +273,7 @@
   .menu-spacer {
     visibility: hidden;
 
-    @media #{$mq-medium} {
+    @media #{$mq-nav} {
       color: $secondary-color;
       margin: 0 0 0 8px;
       visibility: visible;
@@ -291,7 +291,7 @@
     line-height: 1;
     border-top: 1px solid $light-gray-2;
 
-    @media #{$mq-medium} {
+    @media #{$mq-nav} {
       margin-top: 3rem;
     }
   }
@@ -335,7 +335,7 @@
       transition: fill 0.25s ease-in-out;
     }
 
-    @media #{$mq-medium} {
+    @media #{$mq-nav} {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -412,7 +412,7 @@
         }
       }
 
-      @media #{$mq-medium} {
+      @media #{$mq-nav} {
         position: static;
       }
     }
@@ -422,7 +422,7 @@
     &-toggle {
       display: none;
 
-      @media #{$mq-medium} {
+      @media #{$mq-nav} {
         display: block;
 
         a {
@@ -469,7 +469,7 @@
         }
       }
 
-      @media #{$mq-medium} {
+      @media #{$mq-nav} {
         display: none;
       }
     }
@@ -479,4 +479,14 @@
 .navbar-nav > li.open > a {
   color: $black;
   background-color: transparent;
+}
+
+/* ============ mobile view ============ */
+@media #{$mq-nav} {
+  .dropdown:hover > .dropdown-menu {
+    display: none;
+  }
+  .dropdown:hover > .dropdown-menu.show {
+    display: block;
+  }
 }
