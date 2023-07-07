@@ -10,6 +10,10 @@
       display: none;
     }
 
+    @media #{$mq-small} {
+      min-height: 80rem;
+    }
+
     @media #{$mq-medium} {
       min-height: 65rem;
 
@@ -20,7 +24,7 @@
   }
 
   &-inner {
-    margin: 10rem auto 5rem;
+    margin: 2rem auto;
     max-width: 30rem;
     min-height: 40rem;
     text-align: center;
@@ -51,6 +55,7 @@
     }
 
     @media #{$mq-medium} {
+      margin: 10rem auto 5rem;
       max-width: 70rem;
     }
   }
