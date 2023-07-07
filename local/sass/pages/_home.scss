@@ -4,6 +4,10 @@
   max-width: $default-page-width;
   position: relative;
 
+  img {
+    margin-inline: auto;
+  }
+
   &__banner {
     @include absCenter;
     width: 100%;
