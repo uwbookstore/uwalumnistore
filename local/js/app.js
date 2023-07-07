@@ -413,4 +413,11 @@ $(document).ready(function () {
     $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo');
     return false;
   });
+
+  $('.dropdown-toggle').off('click');
+
+  $('.dropdown-toggle').click(function () {
+    var allParents = $('.navbar-waa').find('.dropdown');
+    $(allParents).removeClass('open');
+  });
 });
