@@ -1,0 +1,52 @@
+h1 {
+  &.thankYouHeader {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+h2 {
+  &#checkoutQuestion,
+  &#orderSummaryTitle,
+  &#needHelpTitle,
+  &.thankYouSubHeader,
+  &.addressHeader {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+h2.addressHeader {
+  a {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+  }
+}
+
+h4 {
+  margin-bottom: 1.5rem;
+}
+.checkoutHighlighted {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+#viewCart {
+  font-size: 1.2rem;
+  padding: 0.5rem 0 0;
+  margin: 0;
+}
+
+#editCart {
+  font-size: 1.2rem;
+}
+
+#checkoutOneCol {
+  input[type='submit'] {
+    width: 100%;
+
+    @media #{$mq-medium} {
+      width: auto;
+    }
+  }
+}
