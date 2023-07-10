@@ -1,0 +1,96 @@
+#loginPanel,
+#logoutPanel,
+#reclaimPanel,
+#lostPasswordPanel {
+  width: 100%;
+  max-width: 45rem;
+  font-size: 1.6rem;
+  margin: 2rem auto;
+  padding: 2.5rem 2.5rem 4.5rem;
+  border-color: transparent;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+
+  input {
+    &[type='text'],
+    &[type='password'],
+    &[type='email'] {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  [class^='col'],
+  .panel-body {
+    padding: 0;
+  }
+}
+
+#reclaimPanelBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  div {
+    text-align: center;
+  }
+
+  input {
+    width: 50%;
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.form {
+  &__actions {
+    flex-direction: column;
+
+    input,
+    a {
+      flex: 1 100%;
+      margin-bottom: 2rem;
+    }
+
+    a {
+      font-size: 1.8rem;
+    }
+
+    @media #{$mq-medium} {
+      flex-direction: row;
+
+      input,
+      a {
+        flex: 1 1 50%;
+      }
+
+      a {
+        font-size: 1.6rem;
+        text-align: right;
+      }
+    }
+  }
+}
+
+.login {
+  &__btns {
+    a {
+      display: block;
+      width: 100%;
+      margin-inline: auto;
+      text-transform: uppercase;
+
+      &:not(:last-child) {
+        margin-bottom: 3.5rem;
+      }
+
+      @media #{$mq-medium} {
+        width: 60%;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
