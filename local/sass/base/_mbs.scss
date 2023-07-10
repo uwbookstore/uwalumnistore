@@ -72,8 +72,8 @@ body header:first-of-type,
 }
 
 a.promo-banner {
-    text-decoration: none;
-    color: #fff;
+  text-decoration: none;
+  color: #fff;
 }
 
 // HIDE ALL UNNECESSARY MBS ELEMENTS
@@ -91,6 +91,7 @@ a.promo-banner {
 #custShipMiddle,
 a#goToTop,
 .disco,
+.hide,
 footer {
   display: none !important;
 }
@@ -112,7 +113,7 @@ footer {
 // chooses.
 
 /*.radioButton,*/
-input[class^="radio"] {
+input[class^='radio'] {
   & + span {
     &::before {
       width: 1.2rem;
