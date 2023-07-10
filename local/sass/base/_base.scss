@@ -54,3 +54,28 @@ body {
     }
   }
 }
+
+.visually-hidden,
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.skip {
+  position: absolute;
+  left: -1000px;
+  color: $black;
+  background-color: $white;
+
+  &:focus,
+  &:active {
+    left: 0;
+    top: 0;
+    z-index: 200;
+  }
+}
