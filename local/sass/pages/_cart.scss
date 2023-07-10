@@ -1,0 +1,75 @@
+.cart {
+  font-size: 1.6rem;
+
+  &__container {
+    width: 100%;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 3rem 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.13);
+
+    .fa.cart__icon {
+      font-size: 5.8rem;
+    }
+  }
+
+  &__p {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 2.5rem auto;
+  }
+
+  &__btn {
+    margin-bottom: 2rem;
+  }
+
+  &__account {
+    padding: 1.5rem;
+    background-color: #f7f7f7;
+    border: 1px solid #efefef;
+    font-size: 1.8rem;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &_title {
+    margin: 0;
+    font-size: inherit;
+  }
+
+  .glyphicon {
+    color: $primary-color;
+  }
+}
+
+.Continue_Shopping,
+#receiveQuestion {
+  margin: 1rem auto;
+
+  a,
+  input {
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: inherit;
+
+    @media #{$mq-medium} {
+      width: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.multiStoreTitle {
+  display: none;
+}
+
+.form-control.Merchandise_Type_Code {
+  cursor: default;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+}
