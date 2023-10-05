@@ -13,6 +13,13 @@ select.form-control {
   padding-right: 2rem;
 }
 
+.form {
+  &-control,
+  &-select {
+    font-size: $default-font-size;
+  }
+}
+
 .form-control,
 .panel,
 .panel > *,
