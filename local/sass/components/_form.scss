@@ -9,6 +9,14 @@
   }
 }
 
+.form-floating {
+  > .form-control {
+    height: auto;
+    line-height: 1;
+    width: 100%;
+  }
+}
+
 select,
 select.form-control {
   -moz-appearance: none;
@@ -36,4 +44,12 @@ select.form-control {
     margin-top: -1rem;
     cursor: text;
   }
+}
+
+.form-floating > .form-control:focus,
+.form-floating > .form-control:not(:placeholder-shown),
+.form-floating > .form-control-plaintext:focus,
+.form-floating > .form-control-plaintext:not(:placeholder-shown) {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
 }
