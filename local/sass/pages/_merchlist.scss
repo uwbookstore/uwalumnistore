@@ -188,6 +188,11 @@ p.merchNumber {
         text-decoration: none;
       }
     }
+
+    .row {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &__filter {
@@ -567,7 +572,10 @@ li.attribute {
 }
 
 // Previously Viewed Items
-.card.previousDynamic .card-header {
+// Featured Items
+.card.previousDynamic .card-header,
+.card.featuredDynamic .card-header,
+.card.checkoutDynamic .card-header {
   font-size: 2.5rem;
   margin: 0 0 2.5rem;
   width: 100%;
@@ -591,6 +599,7 @@ li.attribute {
     border-bottom: none;
     padding-bottom: 0;
     padding-left: 0;
+    padding-right: 0;
     background: none;
 
     span {
@@ -608,10 +617,18 @@ li.attribute {
   }
 }
 
-.card.previousDynamic {
+.card.previousDynamic,
+.card.featuredDynamic,
+.card.checkoutDynamic {
   max-width: 117rem;
   margin: 2rem auto 0;
   border: none;
+}
+
+.dynamicCard .card-body .row.col-12 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 .dynamicLeftArrow {
@@ -627,12 +644,5 @@ li.attribute {
 
   @media #{$mq-medium} {
     right: 2rem;
-  }
-}
-
-.card-body {
-  .col-xs-12 {
-    display: flex;
-    justify-content: center;
   }
 }
