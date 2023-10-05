@@ -7,23 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>UW Alumni Store</title>
 
-  <link href="/RWD-CSS/bootstrap.css?v=1.0" type="text/css" rel="stylesheet" />
-  <link href="/RWD-CSS/bootstrap_v5_2_custom.css?v=1.0" type="text/css" rel="stylesheet" />
-  <link href="/RWD-CSS/MasterCSS_new.css?v=1.0" type="text/css" rel="stylesheet" />
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"
-    integrity="sha256-6XMVI0zB8cRzfZjqKcD01PBsAy3FlDASrlC8SxCpInY=" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-migrate-1.4.1.js"></script>
-
-  <script src="/RWD-JS/popper.min.js"></script>
-  <script src="/RWD-JS/tippy-bundle.js"></script>
-  <script src="/RWD-JS/bootstrap_v5_2.js?v=1.0"></script>
-
-  <script src="/RWD-JS/Confirm.js?v=1.0"></script>
-  <script src="/RWD-JS/MasterJS.js?v=1.0"></script>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7292020/6907632/css/fonts.css" />
@@ -40,7 +27,28 @@
     <div id="topSection">
       <div id="waa-nav" class="container">
         <!-- Static navbar -->
-        <nav class="navbar navbar-expand-lg navbar-waa">
+
+        <!-- <div class="navbar-header pull-right">
+            <ul class="nav pull-left">
+              <li class="cart-toggle pull-right">
+                <a href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="117" height="88.17" viewBox="0 0 117 88.17"
+                    class="cart--icon">
+                    <path
+                      d="M98.5,73h-55a3.5,3.5,0,0,1-3.27-2.24L16.1,8H4.5a3.5,3.5,0,0,1,0-7h14a3.5,3.5,0,0,1,3.27,2.24L45.9,66H98.5a3.5,3.5,0,0,1,0,7Z"
+                      transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
+                    <path
+                      d="M100.5,53.33H36.17a3.5,3.5,0,0,1,0-7H97.94l9.79-31H36.5a3.5,3.5,0,0,1,0-7h76a3.5,3.5,0,0,1,3.5,3.5,3.39,3.39,0,0,1-.16,1.05l-12,38A3.5,3.5,0,0,1,100.5,53.33Z"
+                      transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
+                    <circle cx="50.5" cy="83.5" r="4.67"></circle>
+                    <circle cx="91.83" cy="82.83" r="4.67"></circle>
+                  </svg>
+                  <span id="ItemCount" class="Count hidden">0</span></a>
+              </li>
+            </ul>
+          </div> -->
+
+        <nav class="navbar navbar-expand-lg">
           <div class="cart-mobile">
             <a href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart">
               <svg xmlns="http://www.w3.org/2000/svg" width="117" height="88.17" viewBox="0 0 117 88.17"
@@ -361,6 +369,7 @@
             <ul class="navbar-nav navbar-right">
               <li class="search">
                 <input id="searchinput" type="search" class="search-field form-control" placeholder="Search...">
+                <!-- <span id="searchclear" class="glyphicon glyphicon-remove-circle"></span> -->
                 <label>
                   <input type="submit" class="search-submit" value="Go">
                   <svg xmlns="http://www.w3.org/2000/svg" width="69.76" height="117.91" viewBox="0 0 69.76 117.91"
@@ -411,7 +420,8 @@
                     <circle cx="50.5" cy="83.5" r="4.67"></circle>
                     <circle cx="91.83" cy="82.83" r="4.67"></circle>
                   </svg>
-                  <span id="ItemCount" class="Count hidden">0</span></a>
+                  <!-- <span id="ItemCount" class="Count hidden">0</span> -->
+                </a>
               </li>
             </ul>
           </div>
@@ -432,13 +442,16 @@
                 <h1>Oops, Something Went Wrong</h1>
                 <p class="bold">The page you were looking for doesn't exist.</p>
                 <p>You may have mistyped the address or the page may have moved.</p>
-                <p class="mt-3"><a href="https://www.uwalumnistore.com/home" class="btn btn-primary" tabindex="0">Return to
+                <p class="mt-3"><a href="https://www.uwalumnistore.com/home" class="btn btn-primary" tabindex="0">Return
+                    to
                     Homepage</a></p>
               </div><img
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0NjIuMjYzIiBoZWlnaHQ9IjEyMS4zMjciIHZpZXdCb3g9IjAgMCA0NjIuMjYzIDEyMS4zMjciPjxwYXRoIGQ9Ik00MzQuMTA4LDE2MC4zYy0yOC40NzEsMC0zNy4xODMsMTkuNTQxLTM5Ljg0MywzMS4wMTlhMi44NTYsMi44NTYsMCwwLDEtNS4xNjIuOTRjLTUuNC04LjA5NC0xNi42LTIwLjEwOC0zNS40NzgtMjAuMTA4LTI5LjUyMiwwLTM2LjIxMywyMS45LTM3LjY3NiwyOS45M2EyLjg0MSwyLjg0MSwwLDAsMS0zLjIxOCwyLjMyMmMtMy45MzQtLjYtMTEuMy0uOTQyLTE3Ljc1NiwzLjEzNWEyOC40MTMsMjguNDEzLDAsMCwwLTEwLjkwOSwxMy4xNDcsMi44MjgsMi44MjgsMCwwLDEtMy4xODEsMS43LDE5LjA4OSwxOS4wODksMCwwLDAtMTIuOTU0LDEuNjY1Yy0zLjc0OCwyLjA1NS02LjUsNy45OTUtNy43LDExLjAyOGEyLjgzNSwyLjgzNSwwLDAsMS0yLjY5NSwxLjc5MmMtNC45MzQtLjA4My0xNy41NC0uMjYtMjIuMzkxLjAzNy04Ljg1NC41NDQtMTAuMDc3LDE0LjMxNSwwLDE0LjE4NiwxMS4zMzctLjE0NSw4LjQ1OC0uMjE5LDEzLjcyMS0uMDkyLDYuOTQ3LjE2Niw4LjkyMSwxMS4yMDYtLjI4MywxMS4yNzItOS42MTIuMDcxLTMzLjE1Ni0yLjI1LTMzLjE1Niw4LjQ1OHM2LjA3OCw5LjA4LDI2LjE4Miw5LjA4SDY0OS43NThjMjAuMSwwLDI2LjE4LDEuNjI2LDI2LjE4LTkuMDhzLTIzLjU0Mi04LjM4Ni0zMy4xNTQtOC40NThjLTkuMjA2LS4wNjctNy4yMzItMTEuMTA3LS4yODMtMTEuMjcyLDUuMjYzLS4xMjcsMi4zODQtLjA1MywxMy43MTkuMDkyLDEwLjA3Ny4xMjksOC44NTYtMTMuNjQzLDAtMTQuMTg2LTQuODUxLS4zLTE3LjQ1NS0uMTItMjIuMzg4LS4wMzdhMi44MzEsMi44MzEsMCwwLDEtMi42OTUtMS43OTJjLTEuMi0zLjAzMy0zLjk1NS04Ljk3NC03LjctMTEuMDI4YTE5LjA5LDE5LjA5LDAsMCwwLTEyLjk1NC0xLjY2NSwyLjgyNiwyLjgyNiwwLDAsMS0zLjE4MS0xLjcsMjguNDM2LDI4LjQzNiwwLDAsMC0xMC45MTEtMTMuMTQ3Yy02LjQ1Mi00LjA3Ny0xMy44Mi0zLjczNi0xNy43NTQtMy4xMzVhMi44NDMsMi44NDMsMCwwLDEtMy4yMi0yLjMyMmMtMS40Ni04LjAzMi04LjE1MS0yOS45My0zNy42NzMtMjkuOTMtMjMuNjIzLDAtMzUuMjIzLDE4LjgxNi0zOC40ODYsMjUuMjE5YTIuODMsMi44MywwLDAsMS0zLjE0OSwxLjQ2LDI1LjY3NCwyNS42NzQsMCwwLDAtOS42NDkuMTA4LDUuMyw1LjMsMCwwLDEtNi4xNS00LjE3MUM0NzguMTA5LDE4My43NzEsNDY5LjI5MiwxNjAuMyw0MzQuMTA4LDE2MC4zWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIxNC41NSAtMTU5LjQyNSkiIGZpbGw9IiNmZmYiIHN0cm9rZT0iI2M1MDUwYyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjEuNzUiLz48L3N2Zz4="
-                class="cloud" alt="red cloud outline" width="460" height="119" style="top:160px;left:-350px;position:absolute"><img
+                class="cloud" alt="red cloud outline" width="460" height="119"
+                style="top:160px;left:-350px;position:absolute"><img
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDEuOTkiIGhlaWdodD0iNzkuNzExIiB2aWV3Qm94PSIwIDAgMzAxLjk5IDc5LjcxMSI+PHBhdGggZD0iTTM1OCwxNjAuM2MtMTguNTYzLDAtMjQuMjQyLDEyLjc0LTI1Ljk3NiwyMC4yMjNhMS44NjIsMS44NjIsMCwwLDEtMy4zNjUuNjEzYy0zLjUyMy01LjI3Ny0xMC44MjQtMTMuMTEtMjMuMTMxLTEzLjExLTE5LjI0NywwLTIzLjYxLDE0LjI3Ny0yNC41NjMsMTkuNTEzYTEuODUyLDEuODUyLDAsMCwxLTIuMSwxLjUxNGMtMi41NjUtLjM5Mi03LjM2OS0uNjE0LTExLjU3NywyLjA0NGExOC41MjQsMTguNTI0LDAsMCwwLTcuMTEyLDguNTcyLDEuODQ0LDEuODQ0LDAsMCwxLTIuMDc0LDEuMTEsMTIuNDQ2LDEyLjQ0NiwwLDAsMC04LjQ0NiwxLjA4NmMtMi40NDMsMS4zNC00LjIzOCw1LjIxMi01LjAyMiw3LjE5YTEuODQ4LDEuODQ4LDAsMCwxLTEuNzU3LDEuMTY4Yy0zLjIxNy0uMDU0LTExLjQzNS0uMTctMTQuNi4wMjQtNS43NzMuMzU0LTYuNTcsOS4zMzMsMCw5LjI0OSw3LjM5MS0uMDk1LDUuNTE0LS4xNDMsOC45NDYtLjA2LDQuNTI5LjEwOCw1LjgxNiw3LjMwNi0uMTg1LDcuMzQ5LTYuMjY3LjA0Ny0yMS42MTctMS40NjctMjEuNjE3LDUuNTE0czMuOTYzLDUuOTIsMTcuMDcsNS45Mkg0OTguNmMxMy4xMDcsMCwxNy4wNjgsMS4wNiwxNy4wNjgtNS45MnMtMTUuMzQ5LTUuNDY4LTIxLjYxNi01LjUxNGMtNi0uMDQ0LTQuNzE1LTcuMjQxLS4xODUtNy4zNDksMy40MzEtLjA4MywxLjU1NC0uMDM1LDguOTQ0LjA2LDYuNTcuMDg0LDUuNzc0LTguODk1LDAtOS4yNDktMy4xNjMtLjE5NC0xMS4zOC0uMDc4LTE0LjYtLjAyNGExLjg0NiwxLjg0NiwwLDAsMS0xLjc1Ny0xLjE2OGMtLjc4NS0xLjk3OC0yLjU3OC01Ljg1MS01LjAyMi03LjE5YTEyLjQ0NiwxMi40NDYsMCwwLDAtOC40NDUtMS4wODYsMS44NDIsMS44NDIsMCwwLDEtMi4wNzQtMS4xMUExOC41MzksMTguNTM5LDAsMCwwLDQ2My44LDE5MS4xYy00LjIwNi0yLjY1OC05LjAxLTIuNDM2LTExLjU3NS0yLjA0NGExLjg1NCwxLjg1NCwwLDAsMS0yLjEtMS41MTRjLS45NTItNS4yMzYtNS4zMTUtMTkuNTEzLTI0LjU2Mi0xOS41MTMtMTUuNCwwLTIyLjk2NCwxMi4yNjctMjUuMDkyLDE2LjQ0MmExLjg0NSwxLjg0NSwwLDAsMS0yLjA1My45NTIsMTYuNzM5LDE2LjczOSwwLDAsMC02LjI5MS4wNzEsMy40NTYsMy40NTYsMCwwLDEtNC4wMS0yLjcyQzM4Ni42ODYsMTc1LjYsMzgwLjkzOCwxNjAuMywzNTgsMTYwLjNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjE0LjU1IC0xNTkuNDI1KSIgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjYzUwNTBjIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMS43NSIvPjwvc3ZnPg=="
-                class="cloud" alt="red cloud outline" width="300" height="78" style="top:275px;right:-175px;position:absolute">
+                class="cloud" alt="red cloud outline" width="300" height="78"
+                style="top:275px;right:-175px;position:absolute">
             </div>
 
 
