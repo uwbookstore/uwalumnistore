@@ -96,18 +96,6 @@ footer {
   display: none !important;
 }
 
-// .searchGiftEventText, .eventMonthSelect, .eventYearSelect, #giftRegistry_eventDate, .giftRegDateText, p.giftRegMessageText, #giftRegistry_Message {
-//     display: none;
-// }
-
-// .displayn {
-//     display: none;
-// }
-
-// .faa-shake.animated {
-//     animation: none;
-// }
-
 // MBS apparently thinks folks will
 // only want to use the colors MBS
 // chooses.
@@ -131,51 +119,43 @@ input[class^='radio'] {
   }
 }
 
-// .copy-clip {
-//   width: 100%;
-
-//   .input-group {
-//     width: 100%;
-//   }
-
-//   .input-group-addon {
-//     width: 4rem !important;
-//     cursor: pointer;
-//     padding: 0;
-
-//     button {
-//       margin: 0;
-//       border: none !important;
-//       background: transparent;
-//     }
-
-//     img {
-//       width: 1.3rem;
-//     }
-
-//     .btn-copy {
-//       padding: 0.6rem 1.2rem;
-//     }
-//   }
-// }
-
 #success-msg,
 #error-msg {
   display: none;
 }
 
-.wl-share {
-  .ib {
-    div {
-      display: inline-block;
-    }
-  }
-  a.btn {
-    display: inline-block;
-    margin: 1.5rem 0;
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  font-size: 15px;
+  padding: 5px;
+}
 
-    &:first-child {
-      margin-right: 2rem;
-    }
-  }
+#promo-toggle-wrapper {
+  display: none;
+}
+
+#promo-content {
+  display: flex !important;
+}
+
+.rem1 {
+  font-size: $default-font-size;
+}
+
+.req-astrisk {
+  float: left;
+  margin-right: 5px;
+}
+
+.coExistingAddressText p {
+  margin-bottom: 5px;
+}
+
+#cart-rightCard .sticky-top {
+  z-index: 0;
 }
