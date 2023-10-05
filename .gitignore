@@ -152,8 +152,8 @@ inSite/index.html
 # /bs5/js
 /bs5/inSite Pages
 
-/local/sass/.sass-cache
-/local/img
-/local/css
-/local/sass/components/_test.scss
-/local/RWD*
+/sass/.sass-cache
+/img
+/css
+/sass/components/_test.scss
+/RWD*
