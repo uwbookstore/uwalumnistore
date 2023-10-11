@@ -28,7 +28,7 @@ button.btn-default.typeCodeOption {
 
   &.disabled {
     cursor: not-allowed;
-    background: url('https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png');
+    background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
     background-size: 100% 100%;
     background-color: transparent;
     color: rgba(100, 100, 100, 0.5);
@@ -274,7 +274,7 @@ span.btn-default.typeSelected {
           &.disabled {
             label {
               cursor: not-allowed;
-              background: url('https://i.univbkstr.com/ubsMain/css/images/disabled-bg.png');
+              background: url('https://i.univbkstr.com/v3/css/img/disabled-bg.png');
               background-size: 100% 100%;
               background-color: transparent;
               color: rgba(100, 100, 100, 0.5);
@@ -542,19 +542,18 @@ span.btn-default.typeSelected {
 }
 
 .heatgear {
-  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/heatgear.png')
+  background: url('https://i.univbkstr.com/v3/img/ua/tech/heatgear.png')
     no-repeat;
 }
 .coldgear {
-  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/coldgear.png')
+  background: url('https://i.univbkstr.com/v3/img/ua/tech/coldgear.png')
     no-repeat;
 }
 .storm {
-  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/storm.png')
-    no-repeat;
+  background: url('https://i.univbkstr.com/v3/img/ua/tech/storm.png') no-repeat;
 }
 .sideline {
-  background: url('https://i.univbkstr.com/images/landing/UnderArmour/tech/sideline.png')
+  background: url('https://i.univbkstr.com/v3/img/ua/tech/sideline.png')
     no-repeat;
 }
 
