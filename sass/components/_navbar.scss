@@ -81,7 +81,7 @@
       align-items: stretch;
       font-size: 1.2rem;
       border: none;
-      background: url('https://www.uwalumnistore.com/SiteImages/11-SchoolImages/11-WAA/11-header-bg.png')
+      background: url('https://i.univbkstr.com/uwalumnistore/css/img/header-bg.png')
         repeat-x;
       border-bottom: none;
 
@@ -357,7 +357,9 @@
         margin-right: 5px;
         border: 1px solid $medium-gray;
         box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
-        transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+        transition:
+          box-shadow 0.5s,
+          border-color 0.25s ease-in-out;
       }
 
       &__icon {
