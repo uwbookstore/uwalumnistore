@@ -53,11 +53,14 @@
 
   document.querySelectorAll('.merchPanel.panel.panel-info').forEach((el) => {
     let item_id, item_category;
+    let sku = el.querySelector('span.oneMerchNumText').textContent;
+    item_id = sku.trim();
+
     if (el.querySelector('span.oneMerchOptionText')) {
-      item_id = el.querySelector('span.oneMerchNumText').textContent.trim() + '-' + el.querySelector('span.oneMerchOptionText').textContent.trim();
-      item_category = el.querySelector('span.oneMerchOptionText').textContent.trim();
+      let size = el.querySelector('span.oneMerchOptionText').textContent;
+      size = size.replaceAll(' ', '').trim();
+      item_category = size;
     } else {
-      item_id = el.querySelector('span.oneMerchNumText').textContent.trim();
       item_category = null;
     }
     
@@ -71,8 +74,8 @@
   });
 
   // gtm_products.forEach((el) => console.log(el))
-
-  gtag("event", "gtmUWAS.orderComplete", {
+  // gtmUWAS.orderComplete
+  gtag("event", "purchase", {
     transaction_id: order_id,
     // eslint-disable-next-line
     value: <<<ORDERTOTAL>>>,
@@ -97,4 +100,3 @@
   })(window, document, "script", "dataLayer", "G-EZF6VJ4T99");
 </script> -->
 <!-- End Google Tag Manager -->
-
