@@ -1,89 +1,114 @@
 <!-- Google Ecommerce Code -->
 <!-- Google tag (gtag.js) -->
-<script async src=https://www.googletagmanager.com/gtag/js?id=G-EZF6VJ4T99></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZF6VJ4T99"></script>
 <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-EZF6VJ4T99'); </script>
 <script>
-  // var order_id = $('h2.thankYouSubHeader').textContent.match(/\d+/);
-  // var order_total = $('span#paymentTotalText').textContent;
-  // var order_tax = $('span#paymentEstimatedText').textContent.replace('$', '');
-  // var order_tax = parseFloat(order_tax);
-  // var order_shipping = $('span.shipChargeText').textContent.replace('$', '');
-  // var order_shipping = parseFloat(order_shipping);
+// purchase
+// add_payment_info
+// add_shipping_info
+// Place this JavaScript code on the ThankYou Page in the Footer Script
+var transaction_id = $('#ty-orderNumber-val').val();
+var value = parseFloat(
+  $('.tyTotal-val.floatr')
+    .text()
+    .replace(/[^0-9.]/gi, '')
+);
+var tax = parseFloat(
+  $('.tyTax-val.floatr')
+    .text()
+    .replace(/[^0-9.]/gi, '')
+);
+var shipping = parseFloat(
+  $('.tyShipHand-val.floatr')
+    .text()
+    .replace(/[^0-9.]/gi, '')
+);
+// var payType = $('#paymentTypeText').text().trim();
+var shippingType = $(
+  '.tyshipment-wrapper.row.bottomBorder .col-md-6.col-12.padding-left0.padding-right0:nth-of-type(2) p:nth-of-type(1)'
+)
+  .first()
+  .contents()
+  .filter(function () {
+    return this.nodeType == 3;
+  })
+  .text();
 
+var items_to_send = [];
 
-  // gtm_products = [];
+// Add textbooks
+$('.tybook-wrapper.row.top10').each(function () {
+  var isbn = $(this).find('.ty-textbook-isbn').val();
+  var name = $(this).find('.ty-textbook-name').val();
+  var category = 'Textbooks';
+  var type = $(this).find('.ty-textbook-pref').val();
+  var price = parseFloat($(this).find('ty-textbook-price').val());
+  var qty = parseInt($(this).find('.ty-textbook-quantity').val());
 
-  // $('.merchPanel.panel.panel-info').each(function () {
-  //   gtm_products.push({
-  //     'id': $(this).find('span.oneMerchNumText').textContent.trim() + '-' + $(this).find('span.oneMerchOptionText').textContent,
-  //     'sku': $(this).find('span.oneMerchNumText').textContent.trim(),
-  //     'name': $(this).find('span.oneMerchDescText').textContent,
-  //     'category': $(this).find('span.oneMerchOptionText').textContent,
-  //     'price': $(this).find('span.oneMerchTotalText').textContent,
-  //     'quantity': $(this).find('span.oneMerchQTYText').textContent
-  //   });
+  var this_item = {
+    item_id: isbn,
+    item_name: name,
+    item_category: category,
+    item_variant: type,
+    price: price,
+    quantity: qty,
+  };
+
+  items_to_send.push(this_item);
+});
+
+// Add merchandise
+$('.row.tymerch-wrapper').each(function () {
+  var sku = $(this).find('.ty-merch-sku').val().trim();
+  var name = $(this).find('.ty-merch-name').val().trim();
+  var category = 'Merchandise';
+  // var types = [];
+  // var type = '';
+  // var types = $(this)
+  //   .find('.oneMerchOption > .oneMerchOptionText')
+  //   .text()
+  //   .trim()
+  //   .split('-', 5);
+  // types.forEach(function (item, index) {
+  //   type = type + item.trim() + ' ';
   // });
+  // type = type.trim();
+  var price = parseFloat(
+    $(this)
+      .find('.ty-merch-price')
+      .val()
+      .replace(/[^0-9.]/gi, '')
+  );
+  var qty = parseInt($(this).find('.ty-merch-quantity').val());
 
-  // console.log(order_id[0]);
-  // console.log(order_total);
-  // console.log(order_tax);
-  // console.log(order_shipping);
-  // console.log(gtm_products);
+  var this_item = {
+    item_id: sku,
+    item_name: name,
+    item_category: category,
+    // item_variant: type,
+    price: price,
+    quantity: qty,
+  };
 
-  // dataLayer.push({
-  //   'event': 'gtmUWAS.orderComplete',
-  //   'transactionId': + order_id,
-  //   'transactionAffiliation': 'University Book Store',
-  //   'transactionTotal': <<<ORDERTOTAL>>>,
-  //   'transactionTax': order_tax,
-  //   'transactionShipping': order_shipping,
-  //   'transactionProducts': gtm_products,
-  // });
-  //     console.log(dataLayer);
+  items_to_send.push(this_item);
+});
 
-  const order_id = document.querySelector('h2.thankYouSubHeader').textContent.split(' ')[4];
-  const order_total = document.querySelector('span#paymentTotalText').textContent;
-  let order_tax = document.querySelector('span#paymentEstimatedText').textContent.replace('$', '');
-  order_tax = parseFloat(order_tax);
-  let order_shipping = document.querySelector('span.shipChargeText').textContent.replace('$', '');
-  order_shipping = parseFloat(order_shipping);
+gtag('event', 'purchase', {
+  transaction_id: transaction_id, // required (order number)
+  value: value, // required (total order $ amount)
+  tax: tax, // optional
+  shipping: shipping, // optional
+  currency: 'USD', // required
+  items: items_to_send,
+});
 
-
-  gtm_products = [];
-
-  document.querySelectorAll('.merchPanel.panel.panel-info').forEach((el) => {
-    let item_id, item_category;
-    let sku = el.querySelector('span.oneMerchNumText').textContent;
-    item_id = sku.trim();
-
-    if (el.querySelector('span.oneMerchOptionText')) {
-      let size = el.querySelector('span.oneMerchOptionText').textContent;
-      size = size.replaceAll(' ', '').trim();
-      item_category = size;
-    } else {
-      item_category = null;
-    }
-    
-    gtm_products.push({
-      item_id,
-      item_name: el.querySelector('span.oneMerchDescText').textContent.trim(),
-      item_category,
-      price: el.querySelector('span.oneMerchTotalText').textContent.trim(),
-      quantity: el.querySelector('span.oneMerchQTYText').textContent.trim()
-    });
-  });
-
-  // gtm_products.forEach((el) => console.log(el))
-  // gtmUWAS.orderComplete
-  gtag("event", "purchase", {
-    transaction_id: order_id,
-    // eslint-disable-next-line
-    value: <<<ORDERTOTAL>>>,
-    tax: order_tax,
-    shipping: order_shipping,
-    currency: "USD",
-    items: gtm_products
-  });
+console.log(items_to_send);
+gtag('event', 'add_shipping_info', {
+  currency: 'USD',
+  value: shipping,
+  shipping_tier: shippingType,
+  items: items_to_send,
+});
 
 </script>
 <!-- Google Tag Manager -->
