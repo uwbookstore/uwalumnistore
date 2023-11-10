@@ -134,3 +134,7 @@ a.paymentBilling-change {
 .selectedPayment-html {
   margin-top: 1.5rem;
 }
+
+[class^='helpSection'] span.fa {
+  color: $primary-color;
+}
