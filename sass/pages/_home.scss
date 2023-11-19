@@ -68,3 +68,83 @@
     }
   }
 }
+
+.holiday-banner {
+  margin: 0 0 2rem;
+  padding: 1rem;
+  background: $light-gray-2;
+  font-size: 3rem;
+  font-weight: 700;
+  color: $primary-color;
+  text-transform: uppercase;
+  font-style: italic;
+  text-align: center;
+}
+
+.holiday-deadline {
+  text-align: center;
+
+  .grid-item {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    color: $primary-color;
+    border-bottom: 2px solid $black;
+    flex: 1 1 100%;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+
+    span {
+      font-weight: normal;
+      font-size: 2rem;
+      color: $black;
+      display: block;
+
+      &.numbers {
+        padding-bottom: 0;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: $primary-color;
+        display: inline;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 3rem;
+      padding-bottom: 0;
+    }
+  }
+
+  @media #{$mq-small} {
+    .grid-item {
+      flex: 1 1 33.333%;
+      border-bottom: none;
+      padding-top: 1rem;
+      border-right: 2px solid $black;
+
+      &:last-child {
+        border-right: none;
+        margin-bottom: 0;
+      }
+
+      span {
+        font-size: 1.6rem;
+        font-weight: normal;
+        // padding-bottom: 2rem;
+        margin-bottom: 0;
+        color: $black;
+
+        &.numbers {
+          font-size: 3rem;
+          font-weight: 700;
+          color: $primary-color;
+          display: inline;
+        }
+      }
+    }
+  }
+}
