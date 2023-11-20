@@ -80,34 +80,47 @@ p.paymentBilling-studentnumber {
 }
 
 a.paymentBilling-change {
-  display: inline-block;
-  padding: 0 1.2rem;
-  border: 2px solid transparent;
-  border-radius: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  border: 2px solid;
   transition: all 0.2s ease-in-out;
-  font-weight: 700;
   height: 5rem;
   line-height: 5rem;
-  font-size: inherit;
-  background-color: transparent;
-  border-color: $primary-color;
-  color: $primary-color;
+  padding: 0 2rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+  background-color: $info-color;
+  border-color: $info-color;
+  color: $black;
+  font-weight: 700;
+  text-align: center;
+  &:link,
+  &:visited {
+  }
 
-  &:hover,
+  &:hover {
+    background-color: darken($info-color, 4%);
+    border-color: darken($info-color, 5%);
+    color: $white;
+  }
+
   &:active,
   &:active:hover,
   &:focus,
   &:active:focus {
-    text-decoration: none;
-    border-color: $primary-color;
-    background-color: $primary-color;
+    background-color: darken($info-color, 2%);
+    border-color: darken($info-color, 3%);
     color: $white;
   }
+}
 
-  @media #{$mq-medium} {
-    border-width: 1px;
-    height: 3rem;
-    line-height: 3rem;
+@media #{$mq-medium} {
+  a.paymentBilling-change {
+    display: inline-block;
+    width: auto;
+    height: 3.5rem;
+    line-height: 3.5rem;
   }
 }
 
