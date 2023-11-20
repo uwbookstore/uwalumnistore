@@ -179,3 +179,34 @@ input[class^='radio'] {
 .rem4 {
   font-size: 64px;
 }
+
+.promo-banner {
+  line-height: 4.5rem;
+  min-height: 4.5rem;
+  background: $primary-color;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.8rem;
+  display: block;
+
+  span {
+    font-size: 1.4rem;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    margin-left: 1.5rem;
+  }
+
+  &:hover,
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+a.promo-banner {
+  text-decoration: none;
+  color: #fff;
+}
