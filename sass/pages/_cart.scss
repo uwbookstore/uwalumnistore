@@ -151,3 +151,11 @@ a.paymentBilling-change {
 [class^='helpSection'] span.fa {
   color: $primary-color;
 }
+
+// MBS fixes the Place Order button
+// to the bottom of the page.
+// Very confusing to the customer,
+// This will fix it.
+.coCheckoutBtnWrap {
+  position: initial;
+}
