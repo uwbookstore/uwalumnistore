@@ -168,3 +168,14 @@ span.shippingMethod-description-span {
     font-size: 1.6rem;
   }
 }
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-width: 3px;
+  background-size: 2.5rem;
+}
+
+.was-validated .form-control:invalid + label,
+.form-control.is-invalid + label {
+  color: #dc3545;
+}
