@@ -130,7 +130,7 @@ $(document).ready(function () {
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
       // `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
-      `<strong>PLEASE READ BEFORE PURCHASE! — I understand that Items ordered after 11/17 may not ship until after the Christmas Holiday. Store pick-up orders will incur a $7.50 drop ship charge.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
+      `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
     );
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
