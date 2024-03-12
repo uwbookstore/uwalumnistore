@@ -145,6 +145,17 @@ $(document).ready(function () {
     );
     $('div#kyleCavan').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+  } else if (itemDisclaimer.length > 0 && $('div#jardine').length > 0) {
+    $(
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+    ).appendTo('div#merch-info');
+    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $('.normal').html(
+      `<strong>PLEASE READ BEFORE PURCHASE! — This is a manufacturer direct item. This item ships separately. Please allow 2-4 weeks for delivery.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
+    );
+    $('div#jardine').hide();
+    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0) {
     $(
       '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
