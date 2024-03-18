@@ -1,15 +1,15 @@
 // Get the modal
-let modal = document.getElementById('cyberMonday24Popup');
+let modal = document.getElementById('madness24Popup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('cyberMonday24')) {
+  if (!sessionStorage.getItem('madness24')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
-      sessionStorage.setItem('cyberMonday24', 'opened');
+      sessionStorage.setItem('madness24', 'opened');
     });
   } else {
-    sessionStorage.setItem('cyberMonday24', 'opened');
+    sessionStorage.setItem('madness24', 'opened');
   }
 
   // Get the <span> element that closes the modal
