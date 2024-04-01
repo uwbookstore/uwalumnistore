@@ -13,14 +13,14 @@
     width: 100%;
 
     @media #{$mq-small} {
-      // top: 60%;
-      top: 75%;
+      top: 60%;
+      // top: 75%;
       width: 50%;
       left: 20rem;
     }
 
     @media #{$mq-medium} {
-      // top: 65%;
+      top: 65%;
       left: 4rem;
       width: auto;
       transform: translate(0);
