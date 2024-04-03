@@ -582,6 +582,13 @@ $(document).ready(function () {
     $(
       '<a href="https://i.univbkstr.com/sizeChart/alternativeApparel" class="merch__detail-size-link gtmSizeTrack" title="Alternative Apparel Size Guide">Size Guide</a>'
     ).insertAfter('.merch__detail-size-label');
+  } else if (
+    (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
+    prodName.substring(0, 30).toLowerCase() === 'little earth wisconsin pet hat'
+  ) {
+    $(
+      '<a href="https://i.univbkstr.com/sizeChart/littleEarth" class="merch__detail-size-link gtmSizeTrack" title="Little Earth Size Guide">Size Guide</a>'
+    ).insertAfter('.merch__detail-size-label');
   } else if (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) {
     $(
       '<a href="https://i.univbkstr.com/sizeChart/" class="merch__detail-size-link gtmSizeTrack" title="General Size Guide">Size Guide</a>'
