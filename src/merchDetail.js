@@ -83,16 +83,17 @@ $(document).ready(function () {
   } else {
     $('<span>' + prodPrice + '</span>').appendTo('div#priceBlock');
   } // END of price-block if
-  if (
-    prodName.substring(0, 7) === 'MacBook' ||
-    prodName.substring(0, 13) === 'Apple MacBook' ||
-    prodName.substring(0, 10) === 'Apple iPad' ||
-    prodName.substring(0, 4) === 'Dell'
-  ) {
-    $(
-      '<div class="alert alert-info">The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</div>'
-    ).appendTo('div#merch-info');
-  }
+
+  // if (
+  //   prodName.substring(0, 7) === 'MacBook' ||
+  //   prodName.substring(0, 13) === 'Apple MacBook' ||
+  //   prodName.substring(0, 10) === 'Apple iPad' ||
+  //   prodName.substring(0, 4) === 'Dell'
+  // ) {
+  //   $(
+  //     '<div class="alert alert-info">The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</div>'
+  //   ).appendTo('div#merch-info');
+  // }
 
   $(
     '<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>'
