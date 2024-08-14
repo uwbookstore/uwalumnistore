@@ -24,7 +24,7 @@ a.merchLink {
 }
 
 p.merchTitle {
-  font-weight: 700;
+  font-weight: 500;
   font-size: inherit;
   margin: 0 0 1rem;
   font-style: italic;
@@ -106,7 +106,7 @@ p.merchNumber {
       position: absolute;
       top: 0.5rem;
       left: 0.5rem;
-      font-weight: 700;
+      font-weight: 500;
       padding: 0.5rem 1rem;
       font-size: 1.4rem;
     }
@@ -128,7 +128,7 @@ p.merchNumber {
       color: $white;
       top: 0.5rem;
       left: 0.5rem;
-      font-weight: 700;
+      font-weight: 500;
       padding: 0.5rem 1rem;
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -167,7 +167,7 @@ p.merchNumber {
     }
 
     &-title {
-      font-weight: 700;
+      font-weight: 500;
       font-size: inherit;
       margin: 0 0 1rem;
       display: block;
@@ -317,7 +317,7 @@ p.merchNumber {
     }
 
     h2 {
-      font-weight: 700;
+      font-weight: 500;
       font-size: inherit;
       margin: 0 0 1rem;
       display: block;
@@ -398,7 +398,7 @@ p.merchNumber {
       margin: 1.5rem auto;
       font-size: 2.4rem;
       font-style: italic;
-      font-weight: 700;
+      font-weight: 500;
       color: $primary-color;
 
       @media #{$mq-medium} {
@@ -491,7 +491,7 @@ p.merchPrice.red {
 
   h1 {
     color: $primary-color;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 3rem;
     margin-bottom: 1.5rem;
   }
@@ -524,7 +524,7 @@ li.attribute {
   color: $white;
   top: 0.5rem;
   left: 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -541,7 +541,7 @@ li.attribute {
   color: $white;
   top: 0.5rem;
   left: 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   font-size: 1.4rem;
 

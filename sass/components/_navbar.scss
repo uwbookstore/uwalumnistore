@@ -134,7 +134,7 @@
         font-size: 1.6rem;
         padding-top: 7px;
         background-color: $primary-color;
-        font-weight: 700;
+        font-weight: 500;
         color: $white;
         text-transform: uppercase;
         text-decoration: none;
@@ -238,7 +238,7 @@
       padding: 0;
 
       a {
-        font-weight: 700 !important;
+        font-weight: 500 !important;
       }
     }
 
@@ -287,7 +287,7 @@
 
   .show-all {
     text-align: center;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
     transition: color 0.25s ease-in-out;
     font-size: 2rem !important;
     padding: 1.4rem !important;

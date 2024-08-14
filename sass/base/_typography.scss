@@ -12,13 +12,8 @@ html {
 
 body {
   font-size: $default-font-size;
-  font-family: 'Verlag A', 'Verlag B', Arial, sans-serif;
+  font-family: 'Red Hat Text', sans-serif;
 }
-
-// *::selection {
-//     background: $primary-color;
-//     color: $white;
-// }
 
 h1,
 h2,
@@ -26,7 +21,6 @@ h3,
 h4,
 h5,
 h6 {
-  // font-weight: 700;
   margin: 0;
 }
 
@@ -77,12 +71,12 @@ i {
 }
 strong,
 b {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 small {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 p {
@@ -124,7 +118,6 @@ sub {
   top: 0.4em;
 }
 
-//{margin:0 60px 12px 45px;border-left:5px solid #ccc;padding-left:10px}
 blockquote {
   border-left: 0.5rem solid $medium-gray;
   padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -137,6 +130,7 @@ blockquote {
 }
 
 .tagline {
+  font-family: 'Red Hat Display', 'Red Hat Text', sans-serif;
   text-align: center;
   margin: 2rem auto;
   font-style: italic;
@@ -295,13 +289,13 @@ blockquote {
 
 .tabs__header {
   text-align: center;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.6rem;
 }
 
 a[href^='tel:'] {
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 500;
   background: #46ca5e;
   border-radius: 0;
   color: $white;
@@ -330,15 +324,10 @@ a[href^='tel:'] {
   }
 }
 
-.num-lg {
-  font-size: 120%;
-  // font-style: normal;
-}
-
 .red {
   color: $primary-color;
 }
 
 .bold {
-  font-weight: 700;
+  font-weight: 500;
 }

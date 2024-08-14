@@ -37,9 +37,10 @@
       }
 
       span {
+        font-family: 'Red Hat Display', 'Red Hat Text', sans-serif;
         display: block;
         color: $primary-color;
-        font-weight: 700;
+        font-weight: 600;
         text-transform: uppercase;
         font-style: italic;
         padding: 1.5rem 2.5rem;
@@ -75,7 +76,7 @@
   padding: 1rem;
   background: $light-gray-2;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 500;
   color: $primary-color;
   text-transform: uppercase;
   font-style: italic;
@@ -88,7 +89,7 @@
   .grid-item {
     margin-top: 2rem;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 500;
     display: block;
     color: $primary-color;
     border-bottom: 2px solid $black;
@@ -107,7 +108,7 @@
       &.numbers {
         padding-bottom: 0;
         font-size: 2.5rem;
-        font-weight: 700;
+        font-weight: 500;
         color: $primary-color;
         display: inline;
       }
@@ -141,7 +142,7 @@
 
         &.numbers {
           font-size: 3rem;
-          font-weight: 700;
+          font-weight: 500;
           color: $primary-color;
           display: inline;
         }

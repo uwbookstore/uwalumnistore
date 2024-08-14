@@ -33,9 +33,7 @@ select.form-control {
 .panel {
   background-color: $white;
 }
-// [class^="col-"] {
-//     padding: 0;
-// }
+
 .panel-info {
   border-color: $medium-gray;
 }
@@ -52,13 +50,12 @@ select.form-control {
 
   em {
     color: #ffae00;
-    font-weight: 700;
+    font-weight: 500;
   }
 }
 
 .alert-default {
   text-align: center;
-  // margin: 0 1rem;
   background-color: $light-gray;
   border-color: darken($light-gray, 10%);
 }
