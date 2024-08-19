@@ -20,7 +20,7 @@
 
     @media #{$mq-medium} {
       padding: 1.5rem 0.5rem 2rem;
-      width: 47.5rem;
+      width: 48rem;
       transform: translateX(-50%);
     }
 
@@ -29,7 +29,8 @@
       display: block;
       color: $primary-color;
       text-transform: uppercase;
-      font-weight: 500;
+      font-weight: 700;
+      letter-spacing: 1px;
       font-style: italic;
 
       @media #{$mq-medium} {
