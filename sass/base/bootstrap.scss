@@ -1,10 +1,12 @@
+@use '../util' as *;
+
 .contain,
 .container {
   width: 100%;
-  max-width: $default-page-width;
+  max-width: var(--default-page-width);
   padding: 0;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     margin: 0 auto;
   }
 }
@@ -16,7 +18,7 @@ select.form-control {
 .form {
   &-control,
   &-select {
-    font-size: $default-font-size;
+    font-size: var(--fs-default);
   }
 }
 
@@ -31,22 +33,22 @@ select.form-control {
 }
 
 .panel {
-  background-color: $white;
+  background-color: var(--clr-white);
 }
 
 .panel-info {
-  border-color: $medium-gray;
+  border-color: var(--clr-medium-gray);
 }
 
 .panel-info > .panel-heading {
-  color: $black;
-  background-color: $light-gray-3;
-  border-color: $medium-gray;
+  color: var(--clr-black);
+  background-color: var(--clr-light-gray-3);
+  border-color: var(--clr-medium-gray);
 }
 
 .alert-warning {
   background-color: #fff3d9;
-  color: $black;
+  color: var(--clr-black);
 
   em {
     color: #ffae00;
@@ -56,8 +58,8 @@ select.form-control {
 
 .alert-default {
   text-align: center;
-  background-color: $light-gray;
-  border-color: darken($light-gray, 10%);
+  background-color: var(--clr-light-gray);
+  border-color: color-mix(in srgb, var(--clr-light-gray), #000 10%);
 }
 
 .table {
@@ -83,7 +85,7 @@ select.form-control {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     display: none;
   }
 }

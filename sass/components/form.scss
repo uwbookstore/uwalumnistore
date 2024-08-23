@@ -3,7 +3,7 @@
   padding: 0 1.5rem;
   line-height: 5rem;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     height: 3rem;
     line-height: 3rem;
   }
@@ -26,17 +26,17 @@ select.form-control {
   background-position: right 0.5rem center;
   background-size: 0.9rem 0.6rem;
   background-repeat: no-repeat;
-  border: 2px solid $medium-gray;
+  border: 2px solid var(--clr-medium-gray);
   width: 100%;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     border-width: 1px;
     width: auto;
   }
 
   &.dd-hidden {
     background-image: none;
-    background-color: $white;
+    background-color: var(--clr-white);
     color: currentColor;
     border: none;
     box-shadow: none;

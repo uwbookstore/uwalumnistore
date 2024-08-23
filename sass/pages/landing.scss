@@ -6,19 +6,19 @@
   min-height: 17.5rem;
   position: relative;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     min-height: 37rem;
   }
 
   &__banner {
     @include absCenter;
-    background-color: $white;
+    background-color: var(--clr-white);
     padding: 1rem;
     text-align: center;
     width: 95%;
     box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.15);
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       padding: 1.5rem 0.5rem 2rem;
       width: 48rem;
       transform: translateX(-50%);
@@ -27,13 +27,13 @@
     &--headline {
       font-family: 'Red Hat Display', sans-serif;
       display: block;
-      color: $primary-color;
+      color: var(--clr-primary);
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 1px;
       font-style: italic;
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         line-height: 3rem;
       }
     }
@@ -50,7 +50,7 @@
       bottom: 5%;
       left: 50%;
       transform: translateX(-50%);
-      background-color: $white;
+      background-color: var(--clr-white);
       padding: 1rem;
       text-align: center;
       width: 95%;
@@ -62,13 +62,13 @@
         padding: 0;
         margin: 0;
         font-size: 2.4rem;
-        color: $primary-color;
+        color: var(--clr-primary);
         text-transform: uppercase;
         font-weight: 500;
         font-style: italic;
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         transform: translateX(0);
         width: auto;
         left: 2.6rem;
@@ -88,7 +88,7 @@
       top: auto;
       transform: translate(-50%, 0);
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         transform: translate(0, 40%);
         left: 1.5rem;
         bottom: 0;
@@ -107,7 +107,7 @@
       &:first-child {
         display: none;
 
-        @media #{$mq-medium} {
+        @include breakpoint(medium) {
           display: block;
           flex: 0 0 27rem;
 
@@ -121,7 +121,7 @@
 
       flex: 1;
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         flex: 0 0 52.5rem;
       }
 
@@ -137,7 +137,7 @@
 
 #shipping {
   table {
-    @media #{$mq-small} {
+    @include breakpoint(small) {
       width: 75%;
       margin: 1rem auto;
     }

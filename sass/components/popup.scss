@@ -18,7 +18,7 @@
     position: relative;
     text-align: center;
 
-    @media #{$mq-small} {
+    @include breakpoint(small) {
       width: 65rem;
       margin: 15% auto;
     }
@@ -36,7 +36,7 @@
     }
 
     h1 {
-      color: $primary-color;
+      color: var(--clr-primary);
       font-size: 4rem;
     }
 
@@ -54,11 +54,11 @@
   }
 
   span.red {
-    color: $primary-color;
+    color: var(--clr-primary);
   }
 
   .popup-close {
-    color: $black;
+    color: var(--clr-black);
     font-size: 2.8rem;
     font-weight: 500;
     position: absolute;
@@ -71,7 +71,7 @@
 
     &:hover,
     &:focus {
-      color: $black;
+      color: var(--clr-black);
       text-decoration: none;
       cursor: pointer;
       opacity: 0.5;

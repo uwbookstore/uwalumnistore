@@ -5,13 +5,13 @@ html {
   font-style: normal;
   font-weight: normal;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     font-size: 62.5%;
   }
 }
 
 body {
-  font-size: $default-font-size;
+  font-size: var(--fs-default);
   font-family: 'Red Hat Text', sans-serif;
 }
 
@@ -49,12 +49,12 @@ h6 {
 }
 
 a {
-  color: $primary-color;
+  color: var(--clr-primary);
   &:link,
   &:visited,
   &:focus,
   &:active {
-    color: $primary-color;
+    color: var(--clr-primary);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
   }
@@ -119,12 +119,12 @@ sub {
 }
 
 blockquote {
-  border-left: 0.5rem solid $medium-gray;
+  border-left: 0.5rem solid var(--clr-medium-gray);
   padding: 0.5rem 0.5rem 0.5rem 1rem;
   font-size: inherit;
   margin-left: 1.5rem;
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     margin: 0 6rem 1.2rem 4.5rem;
   }
 }
@@ -134,7 +134,7 @@ blockquote {
   text-align: center;
   margin: 2rem auto;
   font-style: italic;
-  color: $secondary-color;
+  color: var(--clr-secondary);
   text-transform: uppercase;
   font-size: 1.8rem;
   line-height: 1.8rem;
@@ -194,7 +194,7 @@ blockquote {
 
     span {
       display: inline-block;
-      background-color: $white;
+      background-color: var(--clr-white);
       padding: 1rem;
     }
 
@@ -217,7 +217,7 @@ blockquote {
         content: '';
         height: 1px;
         display: block;
-        background-color: $light-gray-2;
+        background-color: var(--clr-light-gray-2);
         // background-color: currentColor;
       }
     }
@@ -237,7 +237,7 @@ blockquote {
 
       span {
         display: inline-block;
-        background-color: $white;
+        background-color: var(--clr-white);
         padding: 1rem;
       }
 
@@ -260,7 +260,7 @@ blockquote {
           content: '';
           height: 1px;
           display: block;
-          background-color: $light-gray-2;
+          background-color: var(--clr-light-gray-2);
           // background-color: currentColor;
         }
       }
@@ -272,14 +272,14 @@ blockquote {
     font-weight: 400;
     text-transform: capitalize;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       font-size: 2rem;
     }
   }
 }
 
 .page-title {
-  color: $primary-color;
+  color: var(--clr-primary);
   font-style: normal;
   font-weight: 200;
   font-size: 2.4rem;
@@ -298,7 +298,7 @@ a[href^='tel:'] {
   font-weight: 500;
   background: #46ca5e;
   border-radius: 0;
-  color: $white;
+  color: var(--clr-white);
   display: block;
   line-height: 1em;
   padding: 1rem 1.5rem;
@@ -320,12 +320,12 @@ a[href^='tel:'] {
   }
 
   h4 {
-    color: $primary-color;
+    color: var(--clr-primary);
   }
 }
 
 .red {
-  color: $primary-color;
+  color: var(--clr-primary);
 }
 
 .bold {

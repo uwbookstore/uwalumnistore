@@ -12,14 +12,14 @@
 .merchItem {
   flex: 0 0 47%;
 
-  @media #{$mq-nav} {
+  @include breakpoint(nav) {
     flex: 0 0 33%;
   }
 }
 
 a.merchLink {
   p.merchTitle {
-    color: $black;
+    color: var(--clr-black);
   }
 }
 
@@ -61,7 +61,7 @@ p.merchNumber {
       font-style: italic;
       transition: opacity 0.25s ease-in-out;
       position: relative;
-      // box-shadow: 0 2px 2px rgba($medium-gray-3, 0.6);
+      // box-shadow: 0 2px 2px rgba(var(--clr-medium-gray-3), 0.6);
       margin: 1rem 0;
       flex: 0 0 100%;
 
@@ -75,22 +75,18 @@ p.merchNumber {
         outline: 2px auto rgba(35, 82, 124, 0.5);
       }
 
-      @media #{$mq-small} {
+      @include breakpoint(small) {
         flex: 0 0 50%;
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         flex: 0 0 33.3333%;
-      }
-
-      @media #{$mq-ie} {
-        flex: 0 0 27%;
       }
 
       &-small {
         flex: 0 0 50%;
 
-        @media #{$mq-medium} {
+        @include breakpoint(medium) {
           flex: 0 0 16.666%;
         }
       }
@@ -112,20 +108,20 @@ p.merchNumber {
     }
 
     &-special {
-      background-color: $primary-color;
-      color: $white;
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
     }
 
     &-restock {
-      background-color: $warning-color;
+      background-color: var(--clr-warning);
       color: #3e3e3e;
       z-index: 20;
     }
 
     &-new {
       position: absolute;
-      background-color: $dark-gray;
-      color: $white;
+      background-color: var(--clr-dark-gray);
+      color: var(--clr-white);
       top: 0.5rem;
       left: 0.5rem;
       font-weight: 500;
@@ -137,7 +133,7 @@ p.merchNumber {
 
     &-in-cart {
       @include absCenter;
-      background-color: rgba($white, 0.8);
+      background-color: rgba(var(--clr-white), 0.8);
       padding: 0.5rem 1.5rem;
       border: 1px solid currentColor;
       width: auto;
@@ -146,7 +142,7 @@ p.merchNumber {
         margin-right: 0.5rem;
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         font-size: 1.4rem;
       }
     }
@@ -154,7 +150,7 @@ p.merchNumber {
     &--header {
       display: none;
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         display: block;
         &:hover {
           opacity: 1;
@@ -171,7 +167,7 @@ p.merchNumber {
       font-size: inherit;
       margin: 0 0 1rem;
       display: block;
-      color: $black;
+      color: var(--clr-black);
     }
 
     &-img {
@@ -202,7 +198,7 @@ p.merchNumber {
     flex-direction: column;
     justify-content: flex-start;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       flex-direction: row;
     }
 
@@ -211,7 +207,7 @@ p.merchNumber {
       align-self: flex-start;
       margin-bottom: 2rem;
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         align-self: flex-end;
         margin-bottom: 0;
       }
@@ -222,7 +218,7 @@ p.merchNumber {
       width: 100%;
 
       label {
-        color: $tertiary-color;
+        color: var(--clr-tertiary);
         font-size: 1rem;
         font-weight: 500;
         line-height: 2;
@@ -237,7 +233,7 @@ p.merchNumber {
         margin-bottom: 3rem;
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         align-self: flex-end;
         width: auto;
 
@@ -257,7 +253,7 @@ p.merchNumber {
 .prevBackward {
   margin-right: 4rem;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     margin-right: 2rem;
   }
 
@@ -305,7 +301,7 @@ p.merchNumber {
     padding: 1.5rem;
 
     a {
-      color: $black;
+      color: var(--clr-black);
       display: block;
       text-decoration: none;
     }
@@ -371,7 +367,7 @@ p.merchNumber {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     flex-direction: row;
     align-items: stretch;
   }
@@ -380,7 +376,7 @@ p.merchNumber {
     flex: 1 100%;
     z-index: 99999;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       flex: 1 60%;
     }
   }
@@ -389,7 +385,7 @@ p.merchNumber {
     flex: 1 100%;
     font-size: 1.6rem;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       flex: 1 40%;
       padding-left: 2rem;
     }
@@ -399,9 +395,9 @@ p.merchNumber {
       font-size: 2.4rem;
       font-style: italic;
       font-weight: 500;
-      color: $primary-color;
+      color: var(--clr-primary);
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         font-size: 2rem;
       }
     }
@@ -433,7 +429,7 @@ p.merchNumber {
   .lcsSizeWrapper,
   .lcsLogoWrapper {
     padding-bottom: 1rem;
-    border-bottom: 1px solid $black;
+    border-bottom: 1px solid var(--clr-black);
   }
 
   .lcsSizeWrapper {
@@ -455,7 +451,7 @@ p.merchNumber {
 
 p.merchSalePrice.red,
 p.merchPrice.red {
-  color: $primary-color;
+  color: var(--clr-primary);
   font-style: italic;
   font-weight: normal;
   display: inline;
@@ -463,15 +459,15 @@ p.merchPrice.red {
 }
 
 .img-empty {
-  background-color: $light-gray;
-  border: 1px solid $light-gray-3;
+  background-color: var(--clr-light-gray);
+  border: 1px solid var(--clr-light-gray-3);
   width: 100%;
   height: 20rem;
   max-width: 60rem;
-  color: $black;
+  color: var(--clr-black);
   position: relative;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     height: 60rem;
   }
 
@@ -480,7 +476,7 @@ p.merchPrice.red {
     font-size: 4.5rem;
     text-align: center;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       font-size: 10rem;
     }
   }
@@ -490,7 +486,7 @@ p.merchPrice.red {
   margin: 2rem 0;
 
   h1 {
-    color: $primary-color;
+    color: var(--clr-primary);
     font-weight: 500;
     font-size: 3rem;
     margin-bottom: 1.5rem;
@@ -510,7 +506,7 @@ p.merchPrice.red {
 li.attribute {
   a {
     cursor: default;
-    color: darken($dark-gray, 5%);
+    color: darken(var(--clr-dark-gray), 5%);
 
     &:hover {
       text-decoration: none;
@@ -520,8 +516,8 @@ li.attribute {
 
 .newBadge {
   position: absolute;
-  background-color: $dark-gray;
-  color: $white;
+  background-color: var(--clr-dark-gray);
+  color: var(--clr-white);
   top: 0.5rem;
   left: 0.5rem;
   font-weight: 500;
@@ -537,8 +533,8 @@ li.attribute {
 
 .saleBadge {
   position: absolute;
-  background-color: $primary-color;
-  color: $white;
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
   top: 0.5rem;
   left: 0.5rem;
   font-weight: 500;
@@ -555,7 +551,7 @@ li.attribute {
   font-size: 2.5rem;
   padding: 2rem;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     font-size: 1.8rem;
     padding: 4px 8px;
   }
@@ -567,8 +563,8 @@ li.attribute {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: $primary-color;
-  border-color: $primary-color;
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
 }
 
 // Previously Viewed Items
@@ -580,13 +576,13 @@ li.attribute {
   margin: 0 0 2.5rem;
   width: 100%;
   padding-bottom: 1rem;
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid var(--clr-black);
   display: block;
   text-align: center;
 
   span {
     display: inline-block;
-    background-color: $white;
+    background-color: var(--clr-white);
     padding: 1rem;
     background-color: inherit;
   }
@@ -611,7 +607,7 @@ li.attribute {
       content: '';
       height: 1px;
       display: block;
-      // background-color: $light-gray-2;
+      // background-color: var(--clr-light-gray-2);
       background-color: currentColor;
     }
   }
@@ -634,7 +630,7 @@ li.attribute {
 .dynamicLeftArrow {
   left: 0;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     left: 2rem;
   }
 }
@@ -642,7 +638,7 @@ li.attribute {
 .dynamicRightArrow {
   right: 0;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     right: 2rem;
   }
 }

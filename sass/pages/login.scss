@@ -56,7 +56,7 @@
       font-size: 1.8rem;
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       flex-direction: row;
 
       input,
@@ -84,7 +84,7 @@
         margin-bottom: 3.5rem;
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         width: 60%;
 
         &:not(:last-child) {

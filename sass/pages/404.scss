@@ -10,11 +10,11 @@
       display: none;
     }
 
-    @media #{$mq-small} {
+    @include breakpoint(small) {
       min-height: 80rem;
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       min-height: 65rem;
 
       .cloud {
@@ -30,7 +30,7 @@
     text-align: center;
 
     h1 {
-      color: $primary-color;
+      color: var(--clr-primary);
       font-family: mrs-eaves-xl-serif, serif;
       font-size: 40.5px;
       font-weight: bod;
@@ -44,7 +44,7 @@
         position: relative;
         height: 8px;
         width: calc(6rem);
-        background-color: $primary-color;
+        background-color: var(--clr-primary);
         content: '';
       }
     }
@@ -54,7 +54,7 @@
       text-transform: uppercase;
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       margin: 10rem auto 5rem;
       max-width: 70rem;
     }

@@ -28,7 +28,7 @@
         padding: 0.3rem;
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         width: 70%;
         &.table > tbody > tr > td {
           padding: 1rem;

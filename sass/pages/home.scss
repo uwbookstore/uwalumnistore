@@ -1,7 +1,7 @@
 .home-hero {
   width: 100%;
   margin: -4rem auto 0;
-  max-width: $default-page-width;
+  max-width: var(--default-page-width);
   position: relative;
 
   img {
@@ -12,14 +12,14 @@
     @include absCenter;
     width: 100%;
 
-    @media #{$mq-small} {
+    @include breakpoint(small) {
       top: 60%;
       // top: 75%;
       width: 50%;
       left: 20rem;
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       top: 65%;
       left: 4rem;
       width: auto;
@@ -29,28 +29,28 @@
     &--headline {
       margin: 0;
 
-      @media #{$mq-small} {
+      @include breakpoint(small) {
       }
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         margin-left: 2rem;
       }
 
       span {
         font-family: 'Red Hat Display', sans-serif;
         display: block;
-        color: $primary-color;
+        color: var(--clr-primary);
         font-weight: 500;
         letter-spacing: 1px;
         text-transform: uppercase;
         font-style: italic;
         padding: 1.5rem 2.5rem;
-        background-color: $white;
+        background-color: var(--clr-white);
         width: 90%;
         margin: 0 auto;
         font-size: 3rem;
 
-        @media #{$mq-medium} {
+        @include breakpoint(medium) {
           width: auto;
           display: inline-block;
           line-height: 3rem;
@@ -64,7 +64,7 @@
       br {
         display: none;
 
-        @media #{$mq-medium} {
+        @include breakpoint(medium) {
           display: block;
         }
       }
@@ -75,10 +75,10 @@
 .holiday-banner {
   margin: 0 0 2rem;
   padding: 1rem;
-  background: $light-gray-2;
+  background: var(--clr-light-gray-2);
   font-size: 3rem;
   font-weight: 500;
-  color: $primary-color;
+  color: var(--clr-primary);
   text-transform: uppercase;
   font-style: italic;
   text-align: center;
@@ -92,8 +92,8 @@
     font-size: 2.5rem;
     font-weight: 500;
     display: block;
-    color: $primary-color;
-    border-bottom: 2px solid $black;
+    color: var(--clr-primary);
+    border-bottom: 2px solid var(--clr-black);
     flex: 1 1 100%;
     text-transform: uppercase;
     padding-bottom: 2rem;
@@ -103,14 +103,14 @@
     span {
       font-weight: normal;
       font-size: 2rem;
-      color: $black;
+      color: var(--clr-black);
       display: block;
 
       &.numbers {
         padding-bottom: 0;
         font-size: 2.5rem;
         font-weight: 500;
-        color: $primary-color;
+        color: var(--clr-primary);
         display: inline;
       }
     }
@@ -122,12 +122,12 @@
     }
   }
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     .grid-item {
       flex: 1 1 33.333%;
       border-bottom: none;
       padding-top: 1rem;
-      border-right: 2px solid $black;
+      border-right: 2px solid var(--clr-black);
 
       &:last-child {
         border-right: none;
@@ -139,12 +139,12 @@
         font-weight: normal;
         // padding-bottom: 2rem;
         margin-bottom: 0;
-        color: $black;
+        color: var(--clr-black);
 
         &.numbers {
           font-size: 3rem;
           font-weight: 500;
-          color: $primary-color;
+          color: var(--clr-primary);
           display: inline;
         }
       }

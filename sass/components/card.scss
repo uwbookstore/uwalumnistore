@@ -6,7 +6,7 @@
       margin: 3rem auto;
       padding: 0px 5px;
 
-      @media #{$mq-small} {
+      @include breakpoint(small) {
         flex: 1 1 50%;
       }
     }
@@ -42,7 +42,7 @@
       width: 80%;
       text-transform: uppercase;
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         font-size: 1.6rem;
         width: 20rem;
       }

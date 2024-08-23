@@ -41,7 +41,7 @@
   }
 
   .glyphicon {
-    color: $primary-color;
+    color: var(--clr-primary);
   }
 }
 
@@ -55,7 +55,7 @@
     margin-bottom: 2rem;
     font-size: inherit;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       width: auto;
       margin-bottom: 0;
     }
@@ -90,9 +90,9 @@ a.paymentBilling-change {
   padding: 0 2rem;
   text-decoration: none;
   font-size: 1.6rem;
-  background-color: $info-color;
-  border-color: $info-color;
-  color: $black;
+  background-color: var(--clr-info);
+  border-color: var(--clr-info);
+  color: var(--clr-black);
   font-weight: 500;
   text-align: center;
   &:link,
@@ -100,22 +100,22 @@ a.paymentBilling-change {
   }
 
   &:hover {
-    background-color: darken($info-color, 4%);
-    border-color: darken($info-color, 5%);
-    color: $white;
+    background-color: darken(var(--clr-info), 4%);
+    border-color: darken(var(--clr-info), 5%);
+    color: var(--clr-white);
   }
 
   &:active,
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: darken($info-color, 2%);
-    border-color: darken($info-color, 3%);
-    color: $white;
+    background-color: darken(var(--clr-info), 2%);
+    border-color: darken(var(--clr-info), 3%);
+    color: var(--clr-white);
   }
 }
 
-@media #{$mq-medium} {
+@include breakpoint(medium) {
   a.paymentBilling-change {
     display: inline-block;
     width: auto;
@@ -149,7 +149,7 @@ a.paymentBilling-change {
 }
 
 [class^='helpSection'] span.fa {
-  color: $primary-color;
+  color: var(--clr-primary);
 }
 
 // MBS fixes the Place Order button

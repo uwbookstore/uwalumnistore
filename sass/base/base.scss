@@ -25,8 +25,8 @@ body {
   width: 100%;
   box-sizing: border-box;
   height: 100%;
-  background: $white;
-  color: $black;
+  background: var(--clr-white);
+  color: var(--clr-black);
 }
 
 body {
@@ -69,8 +69,8 @@ body {
 .skip {
   position: absolute;
   left: -1000px;
-  color: $black;
-  background-color: $white;
+  color: var(--clr-black);
+  background-color: var(--clr-white);
 
   &:focus,
   &:active {

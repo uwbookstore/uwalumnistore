@@ -1,7 +1,7 @@
 .tabs {
   font-size: 1.6rem;
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     font-size: 1.4rem;
   }
 
@@ -17,7 +17,7 @@
   &__item {
     display: block;
 
-    @media #{$mq-small} {
+    @include breakpoint(small) {
       display: inline-block;
       width: auto;
 
@@ -40,7 +40,7 @@
       padding: 2rem;
       position: relative;
       text-align: center;
-      color: $black;
+      color: var(--clr-black);
       height: 6rem;
       transition: all 0.2s ease-in-out;
     }
@@ -48,9 +48,9 @@
     &-active {
       &:link,
       &:visited {
-        border-bottom-color: $primary-color;
+        border-bottom-color: var(--clr-primary);
         opacity: 1;
-        background-color: $light-gray-3;
+        background-color: var(--clr-light-gray-3);
       }
     }
 
@@ -58,11 +58,11 @@
       margin-right: 1rem;
 
       &.fa.fa-exclamation-triangle {
-        color: $primary-color;
+        color: var(--clr-primary);
       }
     }
 
-    @media #{$mq-small} {
+    @include breakpoint(small) {
       &:link,
       &:visited {
         background: transparent;
@@ -92,14 +92,14 @@
       padding: 0 2rem;
 
       span {
-        color: $primary-color;
+        color: var(--clr-primary);
         font-weight: 500;
       }
 
       ol {
         margin-left: 3rem;
 
-        @media #{$mq-small} {
+        @include breakpoint(small) {
           margin: 1rem auto;
           width: 75%;
         }
@@ -107,7 +107,7 @@
     }
 
     #shipping {
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         height: 30rem;
         overflow-y: scroll;
       }

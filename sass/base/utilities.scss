@@ -2,7 +2,7 @@
   visibility: hidden;
   opacity: 0;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     margin: 0 0 0 1rem;
     visibility: visible;
     opacity: 1;
@@ -12,7 +12,7 @@
 .u-mobi-hide {
   display: none;
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     display: block;
   }
 }
@@ -20,7 +20,7 @@
 .u-dt-hide {
   display: block;
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     display: none;
   }
 }
@@ -28,7 +28,7 @@
 .u-rwd-break {
   display: block;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     display: none;
   }
 }
@@ -131,7 +131,7 @@ $spacers: map-merge(
 .dml-30 {
   margin-left: 0;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     margin-left: 3rem;
   }
 }

@@ -27,8 +27,8 @@ h4 {
   margin-bottom: 1.5rem;
 }
 .checkoutHighlighted {
-  color: $primary-color;
-  border-color: $primary-color;
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
 }
 
 #viewCart {
@@ -45,7 +45,7 @@ h4 {
   input[type='submit'] {
     width: 100%;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       width: auto;
     }
   }

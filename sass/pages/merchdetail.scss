@@ -3,9 +3,9 @@
   margin: 1rem auto;
   text-align: center;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid $light-gray-2;
+  border-bottom: 1px solid var(--clr-light-gray-2);
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     position: relative;
     display: flex;
     margin: 0;
@@ -21,9 +21,9 @@ button.btn-default.typeCodeOption {
   &:hover,
   &.typeSelected {
     border-width: 1px !important;
-    border-color: $primary-color !important;
-    color: $white;
-    background-color: $primary-color;
+    border-color: var(--clr-primary) !important;
+    color: var(--clr-white);
+    background-color: var(--clr-primary);
   }
 
   &.disabled {
@@ -35,7 +35,7 @@ button.btn-default.typeCodeOption {
     border-color: rgba(100, 100, 100, 0.5);
   }
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     width: 5rem;
     font-weight: normal;
     font-size: 1.2rem;
@@ -85,7 +85,7 @@ span.btn-default.typeSelected {
       }
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       flex: 1 20%;
       margin-top: 3rem;
 
@@ -99,7 +99,7 @@ span.btn-default.typeSelected {
 }
 
 .rankImageWrapper span.ranking {
-  color: $white;
+  color: var(--clr-white);
 }
 
 .merch {
@@ -144,7 +144,7 @@ span.btn-default.typeSelected {
       .message_merch_promo {
         padding: 1rem;
         margin-bottom: 1.5rem;
-        border: 1px solid darken($success-color, 20%);
+        border: 1px solid darken(var(--clr-success), 20%);
       }
     }
 
@@ -154,7 +154,7 @@ span.btn-default.typeSelected {
       font-style: italic;
       font-weight: 500;
       text-transform: uppercase;
-      color: $primary-color;
+      color: var(--clr-primary);
 
       &-small {
         font-size: 2.4rem;
@@ -173,15 +173,15 @@ span.btn-default.typeSelected {
       }
 
       .sale {
-        color: $primary-color;
+        color: var(--clr-primary);
       }
     }
 
     &-description {
       margin: 1.5rem auto;
       padding: 1rem 0 2rem;
-      border-top: 1px solid $black;
-      border-bottom: 1px solid $black;
+      border-top: 1px solid var(--clr-black);
+      border-bottom: 1px solid var(--clr-black);
       position: relative;
       line-height: 1.6;
 
@@ -208,7 +208,7 @@ span.btn-default.typeSelected {
     &-size {
       margin: 1.5rem auto;
       padding: 0 0 1.5rem;
-      border-bottom: 1px solid $black;
+      border-bottom: 1px solid var(--clr-black);
       position: relative;
 
       &-link {
@@ -218,7 +218,7 @@ span.btn-default.typeSelected {
           font-size: 1.6rem;
           text-transform: lowercase;
           margin-left: 0.5rem;
-          color: $black;
+          color: var(--clr-black);
         }
       }
 
@@ -244,11 +244,11 @@ span.btn-default.typeSelected {
             display: none;
 
             &:checked + label {
-              background-color: $primary-color;
-              color: $white;
+              background-color: var(--clr-primary);
+              color: var(--clr-white);
               font-weight: 500;
               cursor: default;
-              border-color: $primary-color;
+              border-color: var(--clr-primary);
             }
           }
 
@@ -264,7 +264,7 @@ span.btn-default.typeSelected {
             line-height: 1.5;
             text-transform: uppercase;
             font-size: 1.2rem;
-            border: 1px solid $black;
+            border: 1px solid var(--clr-black);
             cursor: pointer;
             font-weight: 400;
             width: 100%;
@@ -283,7 +283,7 @@ span.btn-default.typeSelected {
           }
         }
 
-        @media #{$mq-medium} {
+        @include breakpoint(medium) {
           justify-content: initial;
         }
       }
@@ -323,7 +323,7 @@ span.btn-default.typeSelected {
       display: none;
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       &-slides {
         flex: 1 80%;
         order: 2;
@@ -406,10 +406,6 @@ span.btn-default.typeSelected {
           padding-left: 0.5rem;
           font-size: 1.5rem;
 
-          @media #{$mq-ie} {
-            flex: 1 1 84%;
-          }
-
           a {
             margin-bottom: 0;
             width: 50%;
@@ -423,10 +419,6 @@ span.btn-default.typeSelected {
         flex-direction: inherit;
         margin-bottom: 0;
         padding-right: 0.5rem;
-
-        @media #{$mq-ie} {
-          flex: 1 1 13%;
-        }
 
         label {
           display: none;
@@ -442,7 +434,7 @@ span.btn-default.typeSelected {
       }
     }
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       padding: 0;
     }
   }
@@ -469,7 +461,7 @@ span.btn-default.typeSelected {
   text-align: center;
   padding: 0.5rem;
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     font-size: 1.2rem;
     padding: 0 0 0 1.5rem;
     margin-bottom: 0;
@@ -509,14 +501,14 @@ span.btn-default.typeSelected {
     cursor: pointer;
     font-size: 3rem;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       top: 1rem;
       transform: translateY(0);
       font-size: 1.6rem;
     }
   }
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     top: 50%;
     transform: translateY(-50%);
     width: 30rem;
@@ -588,7 +580,7 @@ span.btn-default.typeSelected {
     }
   }
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     justify-content: space-between;
 
     .btn {
@@ -603,7 +595,7 @@ span.btn-default.typeSelected {
 
 p.sale-info {
   font-weight: bold;
-  color: $primary-color;
+  color: var(--clr-primary);
   margin: 5px 0;
   font-size: 1.4rem;
   letter-spacing: 1px;

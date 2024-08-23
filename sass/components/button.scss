@@ -10,8 +10,8 @@
 
   &-primary {
     background-color: transparent;
-    border-color: $primary-color;
-    color: $primary-color;
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
     &:link,
     &:visited {
     }
@@ -22,27 +22,27 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      border-color: $primary-color;
-      background-color: $primary-color;
-      color: $white;
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary);
+      color: var(--clr-white);
     }
 
     &-inverted {
       &:hover,
       &:active,
       &:focus {
-        color: $white;
+        color: var(--clr-white);
       }
     }
   }
 
   &-success {
     background-color: transparent;
-    border-color: $success-color;
-    color: $success-color;
+    border-color: var(--clr-success);
+    color: var(--clr-success);
     &:link,
     &:visited {
-      color: $success-color;
+      color: var(--clr-success);
     }
 
     &:hover,
@@ -51,57 +51,57 @@
     &:focus,
     &:active:focus,
     &-inverted {
-      border-color: $success-color;
-      background-color: $success-color;
-      color: $white;
+      border-color: var(--clr-success);
+      background-color: var(--clr-success);
+      color: var(--clr-white);
     }
   }
 
   &-default {
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
   }
 
   &-disabled {
     cursor: not-allowed;
     //pointer-events: none;
-    background-color: $disabled;
-    border: 1px solid $secondary-color;
+    background-color: var(--clr-disabled);
+    border: 1px solid var(--clr-secondary);
     box-shadow: none;
-    color: $white;
+    color: var(--clr-white);
 
     &:link,
     &:visited {
-      color: $white;
+      color: var(--clr-white);
     }
 
     &:hover,
     &:active,
     &:active:focus {
       cursor: not-allowed;
-      background-color: $disabled;
-      border: 1px solid $secondary-color;
+      background-color: var(--clr-disabled);
+      border: 1px solid var(--clr-secondary);
       box-shadow: none;
-      color: $white;
+      color: var(--clr-white);
     }
   }
 
   &-secondary {
     background-color: transparent;
-    border-color: $secondary-color;
-    color: $secondary-color;
+    border-color: var(--clr-secondary);
+    color: var(--clr-secondary);
 
     &:link,
     &:visited {
-      color: $secondary-color;
+      color: var(--clr-secondary);
     }
 
     &:hover,
     &:active,
     &:active:focus {
-      color: $white;
-      border-color: $primary-color;
-      background-color: $primary-color;
+      color: var(--clr-white);
+      border-color: var(--clr-primary);
+      background-color: var(--clr-primary);
     }
   }
 
@@ -117,7 +117,7 @@
 
     &:hover,
     &:active {
-      color: $primary-color;
+      color: var(--clr-primary);
       text-decoration: underline;
       box-shadow: none;
     }
@@ -128,7 +128,7 @@
     }
   }
 
-  @media #{$mq-medium} {
+  @include breakpoint(medium) {
     border-width: 1px;
     height: 3rem;
     line-height: 3rem;
@@ -139,7 +139,7 @@
     padding: 0;
     width: 5rem;
 
-    @media #{$mq-medium} {
+    @include breakpoint(medium) {
       width: 3rem;
     }
 
@@ -147,7 +147,7 @@
       font-size: 3.5rem;
       padding-top: 0.5rem;
 
-      @media #{$mq-medium} {
+      @include breakpoint(medium) {
         font-size: 1.8rem;
       }
     }
@@ -157,8 +157,8 @@
     button {
       border: none;
       background-color: transparent;
-      color: $primary-color;
-      border-bottom: 1px solid $primary-color;
+      color: var(--clr-primary);
+      border-bottom: 1px solid var(--clr-primary);
       margin-bottom: 1rem;
     }
   }

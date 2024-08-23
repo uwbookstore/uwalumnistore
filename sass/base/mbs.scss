@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 // Create some space under the
 // iCM editor menu since we use
 // a negative top margin on the
@@ -14,7 +16,7 @@
   margin: 4rem 0 0;
   padding: 0 1rem;
 
-  @media #{$mq-small} {
+  @include breakpoint(small) {
     padding: 0;
     margin-left: auto;
     margin-right: auto;
@@ -48,7 +50,7 @@ body header:first-of-type,
 .promo-banner {
   line-height: 4.5rem;
   min-height: 4.5rem;
-  background: $primary-color;
+  background: var(--clr-primary);
   color: #fff;
   text-align: center;
   font-style: italic;
@@ -113,7 +115,7 @@ input[class^='radio'] {
   &:checked {
     & + span {
       &::before {
-        background-color: $primary-color;
+        background-color: var(--clr-primary);
       }
     }
   }
@@ -144,7 +146,7 @@ input[class^='radio'] {
 }
 
 .rem1 {
-  font-size: $default-font-size;
+  font-size: var(--fs-default);
 }
 
 .req-astrisk {
@@ -183,7 +185,7 @@ input[class^='radio'] {
 .promo-banner {
   line-height: 4.5rem;
   min-height: 4.5rem;
-  background: $primary-color;
+  background: var(--clr-primary);
   color: #fff;
   text-align: center;
   font-style: italic;

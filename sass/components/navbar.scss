@@ -1,17 +1,17 @@
 #waa-nav {
   .navbar {
     border-color: #e7e7e7;
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 1px solid var(--clr-secondary);
     box-sizing: border-box;
     text-transform: uppercase;
-    background-color: $white;
-    color: $secondary-color;
+    background-color: var(--clr-white);
+    color: var(--clr-secondary);
     position: relative;
     height: 11.2rem;
     padding: 0;
 
     &-nav {
-      background-color: $white;
+      background-color: var(--clr-white);
       margin: 0;
 
       li {
@@ -19,7 +19,7 @@
           border-bottom: 1px solid #ccc;
           padding: 1.4rem;
           font-size: 1.3rem;
-          color: $black;
+          color: var(--clr-black);
           text-decoration: none;
           display: block;
           width: 100%;
@@ -28,7 +28,7 @@
         }
       }
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         flex-direction: row;
         li {
           &:not(:last-child) {
@@ -43,7 +43,7 @@
 
             &:hover,
             &:focus {
-              color: $primary-color;
+              color: var(--clr-primary);
             }
           }
         }
@@ -56,7 +56,7 @@
       width: 100%;
       z-index: 20;
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         display: flex;
         align-items: center;
         top: 4.2rem;
@@ -71,13 +71,13 @@
       padding: 0;
       list-style-type: none;
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         flex-direction: row;
         padding: 0 4rem 1rem 1rem;
       }
     }
 
-    @media #{$mq-nav} {
+    @include breakpoint(nav) {
       align-items: stretch;
       font-size: 1.2rem;
       border: none;
@@ -110,7 +110,7 @@
       .waa-logo {
         width: 6.2rem;
         padding: 0px 1rem;
-        background-color: $white;
+        background-color: var(--clr-white);
         height: 5rem;
         margin: auto;
         position: absolute;
@@ -118,7 +118,7 @@
         left: 50%;
         transform: translateX(-50%);
 
-        @media #{$mq-nav} {
+        @include breakpoint(nav) {
           top: 3.1rem;
         }
       }
@@ -133,15 +133,15 @@
         width: 18rem;
         font-size: 1.6rem;
         padding-top: 7px;
-        background-color: $primary-color;
+        background-color: var(--clr-primary);
         font-weight: 500;
-        color: $white;
+        color: var(--clr-white);
         text-transform: uppercase;
         text-decoration: none;
         // z-index: 200;
         text-align: center;
 
-        @media #{$mq-nav} {
+        @include breakpoint(nav) {
           top: 9.5rem;
           bottom: auto;
         }
@@ -167,7 +167,7 @@
         width: 2.2rem;
         height: 2px;
         border-radius: 1px;
-        background-color: $black;
+        background-color: var(--clr-black);
         transition: all 0.25s ease-in-out;
 
         + .icon-bar {
@@ -189,7 +189,7 @@
         transform-origin: 10% 90%;
       }
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         display: none;
       }
 
@@ -208,7 +208,7 @@
 
   .dropdown {
     position: static;
-    background-color: $light-gray-3;
+    background-color: var(--clr-light-gray-3);
 
     &-toggle {
       &::after {
@@ -220,7 +220,7 @@
       position: static;
       margin: 0;
       padding: 0;
-      background-color: $light-gray-2;
+      background-color: var(--clr-light-gray-2);
       font-size: 1.2rem;
       width: 100%;
       border: none;
@@ -242,12 +242,12 @@
       }
     }
 
-    @media #{$mq-nav} {
+    @include breakpoint(nav) {
       background-color: transparent;
 
       &-menu {
         position: absolute;
-        background-color: $light-gray-3;
+        background-color: var(--clr-light-gray-3);
         padding: 2.5rem 1rem 0;
         top: 4rem !important;
         left: 0;
@@ -276,8 +276,8 @@
   .menu-spacer {
     visibility: hidden;
 
-    @media #{$mq-nav} {
-      color: $secondary-color;
+    @include breakpoint(nav) {
+      color: var(--clr-secondary);
       margin: 0 0 0 8px;
       visibility: visible;
       opacity: 1;
@@ -292,21 +292,21 @@
     font-size: 2rem !important;
     padding: 1.4rem !important;
     line-height: 1;
-    border-top: 1px solid $light-gray-2;
+    border-top: 1px solid var(--clr-light-gray-2);
 
-    @media #{$mq-nav} {
+    @include breakpoint(nav) {
       margin-top: 3rem;
     }
   }
 
   .search {
     position: relative;
-    border-bottom: 1px solid $medium-gray;
+    border-bottom: 1px solid var(--clr-medium-gray);
     text-align: center;
 
     &-field {
       border: none;
-      background-color: $light-gray-3;
+      background-color: var(--clr-light-gray-3);
       display: block;
       width: 100%;
       margin: 0;
@@ -333,12 +333,12 @@
       left: 1.5rem;
       height: 2rem;
       width: 1.6rem;
-      fill: $secondary-color;
+      fill: var(--clr-secondary);
       cursor: pointer;
       transition: fill 0.25s ease-in-out;
     }
 
-    @media #{$mq-nav} {
+    @include breakpoint(nav) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -355,7 +355,7 @@
         padding: 0.3rem;
         margin: 0;
         margin-right: 5px;
-        border: 1px solid $medium-gray;
+        border: 1px solid var(--clr-medium-gray);
         box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
         transition:
           box-shadow 0.5s,
@@ -372,7 +372,7 @@
   }
 
   .my-account {
-    @media #{$mq-nav} {
+    @include breakpoint(nav) {
       width: 30rem;
       left: 60rem;
       padding: 2.5rem 0;
@@ -393,7 +393,7 @@
         &:link,
         &:visited {
           .account-img {
-            fill: $secondary-color;
+            fill: var(--clr-secondary);
             width: 1.6rem;
             height: 1.9rem;
             transition: fill 0.25s ease-in-out;
@@ -406,18 +406,18 @@
 
         &:hover {
           .account-img {
-            fill: $primary-color;
+            fill: var(--clr-primary);
           }
         }
 
         span {
-          @media #{$mq-nav} {
+          @include breakpoint(nav) {
             display: none;
           }
         }
       }
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         position: static;
       }
     }
@@ -427,7 +427,7 @@
     &-toggle {
       display: none;
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         display: block;
 
         a {
@@ -442,7 +442,7 @@
 
           &:hover {
             svg {
-              fill: $primary-color;
+              fill: var(--clr-primary);
             }
           }
         }
@@ -469,12 +469,12 @@
 
         &:hover {
           svg {
-            fill: $primary-color;
+            fill: var(--clr-primary);
           }
         }
       }
 
-      @media #{$mq-nav} {
+      @include breakpoint(nav) {
         display: none;
       }
     }
@@ -482,12 +482,12 @@
 }
 
 .navbar-nav > li.open > a {
-  color: $black;
+  color: var(--clr-black);
   background-color: transparent;
 }
 
 /* ============ mobile view ============ */
-@media #{$mq-nav} {
+@include breakpoint(nav) {
   .dropdown:hover > .dropdown-menu {
     display: none;
   }
