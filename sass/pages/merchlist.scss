@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .searchCatWrap,
 .sortCatWrap {
   display: none;
@@ -506,7 +508,7 @@ p.merchPrice.red {
 li.attribute {
   a {
     cursor: default;
-    color: darken(var(--clr-dark-gray), 5%);
+    color: color-mix(in srgb, var(--clr-dark-gray), #000 5%);
 
     &:hover {
       text-decoration: none;

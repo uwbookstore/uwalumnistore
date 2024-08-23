@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .pnf__wrapper {
   &-outer {
     min-height: 60rem;

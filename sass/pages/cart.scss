@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .cart {
   font-size: 1.6rem;
 
@@ -100,8 +102,8 @@ a.paymentBilling-change {
   }
 
   &:hover {
-    background-color: darken(var(--clr-info), 4%);
-    border-color: darken(var(--clr-info), 5%);
+    background-color: color-mix(in srgb, var(--clr-info), #000 4%);
+    border-color: color-mix(in srgb, var(--clr-info), #000 5%);
     color: var(--clr-white);
   }
 
@@ -109,8 +111,8 @@ a.paymentBilling-change {
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: darken(var(--clr-info), 2%);
-    border-color: darken(var(--clr-info), 3%);
+    background-color: color-mix(in srgb, var(--clr-info), #000 2%);
+    border-color: color-mix(in srgb, var(--clr-info), #000 3%);
     color: var(--clr-white);
   }
 }

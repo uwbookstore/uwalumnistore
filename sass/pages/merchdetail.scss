@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .flexslider {
   width: 100%;
   margin: 1rem auto;
@@ -144,7 +146,7 @@ span.btn-default.typeSelected {
       .message_merch_promo {
         padding: 1rem;
         margin-bottom: 1.5rem;
-        border: 1px solid darken(var(--clr-success), 20%);
+        border: 1px solid color-mix(in srgb, var(--clr-success), #000 20%);
       }
     }
 

@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 #waa-nav {
   .navbar {
     border-color: #e7e7e7;
@@ -397,10 +399,6 @@
             width: 1.6rem;
             height: 1.9rem;
             transition: fill 0.25s ease-in-out;
-          }
-
-          @media #{$mq-ie} {
-            padding: 0.9rem 1rem;
           }
         }
 

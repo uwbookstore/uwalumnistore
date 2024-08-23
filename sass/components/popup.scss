@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .popup {
   display: none;
   position: fixed;

@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 .footer {
   max-width: var(--default-page-width);
   margin: auto;
