@@ -1,15 +1,15 @@
 // Get the modal
-let modal = document.getElementById('grad24Popup');
+let modal = document.getElementById('freeShippingPopup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('grad24')) {
+  if (!sessionStorage.getItem('freeShip')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
-      sessionStorage.setItem('grad24', 'opened');
+      sessionStorage.setItem('freeShip', 'opened');
     });
   } else {
-    sessionStorage.setItem('grad24', 'opened');
+    sessionStorage.setItem('freeShip', 'opened');
   }
 
   // Get the <span> element that closes the modal
