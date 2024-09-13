@@ -294,6 +294,10 @@ $(document).ready(function () {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">NB/3M</span></div></div>'
       ).appendTo('div#merch-info');
+    } else if (singleItem === 'large/x-large') {
+      $(
+        '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">L/XL</span></div></div>'
+      ).appendTo('div#merch-info');
     } else {
       $(
         '<div id="sizes" class="merch__detail-size"><div class="grid merch__detail-size-picker"><span class="btn btn-default typeSelected">' +
