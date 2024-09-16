@@ -1,80 +1,5 @@
 @use '../util' as *;
 
-.home-hero {
-  width: 100%;
-  margin: -4rem auto 0;
-  max-width: var(--default-page-width);
-  position: relative;
-
-  img {
-    margin-inline: auto;
-    width: 100%;
-  }
-
-  &__banner {
-    @include absCenter;
-    width: 100%;
-
-    @include breakpoint(small) {
-      top: 60%;
-      // top: 75%;
-      width: 50%;
-      left: 20rem;
-    }
-
-    @include breakpoint(medium) {
-      top: 65%;
-      left: 4rem;
-      width: auto;
-      transform: translate(0);
-    }
-
-    &--headline {
-      margin: 0;
-
-      @include breakpoint(small) {
-      }
-
-      @include breakpoint(medium) {
-        margin-left: 2rem;
-      }
-
-      span {
-        font-family: 'Red Hat Display', sans-serif;
-        display: block;
-        color: var(--clr-primary);
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-style: italic;
-        padding: 1.5rem 2.5rem;
-        background-color: var(--clr-white);
-        width: 90%;
-        margin: 0 auto;
-        font-size: 3rem;
-
-        @include breakpoint(medium) {
-          width: auto;
-          display: inline-block;
-          line-height: 3rem;
-        }
-
-        &:not(:last-child) {
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      br {
-        display: none;
-
-        @include breakpoint(medium) {
-          display: block;
-        }
-      }
-    }
-  }
-}
-
 .holiday-banner {
   margin: 0 0 2rem;
   padding: 1rem;
@@ -140,7 +65,6 @@
       span {
         font-size: 1.6rem;
         font-weight: normal;
-        // padding-bottom: 2rem;
         margin-bottom: 0;
         color: var(--clr-black);
 
