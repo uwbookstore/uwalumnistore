@@ -79,6 +79,10 @@
       font-weight: 700;
       letter-spacing: 1px;
       font-style: italic;
+
+      @include breakpoint(medium) {
+        line-height: 3rem;
+      }
     }
 
     span {
