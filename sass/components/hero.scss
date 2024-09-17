@@ -1,20 +1,21 @@
 @use '../util' as *;
 
 .hero {
-  &__image {
-    width: 100%;
-    margin: -4rem auto 0;
-    max-width: var(--default-page-width);
-    position: relative;
+  width: 100%;
+  z-index: 10;
+  margin: -4rem auto 0;
+  max-width: var(--default-page-width);
+  min-height: 17.5rem;
+  position: relative;
 
+  &__image {
     img {
       margin-inline: auto;
       width: 100%;
     }
   }
 
-  &__banner {
-    position: absolute;
+  &__body {
     @include absCenter;
     background-color: var(--clr-white);
     padding: 1rem;
@@ -22,21 +23,48 @@
     width: 95%;
     box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.15);
 
-    br {
-      display: none;
+    &--header {
+      font-family: 'Red Hat Display', sans-serif;
+      display: block;
+      color: var(--clr-primary);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-style: italic;
 
       @include breakpoint(medium) {
-        display: block;
+        line-height: 3rem;
       }
+    }
+
+    &--text {
+      margin: 1rem 0 0;
+      line-height: 2rem;
+    }
+
+    @include breakpoint(medium) {
+      padding: 1.5rem 0.5rem 2rem;
+      width: 48rem;
+      transform: translateX(-50%);
     }
 
     &.home {
       background-color: transparent;
+      text-align: initial;
       width: 100%;
       padding: 0;
-      text-align: initial;
+      box-shadow: none;
+
+      br {
+        display: none;
+
+        @include breakpoint(medium) {
+          display: block;
+        }
+      }
 
       span {
+        display: block;
         font-weight: 500;
         padding: 1.5rem 2.5rem;
         background-color: var(--clr-white);
@@ -64,36 +92,12 @@
         left: 4rem;
         width: auto;
         transform: translate(0);
+        margin-left: 2rem;
 
         span {
           display: inline-block;
         }
       }
-    }
-
-    &--text {
-      font-family: 'Red Hat Display', sans-serif;
-      display: block;
-      color: var(--clr-primary);
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1px;
-      font-style: italic;
-
-      @include breakpoint(medium) {
-        line-height: 3rem;
-      }
-    }
-
-    span {
-      display: block;
-      margin-top: 1rem;
-    }
-
-    @include breakpoint(medium) {
-      padding: 1.5rem 0.5rem 2rem;
-      width: 48rem;
-      transform: translateX(-50%);
     }
   }
 }
