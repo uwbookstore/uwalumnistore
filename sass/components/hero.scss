@@ -3,7 +3,7 @@
 .hero {
   width: 100%;
   z-index: 10;
-  margin: -4rem auto 0;
+  margin: -4rem auto 1rem;
   max-width: var(--default-page-width);
   min-height: 17.5rem;
   position: relative;
@@ -96,6 +96,14 @@
         span {
           display: inline-block;
         }
+      }
+    }
+
+    &:not(.home) {
+      span {
+        display: block;
+        margin-top: 1rem;
+        line-height: 2rem;
       }
     }
 
