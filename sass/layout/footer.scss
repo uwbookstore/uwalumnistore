@@ -4,22 +4,22 @@
   max-width: var(--default-page-width);
   margin: auto;
   height: auto;
-  font-size: 1.2rem;
-  padding-bottom: 2.5rem;
+  font-size: rem(12);
+  padding-bottom: rem(25);
 
   &__banner {
     &:link,
     &:visited {
       display: block;
-      margin: 2.5rem 0;
-      padding: 2.5rem;
+      margin: rem(25) 0;
+      padding: rem(25);
       background: var(--clr-medium-gray-2);
       text-align: center;
       text-transform: uppercase;
       font-style: italic;
       font-weight: 500;
       color: var(--clr-dark-gray);
-      line-height: 1.2rem;
+      line-height: rem(12);
     }
 
     &:hover {
@@ -28,7 +28,7 @@
   }
 
   &__membership {
-    margin-bottom: 2.5rem;
+    margin-bottom: rem(25);
     font-style: italic;
     text-align: center;
     text-transform: uppercase;
@@ -46,36 +46,36 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-top: 1px solid var(--clr-medium-gray);
-    padding: 0 0 2.5rem;
+    border-top: rem(1) solid var(--clr-medium-gray);
+    padding: 0 0 rem(25);
 
     &-item {
       justify-content: flex-start;
-      border-bottom: 1px solid var(--clr-medium-gray);
+      border-bottom: rem(1) solid var(--clr-medium-gray);
       flex: 1 1 100%;
 
       dl {
         margin: 0;
         color: var(--clr-dark-gray);
-        font-size: 2rem;
-        padding: 0 2.5rem;
+        font-size: rem(20);
+        padding: 0 rem(25);
 
         dt {
           font-weight: 500;
           text-transform: uppercase;
-          line-height: 2.5rem;
+          line-height: rem(25);
           position: relative;
           cursor: pointer;
           display: block;
-          padding: 2.5rem 0;
+          padding: rem(25) 0;
         }
 
         em {
           position: absolute;
-          top: 2.5rem;
-          right: 1rem;
+          top: rem(25);
+          right: rem(10);
           left: auto;
-          font-size: 1.5rem;
+          font-size: rem(15);
           transition: all 0.4s ease;
         }
 
@@ -100,7 +100,7 @@
             display: block;
             width: 100%;
             color: var(--clr-dark-gray);
-            padding: 2rem 0;
+            padding: rem(20) 0;
 
             &:first-child {
               padding-top: 0;
@@ -140,19 +140,19 @@
     }
 
     @include breakpoint(medium) {
-      padding: 2.5rem;
-      font-size: 1.2rem;
+      padding: rem(25);
+      font-size: rem(12);
       &-item {
         flex: 1 1 25%;
         border-bottom: none;
 
         &:not(:last-child) {
-          border-right: 1px solid var(--clr-medium-gray);
+          border-right: rem(1) solid var(--clr-medium-gray);
         }
 
         dl {
-          font-size: 1.2rem;
-          margin: 0 2rem;
+          font-size: rem(12);
+          margin: 0 rem(20);
           padding: 0;
 
           dt {
@@ -162,8 +162,8 @@
 
           dd {
             margin: auto;
-            line-height: 2.5rem;
-            font-size: 1.5rem;
+            line-height: rem(25);
+            font-size: rem(15);
           }
         }
       }
@@ -183,11 +183,11 @@
   &__social {
     flex-direction: column;
     align-items: flex-start;
-    padding: 2rem;
+    padding: rem(20);
 
     &--links {
-      margin: 0 auto 4rem;
-      font-size: 3.5rem;
+      margin: 0 auto rem(40);
+      font-size: rem(35);
       text-align: center;
 
       a {
@@ -195,10 +195,10 @@
         &:visited {
           color: var(--clr-medium-gray-3);
           transition: color 0.25s ease-in-out;
-          padding: 0 2rem;
+          padding: 0 rem(20);
 
           &:not(:last-child) {
-            margin-right: 1rem;
+            margin-right: rem(10);
           }
         }
 
@@ -221,7 +221,7 @@
         flex: 1 1 100%;
         display: flex;
         justify-content: flex-start;
-        flex: 2rem;
+        flex: rem(20);
       }
     }
 
@@ -247,19 +247,19 @@
     }
 
     &--img {
-      width: 11.5rem;
+      width: rem(115);
     }
   }
 
   &__copy {
-    margin: 5px auto 0;
+    margin: rem(5) auto 0;
     color: #8c8c8c;
     text-align: center;
 
     &-date {
       &::before {
         content: '\00a9';
-        margin-right: 0.5rem;
+        margin-right: rem(5);
       }
     }
   }

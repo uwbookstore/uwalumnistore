@@ -13,21 +13,21 @@
 
   &-content {
     background-color: #fff;
-    margin: 35% 5px;
-    padding: 2rem;
-    box-shadow: 5px 5px 1rem rgba(0, 0, 0, 0.5);
+    margin: 35% rem(5);
+    padding: rem(20);
+    box-shadow: rem(5) rem(5) rem(10) rgba(0, 0, 0, 0.5);
     width: auto;
     position: relative;
     text-align: center;
 
     @include breakpoint(small) {
-      width: 65rem;
+      width: rem(650);
       margin: 15% auto;
     }
 
     h1,
     h2 {
-      margin-bottom: 1.5rem;
+      margin-bottom: rem(15);
       font-weight: 500;
 
       a {
@@ -39,20 +39,20 @@
 
     h1 {
       color: var(--clr-primary);
-      font-size: 4rem;
+      font-size: rem(40);
     }
 
     h2 {
-      font-size: 1.8rem;
+      font-size: rem(18);
 
       span {
-        font-size: 1.4rem;
+        font-size: rem(14);
       }
     }
   }
 
   .small {
-    font-size: 1.1rem;
+    font-size: rem(11);
   }
 
   span.red {
@@ -61,15 +61,15 @@
 
   .popup-close {
     color: var(--clr-black);
-    font-size: 2.8rem;
+    font-size: rem(28);
     font-weight: 500;
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: rem(1);
+    right: rem(1);
     opacity: 0.8;
     float: right;
     line-height: 1;
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 rem(1) 0 #fff;
 
     &:hover,
     &:focus {

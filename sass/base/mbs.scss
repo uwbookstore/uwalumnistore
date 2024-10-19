@@ -5,16 +5,16 @@
 // a negative top margin on the
 // hero images.
 #modMenu {
-  margin-bottom: 5rem;
+  margin-bottom: rem(50);
 }
 
 #dv_Logo input#imgLogo {
-  max-width: 20rem;
+  max-width: rem(200);
 }
 
 #ContainDiv {
-  margin: 4rem 0 0;
-  padding: 0 1rem;
+  margin: rem(40) 0 0;
+  padding: 0 rem(10);
 
   @include breakpoint(small) {
     padding: 0;
@@ -25,7 +25,7 @@
 
 #dv_Logo {
   #imgLogo {
-    max-width: 30rem;
+    max-width: rem(300);
     display: block;
     margin: auto;
   }
@@ -34,7 +34,7 @@
 #hScript,
 #fScript {
   font-family: Monaco, monospace;
-  font-size: 1.4rem;
+  font-size: rem(14);
   width: 100%;
 }
 
@@ -48,23 +48,23 @@ body header:first-of-type,
 }
 
 .promo-banner {
-  line-height: 4.5rem;
-  min-height: 4.5rem;
+  line-height: rem(45);
+  min-height: rem(45);
   background: var(--clr-primary);
   color: #fff;
   text-align: center;
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: rem(18);
   display: block;
 
   span {
-    font-size: 1.4rem;
+    font-size: rem(14);
   }
 
   a {
     color: #fff;
     text-decoration: underline;
-    margin-left: 1.5rem;
+    margin-left: rem(15);
   }
 
   &:hover,
@@ -106,8 +106,8 @@ footer {
 input[class^='radio'] {
   & + span {
     &::before {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: rem(12);
+      height: rem(12);
       vertical-align: 0;
     }
   }
@@ -128,13 +128,13 @@ input[class^='radio'] {
 
 .skip {
   position: absolute;
-  left: -10000px;
+  left: rem(-10000);
   top: auto;
-  width: 1px;
-  height: 1px;
+  width: rem(1);
+  height: rem(1);
   overflow: hidden;
-  font-size: 15px;
-  padding: 5px;
+  font-size: rem(15);
+  padding: rem(5);
 }
 
 #promo-toggle-wrapper {
@@ -151,11 +151,11 @@ input[class^='radio'] {
 
 .req-astrisk {
   float: left;
-  margin-right: 5px;
+  margin-right: rem(5);
 }
 
 .coExistingAddressText p {
-  margin-bottom: 5px;
+  margin-bottom: rem(5);
 }
 
 #cart-rightCard .sticky-top {
@@ -163,54 +163,23 @@ input[class^='radio'] {
 }
 
 .rem1_2 {
-  font-size: 19.2px;
+  font-size: rem(19.2);
 }
 
 .rem1_5 {
-  font-size: 24px;
+  font-size: rem(24);
 }
 
 .rem2 {
-  font-size: 32px;
+  font-size: rem(32);
 }
 
 .rem3 {
-  font-size: 48px;
+  font-size: rem(48);
 }
 
 .rem4 {
-  font-size: 64px;
-}
-
-.promo-banner {
-  line-height: 4.5rem;
-  min-height: 4.5rem;
-  background: var(--clr-primary);
-  color: #fff;
-  text-align: center;
-  font-style: italic;
-  font-size: 1.8rem;
-  display: block;
-
-  span {
-    font-size: 1.4rem;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: underline;
-    margin-left: 1.5rem;
-  }
-
-  &:hover,
-  &:visited {
-    text-decoration: none;
-  }
-}
-
-a.promo-banner {
-  text-decoration: none;
-  color: #fff;
+  font-size: rem(64);
 }
 
 .merchDiscount.red.top5.bold,

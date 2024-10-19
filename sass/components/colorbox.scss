@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 /*------------------------------------*\
   COLORBOX
 \*------------------------------------*/
@@ -13,7 +15,7 @@
   left: 0;
   z-index: 9999;
   overflow: hidden;
-  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  box-shadow: rem(5) rem(5) rem(10) rgba(0, 0, 0, 0.5);
 }
 
 #cboxOverlay {
@@ -92,46 +94,46 @@ div#colorbox button {
 }
 
 #cboxTopLeft {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: rem(14);
+  height: rem(14);
   background: var(--clr-white);
 }
 
 #cboxTopCenter {
-  height: 1.4rem;
+  height: rem(14);
   background: var(--clr-white);
 }
 
 #cboxTopRight {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: rem(14);
+  height: rem(14);
   background: var(--clr-white);
 }
 
 #cboxBottomLeft {
-  width: 1.4rem;
-  height: 4.3rem;
+  width: rem(14);
+  height: rem(43);
   background: var(--clr-white);
 }
 
 #cboxBottomCenter {
-  height: 4.3rem;
+  height: rem(43);
   background: var(--clr-white);
 }
 
 #cboxBottomRight {
-  width: 1.4rem;
-  height: 4.3rem;
+  width: rem(14);
+  height: rem(43);
   background: var(--clr-white);
 }
 
 #cboxMiddleLeft {
-  width: 1.4rem;
+  width: rem(14);
   background: var(--clr-white);
 }
 
 #cboxMiddleRight {
-  width: 1.4rem;
+  width: rem(14);
   background: var(--clr-white);
 }
 
@@ -145,12 +147,12 @@ div#colorbox button {
 }
 
 #cboxError {
-  padding: 5rem;
-  border: 1px solid var(--clr-medium-gray);
+  padding: rem(50);
+  border: rem(1) solid var(--clr-medium-gray);
 }
 
 #cboxLoadedContent {
-  margin-bottom: 0.5rem;
+  margin-bottom: rem(5);
 }
 
 // #cboxLoadingOverlay {
@@ -164,7 +166,7 @@ div#colorbox button {
 
 #cboxTitle {
   position: absolute;
-  bottom: -2.5rem;
+  bottom: rem(-25);
   left: 0;
   text-align: center;
   width: 100%;
@@ -174,8 +176,8 @@ div#colorbox button {
 
 #cboxCurrent {
   position: absolute;
-  bottom: -2.5rem;
-  left: 5.8rem;
+  bottom: rem(-25);
+  left: rem(58);
   font-weight: 500;
   color: var(--clr-secondary);
 }
@@ -185,55 +187,55 @@ div#colorbox button {
 #cboxClose,
 #cboxSlideshow {
   position: absolute;
-  bottom: -2.9rem;
+  bottom: rem(-29);
   background: url(https://i.univbkstr.com/v3/css/img/cbox/controls.png)
     no-repeat 0 0;
-  width: 2.3rem;
-  height: 2.3rem;
-  text-indent: -9999px;
+  width: rem(23);
+  height: rem(23);
+  text-indent: rem(-9999);
 }
 
 #cboxPrevious {
-  left: 0px;
-  background-position: -5.1rem -2.5rem;
+  left: 0;
+  background-position: rem(-51) rem(-25);
 }
 
 #cboxPrevious:hover {
-  background-position: -5.1rem 0;
+  background-position: rem(-51) 0;
 }
 
 #cboxNext {
   left: 2.7rem;
-  background-position: -7.5rem -2.5rem;
+  background-position: rem(-75) rem(-25);
 }
 
 #cboxNext:hover {
-  background-position: -7.5rem 0;
+  background-position: rem(-75) 0;
 }
 
 #cboxClose {
   right: 0;
-  background-position: -10rem -2.5rem;
+  background-position: rem(-100) rem(-25);
 }
 
 #cboxClose:hover {
-  background-position: -10rem 0;
+  background-position: rem(-100) 0;
 }
 
 .cboxSlideshow_on #cboxSlideshow {
-  background-position: -12.5rem 0;
-  right: 2.7rem;
+  background-position: rem(-125) 0;
+  right: rem(27);
 }
 
 .cboxSlideshow_on #cboxSlideshow:hover {
-  background-position: -15rem 0;
+  background-position: rem(-150) 0;
 }
 
 .cboxSlideshow_off #cboxSlideshow {
-  background-position: -15rem -2.5rem;
+  background-position: rem(-150) rem(-25);
   right: 2.7rem;
 }
 
 .cboxSlideshow_off #cboxSlideshow:hover {
-  background-position: -12.5rem 0;
+  background-position: rem(-125) 0;
 }

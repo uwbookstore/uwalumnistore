@@ -1,13 +1,13 @@
 @use '../util' as *;
 
 .btn {
-  padding: 0 1.2rem;
-  border: 2px solid transparent;
+  padding: 0 rem(12);
+  border: rem(2) solid transparent;
   border-radius: 0;
   transition: all 0.2s ease-in-out;
   font-weight: 500;
-  height: 5rem;
-  line-height: 5rem;
+  height: rem(50);
+  line-height: rem(50);
   font-size: inherit;
 
   &-primary {
@@ -68,7 +68,7 @@
     cursor: not-allowed;
     //pointer-events: none;
     background-color: var(--clr-disabled);
-    border: 1px solid var(--clr-secondary);
+    border: rem(1) solid var(--clr-secondary);
     box-shadow: none;
     color: var(--clr-white);
 
@@ -82,7 +82,7 @@
     &:active:focus {
       cursor: not-allowed;
       background-color: var(--clr-disabled);
-      border: 1px solid var(--clr-secondary);
+      border: rem(1) solid var(--clr-secondary);
       box-shadow: none;
       color: var(--clr-white);
     }
@@ -112,7 +112,7 @@
     &:visited {
       font-weight: normal;
       font-size: inherit;
-      margin-bottom: 1.5rem;
+      margin-bottom: rem(15);
       transition: all 0.2s ease-in-out;
       text-transform: capitalize;
     }
@@ -126,31 +126,31 @@
 
     i,
     em {
-      font-size: 1rem;
+      font-size: rem(10);
     }
   }
 
   @include breakpoint(medium) {
-    border-width: 1px;
-    height: 3rem;
-    line-height: 3rem;
+    border-width: rem(1);
+    height: rem(30);
+    line-height: rem(30);
   }
 
   &-rnd {
-    border-radius: 10rem;
+    border-radius: rem(100);
     padding: 0;
-    width: 5rem;
+    width: rem(50);
 
     @include breakpoint(medium) {
-      width: 3rem;
+      width: rem(30);
     }
 
     i {
-      font-size: 3.5rem;
-      padding-top: 0.5rem;
+      font-size: rem(35);
+      padding-top: rem(5);
 
       @include breakpoint(medium) {
-        font-size: 1.8rem;
+        font-size: rem(18);
       }
     }
   }
@@ -160,8 +160,8 @@
       border: none;
       background-color: transparent;
       color: var(--clr-primary);
-      border-bottom: 1px solid var(--clr-primary);
-      margin-bottom: 1rem;
+      border-bottom: rem(1) solid var(--clr-primary);
+      margin-bottom: rem(10);
     }
   }
 

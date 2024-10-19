@@ -66,24 +66,24 @@ select.form-control {
   &-dorms {
     td {
       width: 25%;
-      font-size: 1.3rem;
+      font-size: rem(13);
     }
   }
 }
 
 .caret {
   position: absolute;
-  right: 2.5rem;
-  top: 2rem;
+  right: rem(25);
+  top: rem(20);
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: rem(2);
   vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid \9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+  border-top: rem(4) dashed;
+  border-top: rem(4) solid \9;
+  border-right: rem(4) solid transparent;
+  border-left: rem(4) solid transparent;
 
   @include breakpoint(small) {
     display: none;

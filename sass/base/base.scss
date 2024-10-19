@@ -23,7 +23,7 @@
 
 html,
 body {
-  margin: 0px auto;
+  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
   height: 100%;
@@ -37,21 +37,21 @@ body {
 }
 
 .entry-content {
-  font-size: 1.8rem;
+  font-size: rem(18);
 
   ul {
     list-style-type: none;
     font-size: inherit;
     line-height: 1.5;
-    margin-bottom: 2.5rem;
-    margin-left: 2rem;
+    margin-bottom: rem(25);
+    margin-left: rem(20);
 
     li {
-      margin-bottom: 0.8rem;
+      margin-bottom: rem(8);
 
       &::before {
         content: '-';
-        margin-right: 0.5rem;
+        margin-right: rem(5);
       }
     }
   }
@@ -61,16 +61,16 @@ body {
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: 1px;
+  height: rem(1);
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: 1px;
+  width: rem(1);
 }
 
 .skip {
   position: absolute;
-  left: -1000px;
+  left: rem(-1000);
   color: var(--clr-black);
   background-color: var(--clr-white);
 

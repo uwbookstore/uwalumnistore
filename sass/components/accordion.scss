@@ -5,10 +5,10 @@
     position: relative;
     color: var(--clr-black);
     background-color: var(--clr-light-gray);
-    border: 1px solid var(--clr-light-gray-2);
-    padding: 1.5rem 2rem 1.5rem 1.5rem;
+    border: rem(1) solid var(--clr-light-gray-2);
+    padding: rem(15) rem(20) rem(15) rem(15);
     line-height: 1;
-    margin: 1rem 0;
+    margin: rem(10) 0;
     font-size: inherit;
     font-weight: 400;
     cursor: pointer;
@@ -17,15 +17,15 @@
     &::before {
       font-family: fontawesome;
       float: right;
-      font-size: 2rem;
+      font-size: rem(20);
       position: absolute;
       content: '\f067';
-      right: 1rem;
+      right: rem(10);
       display: block;
       transition: transform 0.25s ease-in-out;
 
       @include breakpoint(small) {
-        font-size: 1.6rem;
+        font-size: rem(16);
       }
     }
 
@@ -35,14 +35,14 @@
     }
 
     @include breakpoint(medium) {
-      padding: 1rem;
+      padding: rem(10);
     }
   }
 
   & > div {
-    padding: 1.5rem;
-    border: 1px solid var(--clr-light-gray-2);
-    margin-top: -1rem;
+    padding: rem(15);
+    border: rem(1) solid var(--clr-light-gray-2);
+    margin-top: rem(-10);
     border-top: none;
 
     ul {

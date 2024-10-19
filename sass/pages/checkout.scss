@@ -2,8 +2,8 @@
 
 h1 {
   &.thankYouHeader {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
+    font-size: rem(22);
+    margin-bottom: rem(20);
   }
 }
 
@@ -13,20 +13,20 @@ h2 {
   &#needHelpTitle,
   &.thankYouSubHeader,
   &.addressHeader {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: rem(20);
+    margin-bottom: rem(20);
   }
 }
 
 h2.addressHeader {
   a {
-    font-size: 1.2rem;
-    margin-left: 1.5rem;
+    font-size: rem(12);
+    margin-left: rem(15);
   }
 }
 
 h4 {
-  margin-bottom: 1.5rem;
+  margin-bottom: rem(15);
 }
 .checkoutHighlighted {
   color: var(--clr-primary);
@@ -34,13 +34,13 @@ h4 {
 }
 
 #viewCart {
-  font-size: 1.2rem;
-  padding: 0.5rem 0 0;
+  font-size: rem(12);
+  padding: rem(5) 0 0;
   margin: 0;
 }
 
 #editCart {
-  font-size: 1.2rem;
+  font-size: rem(12);
 }
 
 #checkoutOneCol {

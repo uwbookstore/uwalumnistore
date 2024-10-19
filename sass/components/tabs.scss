@@ -1,10 +1,10 @@
 @use '../util' as *;
 
 .tabs {
-  font-size: 1.6rem;
+  font-size: rem(16);
 
   @include breakpoint(small) {
-    font-size: 1.4rem;
+    font-size: rem(14);
   }
 
   &__nav {
@@ -24,7 +24,7 @@
       width: auto;
 
       &:not(:last-child) {
-        margin-right: 1.5rem;
+        margin-right: rem(15);
       }
     }
   }
@@ -34,16 +34,16 @@
     &:visited {
       display: block;
       width: 100%;
-      font-size: 1.2rem;
+      font-size: rem(12);
       background-color: #ddd;
-      border-bottom: 0.4rem solid transparent;
+      border-bottom: rem(4) solid transparent;
       font-weight: 500;
       text-transform: uppercase;
-      padding: 2rem;
+      padding: rem(20);
       position: relative;
       text-align: center;
       color: var(--clr-black);
-      height: 6rem;
+      height: rem(60);
       transition: all 0.2s ease-in-out;
     }
 
@@ -68,7 +68,7 @@
       &:link,
       &:visited {
         background: transparent;
-        padding: 1rem;
+        padding: rem(10);
         height: auto;
       }
 
@@ -90,8 +90,8 @@
 
   &__container {
     & > div {
-      margin: 2rem 0 3rem;
-      padding: 0 2rem;
+      margin: rem(20) 0 rem(30);
+      padding: 0 rem(20);
 
       span {
         color: var(--clr-primary);
@@ -99,10 +99,10 @@
       }
 
       ol {
-        margin-left: 3rem;
+        margin-left: rem(30);
 
         @include breakpoint(small) {
-          margin: 1rem auto;
+          margin: rem(10) auto;
           width: 75%;
         }
       }
@@ -110,7 +110,7 @@
 
     #shipping {
       @include breakpoint(medium) {
-        height: 30rem;
+        height: rem(300);
         overflow-y: scroll;
       }
     }

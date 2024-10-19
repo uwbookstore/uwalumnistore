@@ -1,10 +1,10 @@
 @use '../util' as *;
 
 .holiday-banner {
-  margin: 0 0 2rem;
-  padding: 1rem;
+  margin: 0 0 rem(20);
+  padding: rem(10);
   background: var(--clr-light-gray-2);
-  font-size: 3rem;
+  font-size: rem(30);
   font-weight: 500;
   color: var(--clr-primary);
   text-transform: uppercase;
@@ -16,27 +16,27 @@
   text-align: center;
 
   .grid-item {
-    margin-top: 2rem;
-    font-size: 2.5rem;
+    margin-top: rem(20);
+    font-size: rem(25);
     font-weight: 500;
     display: block;
     color: var(--clr-primary);
-    border-bottom: 2px solid var(--clr-black);
+    border-bottom: rem(2) solid var(--clr-black);
     flex: 1 1 100%;
     text-transform: uppercase;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
+    padding-bottom: rem(20);
+    margin-bottom: rem(20);
     font-style: italic;
 
     span {
       font-weight: normal;
-      font-size: 2rem;
+      font-size: rem(20);
       color: var(--clr-black);
       display: block;
 
       &.numbers {
         padding-bottom: 0;
-        font-size: 2.5rem;
+        font-size: rem(25);
         font-weight: 500;
         color: var(--clr-primary);
         display: inline;
@@ -45,7 +45,7 @@
 
     &:last-child {
       border-bottom: none;
-      margin-bottom: 3rem;
+      margin-bottom: rem(30);
       padding-bottom: 0;
     }
   }
@@ -54,8 +54,8 @@
     .grid-item {
       flex: 1 1 33.333%;
       border-bottom: none;
-      padding-top: 1rem;
-      border-right: 2px solid var(--clr-black);
+      padding-top: rem(10);
+      border-right: rem(2) solid var(--clr-black);
 
       &:last-child {
         border-right: none;
@@ -63,13 +63,13 @@
       }
 
       span {
-        font-size: 1.6rem;
+        font-size: rem(16);
         font-weight: normal;
         margin-bottom: 0;
         color: var(--clr-black);
 
         &.numbers {
-          font-size: 3rem;
+          font-size: rem(30);
           font-weight: 500;
           color: var(--clr-primary);
           display: inline;

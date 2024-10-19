@@ -3,37 +3,37 @@
 .customer {
   h4 {
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: rem(10);
   }
 
   &__faq {
-    margin-top: 5rem;
+    margin-top: rem(50);
   }
 
   &__returns {
     &-merch {
-      margin-top: 2rem;
+      margin-top: rem(20);
     }
   }
 
   &__clearance {
-    margin-top: 5rem;
+    margin-top: rem(50);
   }
 
   &__sizes {
-    margin-top: 5rem;
+    margin-top: rem(50);
 
     table {
-      margin: 2rem auto;
+      margin: rem(20) auto;
 
       &.table > tbody > tr > td {
-        padding: 0.3rem;
+        padding: rem(3);
       }
 
       @include breakpoint(medium) {
         width: 70%;
         &.table > tbody > tr > td {
-          padding: 1rem;
+          padding: rem(10);
         }
       }
     }

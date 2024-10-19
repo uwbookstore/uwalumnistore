@@ -12,7 +12,7 @@
 
         @include breakpoint(medium) {
           display: block;
-          flex: 0 0 27rem;
+          flex: 0 0 rem(270);
 
           img {
             display: block;
@@ -25,7 +25,7 @@
       flex: 1;
 
       @include breakpoint(medium) {
-        flex: 0 0 52.5rem;
+        flex: 0 0 rem(525);
       }
 
       .menu__grid--item {
@@ -42,7 +42,7 @@
   table {
     @include breakpoint(small) {
       width: 75%;
-      margin: 1rem auto;
+      margin: rem(10) auto;
     }
   }
 }

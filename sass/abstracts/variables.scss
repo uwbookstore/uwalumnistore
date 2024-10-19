@@ -1,3 +1,5 @@
+@use '../util' as *;
+
 :root {
   --clr-primary: #c5050c;
   --clr-secondary: #777777;
@@ -17,6 +19,6 @@
   --clr-white: #fefefe;
   --clr-disabled: #969696;
 
-  --fs-default: 1.4rem;
-  --default-page-width: 90rem;
+  --fs-default: #{rem(14)};
+  --default-page-width: #{rem(900)};
 }
