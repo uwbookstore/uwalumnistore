@@ -43,7 +43,7 @@
 
     @include breakpoint(medium) {
       padding: rem(15) rem(5) rem(20);
-      width: 48rem;
+      width: rem(480);
       transform: translateX(-50%);
     }
 
@@ -124,7 +124,7 @@
         width: auto;
         left: rem(26);
         padding: rem(15) rem(5) rem(20);
-        bottom: 1rem;
+        bottom: rem(10);
         margin-bottom: 0;
 
         .hero__body--header {
