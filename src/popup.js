@@ -1,15 +1,15 @@
 // Get the modal
-let modal = document.getElementById('freeShippingPopup');
+let modal = document.getElementById('blackFridayPopup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('freeShip')) {
+  if (!sessionStorage.getItem('blackFriday24')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
-      sessionStorage.setItem('freeShip', 'opened');
+      sessionStorage.setItem('blackFriday24', 'opened');
     });
   } else {
-    sessionStorage.setItem('freeShip', 'opened');
+    sessionStorage.setItem('blackFriday24', 'opened');
   }
 
   // Get the <span> element that closes the modal
