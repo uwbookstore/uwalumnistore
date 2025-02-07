@@ -2,442 +2,123 @@ $(document).ready(function () {
   // Prompt User to purchase AppleCare+
   // Produc/AppleCare+ SKU array...
   const skuArr = [
-    [
-      '19425308041',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19425308135',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19425308229',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19425308323',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    ['2075911', 'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065'],
-    [
-      '19425308088',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19425308182',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19425308276',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19425308370',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1766065',
-    ],
-    [
-      '19594912417',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594912511',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594912605',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594912699',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    ['2077902', 'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348'],
-    [
-      '19594912464',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594912558',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594912652',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594912746',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594963568',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594963615',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594963662',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19594963709',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852348',
-    ],
-    [
-      '19425371051',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1829617',
-    ],
-    [
-      '19425371380',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1829617',
-    ],
-    [
-      '19594912887',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594912981',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594913075',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594913169',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    ['2077903', 'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351'],
-    [
-      '19594912934',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594913028',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594913122',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594913216',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594963760',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594963807',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594963854',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594963901',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1852351',
-    ],
-    [
-      '19594909890',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897',
-    ],
-    [
-      '19594901484',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897',
-    ],
-    [
-      '19594909935',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897',
-    ],
-    [
-      '19594901529',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897',
-    ],
-    ['2077571', 'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897'],
-    [
-      '19594964058',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897',
-    ],
-    [
-      '19594964103',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841897',
-    ],
-    [
-      '19594900003',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841965',
-    ],
-    [
-      '19594900006',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841965',
-    ],
-    [
-      '19594900004',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841965',
-    ],
-    [
-      '19594900007',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841965',
-    ],
-    [
-      '19594900005',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841965',
-    ],
-    [
-      '19594900008',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841965',
-    ],
-    [
-      '19594900015',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594900018',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594900016',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594900019',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594900017',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594900020',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594918524',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19594918569',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1841968',
-    ],
-    [
-      '19425338744',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425338825',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425338771',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425338798',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425338960',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425339041',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425338987',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19425339014',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1781609',
-    ],
-    [
-      '19594918813',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594918840',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594918867',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594918894',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594918921',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594918948',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594918975',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594919002',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594919029',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594919056',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594919083',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594919110',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857565',
-    ],
-    [
-      '19594925325',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925352',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925379',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925406',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925433',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925460',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925487',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925514',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925541',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925568',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925595',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594925622',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857568',
-    ],
-    [
-      '19594922246',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594922272',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594922298',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594922324',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594922350',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594922376',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594946687',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594946710',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857571',
-    ],
-    [
-      '19594923863',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594923890',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594923917',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594923944',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594923971',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594923998',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594946779',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19594946802',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1857574',
-    ],
-    [
-      '19425281838',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1694621',
-    ],
-    [
-      '19425332403',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1694621',
-    ],
-    [
-      '19019909842',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1694621',
-    ],
-    [
-      '19594905248',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1694624',
-    ],
-    [
-      '19425309771',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1694630',
-    ],
-    [
-      '19425309739',
-      'https://www.uwalumnistore.com/MerchDetail?MerchID=1694630',
-    ],
+    // ["2052508", "https://www.uwbookstore.com/Wisconsin-Badgers/Tech/AppleCare/AppleCare-for-MacBook-Air-3-year"],
+    ['19594989902', '19425345021'],
+    ['19594989947', '19425345021'],
+    ['19594989992', '19425345021'],
+    ['19594990037', '19425345021'],
+    ['19594963568', '19594958732'],
+    ['19594963615', '19594958732'],
+    ['19594963662', '19594958732'],
+    ['19594990103', '19594958732'],
+    ['19594990149', '19594958732'],
+    ['19594990195', '19594958732'],
+    ['19594990241', '19594958732'],
+    ['19594990287', '19594958732'],
+    ['19594990333', '19594958732'],
+    ['19594990379', '19594958732'],
+    ['19594990425', '19594958732'],
+    ['19594990496', '19594958739'],
+    ['19594990543', '19594958739'],
+    ['19594990590', '19594958739'],
+    ['19594990637', '19594958739'],
+    ['19594990684', '19594958739'],
+    ['19594990731', '19594958739'],
+    ['19594990778', '19594958739'],
+    ['19594990825', '19594958739'],
+    ['19594950778', '19595025861'],
+    ['19594950780', '19595025861'],
+    ['19594950779', '19595025861'],
+    ['19594950781', '19595025861'],
+    ['19594992659', '19595025861'],
+    ['19594992705', '19595025861'],
+    ['19594987348', '19595025853'],
+    ['19594987483', '19595025853'],
+    ['19594987393', '19595025853'],
+    ['19594987528', '19595025853'],
+    ['19594987438', '19595025853'],
+    ['19594987573', '19595025853'],
+    ['19594986960', '19595025845'],
+    ['19594986780', '19595025845'],
+    ['19594987005', '19595025845'],
+    ['19594986825', '19595025845'],
+    ['19594986870', '19595025845'],
+    ['19594987050', '19595025845'],
+    ['19594987095', '19595025845'],
+    ['19594986915', '19595025845'],
+    ['19594994255', '19595025829'],
+    ['19594994296', '19595025829'],
+    ['19594908029', '19595025829'],
+    ['19594908073', '19595025829'],
+    ['19594959153', '19595025837'],
+    ['19594959241', '19595025837'],
+    ['19594959285', '19595025837'],
+    ['19594959329', '19595025837'],
+    ['19594972896', '19595020701'],
+    ['19594972919', '19595020701'],
+    ['19594972942', '19595020701'],
+    ['19594972965', '19595020701'],
+    ['19425338744', '2076403'],
+    ['19425338825', '2076403'],
+    ['19425338771', '2076403'],
+    ['19425338798', '2076403'],
+    ['19425338960', '2076403'],
+    ['19425339041', '2076403'],
+    ['19425338987', '2076403'],
+    ['19425339014', '2076403'],
+    ['19594918813', '19594974701'],
+    ['19594918840', '19594974701'],
+    ['19594918867', '19594974701'],
+    ['19594918894', '19594974701'],
+    ['19594918921', '19594974701'],
+    ['19594918948', '19594974701'],
+    ['19594918975', '19594974701'],
+    ['19594919002', '19594974701'],
+    ['19594919029', '19594974701'],
+    ['19594919056', '19594974701'],
+    ['19594919083', '19594974701'],
+    ['19594919110', '19594974701'],
+    ['19594925325', '19594974773'],
+    ['19594925352', '19594974773'],
+    ['19594925379', '19594974773'],
+    ['19594925406', '19594974773'],
+    ['19594925433', '19594974773'],
+    ['19594925460', '19594974773'],
+    ['19594925487', '19594974773'],
+    ['19594925514', '19594974773'],
+    ['19594925541', '19594974773'],
+    ['19594925568', '19594974773'],
+    ['19594925595', '19594974773'],
+    ['19594925622', '19594974773'],
+    ['19594922246', '19594974685'],
+    ['19594922272', '19594974685'],
+    ['19594922298', '19594974685'],
+    ['19594922324', '19594974685'],
+    ['19594922350', '19594974685'],
+    ['19594922376', '19594974685'],
+    ['19594946687', '19594974685'],
+    ['19594946710', '19594974685'],
+    ['19594923863', '19594974693'],
+    ['19594923890', '19594974693'],
+    ['19594923917', '19594974693'],
+    ['19594923944', '19594974693'],
+    ['19594923971', '19594974693'],
+    ['19594923998', '19594974693'],
+    ['19594946779', '19594974693'],
+    ['19594946802', '19594974693'],
+    ['19594968852', '2073820'],
+    ['19594968960', '2073820'],
+    ['19594970452', '2073821'],
+    ['19425281838', '2073820'],
+    ['19594954389', '2073371'],
+    ['19594954403', '2073371'],
+    ['19594954417', '2073371'],
+    ['19594954431', '2073371'],
+    ['19594954445', '2073371'],
+    ['19425309771', '2073823'],
+    ['19425309739', '2073823'],
+    ['19425381907', '19594929271'],
+    ['19425382018', '19594929271'],
   ];
 
   for (let i = 0; i < skuArr.length; i += 1) {
