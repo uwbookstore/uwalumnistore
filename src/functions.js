@@ -23,11 +23,11 @@ $(document).ready(function () {
   $('.footer__copy-date').text('Copyright ' + pageCopy);
   $('.home-hero-img').attr(
     'src',
-    $('.home-hero-img').attr('src') + '?v1=' + month + day + year
+    $('.home-hero-img').attr('src') + '?v3=' + month + day + year
   );
   $('.home-hero-img-sm').attr(
     'src',
-    $('.home-hero-img-sm').attr('src') + '?v1=' + month + day + year
+    $('.home-hero-img-sm').attr('src') + '?v3=' + month + day + year
   );
 
   $.urlParam = function (name) {
