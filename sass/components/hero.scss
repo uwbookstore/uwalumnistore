@@ -58,6 +58,7 @@
       top: initial;
       bottom: rem(20);
       transform: translate(-50%, 0);
+      // TODO: Remove above
 
       br {
         display: none;
@@ -80,6 +81,7 @@
 
         // TODO: Remove after February
         padding: rem(5) rem(10);
+        // TODO: Remove above
 
         &:not(:last-child) {
           margin-bottom: rem(15);
@@ -97,12 +99,14 @@
         bottom: initial;
         top: 70%;
         left: rem(250);
+        // TODO: Remove above
 
         span {
           width: auto;
 
           // TODO: Remove after February
           padding: rem(15) rem(25);
+          // TODO: Remove above
         }
       }
 
@@ -116,6 +120,7 @@
 
         // TODO: Remove after February
         top: 80%;
+        // TODO: Remove above
 
         span {
           display: inline-block;
