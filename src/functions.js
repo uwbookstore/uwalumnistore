@@ -21,14 +21,14 @@ $(document).ready(function () {
   var year = d.getFullYear();
   var pageCopy = d.getFullYear();
   $('.footer__copy-date').text('Copyright ' + pageCopy);
-  $('.home-hero-img').attr(
-    'src',
-    $('.home-hero-img').attr('src') + '?v3=' + month + day + year
-  );
-  $('.home-hero-img-sm').attr(
-    'src',
-    $('.home-hero-img-sm').attr('src') + '?v3=' + month + day + year
-  );
+  // $('.home-hero-img').attr(
+  //   'src',
+  //   $('.home-hero-img').attr('src') + '?v3=' + month + day + year
+  // );
+  // $('.home-hero-img-sm').attr(
+  //   'src',
+  //   $('.home-hero-img-sm').attr('src') + '?v3=' + month + day + year
+  // );
 
   $.urlParam = function (name) {
     var results = new RegExp('[?&]' + name + '=([^&#]*)').exec(
