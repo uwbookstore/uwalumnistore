@@ -19,7 +19,7 @@
       text-transform: uppercase;
       font-style: italic;
       font-weight: 500;
-      color: var(--clr-dark-gray);
+      color: var(--clr-dark-gray-100);
       line-height: rem(12);
     }
 
@@ -77,6 +77,11 @@
           padding: rem(25) 0;
         }
 
+        ul {
+          list-style-type: none;
+          padding: 0;
+        }
+
         em {
           position: absolute;
           top: rem(25);
@@ -98,7 +103,7 @@
       }
 
       .submenu {
-        display: none;
+        // display: none;
         width: 100%;
 
         &--link {
@@ -121,8 +126,6 @@
         }
 
         @include breakpoint(medium) {
-          display: block;
-
           &--link {
             &:link,
             &:visited {
@@ -172,16 +175,6 @@
             line-height: rem(25);
             font-size: rem(15);
           }
-        }
-      }
-    }
-  }
-
-  &__info {
-    &--header {
-      @include breakpoint(medium) {
-        em {
-          display: none;
         }
       }
     }
