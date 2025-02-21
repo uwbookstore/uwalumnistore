@@ -46,12 +46,12 @@ h6 {
 }
 
 a {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   &:link,
   &:visited,
   &:focus,
   &:active {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     text-decoration: none;
     transition: all 0.25s ease-in-out;
   }
@@ -126,7 +126,7 @@ blockquote {
   text-align: center;
   margin: rem(20) auto;
   font-style: italic;
-  color: var(--clr-secondary);
+  color: var(--bs-secondary);
   text-transform: uppercase;
   font-size: rem(18);
   line-height: rem(18);
@@ -185,7 +185,7 @@ blockquote {
 
     span {
       display: inline-block;
-      background-color: var(--clr-white);
+      background-color: var(--bs-white);
       padding: rem(10);
     }
 
@@ -227,7 +227,7 @@ blockquote {
 
       span {
         display: inline-block;
-        background-color: var(--clr-white);
+        background-color: var(--bs-white);
         padding: rem(10);
       }
 
@@ -268,7 +268,7 @@ blockquote {
 }
 
 .page-title {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   font-style: normal;
   font-weight: 200;
   font-size: rem(24);
@@ -287,7 +287,7 @@ a[href^='tel:'] {
   font-weight: 500;
   background: #46ca5e;
   border-radius: 0;
-  color: var(--clr-white);
+  color: var(--bs-white);
   display: block;
   line-height: 1em;
   padding: rem(10) rem(15);
@@ -309,12 +309,12 @@ a[href^='tel:'] {
   }
 
   h4 {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 }
 
 .red {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
 }
 
 .bold {

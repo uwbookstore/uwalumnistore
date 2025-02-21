@@ -50,7 +50,7 @@ body header:first-of-type,
 .promo-banner {
   line-height: rem(45);
   min-height: rem(45);
-  background: var(--clr-primary);
+  background: var(--bs-primary);
   color: #fff;
   text-align: center;
   font-style: italic;
@@ -94,7 +94,7 @@ a.promo-banner {
 a#goToTop,
 .disco,
 .hide,
-footer {
+footer:last-of-type {
   display: none !important;
 }
 
@@ -115,7 +115,7 @@ input[class^='radio'] {
   &:checked {
     & + span {
       &::before {
-        background-color: var(--clr-primary);
+        background-color: var(--bs-primary);
       }
     }
   }

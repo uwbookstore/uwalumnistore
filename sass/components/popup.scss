@@ -38,7 +38,7 @@
     }
 
     h1 {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       font-size: rem(40);
     }
 
@@ -56,11 +56,11 @@
   }
 
   span.red {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 
   .popup-close {
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
     font-size: rem(28);
     font-weight: 500;
     position: absolute;
@@ -73,7 +73,7 @@
 
     &:hover,
     &:focus {
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       text-decoration: none;
       cursor: pointer;
       opacity: 0.5;

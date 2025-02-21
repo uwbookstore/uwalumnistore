@@ -1,6 +1,7 @@
 @use '../util' as *;
 
 .footer {
+  display: block;
   max-width: var(--default-page-width);
   margin: auto;
   height: auto;
@@ -37,6 +38,12 @@
     &-link {
       &:hover {
         text-decoration: none;
+      }
+
+      @include breakpoint(xsmall) {
+        br {
+          display: none;
+        }
       }
     }
   }
@@ -132,7 +139,7 @@
             &:hover,
             &:active {
               text-decoration: none;
-              color: var(--clr-primary);
+              color: var(--bs-primary);
             }
           }
         }
@@ -204,7 +211,7 @@
 
         &:hover,
         &:active {
-          color: var(--clr-primary);
+          color: var(--bs-primary);
           transition: color 0.25s ease-in-out;
         }
 

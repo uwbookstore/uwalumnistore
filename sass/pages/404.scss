@@ -32,7 +32,7 @@
     text-align: center;
 
     h1 {
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       font-family: mrs-eaves-xl-serif, serif;
       font-size: rem(40.5);
       font-weight: bold;
@@ -47,7 +47,7 @@
         height: rem(8);
         // width: calc(#{rem(60)});
         width: calc(rem(60));
-        background-color: var(--clr-primary);
+        background-color: var(--bs-primary);
         content: '';
       }
     }

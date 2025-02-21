@@ -3,17 +3,17 @@
 #waa-nav {
   .navbar {
     border-color: #e7e7e7;
-    border-bottom: rem(1) solid var(--clr-secondary);
+    border-bottom: rem(1) solid var(--bs-secondary);
     box-sizing: border-box;
     text-transform: uppercase;
-    background-color: var(--clr-white);
-    color: var(--clr-secondary);
+    background-color: var(--bs-white);
+    color: var(--bs-secondary);
     position: relative;
     height: rem(112);
     padding: 0;
 
     &-nav {
-      background-color: var(--clr-white);
+      background-color: var(--bs-white);
       margin: 0;
 
       li {
@@ -21,7 +21,7 @@
           border-bottom: rem(1) solid #ccc;
           padding: rem(14);
           font-size: rem(13);
-          color: var(--clr-black);
+          color: var(--bs-gray-dark);
           text-decoration: none;
           display: block;
           width: 100%;
@@ -45,7 +45,7 @@
 
             &:hover,
             &:focus {
-              color: var(--clr-primary);
+              color: var(--bs-primary);
             }
           }
         }
@@ -112,7 +112,7 @@
       .waa-logo {
         width: rem(62);
         padding: 0 rem(10);
-        background-color: var(--clr-white);
+        background-color: var(--bs-white);
         height: rem(50);
         margin: auto;
         position: absolute;
@@ -135,9 +135,9 @@
         width: rem(180);
         font-size: rem(16);
         padding-top: rem(7);
-        background-color: var(--clr-primary);
+        background-color: var(--bs-primary);
         font-weight: 500;
-        color: var(--clr-white);
+        color: var(--bs-white);
         text-transform: uppercase;
         text-decoration: none;
         // z-index: 200;
@@ -169,7 +169,7 @@
         width: rem(20);
         height: rem(2);
         border-radius: rem(1);
-        background-color: var(--clr-black);
+        background-color: var(--bs-gray-dark);
         transition: all 0.25s ease-in-out;
 
         + .icon-bar {
@@ -279,7 +279,7 @@
     visibility: hidden;
 
     @include breakpoint(nav) {
-      color: var(--clr-secondary);
+      color: var(--bs-secondary);
       margin: 0 0 0 rem(8);
       visibility: visible;
       opacity: 1;
@@ -335,7 +335,7 @@
       left: rem(15);
       height: rem(20);
       width: rem(16);
-      fill: var(--clr-secondary);
+      fill: var(--bs-secondary);
       cursor: pointer;
       transition: fill 0.25s ease-in-out;
     }
@@ -395,7 +395,7 @@
         &:link,
         &:visited {
           .account-img {
-            fill: var(--clr-secondary);
+            fill: var(--bs-secondary);
             width: rem(16);
             height: rem(19);
             transition: fill 0.25s ease-in-out;
@@ -404,7 +404,7 @@
 
         &:hover {
           .account-img {
-            fill: var(--clr-primary);
+            fill: var(--bs-primary);
           }
         }
 
@@ -440,7 +440,7 @@
 
           &:hover {
             svg {
-              fill: var(--clr-primary);
+              fill: var(--bs-primary);
             }
           }
         }
@@ -467,7 +467,7 @@
 
         &:hover {
           svg {
-            fill: var(--clr-primary);
+            fill: var(--bs-primary);
           }
         }
       }
@@ -480,7 +480,7 @@
 }
 
 .navbar-nav > li.open > a {
-  color: var(--clr-black);
+  color: var(--bs-gray-dark);
   background-color: transparent;
 }
 

@@ -23,9 +23,9 @@ button.btn-default.typeCodeOption {
   &:hover,
   &.typeSelected {
     border-width: rem(1) !important;
-    border-color: var(--clr-primary) !important;
-    color: var(--clr-white);
-    background-color: var(--clr-primary);
+    border-color: var(--bs-primary) !important;
+    color: var(--bs-white);
+    background-color: var(--bs-primary);
   }
 
   &.disabled {
@@ -101,7 +101,7 @@ span.btn-default.typeSelected {
 }
 
 .rankImageWrapper span.ranking {
-  color: var(--clr-white);
+  color: var(--bs-white);
 }
 
 .merch {
@@ -146,7 +146,7 @@ span.btn-default.typeSelected {
       .message_merch_promo {
         padding: rem(10);
         margin-bottom: rem(15);
-        border: rem(1) solid color-mix(in srgb, var(--clr-success), #000 20%);
+        border: rem(1) solid color-mix(in srgb, var(--bs-success), #000 20%);
       }
     }
 
@@ -156,7 +156,7 @@ span.btn-default.typeSelected {
       font-style: italic;
       font-weight: 500;
       text-transform: uppercase;
-      color: var(--clr-primary);
+      color: var(--bs-primary);
 
       &-small {
         font-size: rem(24);
@@ -175,15 +175,15 @@ span.btn-default.typeSelected {
       }
 
       .sale {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
       }
     }
 
     &-description {
       margin: rem(15) auto;
       padding: rem(10) 0 rem(20);
-      border-top: rem(1) solid var(--clr-black);
-      border-bottom: rem(1) solid var(--clr-black);
+      border-top: rem(1) solid var(--bs-gray-dark);
+      border-bottom: rem(1) solid var(--bs-gray-dark);
       position: relative;
       line-height: 1.6;
 
@@ -210,7 +210,7 @@ span.btn-default.typeSelected {
     &-size {
       margin: rem(15) auto;
       padding: 0 0 rem(15);
-      border-bottom: rem(1) solid var(--clr-black);
+      border-bottom: rem(1) solid var(--bs-gray-dark);
       position: relative;
 
       &-link {
@@ -220,7 +220,7 @@ span.btn-default.typeSelected {
           font-size: rem(16);
           text-transform: lowercase;
           margin-left: rem(5);
-          color: var(--clr-black);
+          color: var(--bs-gray-dark);
         }
       }
 
@@ -246,11 +246,11 @@ span.btn-default.typeSelected {
             display: none;
 
             &:checked + label {
-              background-color: var(--clr-primary);
-              color: var(--clr-white);
+              background-color: var(--bs-primary);
+              color: var(--bs-white);
               font-weight: 500;
               cursor: default;
-              border-color: var(--clr-primary);
+              border-color: var(--bs-primary);
             }
           }
 
@@ -266,7 +266,7 @@ span.btn-default.typeSelected {
             line-height: 1.5;
             text-transform: uppercase;
             font-size: rem(12);
-            border: rem(1) solid var(--clr-black);
+            border: rem(1) solid var(--bs-gray-dark);
             cursor: pointer;
             font-weight: 400;
             width: 100%;
@@ -597,7 +597,7 @@ span.btn-default.typeSelected {
 
 p.sale-info {
   font-weight: bold;
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   margin: rem(5) 0;
   font-size: rem(14);
   letter-spacing: rem(1);

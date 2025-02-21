@@ -21,7 +21,7 @@
 
 a.merchLink {
   p.merchTitle {
-    color: var(--clr-black);
+    color: var(--bs-gray-dark);
   }
 }
 
@@ -110,12 +110,12 @@ p.merchNumber {
     }
 
     &-special {
-      background-color: var(--clr-primary);
-      color: var(--clr-white);
+      background-color: var(--bs-primary);
+      color: var(--bs-white);
     }
 
     &-restock {
-      background-color: var(--clr-warning);
+      background-color: var(--bs-warning);
       color: #3e3e3e;
       z-index: 20;
     }
@@ -123,7 +123,7 @@ p.merchNumber {
     &-new {
       position: absolute;
       background-color: var(--clr-dark-gray);
-      color: var(--clr-white);
+      color: var(--bs-white);
       top: rem(5);
       left: rem(5);
       font-weight: 500;
@@ -135,7 +135,7 @@ p.merchNumber {
 
     &-in-cart {
       @include absCenter;
-      background-color: rgba(var(--clr-white), 0.8);
+      background-color: rgba(var(--bs-white), 0.8);
       padding: rem(5) rem(15);
       border: rem(1) solid currentColor;
       width: auto;
@@ -169,7 +169,7 @@ p.merchNumber {
       font-size: inherit;
       margin: 0 0 rem(10);
       display: block;
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
     }
 
     &-img {
@@ -220,7 +220,7 @@ p.merchNumber {
       width: 100%;
 
       label {
-        color: var(--clr-tertiary);
+        color: var(--bs-gray);
         font-size: rem(10);
         font-weight: 500;
         line-height: 2;
@@ -303,7 +303,7 @@ p.merchNumber {
     padding: rem(15);
 
     a {
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       display: block;
       text-decoration: none;
     }
@@ -393,7 +393,7 @@ p.merchNumber {
       font-size: rem(24);
       font-style: italic;
       font-weight: 500;
-      color: var(--clr-primary);
+      color: var(--bs-primary);
 
       @include breakpoint(medium) {
         font-size: rem(20);
@@ -427,7 +427,7 @@ p.merchNumber {
   .lcsSizeWrapper,
   .lcsLogoWrapper {
     padding-bottom: rem(10);
-    border-bottom: rem(1) solid var(--clr-black);
+    border-bottom: rem(1) solid var(--bs-gray-dark);
   }
 
   .lcsSizeWrapper {
@@ -449,7 +449,7 @@ p.merchNumber {
 
 p.merchSalePrice.red,
 p.merchPrice.red {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   font-style: italic;
   font-weight: normal;
   display: inline;
@@ -462,7 +462,7 @@ p.merchPrice.red {
   width: 100%;
   height: rem(200);
   max-width: rem(600);
-  color: var(--clr-black);
+  color: var(--bs-gray-dark);
   position: relative;
 
   @include breakpoint(medium) {
@@ -484,7 +484,7 @@ p.merchPrice.red {
   margin: rem(20) 0;
 
   h1 {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
     font-weight: 500;
     font-size: rem(30);
     margin-bottom: rem(15);
@@ -515,7 +515,7 @@ li.attribute {
 .newBadge {
   position: absolute;
   background-color: var(--clr-dark-gray);
-  color: var(--clr-white);
+  color: var(--bs-white);
   top: rem(5);
   left: rem(5);
   font-weight: 500;
@@ -531,8 +531,8 @@ li.attribute {
 
 .saleBadge {
   position: absolute;
-  background-color: var(--clr-primary);
-  color: var(--clr-white);
+  background-color: var(--bs-primary);
+  color: var(--bs-white);
   top: rem(5);
   left: rem(5);
   font-weight: 500;
@@ -561,8 +561,8 @@ li.attribute {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: var(--clr-primary);
-  border-color: var(--clr-primary);
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 // Previously Viewed Items
@@ -574,13 +574,13 @@ li.attribute {
   margin: 0 0 rem(25);
   width: 100%;
   padding-bottom: rem(10);
-  border-bottom: rem(1) solid var(--clr-black);
+  border-bottom: rem(1) solid var(--bs-gray-dark);
   display: block;
   text-align: center;
 
   span {
     display: inline-block;
-    background-color: var(--clr-white);
+    background-color: var(--bs-white);
     padding: rem(10);
     background-color: inherit;
   }

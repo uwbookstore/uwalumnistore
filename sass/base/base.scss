@@ -27,8 +27,8 @@ body {
   width: 100%;
   box-sizing: border-box;
   height: 100%;
-  background: var(--clr-white);
-  color: var(--clr-black);
+  background: var(--bs-white);
+  color: var(--bs-gray-dark);
 }
 
 body {
@@ -71,8 +71,8 @@ body {
 .skip {
   position: absolute;
   left: rem(-1000);
-  color: var(--clr-black);
-  background-color: var(--clr-white);
+  color: var(--bs-gray-dark);
+  background-color: var(--bs-white);
 
   &:focus,
   &:active {

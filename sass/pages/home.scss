@@ -6,7 +6,7 @@
   background: var(--clr-light-gray-2);
   font-size: rem(30);
   font-weight: 500;
-  color: var(--clr-primary);
+  color: var(--bs-primary);
   text-transform: uppercase;
   font-style: italic;
   text-align: center;
@@ -20,8 +20,8 @@
     font-size: rem(25);
     font-weight: 500;
     display: block;
-    color: var(--clr-primary);
-    border-bottom: rem(2) solid var(--clr-black);
+    color: var(--bs-primary);
+    border-bottom: rem(2) solid var(--bs-gray-dark);
     flex: 1 1 100%;
     text-transform: uppercase;
     padding-bottom: rem(20);
@@ -31,14 +31,14 @@
     span {
       font-weight: normal;
       font-size: rem(20);
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       display: block;
 
       &.numbers {
         padding-bottom: 0;
         font-size: rem(25);
         font-weight: 500;
-        color: var(--clr-primary);
+        color: var(--bs-primary);
         display: inline;
       }
     }
@@ -55,7 +55,7 @@
       flex: 1 1 33.333%;
       border-bottom: none;
       padding-top: rem(10);
-      border-right: rem(2) solid var(--clr-black);
+      border-right: rem(2) solid var(--bs-gray-dark);
 
       &:last-child {
         border-right: none;
@@ -66,12 +66,12 @@
         font-size: rem(16);
         font-weight: normal;
         margin-bottom: 0;
-        color: var(--clr-black);
+        color: var(--bs-gray-dark);
 
         &.numbers {
           font-size: rem(30);
           font-weight: 500;
-          color: var(--clr-primary);
+          color: var(--bs-primary);
           display: inline;
         }
       }

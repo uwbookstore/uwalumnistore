@@ -42,7 +42,7 @@
       padding: rem(20);
       position: relative;
       text-align: center;
-      color: var(--clr-black);
+      color: var(--bs-gray-dark);
       height: rem(60);
       transition: all 0.2s ease-in-out;
     }
@@ -50,7 +50,7 @@
     &-active {
       &:link,
       &:visited {
-        border-bottom-color: var(--clr-primary);
+        border-bottom-color: var(--bs-primary);
         opacity: 1;
         background-color: var(--clr-light-gray-3);
       }
@@ -60,7 +60,7 @@
       margin-right: 1rem;
 
       &.fa.fa-exclamation-triangle {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
       }
     }
 
@@ -94,7 +94,7 @@
       padding: 0 rem(20);
 
       span {
-        color: var(--clr-primary);
+        color: var(--bs-primary);
         font-weight: 500;
       }
 

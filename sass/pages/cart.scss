@@ -43,7 +43,7 @@
   }
 
   .glyphicon {
-    color: var(--clr-primary);
+    color: var(--bs-primary);
   }
 }
 
@@ -92,9 +92,9 @@ a.paymentBilling-change {
   padding: 0 rem(20);
   text-decoration: none;
   font-size: rem(16);
-  background-color: var(--clr-info);
-  border-color: var(--clr-info);
-  color: var(--clr-black);
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
+  color: var(--bs-gray-dark);
   font-weight: 500;
   text-align: center;
   &:link,
@@ -102,18 +102,18 @@ a.paymentBilling-change {
   }
 
   &:hover {
-    background-color: color-mix(in srgb, var(--clr-info), #000 4%);
-    border-color: color-mix(in srgb, var(--clr-info), #000 5%);
-    color: var(--clr-white);
+    background-color: color-mix(in srgb, var(--bs-info), #000 4%);
+    border-color: color-mix(in srgb, var(--bs-info), #000 5%);
+    color: var(--bs-white);
   }
 
   &:active,
   &:active:hover,
   &:focus,
   &:active:focus {
-    background-color: color-mix(in srgb, var(--clr-info), #000 2%);
-    border-color: color-mix(in srgb, var(--clr-info), #000 3%);
-    color: var(--clr-white);
+    background-color: color-mix(in srgb, var(--bs-info), #000 2%);
+    border-color: color-mix(in srgb, var(--bs-info), #000 3%);
+    color: var(--bs-white);
   }
 }
 
@@ -151,7 +151,7 @@ a.paymentBilling-change {
 }
 
 [class^='helpSection'] span.fa {
-  color: var(--clr-primary);
+  color: var(--bs-primary);
 }
 
 // MBS fixes the Place Order button

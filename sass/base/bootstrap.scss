@@ -33,7 +33,7 @@ select.form-control {
 }
 
 .panel {
-  background-color: var(--clr-white);
+  background-color: var(--bs-white);
 }
 
 .panel-info {
@@ -41,14 +41,14 @@ select.form-control {
 }
 
 .panel-info > .panel-heading {
-  color: var(--clr-black);
+  color: var(--bs-gray-dark);
   background-color: var(--clr-light-gray-3);
   border-color: var(--clr-medium-gray);
 }
 
 .alert-warning {
   background-color: #fff3d9;
-  color: var(--clr-black);
+  color: var(--bs-gray-dark);
 
   em {
     color: #ffae00;

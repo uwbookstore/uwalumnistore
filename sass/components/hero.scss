@@ -17,7 +17,7 @@
 
   &__body {
     @include absCenter;
-    background-color: var(--clr-white);
+    background-color: var(--bs-white);
     padding: rem(10);
     text-align: center;
     width: 95%;
@@ -25,7 +25,7 @@
 
     &--header {
       font-family: 'Red Hat Display', sans-serif;
-      color: var(--clr-primary);
+      color: var(--bs-primary);
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: rem(1);
@@ -74,7 +74,7 @@
         // TODO: Reset after February
         // padding: rem(15) rem(25);
 
-        background-color: var(--clr-white);
+        background-color: var(--bs-white);
         width: 90%;
         margin: 0 auto;
         font-size: rem(30);

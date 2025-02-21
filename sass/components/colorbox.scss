@@ -85,7 +85,7 @@
 // ordered & tabbed in a way that represents the nesting of the generated HTML.
 
 #cboxOverlay {
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 div#colorbox button {
@@ -96,54 +96,54 @@ div#colorbox button {
 #cboxTopLeft {
   width: rem(14);
   height: rem(14);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxTopCenter {
   height: rem(14);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxTopRight {
   width: rem(14);
   height: rem(14);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxBottomLeft {
   width: rem(14);
   height: rem(43);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxBottomCenter {
   height: rem(43);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxBottomRight {
   width: rem(14);
   height: rem(43);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxMiddleLeft {
   width: rem(14);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxMiddleRight {
   width: rem(14);
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxContent {
-  background: var(--clr-white);
+  background: var(--bs-white);
   overflow: visible;
 }
 
 .cboxIframe {
-  background: var(--clr-white);
+  background: var(--bs-white);
 }
 
 #cboxError {
@@ -171,7 +171,7 @@ div#colorbox button {
   text-align: center;
   width: 100%;
   font-weight: 500;
-  color: var(--clr-secondary);
+  color: var(--bs-secondary);
 }
 
 #cboxCurrent {
@@ -179,7 +179,7 @@ div#colorbox button {
   bottom: rem(-25);
   left: rem(58);
   font-weight: 500;
-  color: var(--clr-secondary);
+  color: var(--bs-secondary);
 }
 
 #cboxPrevious,
