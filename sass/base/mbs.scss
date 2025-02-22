@@ -94,7 +94,7 @@ a.promo-banner {
 a#goToTop,
 .disco,
 .hide,
-footer:last-of-type {
+footer:not(.footer) {
   display: none !important;
 }
 
