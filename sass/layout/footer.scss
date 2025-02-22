@@ -139,20 +139,19 @@
     flex-wrap: wrap;
     justify-content: space-between;
     border-top: rem(1) solid var(--clr-medium-gray);
-    padding: 0 0 rem(25);
+    padding-bottom: rem(25);
 
     @include breakpoint(nav) {
       padding: rem(25);
+      flex-wrap: nowrap;
     }
   }
 
   &__links {
-    border-bottom: rem(1) solid var(--clr-medium-gray);
     flex: 1 1 100%;
 
     div {
-      margin: 0;
-      padding: 0 rem(25);
+      padding-inline: rem(25);
       color: var(--clr-dark-gray);
       border-bottom: rem(1) solid var(--clr-medium-gray);
     }
@@ -164,121 +163,154 @@
       padding: 0;
     }
 
-    li {
-      margin-bottom: rem(8);
-    }
-
     &-title {
       font-weight: 500;
       text-transform: uppercase;
-      line-height: rem(25);
       padding: rem(25) 0;
-      font-size: rem(20);
     }
 
     a {
       display: block;
-      width: 100%;
       color: var(--clr-dark-gray);
-      padding: rem(20) 0;
+      padding-bottom: rem(20);
 
-      &:first-child {
-        padding-top: 0;
+      &:hover {
+        text-decoration: none;
+        color: var(--bs-primary);
+        transition: var(--transition);
+      }
+
+      &.phone {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: rem(50);
+        font-weight: 500;
+        background: var(--bs-success);
+        color: var(--bs-white);
+        width: auto;
+        padding-inline: rem(10);
+        padding-bottom: 0;
+        margin: rem(10) rem(10) rem(20) 0;
+
+        &::before {
+          font-family: 'FontAwesome';
+          content: '\f095';
+          padding: 0 rem(5) 0 0;
+        }
+
+        @include breakpoint(xsmall) {
+          display: inline-block;
+          height: auto;
+          color: inherit;
+          font-weight: 400;
+          background-color: transparent;
+          cursor: text;
+          margin: 0;
+          padding: rem(20) 0;
+
+          &::before {
+            content: '';
+            padding: 0;
+          }
+        }
+
+        @include breakpoint(nav) {
+          padding: 0;
+        }
       }
     }
 
     @include breakpoint(nav) {
       display: flex;
-      flex: 1 1 75%;
+      flex: 0 0 75%;
+      border-bottom: none;
 
       div {
         padding: 0;
-        flex: 1 1 33.3333%;
-
-        &:not(:last-child) {
-          border-right: rem(1) solid var(--clr-medium-gray);
-        }
+        flex: 0 0 33.3333%;
+        border-bottom: none;
+        border-right: rem(1) solid var(--clr-medium-gray);
       }
 
       ul {
-        font-size: rem(20);
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+        font-size: rem(15);
+        margin-inline: rem(20);
       }
 
       li {
-        margin-bottom: rem(8);
+        margin-bottom: 0;
+        line-height: rem(25);
       }
 
       &-title {
-        font-weight: 500;
-        text-transform: uppercase;
-        line-height: rem(25);
-        padding: rem(25) 0;
-        font-size: rem(20);
+        padding: 0;
+        font-size: rem(12);
+      }
+
+      a {
+        padding: 0;
       }
     }
   }
 
   &__social {
-    flex-direction: column;
-    align-items: flex-start;
     flex: 1 1 100%;
     padding: rem(20);
+    border-bottom: rem(1) solid var(--clr-medium-gray);
 
     &--links {
-      margin: 0 auto rem(40);
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: rem(40);
       font-size: rem(35);
-      text-align: center;
+      max-width: rem(350);
+      margin-inline: auto;
 
       a {
         &:link,
         &:visited {
           color: var(--clr-medium-gray-3);
-          transition: color 0.25s ease-in-out;
-          padding: 0 rem(20);
-
-          &:not(:last-child) {
-            margin-right: rem(10);
-          }
+          padding: 0 rem(25);
         }
 
-        &:hover,
         &:active {
           color: var(--bs-primary);
-          transition: color 0.25s ease-in-out;
         }
 
         @include breakpoint(nav) {
+          transition: var(--transition);
+
           &:link,
           &:visited {
-            padding: 0;
+            padding: 0 rem(5);
+
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+
+          &:hover,
+          &:active {
+            color: var(--bs-primary);
+            transition: var(--transition);
           }
         }
       }
 
       @include breakpoint(nav) {
-        align-self: flex-start;
-        flex: 1 1 100%;
-        display: flex;
-        justify-content: flex-start;
-        flex: rem(20);
+        justify-content: flex-end;
       }
     }
 
     @include breakpoint(nav) {
       flex: 1 1 25%;
       padding: 0;
-
-      &--links {
-        justify-content: flex-end;
-      }
+      border-bottom: none;
     }
   }
 
   &__logo {
-    margin: 0 auto;
     text-align: center;
 
     @include breakpoint(nav) {
