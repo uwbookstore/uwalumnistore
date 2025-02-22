@@ -48,92 +48,6 @@
     }
   }
 
-  .grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    border-top: rem(1) solid var(--clr-medium-gray);
-    padding: 0 0 rem(25);
-
-    &-item {
-      justify-content: flex-start;
-      border-bottom: rem(1) solid var(--clr-medium-gray);
-      flex: 1 1 100%;
-
-      dl {
-        margin: 0;
-        color: var(--clr-dark-gray);
-        font-size: rem(20);
-        padding: 0 rem(25);
-
-        dt {
-          font-weight: 500;
-          text-transform: uppercase;
-          line-height: rem(25);
-          position: relative;
-          cursor: pointer;
-          display: block;
-          padding: rem(25) 0;
-        }
-
-        ul {
-          list-style-type: none;
-          padding: 0;
-        }
-
-        em {
-          position: absolute;
-          top: rem(25);
-          right: rem(10);
-          left: auto;
-          font-size: rem(15);
-          transition: all 0.4s ease;
-        }
-
-        &.open {
-          em {
-            transform: rotate(180deg);
-          }
-        }
-      }
-
-      &:first-child dl {
-        margin-top: 0;
-      }
-    }
-
-    @include breakpoint(nav) {
-      padding: rem(25);
-      font-size: rem(12);
-      &-item {
-        flex: 1 1 25%;
-        border-bottom: none;
-
-        &:not(:last-child) {
-          border-right: rem(1) solid var(--clr-medium-gray);
-        }
-
-        dl {
-          font-size: rem(12);
-          margin: 0 rem(20);
-          padding: 0;
-
-          dt {
-            cursor: default;
-            padding: 0;
-          }
-
-          dd {
-            margin: auto;
-            line-height: rem(25);
-            font-size: rem(15);
-          }
-        }
-      }
-    }
-  }
-
   &__links-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -199,7 +113,7 @@
           padding: 0 rem(5) 0 0;
         }
 
-        @include breakpoint(xsmall) {
+        @include breakpoint(small) {
           display: inline-block;
           height: auto;
           color: inherit;
