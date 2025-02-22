@@ -86,7 +86,7 @@ a.paymentBilling-change {
   cursor: pointer;
   display: block;
   border: rem(2) solid;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition);
   height: rem(50);
   line-height: rem(50);
   padding: 0 rem(20);

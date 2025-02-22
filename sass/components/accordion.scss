@@ -22,7 +22,7 @@
       content: '\f067';
       right: rem(10);
       display: block;
-      transition: transform 0.25s ease-in-out;
+      transition: var(--transition);
 
       @include breakpoint(small) {
         font-size: rem(16);
@@ -31,7 +31,7 @@
 
     &.active::before {
       transform: rotate(45deg);
-      transition: transform 0.25s ease-in-out;
+      transition: var(--transition);
     }
 
     @include breakpoint(medium) {

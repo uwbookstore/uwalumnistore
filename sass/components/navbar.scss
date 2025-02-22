@@ -170,7 +170,7 @@
         height: rem(2);
         border-radius: rem(1);
         background-color: var(--bs-gray-dark);
-        transition: all 0.25s ease-in-out;
+        transition: var(--transition);
 
         + .icon-bar {
           margin-top: rem(4);
@@ -290,7 +290,7 @@
   .show-all {
     text-align: center;
     font-weight: 500 !important;
-    transition: color 0.25s ease-in-out;
+    transition: var(--transition);
     font-size: rem(20) !important;
     padding: rem(14) !important;
     line-height: 1;
@@ -337,7 +337,7 @@
       width: rem(16);
       fill: var(--bs-secondary);
       cursor: pointer;
-      transition: fill 0.25s ease-in-out;
+      transition: var(--transition);
     }
 
     @include breakpoint(nav) {
@@ -398,7 +398,7 @@
             fill: var(--bs-secondary);
             width: rem(16);
             height: rem(19);
-            transition: fill 0.25s ease-in-out;
+            transition: var(--transition);
           }
         }
 
@@ -435,7 +435,7 @@
             fill: #777;
             width: rem(26.5);
             height: rem(20);
-            transition: fill 0.25s ease-in-out;
+            transition: var(--transition);
           }
 
           &:hover {
@@ -462,7 +462,7 @@
           fill: #777;
           width: rem(26.5);
           height: rem(20);
-          transition: fill 0.25s ease-in-out;
+          transition: var(--transition);
         }
 
         &:hover {

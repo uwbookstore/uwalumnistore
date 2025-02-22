@@ -61,9 +61,8 @@ p.merchNumber {
       padding: rem(25);
       text-align: center;
       font-style: italic;
-      transition: opacity 0.25s ease-in-out;
+      transition: var(--transition);
       position: relative;
-      // box-shadow: 0 rem(2) rem(2) rgba(var(--clr-medium-gray-3), 0.6);
       margin: rem(10) 0;
       flex: 0 0 100%;
 
@@ -92,11 +91,6 @@ p.merchNumber {
           flex: 0 0 16.666%;
         }
       }
-
-      // &:hover {
-      //     opacity: 0.7;
-      //     transition: opacity 0.25s ease-in-out;
-      // }
     }
 
     &-special,
@@ -284,7 +278,7 @@ p.merchNumber {
   &:hover,
   &:active {
     opacity: 0.7;
-    transition: opacity 0.25s ease-in-out;
+    transition: var(--transition);
     text-decoration: none;
   }
 }
