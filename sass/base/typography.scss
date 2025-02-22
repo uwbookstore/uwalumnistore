@@ -282,27 +282,6 @@ blockquote {
   font-size: rem(16);
 }
 
-a[href^='tel:'] {
-  font-size: 1em;
-  font-weight: 500;
-  background: #46ca5e;
-  border-radius: 0;
-  color: var(--bs-white);
-  display: block;
-  line-height: 1em;
-  padding: rem(10) rem(15);
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-  margin: rem(10) auto;
-
-  &:before {
-    font-family: 'FontAwesome';
-    content: '\f095';
-    padding: 0 rem(5) 0 0;
-  }
-}
-
 .contact-info {
   ul {
     list-style-type: none;
