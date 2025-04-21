@@ -62,9 +62,17 @@ body header:first-of-type,
   }
 
   a {
-    color: #fff;
-    text-decoration: underline;
-    margin-left: rem(15);
+    &:link {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: 500;
+      text-underline-offset: rem(4);
+      font-style: normal;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
   }
 
   &:hover,
