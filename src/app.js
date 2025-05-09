@@ -173,7 +173,7 @@ const cloneAndAppendLinks = (
   parentId,
   subElementClass,
   targetSelector,
-  newClass
+  newClasses
 ) => {
   const parent = document.getElementById(parentId);
   const target = document.querySelector(targetSelector);
@@ -184,12 +184,17 @@ const cloneAndAppendLinks = (
 
   links.forEach((link) => {
     const clone = link.cloneNode(true);
-    clone.classList.add(newClass);
+
+    if (typeof newClasses === 'string') {
+      clone.classList.add(newClasses);
+    } else if (Array.isArray(newClasses)) {
+      clone.classList.add(...newClasses);
+    }
     target.appendChild(clone);
   });
 };
 
-// CLONE MENU SECTIONS TO APPROPRIATE LANDING PAGES
+// CLONE MENU SECTIONS TO MAIN CATEGORY LANDING PAGES
 // Women
 cloneAndAppendLinks('women', 'ul.featured', '#womens-main', 'menu__grid--item');
 cloneAndAppendLinks('women', 'ul.tops', '#womens-main', 'menu__grid--item');
@@ -227,5 +232,121 @@ prependTextToElement('#kids-main a.toddler', 'Toddler ');
 cloneAndAppendLinks('kids', 'ul.youth', '#kids-main', 'menu__grid--item');
 prependTextToElement('#kids-main a.youth', 'Youth ');
 
+// Gifts
+cloneAndAppendLinks(
+  'gifts-acc',
+  'ul.featured',
+  '#gift-main',
+  'menu__grid--item'
+);
+cloneAndAppendLinks(
+  'gifts-acc',
+  'ul.for-the-home',
+  '#gift-main',
+  'menu__grid--item'
+);
+cloneAndAppendLinks(
+  'gifts-acc',
+  'ul.miscellaneous',
+  '#gift-main',
+  'menu__grid--item'
+);
+
+// Remove "for" from mens/womens alumni title
+document.querySelectorAll('.category__grid a.alumni').forEach((link) => {
+  link.textContent = 'Alumni';
+});
+
+// CLONE MENU SECTIONS TO MAIN SUB-CATEGORY LANDING PAGES
+// Women's pages
+cloneAndAppendLinks('women', 'ul.featured', '#womens-featured', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('women', 'ul.tops', '#womens-tops', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('women', 'ul.accessories', '#womens-accessories', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+
+// men's pages
+cloneAndAppendLinks('men', 'ul.featured', '#mens-featured', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('men', 'ul.tops', '#mens-tops', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('men', 'ul.accessories', '#mens-accessories', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+
+// kid's pages
+cloneAndAppendLinks('kids', 'ul.featured', '#kids-featured', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('kids', 'ul.infant', '#kids-infant', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('kids', 'ul.toddler', '#kids-toddler', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('kids', 'ul.youth', '#kids-youth', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+
+// gift pages
+cloneAndAppendLinks('gifts-acc', 'ul.featured', '#gift-featured', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('gifts-acc', 'ul.for-the-home', '#gift-home', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('gifts-acc', 'ul.miscellaneous', '#gift-misc', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+cloneAndAppendLinks('gifts-acc', 'ul.tech', '#tech-main', [
+  'menu__grid--item',
+  'cat-link',
+  'mx-0',
+]);
+
+// Add chevron icon to submenu
+document.querySelectorAll('a.cat-link').forEach((el) => {
+  const icon = document.createElement('em');
+  icon.classList.add('fa', 'fa-chevron-right');
+  el.appendChild(icon);
+});
+
 // SORT MENUS ALPHABETICALLY
 sortList('#womens-main');
+sortList('#mens-main');
+sortList('#kids-main');
+sortList('#gift-main');
+sortList('#tech-main');
+sortList('.menu__grid');
