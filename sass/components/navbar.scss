@@ -498,10 +498,15 @@
   display: none;
   position: fixed;
   z-index: 9999999999999;
-  bottom: rem(40);
-  right: rem(10);
+  bottom: rem(20);
+  right: rem(20);
   width: rem(50);
   height: rem(50);
+
+  @include breakpoint(medium) {
+    bottom: rem(60);
+    right: rem(60);
+  }
 }
 
 .backtotop a {
@@ -511,10 +516,9 @@
     opacity: 1;
     width: rem(50);
     height: rem(50);
-    background-color: var(--bs-primary);
-    border: rem(2) solid #c0c0c0;
+    background-color: rgba(#c0c0c0, 0.7);
+    border: rem(2) solid rgba(#c0c0c0, 0.8);
     border-radius: rem(4);
-    // outline: 0;
     position: absolute;
     transition: all 0.2s ease;
 
@@ -526,7 +530,8 @@
 
   &:hover {
     transform: translateY(rem(-3));
-    background-color: #9e040a;
+    background-color: rgba(#c0c0c0, 0.8);
+    border-color: #c0c0c0;
     box-shadow: 0 rem(1) rem(2) rgba(var(--bs-gray-dark), 0.6);
   }
   &:active {
@@ -537,6 +542,6 @@
 
 .backtotop em {
   @include absCenter;
-  color: var(--bs-white);
+  color: var(--bs-gray-dark);
   font-size: rem(20);
 }
