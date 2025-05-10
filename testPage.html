@@ -449,58 +449,987 @@
   <main id="page_wrapper">
     <div id="ContainDiv" class="contain container clear">
 
-      <div class="hero">
-        <div class="hero__image">
-          <picture>
-            <source media="(min-width: 48em)"
-              srcset="https://i.univbkstr.com/uwalumnistore/images/womens/landing_hero.jpg">
-            <img src="https://i.univbkstr.com/uwalumnistore/images/womens/landing_hero-sm.jpg" alt="Women's Apparel"
-              class="img-fluid">
-          </picture>
-        </div>
 
-        <div class="hero__body">
-          <h2 class="hero__body--header">Women's Apparel</h2>
-          <span>From casual comfort to smartly styled, these looks will say you're all Badger.</span>
-        </div>
-      </div>
+      <div class="row">
 
-      <div class="d-flex flex-wrap primary__card primary__card--feature">
-        <div class="primary__card--feature-item">
-          <a href="https://www.uwalumnistore.com/Shop/Gifts/For-Alumni" class="primary__card--feature-link">
-            <img class="primary__card--feature-img"
-              src="https://i.univbkstr.com/uwalumnistore/images/womens/alumni_feature.jpg?v=12102021"
-              alt="Just for Alumni">
-          </a>
-          <a href="https://www.uwalumnistore.com/Shop/Gifts/For-Alumni" class="btn btn-secondary">Shop Alumni</a>
+        <div id="contentSection" Class="col-lg-12 col-md-12 col-sm-12 col-12" role="main">
+
+          <ul class="breadcrumb background_none">
+            <li> <a Class="small" href="https://www.uwalumnistore.com/merchandise"> Merchandise Categories</a></li>
+            <li> <a Class="small"> Women's Long Sleeves</a></li>
+
+          </ul>
+
+
+          <a Class="floatr right15 top-50 pageHelp"
+            href="https://www.uwalumnistore.com/help/MerchandiseBrowse.htm">Help</a>
+          <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+          <input type="hidden" class="ga4-itemlistid" value="25362" />
+          <input type="hidden" class="ga4-itemlistname" value="Women&#39;s Long Sleeves" />
+
+          <input type="hidden" class="ga4-location" value="merchlist" />
+
+
+
+          <form action="/Shop/Womens/Long-Sleeve" method="post"><input name="__RequestVerificationToken" type="hidden"
+              value="quq0YlDxLJ68Nr-6gVb3XYs1W1uxrDUwgKFyn4yeXjAI8-PcthTCQKyO3k5-Xa82gMf0SiXSR1qrKOaYQ3ZL2y1469w1" />
+            <style>
+              /*.btn {
+                 border-radius: 0px;
+             }*/
+
+              .imageLeft {
+                position: absolute;
+                top: 48%;
+                left: 20px;
+                width: 50px;
+                height: 65px;
+              }
+
+              .imageRight {
+                position: absolute;
+                top: 48%;
+                right: 20px;
+                width: 50px;
+                height: 65px;
+              }
+
+              .imageLeft:hover,
+              .imageRight:hover {
+                cursor: pointer;
+              }
+            </style>
+            <input id="hiddenShowResults1" name="showResults1" type="hidden" value="1" /><input id="hiddenShowResults2"
+              name="showResults2" type="hidden" value="12" /><input id="hiddenShowPerPage" name="showPerPage"
+              type="hidden" value="12" /><input id="hiddenID" name="mclID" type="hidden" value="25362" /><input
+              id="hiddenType" name="itemType" type="hidden" value="" /><input id="hiddenSearchString"
+              name="searchString" type="hidden" value="" /><input id="hiddenSearchType" name="searchType" type="hidden"
+              value="All" /><input id="hiddenNum" name="num" type="hidden" value="" /><input id="hiddenSearchIn"
+              name="searchin" type="hidden" value="" /><input id="hiddenSearchMCL" name="searchMCL" type="hidden"
+              value="" /><input id="hiddenCatID" name="CatID" type="hidden" value="" /><input id="hiddenOriginal"
+              name="originalSearchType" type="hidden" value="" /><input id="hiddenStore" name="StoreID" type="hidden"
+              value="294" /><input id="hiddenSort" name="sortOrderEnum" type="hidden" value="8" /><input
+              id="hiddenCatSearch" name="catSearch" type="hidden" value="" /><input id="useRouting" name="useRouting"
+              type="hidden" value="True" /><input id="isMerchList" name="isMerchList" type="hidden"
+              value="True" /><input id="hiddenLargeSwitch" name="largeSwitch" type="hidden" value="False" /><input
+              id="hiddenLowPrice" name="lowPrice" type="hidden" value="0" /><input id="hiddenHighPrice" name="highPrice"
+              type="hidden" value="1000000" /><input id="GiftReload" name="GiftReload" type="hidden"
+              value="False" /><input id="fc" name="fc" type="hidden" value="" /><input id="fv" name="fv" type="hidden"
+              value="" /><input id="listView" name="listView" type="hidden" value="" />
+
+
+            <input type="submit" id="showPerPageSubmit" value="showPerPage" name="submitButton" class="displayn" />
+            <input type="submit" id="firstSubmit" value="firstSubmit" name="submitButton" class="displayn" />
+            <input type="submit" id="prevSubmit" value="prevSubmit" name="submitButton" class="displayn" />
+            <input type="submit" id="nextSubmit" value="nextSubmit" name="submitButton" class="displayn" />
+            <input type="submit" id="lastSubmit" value="lastSubmit" name="submitButton" class="displayn" />
+            <input type="submit" id="sortSubmit" value="sortSubmit" name="submitButton" class="displayn" />
+            <input type="submit" id="searchSubmit" value="searchSubmit" name="submitButton" class="displayn" />
+            <input type="submit" id="filterSubmit" value="filterSubmit" name="submitButton" class="displayn" />
+            <div id="scrollPositionIgnore"></div>
+            <a id="goToTop" class="btn btn-default displayn" title="Go to top"><span
+                class="glyphicon glyphicon-chevron-up"></span></a>
+            <div Class="center">
+              <h1 Class="page_header">The Red Shirt™</h1>
+            </div>
+            <!--Search and Sort Dropdown Row-->
+            <div class="row">
+              <!--Search Bar-->
+              <div class="searchCatWrap col-sm-4 col-12 padding0 padding-right10 bottom10">
+                <div class="input-group">
+                  <input type="text" class="form-control searchCat" placeholder="Search Women&#39;s Long Sleeves"
+                    aria-label="Search Women&#39;s Long Sleeves" />
+                  <button class="btn btn-default searchCatButton" type="button"
+                    aria-label="Search Women&#39;s Long Sleeves"><span
+                      class="glyphicon glyphicon-search"></span></button>
+                </div>
+              </div>
+
+              <!--Sort Dropdowns-->
+              <div class="sortCatWrap col-sm-8 col-12 padding0 bottom10">
+                <div class="row" style="width: 100%; justify-content: flex-end;">
+                  <div class="col-md-5 col-sm-0 col-0 padding0 no_show_small">
+                    <div class="input-group">
+                      <label class="input-group-text" for="merchResultsSelectID">Show:</label>
+                      <select aria-label="Show number of items per page" id="merchResultsSelectID"
+                        class="merchResultsSelect form-control form-select wauto right5">
+                        <option selected value="12">12 Items Per Page</option>
+                        <option value="24">24 Items Per Page</option>
+                        <option value="48">48 Items Per Page</option>
+                        <option value="92">92 Items Per Page</option>
+                        <option value="100">100 Items Per Page</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-5 col-sm-12 col-12 padding0">
+                    <div class="input-group">
+                      <label class="input-group-text" for="merchSortBySelectID">Sort By:</label>
+                      <select aria-label="Sort By" id="merchSortBySelectID"
+                        class="merchSortBy form-control form-select wauto">
+                        <option value="0"> Description(A - Z)</option>
+                        <option value="1"> Description(Z - A)</option>
+                        <option value="2"> Price(Low - High)</option>
+                        <option value="3"> Price(High - Low)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-md-2 col-sm-0 col-0 padding0 no_show_small">
+                    <div Class="displayib largeSwitch listSwitch" data-class="" tabindex="0" aria-label="Display Large"
+                      role="button"><span class="fa fa-2x fa-th-large switchIcon"></span></div>
+                    <div Class="displayib smallSwitch listSwitch" tabindex="0" aria-label="Display Small" role="button">
+                      <span class="fa fa-2x fa-th switchIcon"></span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+            </div>
+            <!--Filter and Merch Row-->
+            <div class="row">
+              <div class="viewFiltersDiv col-12 bottom10">
+                <div class="filterButtonWrapper">
+                  <div tabindex="0" role="button" aria-label="Open Filters Dialog" class="viewFiltersButton displayn">
+                    <span class="filterText">FILTERS</span>
+                  </div>
+                </div>
+              </div>
+
+              <!--Filter Section-->
+              <div role="dialog" class="filterColumn col-md-3 col-sm-3 col-12 displayn">
+                <div class="row">
+                  <div class="col-12 padding0">
+                    <p Class="filterTitle font20"><strong>FILTER BY:</strong></p>
+                    <p class="closeFilterX floatr hover_pointer filterDisplay"><span
+                        class="glyphicon glyphicon-remove"></span></p>
+                    <input type="button" id="filterButton1"
+                      class="btn btn-primary top5 wauto filterButton filterButtonDisplay" value="Apply" />
+                  </div>
+                </div>
+                <div class="filterOption top10 filterPriceOption row">
+
+                  <div class="col-12 padding0">
+                    <p Class="filterOptionTitle padding5 bottom_border bottom5"><strong>Price</strong><span
+                        class="fa fa-minus-square floatr hover_pointer filterCollapse" data-id="filterPriceOption"
+                        data-filtername="Price" tabindex="0" aria-label="Collapse Price Filter" role="button"></span>
+                    </p>
+                  </div>
+                  <div class="col-12 padding0">
+                    <div class="filterValueWrapper bottom10 " data-filterid="filterPriceOption">
+                      <div class="filterPrice top10 bottom10 input-group">
+                        <input aria-label="Minimum Price Filter Input" class="filterMin form-control visibilityHide"
+                          id="filterMinInput" max="100000" min="0" name="filterMin" placeholder="Min" type="number"
+                          value="0" />
+                        <span class="input-group-text">to</span>
+                        <input aria-label="Maximum Price Filter Input" class="filterMin form-control visibilityHide"
+                          id="filterMaxInput" max="100000" min="0" name="filterMax" placeholder="Max" type="number"
+                          value="1000000" />
+                      </div>
+                      <div class="filterOption top10 filterSaleOption">
+                        <div class="form-floating">
+                          <input aria-label="On Sale" class="filterCheck newCheckbox" data-category="filteronsale"
+                            data-value="filteronsale" id="merchFilterOnSale" name="merchFilterOnSale" type="checkbox"
+                            value="true" /><input name="merchFilterOnSale" type="hidden" value="false" />
+                          <span class="newCheckboxText"> On Sale</span>
+                        </div>
+                      </div>
+                      <p id="priceError" role="alert" class="red top10"></p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <!--MerchList Section-->
+              <div class="merchColumn col-12">
+                <div class="row">
+                  <div class="filterSelections col-12 padding0 bottom10">
+                    <a class="hover_pointer clearIndPriceFilter bottom10 displayn filterSelection" tabindex="0">
+                      <span class="priceFilterOptionText"></span>
+                      <span class="fa fa-times"></span>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 padding0">
+                    <div class="row">
+                      <!--
+  This is the container for all merch list / grid items.
+  This is where we determine if we need to display merch list / grid, and iterate through our merch items.
+-->
+
+
+
+                      <!---->
+
+
+
+                      <!--One Item-->
+                      <div data-count="1" data-merID="1860605"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Antigua Women&#39;s Bucky Badger &#188; Zip (White)" />
+                        <input type="hidden" class="ga4-price" value="69.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2078257           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1860605&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1860605-1.png"
+                                    alt="Antigua Women&#39;s Bucky Badger &#188; Zip (White)" aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1860605">Antigua Women's Bucky Badger ¼ Zip
+                                (White)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2078257 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$69.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="2" data-merID="1836200" class="merchItem padding0 bottom10 col-sm-4 col-6"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Champion Women&#39;s Bucky Badger Long Sleeve T-Shirt (Red)" />
+                        <input type="hidden" class="ga4-price" value="39.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2077218           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1836200&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1836200-1.png"
+                                    alt="Champion Women&#39;s Bucky Badger Long Sleeve T-Shirt (Red)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1836200">Champion Women's Bucky Badger Long
+                                Sleeve T-Shirt (Red)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2077218 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$39.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="3" data-merID="1592581"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Champion Women&#39;s Bucky Badger Long Sleeve T-Shirt (White)" />
+                        <input type="hidden" class="ga4-price" value="39.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2072755           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1592581&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1592581-1.png"
+                                    alt="Champion Women&#39;s Bucky Badger Long Sleeve T-Shirt (White)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1592581">Champion Women's Bucky Badger Long
+                                Sleeve T-Shirt (White)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2072755 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$39.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="4" data-merID="1869875"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Chicka-d Women&#39;s Plus Bucky Badger Flannel Shirt (Black/Red)" />
+                        <input type="hidden" class="ga4-price" value="64.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2077777           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1869875&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1869875-1.png"
+                                    alt="Chicka-d Women&#39;s Plus Bucky Badger Flannel Shirt (Black/Red)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1869875">Chicka-d Women's Plus Bucky Badger
+                                Flannel Shirt (Black/Red)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2077777 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$64.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="5" data-merID="1865014"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Gameday Social Women&#39;s WI Split Cropped Long Sleeve (White)" />
+                        <input type="hidden" class="ga4-price" value="69.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2078281           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1865014&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1865014-2.png"
+                                    alt="Gameday Social Women&#39;s WI Split Cropped Long Sleeve (White)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1865014">Gameday Social Women's WI Split
+                                Cropped Long Sleeve (White)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2078281 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$69.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="6" data-merID="1836906" class="merchItem padding0 bottom10 col-sm-4 col-6"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Hype and Vice Women&#39;s Wisconsin Rugby Polo (Red/White)" />
+                        <input type="hidden" class="ga4-price" value="64.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2076745           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1836906&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1836906-1.png"
+                                    alt="Hype and Vice Women&#39;s Wisconsin Rugby Polo (Red/White)" aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1836906">Hype and Vice Women's Wisconsin
+                                Rugby Polo (Red/White)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2076745 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$64.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="7" data-merID="1860479"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Old Fashioned Golf Women&#39;s WI Short Form &#188; Zip (Red)" />
+                        <input type="hidden" class="ga4-price" value="79.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2078179           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1860479&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1860479-2.png"
+                                    alt="Old Fashioned Golf Women&#39;s WI Short Form &#188; Zip (Red)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1860479">Old Fashioned Golf Women's WI
+                                Short Form ¼ Zip (Red)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2078179 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$79.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="8" data-merID="1859911" class="merchItem padding0 bottom10 col-sm-4 col-6"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Old Fashioned Golf Women&#39;s Wisconsin Icon &#188; Zip (White)" />
+                        <input type="hidden" class="ga4-price" value="79.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2078178           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1859911&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1859911-2.png"
+                                    alt="Old Fashioned Golf Women&#39;s Wisconsin Icon &#188; Zip (White)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1859911">Old Fashioned Golf Women's
+                                Wisconsin Icon ¼ Zip (White)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2078178 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$79.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="9" data-merID="1860481"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Old Fashioned Golf Women&#39;s Wisconsin Volleyball &#188; Zip (Red)" />
+                        <input type="hidden" class="ga4-price" value="79.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2078177           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1860481&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1860481-2.png"
+                                    alt="Old Fashioned Golf Women&#39;s Wisconsin Volleyball &#188; Zip (Red)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1860481">Old Fashioned Golf Women's
+                                Wisconsin Volleyball ¼ Zip (Red)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2078177 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$79.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="10" data-merID="1540745"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Under Armour Replica Women&#39;s Hockey Jersey (White)" />
+                        <input type="hidden" class="ga4-price" value="129.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2068170           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1540745&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1540745-1.jpg"
+                                    alt="Under Armour Replica Women&#39;s Hockey Jersey (White)" aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1540745">Under Armour Replica Women's
+                                Hockey Jersey (White)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2068170 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$129.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="11" data-merID="1858881"
+                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Under Armour Women&#39;s WI Badgers Long Sleeve T-Shirt (Red)" />
+                        <input type="hidden" class="ga4-price" value="44.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2078199           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1858881&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1858881-1.png"
+                                    alt="Under Armour Women&#39;s WI Badgers Long Sleeve T-Shirt (Red)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1858881">Under Armour Women's WI Badgers
+                                Long Sleeve T-Shirt (Red)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2078199 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$44.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+
+
+                      <!--One Item-->
+                      <div data-count="12" data-merID="1829288" class="merchItem padding0 bottom10 col-sm-4 col-6"
+                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
+                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
+                        <input type="hidden" class="ga4-name"
+                          value="Under Armour Women&#39;s WI Badgers Long Sleeve T-Shirt (Red)" />
+                        <input type="hidden" class="ga4-price" value="44.99" />
+
+
+
+                        <input type="hidden" class="ga4-salePrice" value="0" />
+                        <input type="hidden" class="ga4-sku" value="2076801           " />
+                        <input type="hidden" class="ga4-discount" />
+                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                        <input type="hidden" class="ga4-items-identifier" value="-1" />
+                        <input type="hidden" class="ga4-isGeneral" value="False" />
+                        <input type="hidden" class="ga4-author" />
+                        <input type="hidden" class="ga4-isNonMerch" value="False" />
+                        <input type="hidden" class="ga4-isWebSku" value="false" />
+                        <!--Merch Info-->
+                        <div class="row">
+                          <div class="merchDetailWrapper col-12">
+
+                            <a tabindex="0"
+                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1829288&amp;CategoryName=Women&#39;s Long Sleeves&amp;CatID=25362&amp;Name=Women&#39;s Long Sleeves"
+                              Class="merchLink displayb bottom10">
+                              <div Class="imageWrapper">
+                                <div Class="bottom10 merchImageWrapper merchlist">
+                                  <!--Merch Image-->
+                                  <img width="200" Class="merchImage img-responsive"
+                                    src="https://www.uwalumnistore.com/storeimages/294-1829288-1.png"
+                                    alt="Under Armour Women&#39;s WI Badgers Long Sleeve T-Shirt (Red)"
+                                    aria-hidden="true">
+                                </div>
+                              </div>
+                              <p Class="merchTitle top0 textc lead" data-id="1829288">Under Armour Women's WI Badgers
+                                Long Sleeve T-Shirt (Red)</p>
+                            </a>
+                            <div Class="merchCol1 textc bottom10">
+
+
+
+                              <!--Merch Item Number-->
+                              <p Class="merchNumber"><span class="merchSKU">2076801 </span></p>
+
+                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$44.99</span></p>
+
+                              <p Class="merchDiscount red top5 bold"></p>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--End MerchListSection-->
+                    </div>
+                    <div class="row">
+                      <div class="textc">
+                        <ul Class="pagination">
+                          <li class="chevLeft"><a class="hover_pointer">&#8249;</a></li>
+                          <li class="chevRight"><a class="hover_pointer">&#8250;</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="itemFormModal" Class="modal fade" role="dialog">
+              <input type="hidden" value="" id="itemFormButton" />
+              <input type="hidden" value="" id="itemFormType" />
+              <input type="hidden" value="" id="itemFormQty" />
+              <input type="hidden" value="" id="itemFormcolorDesc" />
+              <input type="hidden" value="" id="itemFormcolorValue" />
+              <input type="hidden" value="" id="itemFormlogoDesc" />
+              <input type="hidden" value="" id="itemFormlogoValue" />
+              <input type="hidden" value="" id="itemFormsizeDesc" />
+              <input type="hidden" value="" id="itemFormsizeValue" />
+              <input type="hidden" value="" id="itemFormTypeCode" />
+              <input type="hidden" value="" id="itemFormCurrentPrice" />
+              <input type="hidden" value="" id="itemFormOldType" />
+              <input type="hidden" value="" id="itemFormOldTypeValue" />
+              <input type="hidden" value="" id="itemFormQuick" />
+              <input type="hidden" value="" id="itemFormSKU" />
+              <input type="hidden" value="" id="itemFormMerchImage" />
+              <div Class="modal-dialog">
+                <!-- Modal content-->
+                <div Class="modal-content itemFormModalContent"></div>
+              </div>
+            </div>
+            <div id="cartType" Class="modal fade" role="dialog">
+              <div Class="modal-dialog">
+                <!-- Modal content-->
+                <div Class="modal-content">
+                  <div class="modal-body cartTypeBody"></div>
+                </div>
+              </div>
+            </div>
+            <div id="quickViewModal" Class="modal fade" role="dialog">
+              <div Class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div Class="modal-content quickViewContent">
+                </div>
+              </div>
+            </div>
+            <div id="overlay">
+              <i id="merchSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+            </div>
+            <div id="imageLightBox" Class="modal fade" role="dialog">
+              <div Class="modal-dialog modal-lg">
+                <div Class="modal-content">
+                  <div Class="modal-body">
+                    <div Class="row bottom10">
+                      <div Class="col-md-1 col-sm-2 col-2 textl">
+                        <a Class="imageLightBoxLeft" style="display: inline-block;"><img class="imageLeft"
+                            src="https://www.uwbookstore.com/RWD-IMG/chevLeft.png" alt="Left Arrow For Light Box" /></a>
+                      </div>
+                      <div Class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
+                        <img data-id="1" Class="imageLightBoxBig img-responsive margin_auto" alt="" />
+                      </div>
+                      <div Class="col-md-1 col-sm-2 col-2 textr">
+                        <a Class="imageLightBoxRight" style="display: inline-block;"><img class="imageRight"
+                            src="https://www.uwbookstore.com/RWD-IMG/chevRight.png"
+                            alt="Right Arrow For Light Box" /></a>
+                      </div>
+                    </div>
+                    <div Class="modalDetailThumbnail textc">
+                    </div>
+                  </div>
+                  <div Class="modal-footer">
+                    <Button type="button" Class="btn btn-default" data-bs-dismiss="modal">Close</Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+
         </div>
-        <div class="primary__card--feature-item">
-          <a href="https://www.uwalumnistore.com/Shop/Womens/Sweatshirts" class="primary__card--feature-link">
-            <img class="primary__card--feature-img"
-              src="https://i.univbkstr.com/uwalumnistore/images/womens/sweatshirt_feature.jpg?v=12102021"
-              alt="Women's Apparel">
-          </a>
-          <a href="https://www.uwalumnistore.com/Shop/Womens/Sweatshirts" class="btn btn-secondary">Shop
-            Sweatshirts</a>
-        </div>
-        <div class="primary__card--feature-item">
-          <a href="https://www.uwalumnistore.com/Womens-Accessories" class="primary__card--feature-link">
-            <img class="primary__card--feature-img"
-              src="https://i.univbkstr.com/uwalumnistore/images/womens/accessories_feature.jpg?v=12102021"
-              alt="Gifts &amp; Accessories">
-          </a>
-          <a href="https://www.uwalumnistore.com/Womens-Accessories" class="btn btn-secondary">Shop Accessories</a>
-        </div>
-        <div class="primary__card--feature-item">
-          <a href="https://www.uwalumnistore.com/Shop/Womens/T-Shirts" class="primary__card--feature-link">
-            <img class="primary__card--feature-img"
-              src="https://i.univbkstr.com/uwalumnistore/images/womens/tshirt_feature.jpg?v=12102021"
-              alt="Men's Apparel">
-          </a>
-          <a href="https://www.uwalumnistore.com/Shop/Womens/T-Shirts" class="btn btn-secondary">Shop T-Shirts</a>
-        </div>
-      </div>
-      <div id="womens-main" class="d-flex flex-wrap category__grid">
       </div>
 
 
@@ -674,6 +1603,7 @@
   </div>
 
   <script src="./src/app.js"></script>
+  <script src="./src/merch-list.js"></script>
   <!-- <script src="./src/popup.js"></script> -->
 
 </body>
