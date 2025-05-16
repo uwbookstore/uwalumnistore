@@ -244,6 +244,11 @@ p.merchNumber {
       }
     }
   }
+
+  &Image {
+    max-height: rem(200);
+    width: auto;
+  }
 }
 
 .prevBackward {
