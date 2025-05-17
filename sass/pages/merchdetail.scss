@@ -1,5 +1,9 @@
 @use '../util' as *;
 
+ul.breadcrumb {
+  display: none;
+}
+
 .flexslider {
   width: 100%;
   margin: rem(10) auto;
@@ -106,6 +110,8 @@ span.btn-default.typeSelected {
 
 .merch {
   &__detail {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto rem(20);
     padding: 0 rem(5);
 
@@ -326,6 +332,7 @@ span.btn-default.typeSelected {
     }
 
     @include breakpoint(medium) {
+      flex-direction: row;
       &-slides {
         flex: 1 80%;
         order: 2;
@@ -400,6 +407,7 @@ span.btn-default.typeSelected {
       }
 
       &-add {
+        display: flex;
         flex-direction: row;
         &-btn {
           display: flex;

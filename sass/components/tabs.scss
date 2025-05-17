@@ -116,3 +116,146 @@
     }
   }
 }
+
+// New Accessible Tabs
+.tabs {
+  &-container {
+    font-size: rem(16);
+
+    // MERCH DETAIL
+    // ADDITIONAL INFO SECTION
+    &.additional-info {
+      ul,
+      [role='tablist'] {
+        display: table;
+        text-align: center;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        a {
+          i {
+            margin-right: rem(10);
+          }
+
+          i.fa.fa-exclamation-triangle {
+            color: var(--bs-primary);
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+
+          &:link,
+          &:visited {
+            display: block;
+            width: 100%;
+            font-size: rem(12);
+            background: var(--bs-gray-100);
+            border-bottom: rem(4) solid transparent;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: rem(20);
+            color: var(--bs-gray-dark);
+            height: rem(60);
+            transition: var(--transition);
+            text-decoration: none;
+          }
+
+          &.active,
+          &[aria-selected='true'] {
+            border-bottom: rem(4) solid var(--bs-primary);
+            cursor: default;
+            background-color: var(--bs-gray-400);
+          }
+        }
+      }
+
+      .tabs__panels > div {
+        margin: rem(20) auto rem(30);
+        padding: 0 rem(20);
+
+        &#disco,
+        &#discontinued,
+        &#shipping {
+          max-width: rem(750);
+        }
+
+        span {
+          color: var(--bs-primary);
+          font-weight: 700;
+        }
+
+        ol {
+          margin-left: rem(30);
+
+          @include breakpoint(small) {
+            margin: rem(10) auto;
+            width: 75%;
+          }
+        }
+      }
+
+      @include breakpoint(small) {
+        font-size: rem(14);
+
+        ul,
+        [role='tablist'] {
+          li {
+            display: inline-block;
+            width: auto;
+          }
+
+          a {
+            &:link,
+            &:visited {
+              background-color: transparent;
+              height: auto;
+              padding: rem(10);
+            }
+          }
+        }
+      }
+
+      @include breakpoint(medium) {
+        ul {
+          li:not(:last-child) {
+            margin-right: rem(15);
+          }
+        }
+      }
+    }
+
+    &.locations {
+      .tabs-nav,
+      [role='tablist'] {
+        display: flex;
+        flex-flow: row wrap;
+        gap: rem(10);
+        justify-content: center;
+        list-style: none;
+
+        li {
+          flex: 0 0 48%;
+
+          a {
+            width: 100%;
+          }
+        }
+
+        @include breakpoint(medium) {
+          li {
+            flex: initial;
+            a {
+              width: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// .row:has(.backCart) {
+//   display: none;
+// }

@@ -444,957 +444,281 @@
 
       <div class="row">
 
-        <div id="contentSection" Class="col-lg-12 col-md-12 col-sm-12 col-12 padding0" role="main">
+        <div id="contentSection" Class="col-lg-12 col-md-12 col-sm-12 col-12" role="main">
 
 
 
 
 
+
+          <script type="85ba407ef76a52a90f3cc001-text/javascript">
+        const ga4_items = [];
+        let ga4_items_temp = [];
+        const lga4_module = ga4.modules.merchdetail;
+        $(document).ready(function () {
+            // add merchandise item
+            $('.merchInfo').each(function () {
+                const item = new Object();
+
+                item.item_id = ga4.safeTrim($(this).find('.ga4-sku').val());
+                item.item_name = ga4.safeTrim(ga4.stripHtml($(this).find('.ga4-name').val()));
+
+                const salePrice = parseFloat($(this).find('.ga4-salePrice').val());
+                const regularPrice = parseFloat($(this).find('.ga4-price').val());
+                const gmPromo = $(this).find('.ga4-discount').val();
+                var discount = 0.00; // initialize to 0 to start, will update if there is a sale
+                var finalPrice = regularPrice; // initialize to regularPrice to start. this will change if the item is on sale.
+
+                if (salePrice > 0) {
+                    // Then our item is on sale
+                    discount = Math.abs(regularPrice - salePrice);
+                    finalPrice = salePrice;
+                }
+
+                // set our price to send (this should be the regular price minus sale price aka real potential revenue from the item)
+                item.price = finalPrice;
+
+                //if (discount > 0)
+                //    item.discount = discount;
+
+                //if (gmPromo != '')
+                //    item.coupon = ga4.safeTrim(gmPromo);
+
+                item.affiliation = ga4.safeTrim($(this).find('.ga4-affiliation').val());
+
+                if (item.item_id.includes('W')) {
+                    $(this).find('.ga4-isWebSku').val('true');
+                    item._isWebSku = true;
+                }
+
+                const nonMerchandise = $(this).find('.ga4-isNonMerch').val();
+
+                if (nonMerchandise && nonMerchandise != '') {
+                    const nmVal = nonMerchandise.toLowerCase() == 'true' ? true : false;
+
+                    if (nmVal) {
+                        $(this).find('.ga4-isWebSku').val('true');
+                        item._isWebSku = true;
+                    }
+                }
+                
+                item.item_variant = 'merchandise';
+                item.quantity = 1;
+
+                ga4_items.push(item);
+            });
+
+            if (lga4_module.view_item.enabled) {
+                ga4.loadScript(lga4_module.view_item.script, function () {
+                    if (!ga4_items || !ga4_items.length)
+                        return;
+
+                    // send event
+                    if (ga4.enabled)
+                        ga4.view_item(ga4_items);
+                });
+            }
+
+            if (lga4_module.add_to_cart.enabled)
+                ga4.loadScript(lga4_module.add_to_cart.script);
+
+            if (lga4_module.add_to_wishlist.enabled)
+                ga4.loadScript(lga4_module.add_to_wishlist.script);
+        });
+    </script>
+          <input type="hidden" class="ga4-sku-form" value="" />
+          <input type="hidden" class="ga4-name-form" value="" />
+          <input type="hidden" class="ga4-discount-form" value="" />
+          <input type="hidden" class="ga4-affiliation-form" value="" />
+          <input type="hidden" class="ga4-price-form" value="" />
+          <input type="hidden" class="ga4-quantity-form" value="" />
+          <input type="hidden" class="ga4-category-form" value="" />
+          <input type="hidden" class="ga4-location" value="merchdetail" />
+
+
+
+
+
+
+          <!--Breadcrumbs-->
 
           <ul class="breadcrumb background_none">
-            <li> <a Class="small" href="https://www.uwalumnistore.com/merchandise"> Merchandise Categories</a></li>
-            <li> <a Class="small"> Men's T-Shirts</a></li>
+            <li> <a Class="small" href="https://www.uwalumnistore.com/merchandise?mc_id=-1"> Merchandise Categories</a>
+            </li>
+            <li> <a Class="small" href="https://www.uwalumnistore.com/merchlist?ID=25360"> Women&#39;s Sweatshirts</a>
+            </li>
+            <li> <a Class="small"> Lands' End WI Pharmacy Women's ¼ Zip (Gray)</a></li>
 
           </ul>
 
-
-          <a Class="floatr right15 top-50 pageHelp"
-            href="https://www.uwalumnistore.com/help/MerchandiseBrowse.htm">Help</a>
-          <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-          <input type="hidden" class="ga4-itemlistid" value="25331" />
-          <input type="hidden" class="ga4-itemlistname" value="Men&#39;s T-Shirts" />
-
-
-          <input type="hidden" class="ga4-location" value="merchlist" />
-
-
-
-          <form action="/Shop/Mens/T-Shirts" method="post"><input name="__RequestVerificationToken" type="hidden"
-              value="DULmOGigUMcuF2i4R5fZ0XBN4HLc9LlDMF9uuSd7po3USEsiwwb3i6GGeGq-OHH_WlVUyaMEfGEQbnD_WH9__bnLRU81" />
-            <style>
-              /*.btn {
-                 border-radius: 0px;
-             }*/
-
-              .imageLeft {
-                position: absolute;
-                top: 48%;
-                left: 20px;
-                width: 50px;
-                height: 65px;
-              }
-
-              .imageRight {
-                position: absolute;
-                top: 48%;
-                right: 20px;
-                width: 50px;
-                height: 65px;
-              }
-
-              .imageLeft:hover,
-              .imageRight:hover {
-                cursor: pointer;
-              }
-            </style>
-            <input id="hiddenShowResults1" name="showResults1" type="hidden" value="1" /><input id="hiddenShowResults2"
-              name="showResults2" type="hidden" value="12" /><input id="hiddenShowPerPage" name="showPerPage"
-              type="hidden" value="12" /><input id="hiddenID" name="mclID" type="hidden" value="25331" /><input
-              id="hiddenType" name="itemType" type="hidden" value="" /><input id="hiddenSearchString"
-              name="searchString" type="hidden" value="" /><input id="hiddenSearchType" name="searchType" type="hidden"
-              value="All" /><input id="hiddenNum" name="num" type="hidden" value="" /><input id="hiddenSearchIn"
-              name="searchin" type="hidden" value="" /><input id="hiddenSearchMCL" name="searchMCL" type="hidden"
-              value="" /><input id="hiddenCatID" name="CatID" type="hidden" value="" /><input id="hiddenOriginal"
-              name="originalSearchType" type="hidden" value="" /><input id="hiddenStore" name="StoreID" type="hidden"
-              value="294" /><input id="hiddenSort" name="sortOrderEnum" type="hidden" value="8" /><input
-              id="hiddenCatSearch" name="catSearch" type="hidden" value="" /><input id="useRouting" name="useRouting"
-              type="hidden" value="True" /><input id="isMerchList" name="isMerchList" type="hidden"
-              value="True" /><input id="hiddenLargeSwitch" name="largeSwitch" type="hidden" value="False" /><input
-              id="hiddenLowPrice" name="lowPrice" type="hidden" value="0" /><input id="hiddenHighPrice" name="highPrice"
-              type="hidden" value="1000000" /><input id="GiftReload" name="GiftReload" type="hidden"
-              value="False" /><input id="fc" name="fc" type="hidden" value="" /><input id="fv" name="fv" type="hidden"
-              value="" /><input id="listView" name="listView" type="hidden" value="" />
-
-
-            <input type="submit" id="showPerPageSubmit" value="showPerPage" name="submitButton" class="displayn" />
-            <input type="submit" id="firstSubmit" value="firstSubmit" name="submitButton" class="displayn" />
-            <input type="submit" id="prevSubmit" value="prevSubmit" name="submitButton" class="displayn" />
-            <input type="submit" id="nextSubmit" value="nextSubmit" name="submitButton" class="displayn" />
-            <input type="submit" id="lastSubmit" value="lastSubmit" name="submitButton" class="displayn" />
-            <input type="submit" id="sortSubmit" value="sortSubmit" name="submitButton" class="displayn" />
-            <input type="submit" id="searchSubmit" value="searchSubmit" name="submitButton" class="displayn" />
-            <input type="submit" id="filterSubmit" value="filterSubmit" name="submitButton" class="displayn" />
-            <div id="scrollPositionIgnore"></div>
-            <a id="goToTop" class="btn btn-default displayn" title="Go to top"><span
-                class="glyphicon glyphicon-chevron-up"></span></a>
+          <!--Breadcrumbs End-->
+          <a class="floatr right15 top-50 pageHelp"
+            href="https://www.uwalumnistore.com/help/MerchandiseDetail.htm">Help</a>
+          <form
+            action="/MerchDetail?MerchID=1590476&amp;CategoryName=Women%27s%20Sweatshirts&amp;CatID=25360&amp;Name=Women%27s%20Sweatshirts"
+            method="post"><input name="__RequestVerificationToken" type="hidden"
+              value="Dv1w1VtixxcPlkQJpqVE_YFWQ2xnTYurUNpmEwN-lH824hVu0HB46SDWyiSdO3Xn97J6fAaEJAx_5vF_Bd0eRhEdfDY1" /><input
+              id="hiddenType" name="itemType" type="hidden" value="" /><input id="customerLoyaltyRWD_totalPointsAvail"
+              name="customerLoyaltyRWD.totalPointsAvail" type="hidden" value="0" /><input id="hiddenSKU" name="SKU"
+              type="hidden" value="2072661           " /><input id="hiddenImg" name="merchDefaultFull" type="hidden"
+              value="/storeimages/294-1590476-1.png" />
             <div Class="center">
-              <h1 Class="page_header">Men&#39;s T-Shirts</h1>
+              <h1 Class="page_header bottom10 displayn">Product Detail</h1>
             </div>
-            <!--Search and Sort Dropdown Row-->
+            <!--One Item-->
+            <div class="row merchItem">
+              <div class="merchImage col-sm-2 col-12">
+                <div Class="merchImageMain">
+                  <img width="200" Class="merchDetailImage margin_auto img-responsive" data-id="1"
+                    src="https://www.uwalumnistore.com/storeimages/294-1590476-1.png"
+                    data-high="https://www.uwalumnistore.com/storeimages/294-1590476-1_hi.png"
+                    data-thumb="https://www.uwalumnistore.com/storeimages/294-1590476-1_th.png"
+                    alt="Cover Image For Lands&#39; End WI Pharmacy Women&#39;s &#188; Zip (Gray)">
+                </div>
+                <div id="imageLightBox" Class="modal fade" role="dialog">
+                  <div Class="modal-dialog modal-lg">
+                    <div Class="modal-content">
+                      <div Class="modal-body">
+                        <div Class="row bottom10">
+                          <div Class="col-md-1 col-sm-2 col-2 textl">
+                            <a Class="imageLightBoxLeft btn btn-default btn-lg" style="display: inline-block;"><span
+                                class="glyphicon glyphicon-chevron-left"></span></a>
+                          </div>
+                          <div Class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
+                            <img data-id="1" Class="imageLightBoxBig img-responsive margin_auto" alt="" />
+                          </div>
+                          <div Class="col-md-1 col-sm-2 col-2 textr">
+                            <a Class="imageLightBoxRight btn btn-default btn-lg" style="display: inline-block;"><span
+                                class="glyphicon glyphicon-chevron-right"></span></a>
+                          </div>
+                        </div>
+                        <div Class="modalDetailThumbnail textc"></div>
+                      </div>
+                      <div Class="modal-footer">
+                        <Button type="button" Class="btn btn-default" data-bs-dismiss="modal">Close</Button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <style>
+                  .merchDetailImage {
+                    cursor: zoom-in;
+                  }
+                </style>
+                <!--Merch Image-->
+              </div>
+
+              <!--Hidden Information to display in modal-->
+              <div class="merchInfo col-sm-10 col-12">
+                <input type="hidden" class="ga4-name"
+                  value="Lands&#39; End WI Pharmacy Women&#39;s &#188; Zip (Gray)" />
+                <input type="hidden" class="ga4-price" value="69.99" />
+
+
+                <input type="hidden" class="ga4-salePrice" value="0" />
+                <input type="hidden" class="ga4-sku" value="2072661           " />
+                <input type="hidden" class="ga4-discount" value="" />
+                <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
+                <input type="hidden" class="ga4-isNonMerch" value="False" />
+                <input type="hidden" class="ga4-isWebSku" value="false" />
+                <!--Merch Title-->
+                <h2 tabindex="0" Class="merchTitle top5" data-id="1590476">Lands' End WI Pharmacy Women's ¼ Zip (Gray)
+                </h2>
+
+
+
+                <!--Merch Long Description-->
+                <div Class="merchDesc">
+                  Stay warm while showing off your UW pride with this &frac14; zip fleece. Detailed with "School of
+                  Pharmacy, University of Wisconsin-Madison" embroidered on the left chest. The lightweight, super-soft
+                  fleece is brushed inside and out. The material is anti-pill and resists lint and pet hair. The raglan
+                  sleeves allow for movement and a comfy fit. Princess seams give a feminine shape to this shirt.
+                  <br>Women's Relaxed Fit<br>Imported<br>100% Polyester
+                </div>
+
+                <!--Merch Item Number-->
+                <p Class="merchItem"><strong>Item: </strong><span class="itemSKU">2072661 </span></p>
+
+                <!--Merch Price-->
+                <p Class="merchPrice top5"><strong>Price: </strong><span class="merchPriceCurrent">$69.99</span></p>
+                <input type="hidden" id="hiddenPriceVal" value="69.99" />
+
+
+                <p Class="merchSizeTitle bold">1 ADULT SIZES: <span class="selectedSize"></span></p>
+                <div class="lcsSizeWrapper">
+                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="SMALL"
+                    data-merid="1590476" data-value="101"><span Class="sizeName">SMALL</span></button>
+                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="MEDIUM"
+                    data-merid="1590476" data-value="102"><span Class="sizeName">MEDIUM</span></button>
+                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="LARGE"
+                    data-merid="1590476" data-value="103"><span Class="sizeName">LARGE</span></button>
+                  <button Class="btn btn-default sizeOption typeCodeOption" tabindex="0" data-size="X-LARGE"
+                    data-merid="1590476" data-value="104"><span Class="sizeName">X-LARGE</span></button>
+                </div>
+                <input id="colorSelected" name="colorSelected" type="hidden" value="" /><input id="colorCodeSelected"
+                  name="colorCodeSelected" type="hidden" value="" /><input id="sizeSelected" name="sizeSelected"
+                  type="hidden" value="" /><input id="sizeCodeSelected" name="sizeCodeSelected" type="hidden"
+                  value="" /><input id="logoSelected" name="logoSelected" type="hidden" value="" /><input
+                  id="logoCodeSelected" name="logoCodeSelected" type="hidden" value="" /><input id="allThree"
+                  name="allThree" type="hidden" value="False" /><input id="noColor" name="noColor" type="hidden"
+                  value="True" /><input id="noSize" name="noSize" type="hidden" value="False" /><input id="noLogo"
+                  name="noLogo" type="hidden" value="True" /><input id="firstSelected" name="firstSelected"
+                  type="hidden" value="0" /><input id="showHex" name="showHex" type="hidden" value="True" /><input
+                  id="colorOne" name="colorOne" type="hidden" value="False" /><input id="sizeOne" name="sizeOne"
+                  type="hidden" value="False" /><input id="logoOne" name="logoOne" type="hidden" value="False" /><input
+                  id="typeselected" name="typeselected" type="hidden" value="0" />
+                <p Class="merchSelectError red displayn" role="alert" data-selectError="1590476">Please select option
+                  for Lands' End WI Pharmacy Women's ¼ Zip (Gray)&nbsp;.</p>
+
+                <Label><input class="top4 merchDisclaimer" data-disclaimer="1590476" type="checkbox" /><span
+                    class="normal">
+                    <div id="landsEndReally"></div>
+                  </span></Label>
+                <p class="merchDisclaimerError red displayn" role="alert" data-disclaimerError="1590476">Please check
+                  the disclaimer checkbox to add this item to the cart.</p>
+
+                <!--Add to Cart Button-->
+                <div class="addToCartButton top5">
+                  <div class="input-group maxW-250-all">
+                    <span class="input-group-text">QTY</span>
+                    <input type="number" id="merchQTY" data-QTYid="1590476" Class="form-control merchDetailQTY QTY1 max"
+                      value="1" maxlength="3" min="1" max="999" aria-label="Quantity" />
+                    <a tabindex="0" Class="addToCartTypes btn btn-primary"
+                      data-name="Lands&#39; End WI Pharmacy Women&#39;s &#188; Zip (Gray)" data-Id="1590476"
+                      data-isTypeless="False" data-regularPrice="69.99" data-isLoyalty="False" data-formid="-1"
+                      data-isOnSale="False" data-egiftCard="False" data-nonMerch="False" data-classID="0" data-csID="0"
+                      data-storeID="294" data-pricePoint="false" data-disclaimer="True" data-reload="False">Add To
+                      Cart</a>
+                  </div>
+                  <p Class="addedToCart displayn" data-addedtocart="1590476"><span
+                      class="glyphicon glyphicon-ok Gift_Checkmark faa-shake animated Checkmark_Color padding0"></span>
+                    This item has been added to your Cart.</p>
+                </div>
+
+
+
+              </div>
+
+
+            </div>
             <div class="row">
-              <!--Search Bar-->
-              <div class="searchCatWrap col-sm-4 col-12 padding0 padding-right10 bottom10">
-                <div class="input-group">
-                  <input type="text" class="form-control searchCat" placeholder="Search Men&#39;s T-Shirts"
-                    aria-label="Search Men&#39;s T-Shirts" />
-                  <button class="btn btn-default searchCatButton" type="button"
-                    aria-label="Search Men&#39;s T-Shirts"><span class="glyphicon glyphicon-search"></span></button>
-                </div>
-              </div>
-
-              <!--Sort Dropdowns-->
-              <div class="sortCatWrap col-sm-8 col-12 padding0 bottom10">
-                <div class="row" style="width: 100%; justify-content: flex-end;">
-                  <div class="col-md-5 col-sm-0 col-0 padding0 no_show_small">
-                    <div class="input-group">
-                      <label class="input-group-text" for="merchResultsSelectID">Show:</label>
-                      <select aria-label="Show number of items per page" id="merchResultsSelectID"
-                        class="merchResultsSelect form-control form-select wauto right5">
-                        <option selected value="12">12 Items Per Page</option>
-                        <option value="24">24 Items Per Page</option>
-                        <option value="48">48 Items Per Page</option>
-                        <option value="96">96 Items Per Page</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="col-md-5 col-sm-12 col-12 padding0">
-                    <div class="input-group">
-                      <label class="input-group-text" for="merchSortBySelectID">Sort By:</label>
-                      <select aria-label="Sort By" id="merchSortBySelectID"
-                        class="merchSortBy form-control form-select wauto">
-                        <option value="0"> Description(A - Z)</option>
-                        <option value="1"> Description(Z - A)</option>
-                        <option value="2"> Price(Low - High)</option>
-                        <option value="3"> Price(High - Low)</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="col-md-2 col-sm-0 col-0 padding0 no_show_small">
-                    <div Class="displayib largeSwitch listSwitch" data-class="" tabindex="0" aria-label="Display Large"
-                      role="button"><span class="fa fa-2x fa-th-large switchIcon"></span></div>
-                    <div Class="displayib smallSwitch listSwitch" tabindex="0" aria-label="Display Small" role="button">
-                      <span class="fa fa-2x fa-th switchIcon"></span>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-
-            </div>
-            <!--Filter and Merch Row-->
-            <div class="row">
-              <div class="viewFiltersDiv col-12 bottom10">
-                <div class="filterButtonWrapper">
-                  <div tabindex="0" role="button" aria-label="Open Filters Dialog" class="viewFiltersButton displayn">
-                    <span class="filterText">FILTERS</span>
-                  </div>
-                </div>
-              </div>
-
-              <!--Filter Section-->
-              <div role="dialog" class="filterColumn col-md-3 col-sm-3 col-12 displayn">
-                <div class="row">
-                  <div class="col-12 padding0">
-                    <p Class="filterTitle font20"><strong>FILTER BY:</strong></p>
-                    <p class="closeFilterX floatr hover_pointer filterDisplay"><span
-                        class="glyphicon glyphicon-remove"></span></p>
-                    <input type="button" id="filterButton1"
-                      class="btn btn-primary top5 wauto filterButton filterButtonDisplay" value="Apply" />
-                  </div>
-                </div>
-                <div class="filterOption top10 filterPriceOption row">
-
-                  <div class="col-12 padding0">
-                    <p Class="filterOptionTitle padding5 bottom_border bottom5"><strong>Price</strong><span
-                        class="fa fa-minus-square floatr hover_pointer filterCollapse" data-id="filterPriceOption"
-                        data-filtername="Price" tabindex="0" aria-label="Collapse Price Filter" role="button"></span>
-                    </p>
-                  </div>
-                  <div class="col-12 padding0">
-                    <div class="filterValueWrapper bottom10 " data-filterid="filterPriceOption">
-                      <div class="filterPrice top10 bottom10 input-group">
-                        <input aria-label="Minimum Price Filter Input" class="filterMin form-control visibilityHide"
-                          id="filterMinInput" max="100000" min="0" name="filterMin" placeholder="Min" type="number"
-                          value="0" />
-                        <span class="input-group-text">to</span>
-                        <input aria-label="Maximum Price Filter Input" class="filterMin form-control visibilityHide"
-                          id="filterMaxInput" max="100000" min="0" name="filterMax" placeholder="Max" type="number"
-                          value="1000000" />
-                      </div>
-                      <div class="filterOption top10 filterSaleOption">
-                        <div class="form-floating">
-                          <input aria-label="On Sale" class="filterCheck newCheckbox" data-category="filteronsale"
-                            data-value="filteronsale" id="merchFilterOnSale" name="merchFilterOnSale" type="checkbox"
-                            value="true" /><input name="merchFilterOnSale" type="hidden" value="false" />
-                          <span class="newCheckboxText"> On Sale</span>
-                        </div>
-                      </div>
-                      <p id="priceError" role="alert" class="red top10"></p>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-
-              <!--MerchList Section-->
-              <div class="merchColumn col-12">
-                <div class="row">
-                  <div class="filterSelections col-12 padding0 bottom10">
-                    <a class="hover_pointer clearIndPriceFilter bottom10 displayn filterSelection" tabindex="0">
-                      <span class="priceFilterOptionText"></span>
-                      <span class="fa fa-times"></span>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-12 padding0">
-                    <div class="row">
-                      <!--
-  This is the container for all merch list / grid items.
-  This is where we determine if we need to display merch list / grid, and iterate through our merch items.
--->
-
-
-
-                      <!---->
-
-
-
-                      <!--One Item-->
-                      <div data-count="1" data-merID="1521873"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-                        <input type="hidden" class="ga4-name"
-                          value="Under Armour Wisconsin Basketball T-Shirt (Gray)" />
-                        <input type="hidden" class="ga4-price" value="34.99" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2068074           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1521873&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1521873-1.jpg"
-                                    alt="Under Armour Wisconsin Basketball T-Shirt (Gray)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1521873">Under Armour Wisconsin Basketball
-                                T-Shirt (Gray)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2068074 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$34.99</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="2" data-merID="1400272" class="merchItem padding0 bottom10 col-sm-4 col-6"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-                        <input type="hidden" class="ga4-name" value="Blue 84 WI Alumni T-Shirt (Red)" />
-                        <input type="hidden" class="ga4-price" value="24.99" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2058746           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1400272&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1400272-1.png"
-                                    alt="Blue 84 WI Alumni T-Shirt (Red)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1400272">Blue 84 WI Alumni T-Shirt (Red)
-                              </p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2058746 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$24.99</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="3" data-merID="1399319"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-                        <input type="hidden" class="ga4-name" value="Top Promotions Wisconsin Alumni T-Shirt (Gray)" />
-                        <input type="hidden" class="ga4-price" value="19.99" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2046644           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1399319&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1399319-1.png"
-                                    alt="Top Promotions Wisconsin Alumni T-Shirt (Gray)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1399319">Top Promotions Wisconsin Alumni
-                                T-Shirt (Gray)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2046644 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$19.99</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="4" data-merID="1400829"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-                        <input type="hidden" class="ga4-name"
-                          value="Top Promotions State Alumni Wisconsin T-Shirt (Red)" />
-                        <input type="hidden" class="ga4-price" value="19.99" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2062338           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1400829&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1400829-1.png"
-                                    alt="Top Promotions State Alumni Wisconsin T-Shirt (Red)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1400829">Top Promotions State Alumni
-                                Wisconsin T-Shirt (Red)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2062338 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$19.99</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="5" data-merID="1783668"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-                        <input type="hidden" class="ga4-name"
-                          value="2022 Guaranteed Rate Bowl Under Armour T-Shirt (Gray) 3X" />
-                        <input type="hidden" class="ga4-price" value="39.99" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2076497           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1783668&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1783668-2.png"
-                                    alt="2022 Guaranteed Rate Bowl Under Armour T-Shirt (Gray) 3X" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1783668">2022 Guaranteed Rate Bowl Under
-                                Armour T-Shirt (Gray) 3X</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2076497 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$39.99</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="6" data-merID="1882754" class="merchItem padding0 bottom10 col-sm-4 col-6"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-                        <input type="hidden" class="ga4-name"
-                          value="2025 Women&#39;s Hockey National Champs Collage T-Shirt (White)" />
-                        <input type="hidden" class="ga4-price" value="44.99" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2079482           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1882754&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1882754-1.png"
-                                    alt="2025 Women&#39;s Hockey National Champs Collage T-Shirt (White)"
-                                    aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1882754">2025 Women's Hockey National
-                                Champs Collage T-Shirt (White)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2079482 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$44.99</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="7" data-merID="1781785"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3  merchListClearTwoThree"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-                        <input type="hidden" class="ga4-name"
-                          value="&#39;47 Brand Bucky Badger Franklin T-Shirt (Black)^" />
-                        <input type="hidden" class="ga4-price" value="35" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2074980           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1781785&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1781785-1.png"
-                                    alt="&#39;47 Brand Bucky Badger Franklin T-Shirt (Black)^" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1781785">'47 Brand Bucky Badger Franklin
-                                T-Shirt (Black)^</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2074980 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="8" data-merID="1401472" class="merchItem padding0 bottom10 col-sm-4 col-6"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-                        <input type="hidden" class="ga4-name"
-                          value="&#39;47 Brand Vault Bucky Badger Franklin T-Shirt (Red)" />
-                        <input type="hidden" class="ga4-price" value="35" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2066167           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1401472&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1401472-2.png"
-                                    alt="&#39;47 Brand Vault Bucky Badger Franklin T-Shirt (Red)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1401472">'47 Brand Vault Bucky Badger
-                                Franklin T-Shirt (Red)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2066167 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="9" data-merID="1399697"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-                        <input type="hidden" class="ga4-name"
-                          value="&#39;47 Brand Vault Wisconsin T-Shirt (Charcoal)" />
-                        <input type="hidden" class="ga4-price" value="46" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2054153           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1399697&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1399697-1.jpg"
-                                    alt="&#39;47 Brand Vault Wisconsin T-Shirt (Charcoal)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1399697">'47 Brand Vault Wisconsin T-Shirt
-                                (Charcoal)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2054153 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$46.00</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="10" data-merID="1873699"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 merchListClear3 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-                        <input type="hidden" class="ga4-name"
-                          value="&#39;47 Brand WI Badgers Dusted Carrick River Tee (Red)" />
-                        <input type="hidden" class="ga4-price" value="40" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2077567           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1873699&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1873699-1.png"
-                                    alt="&#39;47 Brand WI Badgers Dusted Carrick River Tee (Red)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1873699">'47 Brand WI Badgers Dusted
-                                Carrick River Tee (Red)</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2077567 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$40.00</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="11" data-merID="1781768"
-                        class="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6  merchListClearTwoThree"
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 merchListClear2 ">
-                        <input type="hidden" class="ga4-name"
-                          value="&#39;47 Brand WI Bucky Badger Franklin Tee (Red)^" />
-                        <input type="hidden" class="ga4-price" value="35" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2074979           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1781768&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1781768-1.png"
-                                    alt="&#39;47 Brand WI Bucky Badger Franklin Tee (Red)^" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1781768">'47 Brand WI Bucky Badger Franklin
-                                Tee (Red)^</p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2074979 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$35.00</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-
-
-                      <!--One Item-->
-                      <div data-count="12" data-merID="1399914" class="merchItem padding0 bottom10 col-sm-4 col-6"
-                        data-classdefault="merchItem padding0 bottom10 col-sm-4 col-6 "
-                        data-class2="merchItem padding0 bottom10 col-sm-6 col-xs-6 ">
-                        <input type="hidden" class="ga4-name" value="&#39;47 Brand WI Bucky T-Shirt (Red)" />
-                        <input type="hidden" class="ga4-price" value="46" />
-
-
-
-                        <input type="hidden" class="ga4-salePrice" value="0" />
-                        <input type="hidden" class="ga4-sku" value="2056096           " />
-                        <input type="hidden" class="ga4-discount" />
-                        <input type="hidden" class="ga4-affiliation" value="UW Alumni Store" />
-                        <input type="hidden" class="ga4-items-identifier" value="-1" />
-                        <input type="hidden" class="ga4-isGeneral" value="False" />
-                        <input type="hidden" class="ga4-author" />
-                        <input type="hidden" class="ga4-isNonMerch" value="False" />
-                        <input type="hidden" class="ga4-isWebSku" value="false" />
-                        <!--Merch Info-->
-                        <div class="row">
-                          <div class="merchDetailWrapper col-12">
-
-                            <a tabindex="0"
-                              href="//www.uwalumnistore.com/MerchDetail?MerchID=1399914&amp;CategoryName=Men&#39;s T-Shirts&amp;CatID=25331&amp;Name=Men&#39;s T-Shirts"
-                              Class="merchLink displayb bottom10">
-                              <div Class="imageWrapper">
-                                <div Class="bottom10 merchImageWrapper merchlist">
-                                  <!--Merch Image-->
-                                  <img width="200" Class="merchImage img-responsive"
-                                    src="https://www.uwalumnistore.com/storeimages/294-1399914-1.jpg"
-                                    alt="&#39;47 Brand WI Bucky T-Shirt (Red)" aria-hidden="true">
-                                </div>
-                              </div>
-                              <p Class="merchTitle top0 textc lead" data-id="1399914">'47 Brand WI Bucky T-Shirt (Red)
-                              </p>
-                            </a>
-                            <div Class="merchCol1 textc bottom10">
-
-
-
-                              <!--Merch Item Number-->
-                              <p Class="merchNumber"><span class="merchSKU">2056096 </span></p>
-
-                              <p Class="merchPrice top5 bold"><span class="merchPriceCurrent">$46.00</span></p>
-
-                              <p Class="merchDiscount red top5 bold"></p>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!--End MerchListSection-->
-                    </div>
-                    <div class="row">
-                      <div class="textc">
-                        <ul Class="pagination">
-                          <ul class="pagination" style="visibility: visible;">
-
-                            <li class="active"><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="1"
-                                data-pagecount="1">1</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="2"
-                                data-pagecount="13">2</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="3"
-                                data-pagecount="25">3</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="4"
-                                data-pagecount="37">4</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="5"
-                                data-pagecount="49">5</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="6"
-                                data-pagecount="61">6</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="7"
-                                data-pagecount="73">7</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="8"
-                                data-pagecount="85">8</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="9"
-                                data-pagecount="97">9</a></li>
-                            <li><a tabindex="0" class="hover_pointer pageNumber" data-buttoncount="10"
-                                data-pagecount="109">10</a></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li class="chevRight"><a class="hover_pointer">›</a></li>
-                          </ul>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="backCart col-12 textr">
+                <a class="hover_pointer btn btn-primary backButton">Back</a>
+                <a href="https://www.uwalumnistore.com/shoppingcart"
+                  class="hover_pointer btn btn-primary cartButton">Shopping Cart</a>
               </div>
             </div>
-
-
+            <!--End One Item-->
             <div id="itemFormModal" Class="modal fade" role="dialog">
               <input type="hidden" value="" id="itemFormButton" />
               <input type="hidden" value="" id="itemFormType" />
               <input type="hidden" value="" id="itemFormQty" />
-              <input type="hidden" value="" id="itemFormcolorDesc" />
-              <input type="hidden" value="" id="itemFormcolorValue" />
-              <input type="hidden" value="" id="itemFormlogoDesc" />
-              <input type="hidden" value="" id="itemFormlogoValue" />
-              <input type="hidden" value="" id="itemFormsizeDesc" />
-              <input type="hidden" value="" id="itemFormsizeValue" />
-              <input type="hidden" value="" id="itemFormTypeCode" />
-              <input type="hidden" value="" id="itemFormCurrentPrice" />
-              <input type="hidden" value="" id="itemFormOldType" />
-              <input type="hidden" value="" id="itemFormOldTypeValue" />
-              <input type="hidden" value="" id="itemFormQuick" />
               <input type="hidden" value="" id="itemFormSKU" />
               <input type="hidden" value="" id="itemFormMerchImage" />
+              <input type="hidden" value="" id="itemFormOldType" />
+              <input type="hidden" value="" id="itemFormOldTypeValue" />
+              <input type="hidden" value="" id="itemFormCurrentPrice" />
+
               <div Class="modal-dialog">
                 <!-- Modal content-->
                 <div Class="modal-content itemFormModalContent"></div>
@@ -1408,37 +732,31 @@
                 </div>
               </div>
             </div>
-            <div id="quickViewModal" Class="modal fade" role="dialog">
-              <div Class="modal-dialog modal-lg">
+            <div id="reportPostModal" Class="modal fade" role="dialog">
+              <div class="modal-dialog">
                 <!-- Modal content-->
-                <div Class="modal-content quickViewContent">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Report Comment</h3>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to report this comment for inappropriate content?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary reportCommentYes">Yes</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  </div>
                 </div>
               </div>
             </div>
-            <div id="overlay">
-              <i id="merchSpinner" class="fa fa-spinner fa-spin" style="font-size:24px"></i>
-            </div>
-            <div id="imageLightBox" Class="modal fade" role="dialog">
-              <div Class="modal-dialog modal-lg">
+            <div id="notEnough" Class="modal fade" role="dialog">
+              <div Class="modal-dialog">
+                <!-- Modal content-->
                 <div Class="modal-content">
+                  <div Class="modal-header">
+                  </div>
                   <div Class="modal-body">
-                    <div Class="row bottom10">
-                      <div Class="col-md-1 col-sm-2 col-2 textl">
-                        <a Class="imageLightBoxLeft" style="display: inline-block;"><img class="imageLeft"
-                            src="https://www.uwalumnistore.com/RWD-IMG/chevLeft.png"
-                            alt="Left Arrow For Light Box" /></a>
-                      </div>
-                      <div Class="modalDetailImage textc col-md-10 col-sm-8 col-8" data-count="0">
-                        <img data-id="1" Class="imageLightBoxBig img-responsive margin_auto" alt="" />
-                      </div>
-                      <div Class="col-md-1 col-sm-2 col-2 textr">
-                        <a Class="imageLightBoxRight" style="display: inline-block;"><img class="imageRight"
-                            src="https://www.uwalumnistore.com/RWD-IMG/chevRight.png"
-                            alt="Right Arrow For Light Box" /></a>
-                      </div>
-                    </div>
-                    <div Class="modalDetailThumbnail textc">
-                    </div>
+                    <p>This item requires more points than you have available.</p>
                   </div>
                   <div Class="modal-footer">
                     <Button type="button" Class="btn btn-default" data-bs-dismiss="modal">Close</Button>
@@ -1447,8 +765,6 @@
               </div>
             </div>
           </form>
-
-
         </div>
       </div>
 
@@ -1602,7 +918,9 @@
   </div>
 
   <script src="./src/app.js"></script>
-  <script src="./src/merch-list.js"></script>
+  <script src="./js/jquery.flexslider-min.js"></script>
+  <script src="./js/jquery.colorbox-min.js"></script>
+  <script src="./src/merch-detail.js"></script>
   <!-- <script src="./src/popup.js"></script> -->
 
 </body>
