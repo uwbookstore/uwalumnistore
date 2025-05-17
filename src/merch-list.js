@@ -1,188 +1,193 @@
 // Rewrite MBS default Merch List page
-// Define page variables
-let categoryTitle = document.querySelector('h1.page_header');
-const itemImage = document.querySelectorAll('.merchImage');
-const productName = document.querySelectorAll('p.merchTitle');
-const searchCatWrapRow = document.querySelector('.searchCatWrap').parentElement;
-const noListItems = document.querySelector('.noListItems');
-const merchSortBy = document.querySelector('select.merchSortBy');
-const filterColumn = document.querySelector('.filterColumn');
-const merchColumn = document.querySelector('.merchColumn');
-const merchResultsSelect = document.querySelector('select.merchResultsSelect');
-const pagination = document.querySelector('ul.pagination');
+document.addEventListener('DOMContentLoaded', () => {
+  const mItems = document.querySelectorAll('div.merchItem');
+  let categoryTitle =
+    document.querySelector('h1.page_header')?.textContent || '';
+  const itemImages = document.querySelectorAll('.merchImage');
 
-// Create new div for no items found
-const noResults = document.createElement('div');
-noResults.classList.add('empty-results');
+  const hideSelectors = [
+    'ul.breadcrumb',
+    '.searchCatWrap',
+    '.sortCatWrap',
+    '.pageHelp',
+    'h1.page_header',
+  ];
+  hideSelectors.forEach((sel) => {
+    document.querySelectorAll(sel).forEach((el) => (el.style.display = 'none'));
+  });
 
-if (categoryTitle.textContent.toLowerCase() === 'search all') {
-  const searched = window.location.search.split('=');
-  const searchTerm = searched[2].replace(/%20/g, ' ');
+  const paginationParent = document.querySelector('.pagination')?.parentElement;
+  if (paginationParent) paginationParent.style.display = 'none';
 
-  // NO RESULTS RETURNED
-  if (noListItems) {
-    noListItems.style.display = 'none'; // Hide MBS div
-    categoryTitle.style.display = 'none'; //Hide MBS page title;
+  if (categoryTitle.toLowerCase() === 'search all') {
+    const searched = window.location.search.split('=');
+    const searchTerm = decodeURIComponent(searched[2] || '').replace(
+      /\+/g,
+      ' '
+    );
 
-    noResults.innerHTML = `
-    <div class="empty-results">
-    <h1>Sorry, we couldn't find any products.</h1>
-    <p>We were unable to find results for <strong>${searchTerm}</strong>. Please check your spelling or try searching for similar terms.</p>
-    </div>
-    `;
+    if (document.querySelectorAll('.noListItems')) {
+      document.querySelector('.noListItems').style.display = 'none';
 
-    searchCatWrapRow.after(noResults);
+      const div = document.createElement('div');
+      div.className = 'empty-results';
+      div.innerHTML = `
+        <h1>Sorry, we couldn't find any products.</h1>
+        <p>We were unable to find results for <strong>${searchTerm}</strong>.
+        Please check your spelling or try searching for similar terms.</p>
+      `;
+      const target = document.querySelector('.searchCatWrap');
+      if (target) target.insertAdjacentElement('afterend', div);
+    }
 
-    categoryTitle.textContent = `Search Results For: ${searchTerm}`;
+    categoryTitle = `Search Results For: ${searchTerm}`;
   }
-} // END OF if (categoryTitle.textContent.toLowerCase() === 'search all')
-else if (
-  categoryTitle.textContent.toLowerCase() === 'new arrivals' &&
-  noListItems
-) {
-  noListItems.style.display = 'none'; // Hide MBS div
-  categoryTitle.style.display = 'none'; //Hide MBS page title;
 
-  noResults.innerHTML = `
-    <section class="empty-results text-center">
-      <h1>
-        Badger fans, stay tuned&mdash;new gear is coming!
-      </h1>
-      <p class="bold">
-        Until then, explore our best-selling favorites and show your Wisconsin pride!
-      </p>
-      <div class="row">
-        <div class="col-sm-12 col-md-6 mb-2">
-          <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers">
-            <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/letsGo.jpg" alt=""
-              class="img-fluid d-block mb-2">
-          </a>
-          <div class="text-center">
-            <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Mens/Best-Sellers" class="btn btn-primary">Shop Men's
-              Best
-              Sellers</a>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-6 mb-2">
-          <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers">
-            <img src="https://i.univbkstr.com/v3/img/pages/newArrivals/badgers.jpg" alt=""
-              class="img-fluid d-block mb-2">
-          </a>
-          <div class="text-center">
-            <a href="http://www.uwbookstore.com/Wisconsin-Badgers/Womens/Best-Sellers" class="btn btn-primary">Shop
-              Women's
-              Best Sellers</a>
-          </div>
-        </div>
-      </div>
-    </section>
-   `;
-
-  searchCatWrapRow.after(noResults);
-}
-
-if (!noListItems) {
-  // HIDE SEARCHCATWRAP PARENT
-  searchCatWrapRow.style.display = 'none';
-
-  // CREATE HEADER WRAPPER DIV, ADD CLASS & ID
-  const merchFilterWrap = document.createElement('div');
-  merchFilterWrap.classList.add('merch__filter');
-  merchFilterWrap.id = 'merch__filter';
-
-  categoryTitle.style.display = 'none';
-
-  merchFilterWrap.innerHTML = `
-    <h2 class="heading__line">${categoryTitle.textContent}</h2>
-  `;
-
-  // ADD SORT BY SELECT AND CART BUTTON
-  // const sortBy = document.createElement('div');
-  // sortBy.id = 'sort-by';
-  // sortBy.className = 'merch__filter--item';
-  // sortBy.innerHTML = `
-  //   <label style="display: block;">Sort By</label>
-  // `;
-
-  // merchSortBy ? sortBy.appendChild(merchSortBy) : null;
-  // merchSortBy ? merchFilterWrap.appendChild(sortBy) : null;
-
-  // const shoppingCartBtn = document.createElement('div');
-  // shoppingCartBtn.className = 'merch__filter--item';
-  // shoppingCartBtn.innerHTML = `
-  //   <a class="btn btn-primary" href="https://www.uwbookstore.com/ShoppingCart">
-  //     Shopping Cart
-  //   </a>
-  // `;
-  // merchFilterWrap.appendChild(shoppingCartBtn);
-
-  // SELECT ELEMENT TO ADD HEADER WRAPPER AFTER
-  filterColumn.after(merchFilterWrap);
-
-  // REPLACE MBS's NO IMAGE AVAILABLE GIF
-  itemImage.forEach((image) => {
-    if (image.getAttribute('src') === '/images/notavail.gif') {
-      image.setAttribute(
+  // Handle missing images
+  itemImages.forEach((img) => {
+    if (img.getAttribute('src') === '/images/notavail.gif') {
+      img.setAttribute(
         'src',
-        'https://i.univbkstr.com/v3/img/misc/no-image-sm.jpg'
+        'https://i.univbkstr.com/uwbookstore/img/no-image-sm.jpg'
       );
-      image.setAttribute('alt', 'Image not available');
+      img.setAttribute('alt', 'Image not available');
+      img.setAttribute('loading', 'Lazy');
     }
   });
 
-  // RESET MBS MERCHITEM CLASSES AND ADD CUSTOM ONES
-  const merchItems = document.querySelectorAll('.merchItem');
-  merchItems.forEach((item) => {
-    item.className = '';
-    item.classList.add('merchItem', 'merch__card-item');
+  ['.viewfiltersDiv', '.filterSelections'].forEach((sel) => {
+    document.querySelectorAll(sel).forEach((el) => (el.style.display = 'none'));
   });
 
-  // CREATE THE PRODUCTS WRAPPER - merch__card
-  const merchCard = document.createElement('div');
-  merchCard.id = 'merch__card';
+  document.querySelectorAll('.merchDetailWrapper').forEach((el) => {
+    el.classList.remove('col-xs-12');
+  });
 
-  merchFilterWrap.after(merchCard);
+  mItems.forEach((item) => {
+    item.classList.remove(
+      'padding0',
+      'bottom10',
+      'col-md-3',
+      'col-sm-6',
+      'col-xs-12',
+      'merchListClear4',
+      'merchListClearTwo'
+    );
+    item.classList.add('merch__card-item');
+  });
 
-  merchColumn.classList.add('flex', 'merch__card');
-  merchCard.appendChild(merchColumn);
+  document
+    .querySelectorAll(
+      '.merchResultsText, .merchResultsSelect, .merchResultsPer'
+    )
+    .forEach((el) => {
+      el.classList.remove('displayib');
+    });
 
-  merchResultsSelect.classList.remove(
-    'wauto',
-    'displayib',
-    'right5',
-    'bottom10'
+  const filterColumn = document.querySelector('.filterColumn');
+  if (filterColumn) {
+    const newDiv = document.createElement('div');
+    newDiv.id = 'merch__card';
+    newDiv.innerHTML = `<div id="pagination-btm" class="text-center"></div>`;
+    filterColumn.insertAdjacentElement('afterend', newDiv);
+
+    const merchColumn = document.querySelector('.merchColumn');
+    if (merchColumn) {
+      merchColumn.classList.add('merch__card');
+      newDiv.prepend(merchColumn);
+    }
+  }
+
+  const pageItems = document.querySelectorAll('.pagination li');
+  if (pageItems.length === 1) {
+    const pagination = document.querySelector('ul.pagination');
+    const merchResultsSelect = document.querySelector(
+      'select.merchResultsSelect'
+    );
+    if (pagination) pagination.style.display = 'none';
+    if (merchResultsSelect) merchResultsSelect.style.display = 'none';
+  }
+
+  const pagination = document.querySelector('ul.pagination');
+  if (pagination) {
+    document.querySelector('#pagination-btm')?.append(pagination);
+  }
+
+  const merchResultsSelect = document.querySelector(
+    'select.merchResultsSelect'
   );
-  merchResultsSelect.classList.add('mx-auto');
+  if (merchResultsSelect) {
+    merchResultsSelect.classList.remove(
+      'wauto',
+      'displayib',
+      'right5',
+      'bottom10'
+    );
+    merchResultsSelect.classList.add('mx-auto');
+    document
+      .querySelector('#pagination-btm')
+      ?.insertAdjacentElement('afterend', merchResultsSelect);
+  }
 
-  const paginationBtm = document.createElement('div');
-  paginationBtm.id = 'pagination-btm';
-  paginationBtm.className = 'text-center';
+  document.querySelectorAll('.logoOption').forEach((el) => {
+    el.classList.remove('btn-default');
+    el.classList.add('btn-primary');
+  });
 
-  merchCard.after(paginationBtm);
-  paginationBtm.appendChild(pagination);
-  paginationBtm.appendChild(merchResultsSelect);
-  const filterSelectionsRow =
-    document.querySelector('.filterSelections').parentElement;
+  const headingInsertHTML = (text) => {
+    const div = document.createElement('div');
+    div.innerHTML = `<h2 class="heading__line">${text}</h2>`;
+    return div;
+  };
 
-  filterSelectionsRow ? (filterSelectionsRow.style.display = 'none') : null;
-
-  // ADD BANNERS/MESSAGES TO CERTAIN PAGES
-  // create container for banner/message
-  const pageBanner = document.createElement('div');
-
-  // FOR THE RED SHIRT
-  if (categoryTitle.textContent.toLowerCase() === 'the red shirt™') {
-    pageBanner.classList.add('text-center');
-    pageBanner.innerHTML = `
+  if (
+    categoryTitle.toLowerCase().includes('laptop') ||
+    categoryTitle.toLowerCase().startsWith('macbook') ||
+    categoryTitle.toLowerCase().startsWith('ipad')
+  ) {
+    const msg = `
+      <div class="center">
+        <p>
+          <strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, & Alumni.</strong>
+        </p>
+      </div>
+    `;
+    const div = document.createElement('div');
+    div.innerHTML = msg;
+    const target = document.querySelector('#merch__card');
+    if (target) {
+      target.insertAdjacentElement('beforebegin', div);
+      target.insertAdjacentElement(
+        'beforebegin',
+        headingInsertHTML(categoryTitle)
+      );
+    }
+  } else if (categoryTitle.toLowerCase().startsWith('the red shirt')) {
+    const redShirtHTML = `
       <div class="center">
         <p>Show your UW pride with this comfy shirt featuring the university&rsquo;s fight song slogan &mdash; and everyone&rsquo;s favorite badger! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this unique and comfy collectible provides a spirited way to give back and help students earn a UW education. It's a fun shirt with a serious mission &ndash; and a must-have for every Badger.<br>
         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
         
         <p><strong>Live Red. Give Back.</strong></p>
-      </div>
-      <div>
-        <h2 class="heading__line"><span>${categoryTitle}</span></h2>
-      </div>
-  `;
+      </div>   
+    `;
+    const redDiv = document.createElement('div');
+    redDiv.innerHTML = redShirtHTML;
+    const target = document.querySelector('#merch__card');
+    if (target) {
+      target.insertAdjacentElement('beforebegin', redDiv);
+      target.insertAdjacentElement(
+        'beforebegin',
+        headingInsertHTML(categoryTitle)
+      );
+    }
+  } else {
+    const target = document.querySelector('#merch__card');
+    if (target) {
+      target.insertAdjacentElement(
+        'beforebegin',
+        headingInsertHTML(categoryTitle)
+      );
+    }
   }
-}
+});
