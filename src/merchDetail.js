@@ -35,7 +35,6 @@ $(document).ready(function () {
     // Only one image
     if ($('img.merchDetailImage').attr('src') === '/images/notavail.gif') {
       // No image available
-      console.log('Image Not Available');
       $(
         '<img src="https://i.univbkstr.com/uwbookstore/img/no-image.jpg" data-src="holder.js/600x600?auto=yes&text=Image not available" class="merch__detail-img" alt="Image not available">'
       ).appendTo('div#merch-imgs');
@@ -330,120 +329,6 @@ $(document).ready(function () {
   if (logos.length > 0 && sizes.length > 0) {
     logos.hide();
   }
-
-  // if (select.length > 0) {
-  //   // Select dropdown...
-  //   console.log("Has dropdown");
-  //   $('<div id="sizes" class="merch__detail-size "></div>').appendTo("div#merch-info");
-  //   $('<label class="merch__detail-size-label">Amount:</label>').appendTo("div#sizes");
-  //   $("select.merchDropdown").appendTo("div#sizes").addClass("form-control");
-  //   $('<div class="grid merch__detail-size-picker"></div>').appendTo("div#sizes");
-
-  //   $.each(select, function (i) {
-  //     $('<div id="size_' + i + '" data-name="' + $(this).text() + '"></div>').appendTo(
-  //       ".grid.merch__detail-size-picker"
-  //     );
-
-  //     $('<input type="radio" id="size-option_' + i + '" name="r">')
-  //       .attr("value", $(this).val())
-  //       .attr("checked", i === 0)
-  //       .click(function () {
-  //         $("select.merchDropdown").val($(this).val());
-  //         $(".addGiftRegButton").attr("data-dropdownValue", $(this).val());
-  //         $(".addSingleReg").attr("data-dropdownValue", $(this).val());
-  //       })
-  //       .appendTo("#size_" + i);
-
-  //     if ($(this).text() === "$5 ($5.00)" || $(this).text() === "$5.00 ($5.00)") {
-  //       $(this).text("$5");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$10 ($10.00)" || $(this).text() === "$10.00 ($10.00)") {
-  //       $(this).text("$10");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$20 ($20.00)" || $(this).text() === "$20.00 ($20.00)") {
-  //       $(this).text("$20");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$25 ($25.00)" || $(this).text() === "$25.00 ($25.00)") {
-  //       $(this).text("$25");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$30 ($30.00)") {
-  //       $(this).text("$30");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$40 ($40.00)") {
-  //       $(this).text("$40");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$50 ($50.00)" || $(this).text() === "$50.00 ($50.00)") {
-  //       $(this).text("$50");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$60 ($60.00)") {
-  //       $(this).text("$60");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$70 ($70.00)") {
-  //       $(this).text("$70");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$75 ($75.00)" || $(this).text() === "$75.00 ($75.00)") {
-  //       $(this).text("$75");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$80 ($80.00)") {
-  //       $(this).text("$80");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$90 ($90.00)") {
-  //       $(this).text("$90");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else if ($(this).text() === "$100 ($100.00)" || $(this).text() === "$100.00 ($100.00)") {
-  //       $(this).text("$100");
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>")
-  //         .appendTo("#size_" + i)
-  //         .parent()
-  //         .addClass("picker");
-  //     } else {
-  //       $('<label for="size-option_' + i + '">' + $(this).text() + "</label>").appendTo("#size_" + i);
-  //     }
-
-  //     if ($("#size_0").attr("data-name") === "Please Select") {
-  //       $("#size_0").hide();
-  //     }
-  //   });
-
-  //   $("select.merchDropdown").hide();
-  //   $("select.merchDropdown").appendTo("div#sizes");
-  // }
 
   $(
     'p.merchDisclaimerError, p.merchSelectError, p.addGiftErrorLCS, p.addGiftError'
