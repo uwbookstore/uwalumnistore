@@ -5,13 +5,13 @@ $(document).ready(function () {
     '<div id="merch-main" class="merch"><div class="grid merch__detail"><div id="merch-imgs" class="merch__detail-images"></div><div id="merch-info" class="merch__detail-info"></div></div></div>'
   ).prependTo('div#ContainDiv');
 
-  var prodName = $('h2.merchTitle').text();
-  var prodSku = $('p.merchItem span').text();
-  var description = $('div.merchDesc').html();
-  var itemDisclaimer = $('input.merchDisclaimer');
-  var noAddCart = $('div.hiddenCartText');
-  var imgArray = $('a.merchThumbnail').length;
-  var detail = $('a.merchThumbnail img');
+  const prodName = $('h2.merchTitle').text();
+  const prodSku = $('p.merchItem span').text();
+  const description = $('div.merchDesc').html();
+  const itemDisclaimer = $('input.merchDisclaimer');
+  const noAddCart = $('div.hiddenCartText');
+  const imgArray = $('a.merchThumbnail').length;
+  const detail = $('a.merchThumbnail img');
 
   // Check to see if there is more than one image
   if (imgArray > 0) {
@@ -82,17 +82,6 @@ $(document).ready(function () {
   } else {
     $('<span>' + prodPrice + '</span>').appendTo('div#priceBlock');
   } // END of price-block if
-
-  // if (
-  //   prodName.substring(0, 7) === 'MacBook' ||
-  //   prodName.substring(0, 13) === 'Apple MacBook' ||
-  //   prodName.substring(0, 10) === 'Apple iPad' ||
-  //   prodName.substring(0, 4) === 'Dell'
-  // ) {
-  //   $(
-  //     '<div class="alert alert-info">The price displayed is our special educational price available to UW Students, Faculty, Staff, Alumni, &amp;&nbsp;UW&nbsp;Health Employees.</div>'
-  //   ).appendTo('div#merch-info');
-  // }
 
   $(
     '<div id="description-block" class="merch__detail-description"><h3 class="merch__detail-title-small">The Details</h3>'
@@ -165,6 +154,15 @@ $(document).ready(function () {
     // $("<em>*</em>").prependTo("#item-disclaimer span.normal");
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   }
+
+  /*
+   **********************************************************
+   **********************************************************
+   **********************************************************
+   **********************************************************
+   **********************************************************
+   **********************************************************
+   */
 
   // Change the dropdown select to buttons,
   // and hide the select element.
