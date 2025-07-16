@@ -333,7 +333,10 @@ $(document).ready(function () {
   ).prependTo('div#sizes');
 
   // Add size charts
-  if (logos.length > 0 && prodName.substring(0, 13) === 'The Red Shirt') {
+  if (
+    (merchLogoTitle.length > 0 || merchSizeTitle.length > 0) &&
+    prodName.substring(0, 13) === 'The Red Shirt'
+  ) {
     $(
       '<a href="https://i.univbkstr.com/sizeChart/redShirt/" class="merch__detail-size-link gtmSizeTrack" title="The Red Shirt&trade; Size Guide">Size Guide</a>'
     ).insertAfter('.merch__detail-size-label');
