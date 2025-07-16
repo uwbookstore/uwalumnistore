@@ -169,7 +169,13 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
         
         <p><strong>Live Red. Give Back.</strong></p>
-      </div>   
+      </div>
+      <!-- <div class="center">
+        <p>Show your UW pride with this comfy shirt inspired by vintage travel posters and the Camp Randall arch! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It&rsquo;s a fun shirt with a serious mission &mdash; and a must-have for every Badger.<br>
+        <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
+        
+        <p><strong>Live Red. Give Back.</strong></p>
+      </div>  --> 
     `;
     const redDiv = document.createElement('div');
     redDiv.innerHTML = redShirtHTML;
