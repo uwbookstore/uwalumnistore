@@ -19,9 +19,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/preset-env": "^7.0.0",
     "autoprefixer": "^10.4.15",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "concat": "^1.0.3",
     "eslint": "^8.49.0",
     "eslint-config-airbnb": "^19.0.4",
