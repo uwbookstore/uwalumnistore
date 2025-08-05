@@ -91,17 +91,9 @@ $(document).ready(function () {
     categoryTitle.toLowerCase().substring(0, 6) === 'shirts'
   ) {
     $(
-      `
-<div class="center">
-  <p>Show your UW pride with this comfy shirt featuring the university&rsquo;s fight song slogan &mdash; and everyone&rsquo;s favorite badger! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this unique and comfy collectible provides a spirited way to give back and help students earn a UW education. It's a fun shirt with a serious mission &ndash; and a must-have for every Badger.<br>
-  <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
-  
-    <p><strong>Live Red. Give Back.</strong></p>
-  </div>
-  <div>
-    <h2 class="heading__line"><span>${categoryTitle}</span></h2>
-  </div>
-      `
+      '<div class="center"><p>Show your UW pride with this comfy shirt inspired by vintage travel posters and the Camp Randall arch! With 25% of proceeds from this limited-edition shirt going to the Wisconsin Alumni Association Scholarship Fund, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It’s a fun shirt with a serious mission — and a must-have for every Badger.<br><a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p><p><strong>Live Red. Give Back.</strong></p></div><div><h2 class="heading__line"><span>' +
+        categoryTitle +
+        '</span></h2></div>'
     ).insertBefore('#merch__card');
   } else {
     $(
