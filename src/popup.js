@@ -1,15 +1,15 @@
 // Get the modal
-let modal = document.getElementById('mayGraduationPopup');
+let modal = document.getElementById('freeShipPopup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('mayGraduation25')) {
+  if (!sessionStorage.getItem('freeShip25')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
-      sessionStorage.setItem('mayGraduation25', 'opened');
+      sessionStorage.setItem('freeShip25', 'opened');
     });
   } else {
-    sessionStorage.setItem('mayGraduation25', 'opened');
+    sessionStorage.setItem('freeShip25', 'opened');
   }
 
   // Get the <span> element that closes the modal
