@@ -126,22 +126,23 @@
       }
 
       span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         bottom: 0;
         top: auto;
         margin: 0 auto;
-        display: block;
+        padding: 0;
         height: rem(32);
         width: rem(180);
         font-size: rem(16);
-        padding-top: rem(7);
         background-color: var(--bs-primary);
         font-weight: 500;
         color: var(--bs-white);
         text-transform: uppercase;
         text-decoration: none;
         // z-index: 200;
-        text-align: center;
 
         @include breakpoint(nav) {
           top: rem(95);
