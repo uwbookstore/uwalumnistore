@@ -48,6 +48,10 @@
     }
 
     &.home {
+      top: initial;
+      bottom: rem(5);
+      left: 50%;
+      transform: translateX(-50%);
       background-color: transparent;
       text-align: initial;
       width: 100%;
@@ -63,9 +67,11 @@
       }
 
       span {
-        display: block;
+        display: flex;
+        align-items: center;
         font-weight: 500;
-        padding: rem(15) rem(25);
+        padding-inline: rem(25);
+        height: rem(45);
 
         background-color: var(--bs-white);
         width: 90%;
@@ -73,30 +79,28 @@
         font-size: rem(30);
 
         &:not(:last-child) {
-          margin-bottom: rem(15);
+          margin-bottom: rem(5);
         }
       }
 
       @include breakpoint(small) {
-        width: 50%;
-
-        top: 60%;
-        left: rem(200);
-
-        span {
-          width: auto;
-        }
-      }
-
-      @include breakpoint(medium) {
-        left: rem(40);
+        left: rem(60);
         width: auto;
         transform: translate(0);
-        margin-left: rem(20);
         top: 65%;
 
+        br {
+          display: block;
+        }
+
         span {
-          display: inline-block;
+          display: inline-flex;
+          width: auto;
+          height: rem(60);
+
+          &:not(:last-child) {
+            margin-bottom: rem(15);
+          }
         }
       }
     }
