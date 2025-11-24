@@ -1,6 +1,6 @@
 // Get the modal
-// let modal = document.getElementById('blackFridayPopup');
-let modal = document.getElementById('cyberMondayPopup');
+let modal = document.getElementById('blackFridayPopup');
+// let modal = document.getElementById('cyberMondayPopup');
 
 if (typeof Storage !== 'undefined') {
   if (!sessionStorage.getItem('blackFriday25')) {
