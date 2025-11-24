@@ -1,15 +1,16 @@
 // Get the modal
-let modal = document.getElementById('freeShipPopup');
+// let modal = document.getElementById('blackFridayPopup');
+let modal = document.getElementById('cyberMondayPopup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('freeShip25')) {
+  if (!sessionStorage.getItem('blackFriday25')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
-      sessionStorage.setItem('freeShip25', 'opened');
+      sessionStorage.setItem('blackFriday25', 'opened');
     });
   } else {
-    sessionStorage.setItem('freeShip25', 'opened');
+    sessionStorage.setItem('blackFriday25', 'opened');
   }
 
   // Get the <span> element that closes the modal

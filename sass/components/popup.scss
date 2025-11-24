@@ -11,6 +11,10 @@
   overflow: auto;
   background-color: rgba(255, 255, 255, 0.9);
 
+  strong {
+    font-weight: 600;
+  }
+
   &-content {
     background-color: #fff;
     margin: 35% rem(5);
@@ -61,7 +65,10 @@
 
   .popup-close {
     color: var(--bs-gray-dark);
-    font-size: rem(28);
+    background: transparent;
+    border: none;
+    padding: rem(10);
+    font-size: rem(20);
     font-weight: 500;
     position: absolute;
     top: rem(1);

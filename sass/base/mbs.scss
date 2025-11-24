@@ -79,6 +79,10 @@ body header:first-of-type,
   &:visited {
     text-decoration: none;
   }
+
+  strong {
+    font-weight: 600;
+  }
 }
 
 a.promo-banner {
