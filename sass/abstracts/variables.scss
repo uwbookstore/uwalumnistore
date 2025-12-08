@@ -2,7 +2,8 @@
 
 :root {
   --bs-primary: #c5050c;
-  --bs-secondary: #777777;
+  // --bs-secondary: #777777;
+  --bs-secondary: #585858;
   --bs-warning: #ffae00;
   --bs-success: #5cb85c;
   --bs-gray: #6e6e6e;
@@ -20,8 +21,12 @@
   // --clr-dark-gray: #818181;
   --clr-disabled: #969696;
 
-  --fs-default: #{rem(14)};
-  --default-page-width: #{rem(900)};
+  --fs-default: #{rem(16)};
+  --default-page-width: #{rem(1320)};
 
   --transition: all 0.25s ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 }
