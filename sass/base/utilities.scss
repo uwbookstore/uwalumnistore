@@ -1,3 +1,4 @@
+@use 'sass:map';
 @use '../util' as *;
 
 .u-menu-spacer {
@@ -48,7 +49,7 @@
 
 $spacer: rem(10) !default;
 $spacers: () !default;
-$spacers: map-merge(
+$spacers: map.merge(
   (
     0: 0,
     1: (
