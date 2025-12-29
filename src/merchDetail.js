@@ -607,8 +607,6 @@ $(document).ready(function () {
       'Health Sciences Learning Center (750 N. Highland Ave)<br>',
       'Hilldale Mall (454 N. Midvale Blvd)<br>',
       'Please allow for our normal processing time of 3 – 4 business days. You will receive notification once the order has been delivered to the store of your choice.</p>',
-      '<p>Brookfield (95 North Moorland Road, Suite E2 - Brookfield)<br>',
-      'Please allow for a processing time of 4-8 business days. You will receive notification once the order has been delivered to the store of choice.</p>',
       '<p>We are happy to work with customers who have particular shipping needs. Please feel free to <a href="' +
         baseUrl +
         'Contact">email</a> us, or call us toll free at 800-993-2665 ext. 1848.</p>',
