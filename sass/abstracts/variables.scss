@@ -24,7 +24,13 @@
   --fs-default: #{rem(16)};
   --default-page-width: #{rem(1320)};
 
-  --transition: all 0.25s ease-in-out;
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: all 0.3s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 
   @media (prefers-reduced-motion: reduce) {
     --transition: none;
