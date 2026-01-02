@@ -285,7 +285,7 @@
           a {
             border-bottom: none;
             padding: 0;
-            font-size: rem(14);
+            font-size: rem(13);
             font-weight: 400;
             transition: var(--transition);
 
@@ -320,8 +320,8 @@
           height: rem(30);
 
           &-field {
-            width: rem(325);
-            margin-inline-end: rem(20);
+            width: rem(300);
+            margin-inline-end: rem(15);
             background-color: var(--bs-white);
           }
         }
