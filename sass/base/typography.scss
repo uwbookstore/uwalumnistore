@@ -122,16 +122,18 @@ blockquote {
 }
 
 .tagline {
+  text-wrap: balance;
   font-family: 'Red Hat Display', sans-serif;
   text-align: center;
   margin: rem(20) auto;
   font-style: italic;
   color: var(--bs-secondary);
   text-transform: uppercase;
-  font-size: rem(18);
-  line-height: rem(18);
+  font-size: rem(20);
+  line-height: 1;
   font-weight: 400;
   margin-bottom: 0;
+  letter-spacing: rem(1);
 }
 
 .past {

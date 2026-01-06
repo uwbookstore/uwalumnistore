@@ -1,13 +1,15 @@
 @use '../util' as *;
 
 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 rem(12);
   border: rem(2) solid transparent;
-  border-radius: 0;
+  border-radius: rem(4);
   transition: var(--transition);
   font-weight: 500;
   height: rem(50);
-  line-height: rem(50);
   font-size: inherit;
 
   &-primary {
@@ -132,8 +134,7 @@
 
   @include breakpoint(medium) {
     border-width: rem(1);
-    height: rem(30);
-    line-height: rem(30);
+    height: rem(40);
   }
 
   &-rnd {
