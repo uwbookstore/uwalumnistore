@@ -1,6 +1,81 @@
-.grid,
-.flex {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+@use '../util' as *;
+
+.grid {
+  display: grid;
+
+  &.home {
+    margin-block: rem(30);
+    gap: rem(30);
+
+    .grid__item {
+      text-align: center;
+
+      img {
+        opacity: 1;
+        transition: var(--transition);
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+
+      h3 {
+        font-family: inherit;
+        margin-block-end: rem(16);
+        font-style: italic;
+        font-size: rem(18);
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      p {
+        margin-block-end: rem(25);
+        font-size: rem(16);
+      }
+
+      &.card {
+        border: none;
+        border-radius: 0;
+
+        [class^='card-img-'] {
+          border-radius: 0;
+        }
+
+        .card-body {
+          .btn {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(small) {
+      grid-template-columns: repeat(2, 1fr);
+
+      .grid__item {
+        &.card {
+          .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            .btn {
+              width: rem(200);
+            }
+          }
+        }
+      }
+    }
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      place-content: center;
+
+      .grid__item.card:last-child {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+    }
+  }
 }
