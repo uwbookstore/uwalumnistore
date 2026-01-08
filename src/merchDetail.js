@@ -119,7 +119,7 @@ $(document).ready(function () {
     $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
     $('.normal').html(
       // `<strong>PLEASE READ BEFORE PURCHASE! — Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong>This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
-      `<strong style="font-weight: 700;">PLEASE READ BEFORE PURCHASE! — DEADLINE FOR LANDS' END CUSTOM HOLIDAY ORDERS HAS PASSED. ORDERS PLACED NOW WILL ARRIVE AFTER CHRISTMAS - Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
+      `<strong style="font-weight: 700;">PLEASE READ BEFORE PURCHASE! - Lands' End may take 10-15 business days (M-F) to ship. Store pick-up orders will incur a $7.50 drop ship charge.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>`
     );
     $('div#landsEnd').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
@@ -133,6 +133,17 @@ $(document).ready(function () {
       '<strong>PLEASE READ BEFORE PURCHASE!</strong> Shipping time takes 10-15 business days (M-F).  This item ships directly from the manufacturer and is <strong>NOT ELIGIBLE</strong> for returns or exchanges and does not qualify for store pick-up, promotional discounts, expedited or free shipping. <strong>By clicking this box, you are agreeing to these terms.</strong>'
     );
     $('div#kyleCavan').hide();
+    $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
+  } else if (itemDisclaimer.length > 0 && $('div#cdiDrop').length > 0) {
+    $(
+      '<div id="item-disclaimer" class="alert alert-warning"><label></label></div>'
+    ).appendTo('div#merch-info');
+    $(itemDisclaimer).next('.normal').appendTo('#item-disclaimer label');
+    $(itemDisclaimer).removeClass('top4').prependTo('#item-disclaimer label');
+    $('.normal').html(`
+      <strong>PLEASE READ BEFORE PURCHASE! Custom orders will incur a $10 handling fee due to it being drop shipped from the manufacturer.</strong> This custom item is <strong>NOT ELIGIBLE</strong> for <strong>returns or exchanges</strong> and does not qualify for <strong>expedited or free shipping. By clicking this box, you are agreeing to these terms.</strong>
+    `);
+    $('div#cdiDrop').hide();
     $('p.merchDisclaimerError').insertAfter('#item-disclaimer');
   } else if (itemDisclaimer.length > 0 && $('div#jardine').length > 0) {
     $(
