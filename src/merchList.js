@@ -4,7 +4,7 @@ $(document).ready(function () {
   var itemImage = $('.merchImage');
 
   $(
-    'ul.breadcrumb, .searchCatWrap, .sortCatWrap, .merchTop.Buttons, .pageHelp, h1.page_header, .bottomButtons'
+    'ul.breadcrumb, .searchCatWrap, .sortCatWrap, .merchTop.Buttons, .pageHelp, h1.page_header, .bottomButtons',
   ).hide();
   $('.pagination').parent().hide();
 
@@ -18,7 +18,7 @@ $(document).ready(function () {
       $(
         '<div class="empty-results"><h1>Sorry, we couldn\'t find any products.</h1><p>We were unable to find results for <strong>' +
           searchTerm +
-          '</strong>. Please check your spelling or try searching for similar terms.</p></div>'
+          '</strong>. Please check your spelling or try searching for similar terms.</p></div>',
       ).insertAfter('.searchCatWrap');
     }
 
@@ -46,7 +46,7 @@ $(document).ready(function () {
   $('.merchDetailWrapper').removeClass(' col-xs-12');
   $('.merchItem')
     .removeClass(
-      'padding0 bottom10 col-md-3 col-sm-6 col-xs-12 merchListClear4 merchListClearTwo'
+      'padding0 bottom10 col-md-3 col-sm-6 col-xs-12 merchListClear4 merchListClearTwo',
     )
     .addClass('merch__card-item');
   $('a.prevBackward,a.nextForward')
@@ -55,11 +55,11 @@ $(document).ready(function () {
   $('a.prevBackward').html('<i class="fa fa-angle-left"></i>');
   $('a.nextForward').html('<i class="fa fa-angle-right">');
   $('.merchResultsText, .merchResultsSelect, .merchResultsPer').removeClass(
-    'displayib'
+    'displayib',
   );
 
   $(
-    '</div><div id="merch__card" class="group"><div id="pagination-btm" class="text-center"></div>'
+    '</div><div id="merch__card" class="group"><div id="pagination-btm" class="text-center"></div>',
   ).insertAfter('.filterColumn');
   $('.merchColumn').addClass('grid merch__card').prependTo('#merch__card');
 
@@ -83,7 +83,7 @@ $(document).ready(function () {
     $(
       '<div class="center"><p><strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, &amp; Alumni.</strong></p></div><div><h2 class="heading__line"><span>' +
         categoryTitle +
-        '</span></h2></div>'
+        '</span></h2></div>',
     ).insertBefore('#merch__card');
   } else if (
     categoryTitle.toLowerCase().substring(0, 13) === 'the red shirt' ||
@@ -93,13 +93,13 @@ $(document).ready(function () {
     $(
       '<div class="center"><p>Show your UW pride with this comfy shirt inspired by vintage travel posters and the Camp Randall arch! With 25% of proceeds from this limited-edition shirt going to the Wisconsin Alumni Association Scholarship Fund, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It’s a fun shirt with a serious mission — and a must-have for every Badger.<br><a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p><p><strong>Live Red. Give Back.</strong></p></div><div><h2 class="heading__line"><span>' +
         categoryTitle +
-        '</span></h2></div>'
+        '</span></h2></div>',
     ).insertBefore('#merch__card');
   } else {
     $(
       '<div><h2 class="heading__line"><span>' +
         categoryTitle +
-        '</span></h2></div>'
+        '</span></h2></div>',
     ).insertBefore('#merch__card');
   }
 });
