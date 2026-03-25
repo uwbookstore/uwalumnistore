@@ -14,7 +14,7 @@ const noResults = document.createElement('div');
 noResults.classList.add('empty-results');
 
 if (categoryTitle.textContent.toLowerCase() === 'search all') {
-  const search = window.location.search.split('=');
+  const searched = window.location.search.split('=');
   const searchTerm = searched[2].replace(/%20/g, ' ');
 
   // NO RESULTS RETURNED
@@ -69,210 +69,100 @@ if (!noListItems) {
   merchFilterWrap.classList.add('merch__filter');
   merchFilterWrap.id = 'merch__filter';
 
-  categoryTitle.style.display = 'none';
-  merchFilterWrap.innerHTML = `
-    <h2 class="heading__list">${categoryTitle.textContent}</h2>
-  `;
+  // FOR THE RED SHIRT
+  if (
+    categoryTitle.textContent.toLowerCase().substring(0, 13) ===
+      'the red shirt' ||
+    categoryTitle.textContent.toLowerCase().substring(0, 13) ===
+      "men's the red" ||
+    categoryTitle.textContent.toLowerCase().substring(0, 6) === 'shirts'
+  ) {
+    merchFilterWrap.innerHTML = `
+      <div>
+        <div class="text-center">
+          <p>Show your UW pride with this comfy shirt inspired by vintage travel posters and the Camp Randall arch! With 25% of proceeds from this limited-edition shirt going to the Wisconsin Alumni Association Scholarship Fund, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It&rsquo;s a fun shirt with a serious mission &mdash; and a must-have for every Badger.<br><a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
+          <p><strong>Live Red. Give Back.</strong></p>
+        </div>
+        <h2 class="heading__line">${categoryTitle.textContent}</h2>
+      </div>
+    `;
+  } else {
+    merchFilterWrap.innerHTML = `
+      <h2 class="heading__line">${categoryTitle.textContent}</h2>
+    `;
+  }
+
+  // SELECT ELEMENT TO ADD HEADER WRAPPER AFTER
   filterColumn.after(merchFilterWrap);
 
   // REPLACE MBS's NO IMAGE AVAILABLE GIF
-}
+  itemImage.forEach((image) => {
+    if (image.getAttribute('src') === '/images/notavail.gif') {
+      image.setAttribute(
+        'src',
+        'https://i.univbkstr.com/img/misc/no-image-sm.jpg',
+      );
+      image.setAttribute('alt', 'Image not available');
+    }
+  });
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const mItems = document.querySelectorAll('div.merchItem');
-//   let categoryTitle =
-//     document.querySelector('h1.page_header')?.textContent || '';
-//   const itemImages = document.querySelectorAll('.merchImage');
+  // RESET MBS MERCHITEM CLASSES AND ADD CUSTOM ONES
+  const merchItems = document.querySelectorAll('.merchItem');
+  merchItems.forEach((item) => {
+    item.className = '';
+    item.classList.add('merchItem', 'merch__card-item');
+  });
 
-//   const hideSelectors = [
-//     'ul.breadcrumb',
-//     '.searchCatWrap',
-//     '.sortCatWrap',
-//     '.pageHelp',
-//     'h1.page_header',
-//   ];
-//   hideSelectors.forEach((sel) => {
-//     document.querySelectorAll(sel).forEach((el) => (el.style.display = 'none'));
-//   });
+  // CREATE THE PRODUCTS WRAPPER - merch__card
+  const merchCard = document.createElement('div');
+  merchCard.id = 'merch__card';
 
-//   const paginationParent = document.querySelector('.pagination')?.parentElement;
-//   if (paginationParent) paginationParent.style.display = 'none';
+  merchFilterWrap.after(merchCard);
 
-//   if (categoryTitle.toLowerCase() === 'search all') {
-//     const searched = window.location.search.split('=');
-//     const searchTerm = decodeURIComponent(searched[2] || '').replace(
-//       /\+/g,
-//       ' '
-//     );
+  merchColumn.classList.add('flex', 'merch__card');
+  merchCard.appendChild(merchColumn);
 
-//     if (document.querySelectorAll('.noListItems')) {
-//       document.querySelector('.noListItems').style.display = 'none';
+  // ADD PAGINATION TO BOTTOM OF PAGE
+  const paginationBtm = document.createElement('div');
+  paginationBtm.id = 'pagination-btm';
+  paginationBtm.className = 'text-center';
 
-//       const div = document.createElement('div');
-//       div.className = 'empty-results';
-//       div.innerHTML = `
-//         <h1>Sorry, we couldn't find any products.</h1>
-//         <p>We were unable to find results for <strong>${searchTerm}</strong>.
-//         Please check your spelling or try searching for similar terms.</p>
-//       `;
-//       const target = document.querySelector('.searchCatWrap');
-//       if (target) target.insertAdjacentElement('afterend', div);
-//     }
+  merchCard.after(paginationBtm);
 
-//     categoryTitle = `Search Results For: ${searchTerm}`;
-//   }
+  const filterSelectionsRow =
+    document.querySelector('.filterSelections').parentElement;
 
-//   // Handle missing images
-//   itemImages.forEach((img) => {
-//     if (img.getAttribute('src') === '/images/notavail.gif') {
-//       img.setAttribute(
-//         'src',
-//         'https://i.univbkstr.com/uwbookstore/img/no-image-sm.jpg'
-//       );
-//       img.setAttribute('alt', 'Image not available');
-//       img.setAttribute('loading', 'Lazy');
-//     }
-//   });
+  filterSelectionsRow ? (filterSelectionsRow.style.display = 'none') : null;
 
-//   ['.viewfiltersDiv', '.filterSelections'].forEach((sel) => {
-//     document.querySelectorAll(sel).forEach((el) => (el.style.display = 'none'));
-//   });
+  // ADD BACK IN STOCK BADGE TO ITEMS WITH ^ IN PRODUCT NAME
+  // productName.forEach((item) => {
+  //   const name = item.textContent.toLowerCase();
+  //   const merchLink = item.closest('.merchDetailWrapper');
 
-//   document.querySelectorAll('.merchDetailWrapper').forEach((el) => {
-//     el.classList.remove('col-xs-12');
-//   });
+  //   if (name.includes('^')) {
+  //     const restockBadge = document.createElement('div');
+  //     restockBadge.className = 'restockBadge';
+  //     restockBadge.innerHTML = 'Back in Stock!';
 
-//   mItems.forEach((item) => {
-//     item.classList.remove(
-//       'padding0',
-//       'bottom10',
-//       'col-md-3',
-//       'col-sm-6',
-//       'col-xs-12',
-//       'merchListClear4',
-//       'merchListClearTwo'
-//     );
-//     item.classList.add('merch__card-item');
-//   });
+  //     merchLink.prepend(restockBadge);
+  //   }
+  // });
+} // END OF MERCHLIST IF STATEMENT
 
-//   document
-//     .querySelectorAll(
-//       '.merchResultsText, .merchResultsSelect, .merchResultsPer'
-//     )
-//     .forEach((el) => {
-//       el.classList.remove('displayib');
-//     });
+// USE JQUERY TO CHECK PAGE ITEMS LENGTH
+// IF ONLY ONE PAGE OF RESULTS, HIDE PAGINATION
+// AND MERCHRESULTSSELECT BOX
+$(document).ready(() => {
+  const pageItems = $('.pagination li');
+  const merchItems = $('.merchItem');
+  $('ul.pagination').appendTo('#pagination-btm');
 
-//   const filterColumn = document.querySelector('.filterColumn');
-//   if (filterColumn) {
-//     const newDiv = document.createElement('div');
-//     newDiv.id = 'merch__card';
-//     newDiv.innerHTML = `<div id="pagination-btm" class="text-center"></div>`;
-//     filterColumn.insertAdjacentElement('afterend', newDiv);
+  $('select.merchResultsSelect')
+    .removeClass('wauto displayib right5 bottom10')
+    .addClass('mx-auto')
+    .appendTo('#pagination-btm');
 
-//     const merchColumn = document.querySelector('.merchColumn');
-//     if (merchColumn) {
-//       merchColumn.classList.add('merch__card');
-//       newDiv.prepend(merchColumn);
-//     }
-//   }
-
-//   const pageItems = document.querySelectorAll('.pagination li');
-//   if (pageItems.length === 1) {
-//     const pagination = document.querySelector('ul.pagination');
-//     const merchResultsSelect = document.querySelector(
-//       'select.merchResultsSelect'
-//     );
-//     if (pagination) pagination.style.display = 'none';
-//     if (merchResultsSelect) merchResultsSelect.style.display = 'none';
-//   }
-
-//   const pagination = document.querySelector('ul.pagination');
-//   if (pagination) {
-//     document.querySelector('#pagination-btm')?.append(pagination);
-//   }
-
-//   const merchResultsSelect = document.querySelector(
-//     'select.merchResultsSelect'
-//   );
-//   if (merchResultsSelect) {
-//     merchResultsSelect.classList.remove(
-//       'wauto',
-//       'displayib',
-//       'right5',
-//       'bottom10'
-//     );
-//     merchResultsSelect.classList.add('mx-auto');
-//     document
-//       .querySelector('#pagination-btm')
-//       ?.insertAdjacentElement('afterend', merchResultsSelect);
-//   }
-
-//   document.querySelectorAll('.logoOption').forEach((el) => {
-//     el.classList.remove('btn-default');
-//     el.classList.add('btn-primary');
-//   });
-
-//   const headingInsertHTML = (text) => {
-//     const div = document.createElement('div');
-//     div.innerHTML = `<h2 class="heading__line">${text}</h2>`;
-//     return div;
-//   };
-
-//   if (
-//     categoryTitle.toLowerCase().includes('laptop') ||
-//     categoryTitle.toLowerCase().startsWith('macbook') ||
-//     categoryTitle.toLowerCase().startsWith('ipad')
-//   ) {
-//     const msg = `
-//       <div class="center">
-//         <p>
-//           <strong>The price displayed is our special educational price available to UW Students, Faculty, Staff, & Alumni.</strong>
-//         </p>
-//       </div>
-//     `;
-//     const div = document.createElement('div');
-//     div.innerHTML = msg;
-//     const target = document.querySelector('#merch__card');
-//     if (target) {
-//       target.insertAdjacentElement('beforebegin', div);
-//       target.insertAdjacentElement(
-//         'beforebegin',
-//         headingInsertHTML(categoryTitle)
-//       );
-//     }
-//   } else if (categoryTitle.toLowerCase().startsWith('the red shirt')) {
-//     const redShirtHTML = `
-//       <!-- <div class="center">
-//         <p>Show your UW pride with this comfy shirt featuring the university&rsquo;s fight song slogan &mdash; and everyone&rsquo;s favorite badger! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this unique and comfy collectible provides a spirited way to give back and help students earn a UW education. It's a fun shirt with a serious mission &ndash; and a must-have for every Badger.<br>
-//         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
-
-//         <p><strong>Live Red. Give Back.</strong></p>
-//       </div>  -->
-//       <div class="center">
-//         <p>Show your UW pride with this comfy shirt inspired by vintage travel posters and the Camp Randall arch! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It&rsquo;s a fun shirt with a serious mission &mdash; and a must-have for every Badger.<br>
-//         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
-
-//         <p><strong>Live Red. Give Back.</strong></p>
-//       </div>
-//     `;
-//     const redDiv = document.createElement('div');
-//     redDiv.innerHTML = redShirtHTML;
-//     const target = document.querySelector('#merch__card');
-//     if (target) {
-//       target.insertAdjacentElement('beforebegin', redDiv);
-//       target.insertAdjacentElement(
-//         'beforebegin',
-//         headingInsertHTML(categoryTitle)
-//       );
-//     }
-//   } else {
-//     const target = document.querySelector('#merch__card');
-//     if (target) {
-//       target.insertAdjacentElement(
-//         'beforebegin',
-//         headingInsertHTML(categoryTitle)
-//       );
-//     }
-//   }
-// });
+  if (merchItems.length <= 12 && pageItems.length === 1) {
+    $('ul.pagination, select.merchResultsSelect').hide();
+  }
+});
