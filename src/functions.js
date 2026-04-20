@@ -5,7 +5,7 @@ $(document).ready(function () {
   // $('link[href*=MasterCSS]').remove();
 
   $(
-    '#degreesGoalSelect,#custAdditionalDegreeGoalR,#custAdditionalDegreeGoalL,#custAddInfoStudentL,#custAddInfoColR'
+    '#degreesGoalSelect,#custAdditionalDegreeGoalR,#custAdditionalDegreeGoalL,#custAddInfoStudentL,#custAddInfoColR',
   ).hide();
   // $("#studentIDText").parent().hide();
 
@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   $.urlParam = function (name) {
     var results = new RegExp('[?&]' + name + '=([^&#]*)').exec(
-      window.location.href
+      window.location.href,
     );
     return results[1] || 0;
   };
@@ -46,7 +46,7 @@ $(document).ready(function () {
   }
 
   $(
-    '<div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="content-modal" aria-hidden="true"><div class="vertical-alignment-helper"><div class="modal-dialog vertical-align-center"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title" id="content-modal-title" style="display: inline-block;"></h4></div><div id="content-modal-body" class="modal-body"></div></div></div></div></div>'
+    '<div class="modal fade" id="content-modal" tabindex="-1" role="dialog" aria-labelledby="content-modal" aria-hidden="true"><div class="vertical-alignment-helper"><div class="modal-dialog vertical-align-center"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><h4 class="modal-title" id="content-modal-title" style="display: inline-block;"></h4></div><div id="content-modal-body" class="modal-body"></div></div></div></div></div>',
   ).appendTo('body');
 
   // Footer Navigation Functions
@@ -60,13 +60,13 @@ $(document).ready(function () {
         links.on(
           'click',
           { el: this.el, multiple: this.multiple },
-          this.dropdown
+          this.dropdown,
         );
       };
 
       Accordion.prototype.dropdown = function (e) {
         var $el = e.data.el;
-        ($this = $(this)), ($next = $this.next());
+        (($this = $(this)), ($next = $this.next()));
 
         $next.slideToggle();
         $this.parent().toggleClass('open');
@@ -250,13 +250,13 @@ $(document).ready(function () {
     .appendTo('#accessories-kids');
   $('#kids ul.youth li.youth.kds-acc a').clone().appendTo('#accessories-kids');
   $('<span>Infant Gifts &amp; </span>').prependTo(
-    '#accessories-kids li.infant.kds-acc a'
+    '#accessories-kids li.infant.kds-acc a',
   );
   $('<span>Toddler Gifts &amp; </span>').prependTo(
-    '#accessories-kids li.toddler.kds-acc a'
+    '#accessories-kids li.toddler.kds-acc a',
   );
   $('<span>Youth Gifts &amp; </span>').prependTo(
-    '#accessories-kids li.youth.kds-acc a'
+    '#accessories-kids li.youth.kds-acc a',
   );
 
   // Gifts & Accessories
@@ -323,7 +323,7 @@ $(document).ready(function () {
           subUrl +
           '">Gift Card Balance Inquiry</a></li>',
         '<li><a href="' + baseUrl + 'logout">Log Out</a></li>',
-      ].join('\n')
+      ].join('\n'),
     );
   } else {
     $('#login').html(
@@ -332,7 +332,7 @@ $(document).ready(function () {
           subUrl +
           '">Register</a></li>',
         '<li><a href="' + baseUrl + 'login">Login</a></a>',
-      ].join('\n')
+      ].join('\n'),
     );
   }
 
@@ -410,3 +410,11 @@ $(document).ready(function () {
     return false;
   });
 });
+
+// if (window.location.href.toLowerCase().search('/shoppingcart') !== -1) {
+//   // TEMP CART MESSAGE
+//   const paymentOptionsBtn = document.getElementById(
+//     'cart-continuePayment-wrapper',
+//   );
+//   paymentOptionsBtn.style.display = 'none';
+// }
