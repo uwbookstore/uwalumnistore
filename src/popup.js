@@ -1,15 +1,15 @@
 // Get the modal
-let modal = document.getElementById('marchMadnessPopup');
+let modal = document.getElementById('mayGradPopup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('marchMadness26')) {
+  if (!sessionStorage.getItem('mayGrad26')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
-      sessionStorage.setItem('marchMadness26', 'opened');
+      sessionStorage.setItem('mayGrad26', 'opened');
     });
   } else {
-    sessionStorage.setItem('marchMadness26', 'opened');
+    sessionStorage.setItem('mayGrad26', 'opened');
   }
 
   // Get the <span> element that closes the modal
