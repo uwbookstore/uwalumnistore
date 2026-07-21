@@ -369,8 +369,8 @@ span.btn-default.typeSelected {
         font-size: rem(14);
       }
 
-      &-description {
-      }
+      // &-description {
+      // }
 
       &-size {
         &-link {
@@ -621,4 +621,40 @@ input.merchDisclaimer {
   .addedToCartQTY {
     display: none;
   }
+}
+
+// MBS FIX - 07/21/2-26
+.center > h1.page_header.bottom10.displayn {
+  display: none;
+}
+
+h2.merchTitle {
+  margin: 15px auto 20px;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--bs-primary);
+}
+
+.merchRegPrice,
+.salePrice {
+  display: inline-block;
+}
+
+.salePrice {
+  color: var(--bs-primary);
+  margin-inline-start: 15px;
+}
+
+.merchSavePrice {
+  display: none;
+}
+
+.merch-add-submit {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.input-group-text {
+  padding-block: 0;
 }
