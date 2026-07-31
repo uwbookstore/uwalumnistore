@@ -274,12 +274,6 @@ p.merchNumber {
 }
 
 .merchLink {
-  &:link,
-  &:visited {
-    h2 {
-    }
-  }
-
   &:hover,
   &:active {
     opacity: 0.7;

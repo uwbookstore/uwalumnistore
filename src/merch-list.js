@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searched = window.location.search.split('=');
     const searchTerm = decodeURIComponent(searched[2] || '').replace(
       /\+/g,
-      ' '
+      ' ',
     );
 
     if (document.querySelectorAll('.noListItems')) {
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (img.getAttribute('src') === '/images/notavail.gif') {
       img.setAttribute(
         'src',
-        'https://i.univbkstr.com/uwbookstore/img/no-image-sm.jpg'
+        'https://i.univbkstr.com/uwbookstore/img/no-image-sm.jpg',
       );
       img.setAttribute('alt', 'Image not available');
       img.setAttribute('loading', 'Lazy');
@@ -71,14 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
       'col-sm-6',
       'col-xs-12',
       'merchListClear4',
-      'merchListClearTwo'
+      'merchListClearTwo',
     );
     item.classList.add('merch__card-item');
   });
 
   document
     .querySelectorAll(
-      '.merchResultsText, .merchResultsSelect, .merchResultsPer'
+      '.merchResultsText, .merchResultsSelect, .merchResultsPer',
     )
     .forEach((el) => {
       el.classList.remove('displayib');
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (pageItems.length === 1) {
     const pagination = document.querySelector('ul.pagination');
     const merchResultsSelect = document.querySelector(
-      'select.merchResultsSelect'
+      'select.merchResultsSelect',
     );
     if (pagination) pagination.style.display = 'none';
     if (merchResultsSelect) merchResultsSelect.style.display = 'none';
@@ -114,14 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const merchResultsSelect = document.querySelector(
-    'select.merchResultsSelect'
+    'select.merchResultsSelect',
   );
   if (merchResultsSelect) {
     merchResultsSelect.classList.remove(
       'wauto',
       'displayib',
       'right5',
-      'bottom10'
+      'bottom10',
     );
     merchResultsSelect.classList.add('mx-auto');
     document
@@ -159,13 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
       target.insertAdjacentElement('beforebegin', div);
       target.insertAdjacentElement(
         'beforebegin',
-        headingInsertHTML(categoryTitle)
+        headingInsertHTML(categoryTitle),
       );
     }
   } else if (categoryTitle.toLowerCase().startsWith('the red shirt')) {
     const redShirtHTML = `
       <!-- <div class="center">
-        <p>Show your UW pride with this comfy shirt featuring the university&rsquo;s fight song slogan &mdash; and everyone&rsquo;s favorite badger! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this unique and comfy collectible provides a spirited way to give back and help students earn a UW education. It's a fun shirt with a serious mission &ndash; and a must-have for every Badger.<br>
+        <p style="text-wrap: balance;">Carry a bit of Bucky wherever you go! This design features everyone&rsquo;s favorite mascot peeking out of a striped faux pocket for a playful splash of Badger spirit. With 25% of proceeds from this limited-edition shirt going to the Wisconsin Alumni Association Scholarship Fund, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It&rsquo;s a fun shirt with a serious mission &mdash; and a must-have for every Badger.<br>
         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
         
         <p><strong>Live Red. Give Back.</strong></p>
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
       target.insertAdjacentElement('beforebegin', redDiv);
       target.insertAdjacentElement(
         'beforebegin',
-        headingInsertHTML(categoryTitle)
+        headingInsertHTML(categoryTitle),
       );
     }
   } else {
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (target) {
       target.insertAdjacentElement(
         'beforebegin',
-        headingInsertHTML(categoryTitle)
+        headingInsertHTML(categoryTitle),
       );
     }
   }
