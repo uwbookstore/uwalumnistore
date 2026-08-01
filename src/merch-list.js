@@ -164,18 +164,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   } else if (categoryTitle.toLowerCase().startsWith('the red shirt')) {
     const redShirtHTML = `
-      <!-- <div class="center">
+      <div class="center">
         <p style="text-wrap: balance;">Carry a bit of Bucky wherever you go! This design features everyone&rsquo;s favorite mascot peeking out of a striped faux pocket for a playful splash of Badger spirit. With 25% of proceeds from this limited-edition shirt going to the Wisconsin Alumni Association Scholarship Fund, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It&rsquo;s a fun shirt with a serious mission &mdash; and a must-have for every Badger.<br>
         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
         
         <p><strong>Live Red. Give Back.</strong></p>
-      </div>  --> 
-      <div class="center">
+      </div>
+      <!-- <div class="center">
         <p>Show your UW pride with this comfy shirt inspired by vintage travel posters and the Camp Randall arch! With 25 percent of proceeds from this limited-edition shirt going to need-based student scholarships, courtesy of the Wisconsin Alumni Association, this exclusive collectible provides a spirited way to give back and help students earn a UW education. It&rsquo;s a fun shirt with a serious mission &mdash; and a must-have for every Badger.<br>
         <a href="https://www.uwalumni.com/shop/theredshirt/" target="_blank">Learn more</a> about The Red Shirt&rsquo;s design and positive impact.</p>
         
         <p><strong>Live Red. Give Back.</strong></p>
-      </div>
+      </div>  --> 
     `;
     const redDiv = document.createElement('div');
     redDiv.innerHTML = redShirtHTML;
