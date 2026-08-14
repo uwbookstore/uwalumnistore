@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let categoryTitle =
     document.querySelector('h1.page_header')?.textContent || '';
   const itemImages = document.querySelectorAll('.merchImage');
+  const noListItems = document.querySelector('.noListItems');
 
   const hideSelectors = [
     'ul.breadcrumb',
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       ' ',
     );
 
-    if (document.querySelectorAll('.noListItems')) {
+    if (noListItems) {
       document.querySelector('.noListItems').style.display = 'none';
 
       const div = document.createElement('div');
