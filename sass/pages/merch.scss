@@ -208,6 +208,10 @@ h2.merchTitle {
   display: inline;
 }
 
+.merch-typecodes {
+  margin-block-end: rem(8);
+}
+
 .merch-typecode-buttons {
   button.btn.merch-typecode-option {
     border-radius: 0;
@@ -349,6 +353,19 @@ div[data-addon-host] {
   }
 }
 
+.merch__detail-size {
+  &-link {
+    &:link,
+    &:visited {
+      text-decoration: underline;
+      font-size: rem(14);
+      text-transform: lowercase;
+      margin-inline-start: rem(8);
+      color: var(--bs-gray-dark);
+    }
+  }
+}
+
 .suggestedItem.merch__card-item {
   opacity: 1;
   transition: opacity 0.25s ease-in-out;
@@ -408,6 +425,12 @@ div[data-merch-price-container] {
   }
 }
 
+.inventory-display-wrapper.short,
+.inventory-display-wrapper.long {
+  margin: 0;
+  margin-block: rem(8);
+}
+
 .inventory-display-wrapper.short .inventory-display-text,
 .inventory-display-wrapper.long .inventory-display-text {
   margin: 0;
@@ -415,12 +438,4 @@ div[data-merch-price-container] {
 
 .inventory-display-text {
   font-weight: 500;
-}
-
-.inventory-display-text.in-stock {
-  color: var(--bs-success) !important;
-}
-
-.inventory-display-text.out-of-stock {
-  color: var(--bs-danger) !important;
 }
