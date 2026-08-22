@@ -1,0 +1,57 @@
+@use '../util' as *;
+
+.callout {
+  --callout-bg: var(--bs-white);
+  --callout-clr: hsl(from var(--bs-black) h s 25%);
+  --callout-bdr: hsl(from var(--bs-black) h s 85%);
+  --callout-bdr-rad: 0;
+
+  display: flex;
+  border-radius: var(--callout-bdr-rad);
+  background: var(--callout-bg);
+  color: var(--callout-clr);
+  border: 1px solid var(--callout-bdr);
+  padding: rem(16) rem(16);
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: 1.45;
+  margin-block-start: rem(15);
+
+  &.center {
+    margin-inline: auto;
+  }
+
+  &.fit-content {
+    max-width: fit-content;
+  }
+
+  &-dark {
+    --callout-bg: hsl(from var(--bs-black) h s 85%);
+    --callout-bdr: hsl(from var(--bs-black) h s 72%);
+    --callout-clr: hsl(from var(--bs-black) h s 10%);
+  }
+
+  &-success {
+    --callout-bg: hsl(from var(--bs-success) h s 92%);
+    --callout-bdr: hsl(from var(--bs-success) h s 85%);
+    --callout-clr: hsl(from var(--bs-success) h s 28%);
+  }
+
+  &-info {
+    --callout-bg: hsl(from var(--bs-info) h s 92%);
+    --callout-bdr: hsl(from var(--bs-info) h s 85%);
+    --callout-clr: hsl(from var(--bs-info) h s 28%);
+  }
+
+  &-warning {
+    --callout-bg: hsl(from var(--bs-warning) h s 92%);
+    --callout-bdr: hsl(from var(--bs-warning) h s 85%);
+    --callout-clr: hsl(from var(--bs-warning) h s 22%);
+  }
+
+  &-danger {
+    --callout-bg: hsl(from var(--bs-danger) h s 92%);
+    --callout-bdr: hsl(from var(--bs-danger) h s 85%);
+    --callout-clr: hsl(from var(--bs-danger) h s 40%);
+  }
+}
