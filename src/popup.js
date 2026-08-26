@@ -2,7 +2,7 @@
 let modal = document.getElementById('augustShippingPopup');
 
 if (typeof Storage !== 'undefined') {
-  if (!sessionStorage.getItem('augustShipping25')) {
+  if (!sessionStorage.getItem('augustShipping26')) {
     // When the page loads, open the modal
     window.addEventListener('load', function () {
       modal.style.display = 'block';
