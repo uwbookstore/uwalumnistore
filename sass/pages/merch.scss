@@ -228,6 +228,14 @@ h2.merchTitle {
   }
 }
 
+.merchSelectError {
+  position: absolute;
+  margin: 0;
+  bottom: 10%;
+  right: 0;
+  z-index: 100;
+}
+
 .merch-purchase-bar {
   justify-content: flex-end;
   margin-block-end: rem(20);

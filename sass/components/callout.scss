@@ -6,7 +6,7 @@
   --callout-bdr: hsl(from var(--bs-black) h s 85%);
   --callout-bdr-rad: 0;
 
-  display: flex;
+  // display: flex;
   border-radius: var(--callout-bdr-rad);
   background: var(--callout-bg);
   color: var(--callout-clr);
