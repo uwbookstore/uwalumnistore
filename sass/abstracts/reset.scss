@@ -1,0 +1,40 @@
+/* CSS Demystified Reset | v0.1 */
+:root {
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+  }
+}
+
+/* Handle box sizing */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make the line-height more reader friendly */
+body {
+  margin: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* prettier-ignore */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Harry Roberts @csswizardry img reset
+   https://x.com/csswizardry/status/1717841334462005661 */
+img,
+svg {
+  max-inline-size: 100%;
+  block-size: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 0.75rem;
+}

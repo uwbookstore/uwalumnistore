@@ -148,19 +148,19 @@ div#colorbox button {
 
 #cboxError {
   padding: rem(50);
-  border: rem(1) solid var(--clr-medium-gray);
+  border: rem(1) solid var(--bs-gray-400);
 }
 
 #cboxLoadedContent {
-  margin-bottom: rem(5);
+  margin-block-end: rem(5);
 }
 
 // #cboxLoadingOverlay {
-//     background:url(https://i.univbkstr.com/v3/css/img/cbox/loading_background.png) no-repeat center center;
+//     background:url(https://i.univbkstr.com/img/css/cbox/loading_background.png) no-repeat center center;
 // }
 
 #cboxLoadingGraphic {
-  background: url(https://i.univbkstr.com/v3/css/img/cbox/loading.gif) no-repeat
+  background: url(https://i.univbkstr.com/img/css/cbox/loading.gif) no-repeat
     center center;
 }
 
@@ -170,7 +170,7 @@ div#colorbox button {
   left: 0;
   text-align: center;
   width: 100%;
-  font-weight: 500;
+  font-weight: 700;
   color: var(--bs-secondary);
 }
 
@@ -178,7 +178,7 @@ div#colorbox button {
   position: absolute;
   bottom: rem(-25);
   left: rem(58);
-  font-weight: 500;
+  font-weight: 700;
   color: var(--bs-secondary);
 }
 
@@ -188,8 +188,8 @@ div#colorbox button {
 #cboxSlideshow {
   position: absolute;
   bottom: rem(-29);
-  background: url(https://i.univbkstr.com/v3/css/img/cbox/controls.png)
-    no-repeat 0 0;
+  background: url(https://i.univbkstr.com/img/css/cbox/controls.png) no-repeat 0
+    0;
   width: rem(23);
   height: rem(23);
   text-indent: rem(-9999);
@@ -205,7 +205,7 @@ div#colorbox button {
 }
 
 #cboxNext {
-  left: 2.7rem;
+  left: rem(27);
   background-position: rem(-75) rem(-25);
 }
 
@@ -228,12 +228,12 @@ div#colorbox button {
 }
 
 .cboxSlideshow_on #cboxSlideshow:hover {
-  background-position: rem(-150) 0;
+  background-position: rem(-15) 0;
 }
 
 .cboxSlideshow_off #cboxSlideshow {
-  background-position: rem(-150) rem(-25);
-  right: 2.7rem;
+  background-position: rem(-15) rem(-25);
+  right: rem(27);
 }
 
 .cboxSlideshow_off #cboxSlideshow:hover {

@@ -1,91 +1,12 @@
 @use '../util' as *;
 
-.contain,
-.container {
-  width: 100%;
-  max-width: var(--default-page-width);
-  padding: 0;
-
-  @include breakpoint(medium) {
-    margin: 0 auto;
-  }
-}
-
-select.form-control {
-  padding-right: 2rem;
-}
-
-.form {
-  &-control,
-  &-select {
-    font-size: var(--fs-default);
-  }
-}
-
-.form-control,
-.panel,
-.panel > *,
-.alert,
-.img-thumbnail,
-.panel-heading,
-.modal-dialog * {
-  border-radius: 0;
-}
-
-.panel {
-  background-color: var(--bs-white);
-}
-
-.panel-info {
-  border-color: var(--clr-medium-gray);
-}
-
-.panel-info > .panel-heading {
-  color: var(--bs-gray-dark);
-  background-color: var(--clr-light-gray-3);
-  border-color: var(--clr-medium-gray);
-}
-
-.alert-warning {
-  background-color: #fff3d9;
-  color: var(--bs-gray-dark);
-
-  em {
-    color: #ffae00;
-    font-weight: 500;
-  }
-}
-
-.alert-default {
-  text-align: center;
-  background-color: var(--clr-light-gray);
-  border-color: color-mix(in srgb, var(--clr-light-gray), #000 10%);
-}
-
-.table {
-  &-dorms {
-    td {
-      width: 25%;
-      font-size: rem(13);
-    }
-  }
-}
-
-.caret {
-  position: absolute;
-  right: rem(25);
-  top: rem(20);
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: rem(2);
-  vertical-align: middle;
-  border-top: rem(4) dashed;
-  border-top: rem(4) solid \9;
-  border-right: rem(4) solid transparent;
-  border-left: rem(4) solid transparent;
-
-  @include breakpoint(small) {
-    display: none;
+input,
+button:not(:disabled),
+[type='button']:not(:disabled),
+.form-control {
+  &:is(:focus, :focus-visible) {
+    box-shadow: 0 0 0 rem(3) var(--clr-gray-400);
+    outline: none;
+    border-radius: 0;
   }
 }

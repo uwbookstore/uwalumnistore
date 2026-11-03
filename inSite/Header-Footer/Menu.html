@@ -1,67 +1,100 @@
-<!-- <div class="promo-banner">
-  <strong>New Season. Big Savings.</strong> Receive free ground shipping on orders of $99 or more through August 23. Use
-  promo code: <strong>UWSHIP26</strong>
-</div> -->
-<div id="waa-nav" class="container">
-  <nav class="navbar navbar-expand-lg">
-    <div class="cart-mobile">
-      <a href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart">
-        <svg xmlns="https://www.w3.org/2000/svg" width="117" height="88.17" viewBox="0 0 117 88.17" class="cart--icon">
-          <path
-            d="M98.5,73h-55a3.5,3.5,0,0,1-3.27-2.24L16.1,8H4.5a3.5,3.5,0,0,1,0-7h14a3.5,3.5,0,0,1,3.27,2.24L45.9,66H98.5a3.5,3.5,0,0,1,0,7Z"
-            transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
-          <path
-            d="M100.5,53.33H36.17a3.5,3.5,0,0,1,0-7H97.94l9.79-31H36.5a3.5,3.5,0,0,1,0-7h76a3.5,3.5,0,0,1,3.5,3.5,3.39,3.39,0,0,1-.16,1.05l-12,38A3.5,3.5,0,0,1,100.5,53.33Z"
-            transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
-          <circle cx="50.5" cy="83.5" r="4.67"></circle>
-          <circle cx="91.83" cy="82.83" r="4.67"></circle>
-        </svg>
-        <span id="ItemCount-sm" class="Count hidden">0</span></a>
-    </div>
+<div class="ubs-toast-region" id="toast-region" role="region" aria-label="Notifications" aria-live="polite"></div>
+<div class="backtotop">
+  <a href="#">
+    <em aria-hidden="true"></em>
+    <span class="sr-only">Back to Top</span>
+  </a>
+</div>
+
+<div role="alert" id='cyberMondayBanner' class='promo-banner'>
+  Save **% on your entire purchase — today only! Use promo code:
+  <button type="button" data-toast="success" data-toast-title="UWSHIP26 copied to clipboard" class="promo-code btn-copy"
+    title="copy UWSHIP26 to clipboard">
+    <span>UWSHIP26</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+      class="size-6" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
+    </svg>
+  </button>
+</div>
+
+<header id="waa-nav">
+
+  <nav class="navbar navbar-expand-lg" aria-label="primary-navigation">
     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-uwfaa"
       aria-controls="navbar-uwfaa" aria-expanded="false" aria-label="Toggle navigation">
       <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar top-bar"></span>
-      <span class="icon-bar middle-bar"></span>
-      <span class="icon-bar bottom-bar"></span>
+      <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 31 31" aria-hidden="true">
+        <line x1="1.95" y1="6.03" x2="29.05" y2="6.03" />
+        <line x1="1.95" y1="15.5" x2="29.05" y2="15.5" />
+        <line x1="1.95" y1="24.97" x2="29.05" y2="24.97" />
+      </svg>
     </button>
+
+    <button type="button" href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart" class="cart-mobile">
+
+      <svg class="cart--icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 31">
+        <polyline points="1.7 2 6.56 2.04 14.97 23.86 33.41 23.86" />
+        <polyline points="12.52 4.47 38.21 4.47 34.21 17.21 12.8 17.21" />
+        <circle cx="17.25" cy="28.41" r="2.06" />
+        <circle cx="30.96" cy="28.41" r="2.06" />
+      </svg>
+
+      <span id="ItemCount-sm" class="Count hidden">0</span>
+    </button>
+
     <a class="navbar-brand" href="https://www.uwalumnistore.com/home">
       <img src="https://i.univbkstr.com/uwalumnistore/img/logos/logo.svg" alt="" role="presentation" class="waa-logo">
-      <span>UW Alumni Store</span>
+      <span class="sr-only">UW Alumni Store</span>
     </a>
+
+
     <div class="collapse navbar-collapse" id="navbar-uwfaa">
-      <ul class="navbar-nav me-auto navbar-left">
+
+      <ul class="navbar-nav navbar-left">
+
+        <li class="nav-item">
+          <a href="https://www.uwalumnistore.com/NewArrivals" class="nav-link">
+            New Arrivals
+          </a>
+        </li>
+
         <!-- ********************************************* -->
         <!-- ****************** Womens ******************* -->
         <!-- ********************************************* -->
         <li class="nav-item dropdown" id="women">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Women <span class="menu-spacer">|</span> <span class="caret"></span>
+            Women
           </a>
+
           <div class="dropdown-menu">
-            <div class="row">
-              <div class="col-md-3">
+
+            <div class="grid grid--navbar">
+              <div>
                 <ul class="featured">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Womens-Top-Sellers">
-                      Top Sellers
-                    </a>
+                    Top Sellers
                   </li>
+
                   <li>
                     <a class="alumni" href="https://www.uwalumnistore.com/Shop/Womens/Alumni">
                       For Alumni
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/The-Red-Shirt">
                       The Red Shirt
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Lands-End">
-                      Lands' End
+                      Lands&apos; End
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Under-Armour">
                       Under Armour
@@ -69,48 +102,55 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="tops">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Womens-Tops">
-                      Tops
-                    </a>
+                    Tops
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Long-Sleeve">
                       Long Sleeves
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Chapter-Polo">
                       Chapter Polo
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Polo-Dress-Shirts">
                       Polo / Dress Shirts
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/T-Shirts">
                       Women's Cut T-Shirts
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Unisex-T-Shirts">
                       Unisex T-Shirts
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Sweatshirts">
                       Sweatshirts / Sweaters
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Tank-Tops">
                       Tank Tops
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Jackets">
                       Jackets
@@ -118,13 +158,13 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="bottoms">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Shop/Womens/Pants-and-Shorts">
-                      Bottoms
-                    </a>
+                    Bottoms
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Pants-and-Shorts">
                       Pants / Shorts
@@ -132,38 +172,43 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="accessories">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Womens-Accessories">
-                      Accessories
-                    </a>
+                    Accessories
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Socks-and-Footwear">
                       Socks / Footwear
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Winter-Wear">
                       Winter Hats / Accessories
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Hats">
                       Hats
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Jewelry">
                       Jewelry
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Bags">
                       Bags
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Womens/Hair-Accessories">
                       Hair Accessories
@@ -172,46 +217,51 @@
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a class="show-all" href="https://www.uwalumnistore.com/Womens-Apparel">
-                  See All Women's
-                </a>
-              </div>
-            </div>
+
+            <!-- <div class="row">
+                  <div class="col-md-12">
+                    <a class="show-all" href="https://www.uwalumnistore.com/Womens-Apparel">
+                      See All Women's
+                    </a>
+                  </div>
+                </div> -->
           </div>
         </li>
+
         <!-- ********************************************* -->
         <!-- ******************* Mens ******************** -->
         <!-- ********************************************* -->
         <li class="nav-item dropdown" id="men">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Men<span class="menu-spacer">|</span> <span class="caret"></span>
+            Men
           </a>
+
           <div class="dropdown-menu">
-            <div class="row">
-              <div class="col-md-3">
+            <div class="grid grid--navbar">
+              <div>
                 <ul class="featured">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Mens-Top-Sellers">
-                      Top Sellers
-                    </a>
+                    Top Sellers
                   </li>
+
                   <li>
                     <a class="alumni" href="https://www.uwalumnistore.com/Shop/Mens/Alumni">
                       For Alumni
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/The-Red-Shirt">
                       The Red Shirt
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Lands-End">
-                      Lands' End
+                      Lands&apos; End
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Under-Armour">
                       Under Armour
@@ -219,53 +269,61 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="tops">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Mens-Tops">
-                      Tops
-                    </a>
+                    Tops
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Long-Sleeve">
                       Long Sleeve Tees
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Jerseys">
                       Jerseys
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Chapter-Polo">
                       Chapter Polo
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Polo-Dress-Shirts">
                       Polo / Dress Shirts
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Sweatshirts">
                       Sweatshirts / Sweaters
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Tank-Tops">
                       Tank Tops
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/T-Shirts">
                       T-Shirts
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Jackets">
                       Jackets
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Big-and-Tall">
                       Big / Tall
@@ -273,13 +331,13 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="bottoms">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Shop/Mens/Pants-and-Shorts">
-                      Bottoms
-                    </a>
+                    Bottoms
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Pants-and-Shorts">
                       Pants / Shorts
@@ -287,28 +345,31 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="accessories">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Mens-Accessories">
-                      Accessories
-                    </a>
+                    Accessories
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Hats/Mens-Hats">
                       Caps / Hats
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Socks-and-Footwear">
                       Socks / Footwear
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Mens/Winter-Wear">
                       Winter Hats / Accessories
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Gifts/Wallets-and-ID-Holders">
                       Wallets &amp; ID Holders
@@ -317,36 +378,39 @@
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a class="show-all" href="https://www.uwalumnistore.com/Mens-Apparel">
-                  See All Men's
-                </a>
-              </div>
-            </div>
+
+            <!-- <div class="row">
+                  <div class="col-md-12">
+                    <a class="show-all" href="https://www.uwalumnistore.com/Mens-Apparel">
+                      See All Men's
+                    </a>
+                  </div>
+                </div> -->
           </div>
         </li>
+
         <!-- ********************************************* -->
         <!-- ******************* Kids ******************** -->
         <!-- ********************************************* -->
         <li class="nav-item dropdown" id="kids">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Kids<span class="menu-spacer">|</span> <span class="caret"></span>
+            Kids
           </a>
+
           <div class="dropdown-menu">
-            <div class="row">
-              <div class="col-md-3">
+            <div class="grid grid--navbar">
+              <div>
                 <ul class="featured">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Kids-Top-Sellers">
-                      Top Sellers
-                    </a>
+                    Top Sellers
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Kids/The-Red-Shirt">
                       The Red Shirt
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Kids/Under-Armour">
                       Under Armour
@@ -354,18 +418,19 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="infant">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Infant-Apparel-and-Gifts">
-                      Infant
-                    </a>
+                    Infant
                   </li>
+
                   <li>
                     <a class="infant" href="https://www.uwalumnistore.com/Shop/Kids/Infant-Clothing">
                       Clothing
                     </a>
                   </li>
+
                   <li>
                     <a class="infant kds-acc" href="https://www.uwalumnistore.com/Shop/Kids/Infant-Accessories">
                       Accessories
@@ -373,18 +438,19 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="toddler">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Toddler-Apparel-and-Gifts">
-                      Toddler
-                    </a>
+                    Toddler
                   </li>
+
                   <li>
                     <a class="toddler" href="https://www.uwalumnistore.com/Shop/Kids/Toddler-Clothing">
                       Clothing
                     </a>
                   </li>
+
                   <li>
                     <a class="toddler kds-acc" href="https://www.uwalumnistore.com/Shop/Kids/Toddler-Accessories">
                       Accessories
@@ -392,18 +458,19 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-md-3">
+
+              <div>
                 <ul class="youth">
                   <li class="dropdown-header">
-                    <a class="main-cat" href="https://www.uwalumnistore.com/Youth-Apparel-and-Gifts">
-                      Youth
-                    </a>
+                    Youth
                   </li>
+
                   <li>
                     <a class="youth" href="https://www.uwalumnistore.com/Shop/Kids/Youth-Clothing">
                       Clothing
                     </a>
                   </li>
+
                   <li>
                     <a class="youth kds-acc" href="https://www.uwalumnistore.com/Shop/Kids/Youth-Accessories">
                       Accessories
@@ -412,217 +479,237 @@
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a class="show-all" href="https://www.uwalumnistore.com/Kids-Apparel">
-                  See All Kid's
-                </a>
-              </div>
-            </div>
+
+            <!-- <div class="row">
+                  <div class="col-md-12">
+                    <a class="show-all" href="https://www.uwalumnistore.com/Kids-Apparel">
+                      See All Kid's
+                    </a>
+                  </div>
+                </div> -->
           </div>
         </li>
+
         <!-- ********************************************* -->
         <!-- ******************* Gift ******************** -->
         <!-- ********************************************* -->
         <li class="nav-item dropdown" id="gifts-acc">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Gifts &amp; Accessories <span class="caret"></span>
+            Gifts &amp; Accessories
           </a>
-          <div class="dropdown-menu">
-            <div class="row">
-              <div class="col-md-4">
-                <ul class="featured">
+
+          <div class='dropdown-menu'>
+            <div class='grid grid--navbar'>
+              <div>
+                <ul class='featured'>
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/All-Gift">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/All-Gift'>
                       All Gift
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/The-Red-Shirt">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/The-Red-Shirt'>
                       The Red Shirt
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Accessories">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Accessories'>
                       Accessories
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/For-Alumni">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/For-Alumni'>
                       Alumni
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Bags">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Bags'>
                       Bags &amp; Totes
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Banners-and-Flags">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Banners-and-Flags'>
                       Banners &amp; Flags
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Drinkware">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Drinkware'>
                       Drinkware
                     </a>
                   </li>
+
                   <!-- <li>
-                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Books'>
-                      Books
-                    </a>
-                  </li> -->
+                      <a href='https://www.uwalumnistore.com/Shop/Gifts/Books'>
+                        Books
+                      </a>
+                    </li> -->
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Car-Accessories">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Car-Accessories'>
                       Car Accessories
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="col-md-4">
-                <ul class="for-the-home">
+
+              <div>
+                <ul class='for-the-home'>
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Decals-Patches-Stickers">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Decals-Patches-Stickers'>
                       Decals/Patches/Stickers
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Games-and-Plush">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Games-and-Plush'>
                       Games &amp; Plush
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/High-End-Gift">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/High-End-Gift'>
                       High End Gift
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Office-Supplies-Furnishings">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Office-Supplies-Furnishings'>
                       Home Decor &amp; Blankets
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Office-Supplies-and-Cards">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Office-Supplies-and-Cards'>
                       Office Supplies &amp; Cards
                     </a>
                   </li>
+
                   <li>
                     <a href="https://www.uwalumnistore.com/Shop/Gifts/Lands-End">
-                      Lands' End
+                      Lands&apos; End
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Holiday-Items">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Holiday-Items'>
                       Ornaments &amp; Seasonal
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Party-Supplies">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Party-Supplies'>
                       Party Supplies
                     </a>
                   </li>
                 </ul>
               </div>
-              <div class="col-md-4">
-                <ul class="miscellaneous">
+
+              <div>
+                <ul class='miscellaneous'>
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Wallets-and-ID-Holders">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Wallets-and-ID-Holders'>
                       Passcases, Wallets, &amp; Keychains
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Pets">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Pets'>
                       Pet
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Picture-Frames-and-Wall-Art">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Picture-Frames-and-Wall-Art'>
                       Picture Frames &amp; Wall Art
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Rain-Gear">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Rain-Gear'>
                       Rain Wear &amp; Umbrellas
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Golf">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Golf'>
                       Sporting Goods
                     </a>
                   </li>
+
                   <li>
-                    <a href="https://www.uwalumnistore.com/Shop/Gifts/Tailgate">
+                    <a href='https://www.uwalumnistore.com/Shop/Gifts/Tailgate'>
                       Tailgate
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <a class="show-all nav-link" href="https://www.uwalumnistore.com/Shop/Gifts/All-Gift">
-                  See All Gifts &amp; Accessories
-                </a>
-              </div>
-            </div>
+
+            <!-- <div class='row'>
+                  <div class='col-md-12'>
+                    <a class='show-all nav-link' href='https://www.uwalumnistore.com/Shop/Gifts/All-Gift'>
+                      See All Gifts &amp; Accessories
+                    </a>
+                  </div>
+                </div> -->
           </div>
         </li>
       </ul>
+
       <ul class="navbar-nav navbar-right">
         <li class="search">
-          <input id="searchinput" type="search" class="search-field form-control" placeholder="Search...">
-          <label>
-            <input type="submit" class="search-submit" value="Go">
-            <svg xmlns="https://www.w3.org/2000/svg" width="69.76" height="117.91" viewBox="0 0 69.76 117.91"
-              class="search__icon">
-              <path
-                d="M46,3.51a34,34,0,0,0-22.46,64l-2.44,7.92-1.72-.53a3.65,3.65,0,0,0-4.55,2.41L5.08,109.49a3.65,3.65,0,0,0,2.4,4.57h0l6.62,2a3.65,3.65,0,0,0,4.55-2.41l9.72-32.14A3.65,3.65,0,0,0,26,77l-1.18-.36,2.41-7.84A34,34,0,0,0,46,3.51ZM63.22,44.36A28.5,28.5,0,1,1,44.36,8.73,28.51,28.51,0,0,1,63.22,44.36Z"
-                transform="translate(-1.02 -0.3)" stroke-miterlimit="10" stroke-width="4"></path>
+          <label for="searchinput" class="sr-only">Search</label>
+          <input id="searchinput" type="search" class="search-field form-control" placeholder="Search">
+          <button type="submit" class="search-submit" aria-label="Submit Search">
+            <svg class="search--icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 31 31">
+              <circle cx="13.1" cy="13.13" r="11.12" />
+              <line x1="20.95" y1="21" x2="29.01" y2="28.96" />
             </svg>
-          </label>
+          </button>
         </li>
+
         <li class="nav-item dropdown account-toggle">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-            title="My Account">
-            <svg xmlns="https://www.w3.org/2000/svg" width="69.77" height="83" viewBox="0 0 69.77 83"
-              class="account-img">
-              <path
-                d="M36.56,44.14A22.07,22.07,0,1,1,58.63,22.07,22.09,22.09,0,0,1,36.56,44.14Zm0-34.78A12.71,12.71,0,1,0,49.27,22.07,12.72,12.72,0,0,0,36.56,9.36Z"
-                transform="translate(0.01)"></path>
-              <path
-                d="M4.68,83a4.8,4.8,0,0,1-1.55-.26,4.67,4.67,0,0,1-2.87-6v0L7.27,57a14.17,14.17,0,0,1,13.35-9.45H51.69A11.79,11.79,0,0,1,63,55.74l6.62,20.63a4.68,4.68,0,0,1-8.91,2.86L54,58.63a2.48,2.48,0,0,0-2.35-1.72h-31a4.8,4.8,0,0,0-4.52,3.2l-7,19.76A4.68,4.68,0,0,1,4.68,83Z"
-                transform="translate(0.01)"></path>
+          <button type="button" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <svg class="account--icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 31 31">
+              <circle cx="15.5" cy="8.77" r="6.73" />
+              <polyline points="26.65 28.97 22.71 20.41 8.29 20.41 4.35 28.97" />
             </svg>
-            <span>&nbsp;&nbsp;My Account</span><span class="caret"></span>
-          </a>
+            <span>My Account</span>
+          </button>
           <div id="login" class="dropdown-menu my-account">
-            <div class="row">
-              <div class="col">
-                <ul>
-                  <li><a href="https://secure2.mbsbooks.com//CustomerRegister?s=www.uwalumnistore.com">Register</a>
-                  </li>
-                  <li><a href="https://www.uwalumnistore.com/login">Login</a></li>
-                </ul>
-              </div>
-            </div>
+            <ul>
+              <li><a href="https://secure2.mbsbooks.com//CustomerRegister?s=www.uwalumnistore.com">Register</a>
+              </li>
+              <li><a href="https://www.uwalumnistore.com/login">Login</a></li>
+            </ul>
           </div>
         </li>
+
         <li class="nav-item cart-toggle">
-          <a href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart">
-            <svg xmlns="https://www.w3.org/2000/svg" width="117" height="88.17" viewBox="0 0 117 88.17"
-              class="cart--icon">
-              <path
-                d="M98.5,73h-55a3.5,3.5,0,0,1-3.27-2.24L16.1,8H4.5a3.5,3.5,0,0,1,0-7h14a3.5,3.5,0,0,1,3.27,2.24L45.9,66H98.5a3.5,3.5,0,0,1,0,7Z"
-                transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
-              <path
-                d="M100.5,53.33H36.17a3.5,3.5,0,0,1,0-7H97.94l9.79-31H36.5a3.5,3.5,0,0,1,0-7h76a3.5,3.5,0,0,1,3.5,3.5,3.39,3.39,0,0,1-.16,1.05l-12,38A3.5,3.5,0,0,1,100.5,53.33Z"
-                transform="translate(0 0)" stroke-miterlimit="10" stroke-width="2"></path>
-              <circle cx="50.5" cy="83.5" r="4.67"></circle>
-              <circle cx="91.83" cy="82.83" r="4.67"></circle>
+          <button type="button" class="nav-link" href="https://www.uwalumnistore.com/shoppingcart"
+            title="Shopping Cart">
+            <svg class="cart--icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 31">
+              <polyline class="st0" points="1.7 2 6.56 2.04 14.97 23.86 33.41 23.86" />
+              <polyline class="st0" points="12.52 4.47 38.21 4.47 34.21 17.21 12.8 17.21" />
+              <circle class="st1" cx="17.25" cy="28.41" r="2.06" />
+              <circle class="st1" cx="30.96" cy="28.41" r="2.06" />
             </svg>
-          </a>
+          </button>
         </li>
       </ul>
     </div>
+
+
   </nav>
-</div>
+  <a href="https://www.uwalumnistore.com/home" class="store-name">
+    UW Alumni Store
+  </a>
+
+</header>

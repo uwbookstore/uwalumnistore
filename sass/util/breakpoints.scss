@@ -1,25 +1,26 @@
 @use 'sass:map';
 
-// 544px, 768px, 900px 1024px, 1366px, 1920px, 2560px
+// 450px, 768px, 1025px, 1366px, 1920px, 2560px
+// prettier-ignore
 $breakpoints-up: (
-  'xsmall': '34em',
-  'small': '48em',
-  'nav': '56.25em',
-  'medium': '64em',
-  'large': '85.375em',
-  'xlarge': '120em',
-  'xxlarge': '160em',
+  'xsmall': '28.125em', // 450px
+  'small': '48em', // 768px
+  'bootstrap': '62em', // 992px
+  'medium': '71.875em', // 1150px
+  'large': '82.8125em', // 1325px
+  'xlarge': '120em', // 1920px
+  'xxlarge': '160em', // 2560px
 );
 
-// 543px, 767px, 899px, 1023px, 1365px, 1919px, 2559px
+// 449px, 767px, 991px, 1365px, 1919px, 2559px
+// prettier-ignore
 $breakpoints-down: (
-  'xsmall': '33.9375em',
-  'small': '47.9375em',
-  'nav': '56.1875em',
-  'medium': '63.9375em',
-  'large': '85.3125em',
-  'xlarge': '119.9375em',
-  'xxlarge': '159.9375em',
+  'xsmall': '28.0625em', // 449px
+  'small': '47.9375em', // 767
+  'medium': '71.8125em', // 1149px
+  'large': '82.75em', // 1324
+  'xlarge': '119.9375em', // 1919
+  'xxlarge': '159.9375em', // 2559
 );
 
 @mixin breakpoint($size) {
@@ -32,11 +33,4 @@ $breakpoints-down: (
   @media (max-width: map.get($breakpoints-down, $size)) {
     @content;
   }
-}
-
-@mixin absCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

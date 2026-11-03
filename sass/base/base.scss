@@ -1,34 +1,20 @@
 @use '../util' as *;
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
-}
-
-/*  GROUPING  */
-.group:before,
-.group:after {
-  content: '';
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.group {
-  zoom: 1; /* For IE 6/7 */
+html {
+  font-style: normal;
+  font-weight: normal;
+  scrollbar-gutter: stable;
 }
 
 html,
 body {
   margin: 0 auto;
-  width: 100%;
+  inline-size: 100%;
   box-sizing: border-box;
-  height: 100%;
+  block-size: 100%;
   background: var(--bs-white);
-  color: var(--bs-gray-dark);
+  color: var(--bs-secondary);
+  font-family: var(--ff-primary);
 }
 
 body {
@@ -36,48 +22,18 @@ body {
   overflow-x: hidden;
 }
 
-.entry-content {
-  font-size: rem(18);
-
-  ul {
-    list-style-type: none;
-    font-size: inherit;
-    line-height: 1.5;
-    margin-bottom: rem(25);
-    margin-left: rem(20);
-
-    li {
-      margin-bottom: rem(8);
-
-      &::before {
-        content: '-';
-        margin-right: rem(5);
-      }
-    }
-  }
-}
-
-.visually-hidden,
 .sr-only {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
-  height: rem(1);
+  block-size: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  width: rem(1);
+  inline-size: 1px;
 }
 
-.skip {
-  position: absolute;
-  left: rem(-1000);
-  color: var(--bs-gray-dark);
-  background-color: var(--bs-white);
-
-  &:focus,
-  &:active {
-    left: 0;
-    top: 0;
-    z-index: 200;
-  }
+.page-wrapper {
+  margin-inline: auto;
+  max-inline-size: var(--default-page-width);
+  margin-block-start: rem(24);
 }

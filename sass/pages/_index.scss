@@ -1,10 +1,4 @@
-@forward '404';
 @forward 'cart';
-@forward 'checkout';
-@forward 'help';
+@forward 'general';
 @forward 'home';
-@forward 'landing';
-@forward 'login';
-@forward 'merch';
-// @forward 'merchdetail';
-@forward 'merchlist';
+@forward 'merchandise';

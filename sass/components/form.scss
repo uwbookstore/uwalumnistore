@@ -1,40 +1,57 @@
 @use '../util' as *;
 
-.form-control {
-  height: rem(50);
-  padding: 0 rem(15);
-  line-height: rem(50);
+.form {
+  &-control {
+    display: flex;
+    align-items: center;
+    padding: 0 rem(15);
+    block-size: rem(50);
+    border-radius: 0;
+    // &:user-valid {
+    //   outline: 2px solid var(--bs-success);
+    // }
+    // &:user-invalid {
+    //   outline: 2px solid var(--bs-danger);
+    // }
+    // https://youtube.com/shorts/3hVffhSpldo?si=iWKCgQ7wqtEftzXj
+  }
+
+  &-floating {
+    > .form-control {
+      block-size: auto;
+      line-height: 1;
+      inline-size: 100%;
+
+      &:focus-visible,
+      &:not(:placeholder-shown) {
+        padding-block: rem(25) rem(10);
+      }
+
+      &-plaintext {
+        &:focus-visible,
+        &:not(:placeholder-shown) {
+          padding-block: rem(25) rem(10);
+        }
+      }
+    }
+  }
 
   @include breakpoint(medium) {
-    height: rem(30);
-    line-height: rem(30);
-  }
-}
-
-.form-floating {
-  > .form-control {
-    height: auto;
-    line-height: 1;
-    width: 100%;
+    &-control {
+      block-size: rem(40);
+    }
   }
 }
 
 select,
 select.form-control {
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="32" height="24" viewBox="0 0 32 24"><polygon points="0,0 32,0 16,24" style="fill: rgb%2851, 51, 51%29"></polygon></svg>');
   background-position: right rem(5) center;
   background-size: rem(9) rem(6);
   background-repeat: no-repeat;
-  border: rem(2) solid var(--clr-medium-gray);
-  width: 100%;
-
-  @include breakpoint(medium) {
-    border-width: rem(1);
-    width: auto;
-  }
+  border: rem(2) solid var(--clr-gray-200);
+  inline-size: 100%;
 
   &.dd-hidden {
     background-image: none;
@@ -43,15 +60,12 @@ select.form-control {
     border: none;
     box-shadow: none;
     padding: 0;
-    margin-top: rem(-10);
+    margin-block-start: rem(-10);
     cursor: text;
   }
-}
 
-.form-floating > .form-control:focus,
-.form-floating > .form-control:not(:placeholder-shown),
-.form-floating > .form-control-plaintext:focus,
-.form-floating > .form-control-plaintext:not(:placeholder-shown) {
-  padding-top: rem(25);
-  padding-bottom: rem(10);
+  @include breakpoint(medium) {
+    border-width: rem(1);
+    inline-size: auto;
+  }
 }

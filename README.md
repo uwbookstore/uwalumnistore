@@ -1,4 +1,4 @@
-# UW Alumni Store
+# UW Alumni Store V2
 
 A repository for all inSite and local files.
 

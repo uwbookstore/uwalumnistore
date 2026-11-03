@@ -1,69 +1,122 @@
 @use '../util' as *;
 
 .accordion {
+  margin: 0;
+  padding: 0;
+
   h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  &:focus-within {
+    border-color: hsl(216deg 94% 43%);
+
+    h3 {
+      background-color: hsl(0deg 0% 97%);
+    }
+  }
+
+  // > * + * {
+  //   border-top: 1px solid var(--bs-gray-300);
+  // }
+
+  &-trigger {
+    border: 1px solid var(--bs-gray-300);
+    background-color: var(--bs-gray-100);
+    color: var(--bs-secondary);
+    display: block;
+    font-size: rem(16);
+    font-weight: normal;
+    margin: 0;
+    margin-block-end: rem(15);
+    padding: rem(10);
+    padding-inline: rem(30);
     position: relative;
-    color: var(--bs-gray-dark);
-    background-color: var(--clr-light-gray);
-    border: rem(1) solid var(--clr-light-gray-2);
-    padding: rem(15) rem(20) rem(15) rem(15);
-    line-height: 1;
-    margin: rem(10) 0;
-    font-size: inherit;
-    font-weight: 400;
-    cursor: pointer;
-    height: auto;
+    text-align: left;
+    width: 100%;
+    outline: none;
+
+    &:focus-visible,
+    &:hover {
+      background: hsl(216deg 94% 94%);
+    }
+
+    &:focus-visible {
+      outline: 4px solid transparent;
+    }
+
+    &[aria-expanded='true'] {
+      margin-block-end: 0;
+    }
+  }
+
+  button {
+    // border-style: none;
+    &::-moz-focus-inner {
+      border: 0;
+    }
+  }
+
+  &-title {
+    display: block;
+    pointer-events: none;
+    border: 2px solid transparent;
+    outline: none;
 
     &::before {
-      font-family: fontawesome;
-      float: right;
-      font-size: rem(20);
+      content: 'Q: ';
+      font-weight: 600;
       position: absolute;
-      content: '\f067';
-      right: rem(10);
-      display: block;
-      transition: var(--transition);
-
-      @include breakpoint(small) {
-        font-size: rem(16);
-      }
-    }
-
-    &.active::before {
-      transform: rotate(45deg);
-      transition: var(--transition);
-    }
-
-    @include breakpoint(medium) {
-      padding: rem(10);
+      left: rem(10);
+      top: rem(12);
     }
   }
 
-  & > div {
-    padding: rem(15);
-    border: rem(1) solid var(--clr-light-gray-2);
-    margin-top: rem(-10);
+  &-trigger:focus-visible .accordion-title {
+    border-color: hsl(216deg 94% 43%);
+  }
+
+  &-icon {
+    border: solid currentColor;
+    border-width: 0 2px 2px 0;
+    height: 0.5rem;
+    pointer-events: none;
+    position: absolute;
+    right: rem(10);
+    top: rem(12);
+    transform: rotate(45deg);
+    width: 0.5rem;
+  }
+
+  &-trigger:focus-visible .accordion-icon,
+  &-trigger:hover .accordion-icon {
+    border-color: hsl(216deg 94% 43%);
+  }
+
+  &-trigger[aria-expanded='true'] .accordion-icon {
+    transform: rotate(-135deg);
+  }
+
+  &-panel {
+    margin: 0;
+    padding: 1em 1.5em;
+    border: 1px solid var(--bs-gray-300);
     border-top: none;
+    background: hsl(0deg 0% 99%);
+    margin-block-end: rem(15);
 
-    ul {
-      margin: 0;
+    > * + * {
+      margin-block-start: rem(15);
+    }
+
+    table {
+      margin-bottom: 0;
     }
   }
 
-  @include breakpoint(small) {
-    div {
-      &.phone {
-        display: inline;
-        border: none;
-        padding: 0;
-      }
-    }
-  }
-
-  table {
-    @include breakpoint(small) {
-      width: 50%;
-      margin: 0 auto;
-    }
+  /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+  &-panel[hidden] {
+    display: none;
   }
 }

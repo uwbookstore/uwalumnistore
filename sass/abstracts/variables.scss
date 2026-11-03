@@ -1,27 +1,77 @@
 @use '../util' as *;
 
+@property --clr-white {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #fefefe;
+}
+
+@property --clr-primary {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #c5050c;
+}
+
 :root {
-  --bs-primary: #c5050c;
-  --bs-secondary: #777777;
+  --bs-primary: var(--clr-primary);
+  --bs-white: var(--clr-white);
+  --bs-secondary: #4d4d4d;
   --bs-warning: #ffae00;
   --bs-success: #5cb85c;
-  --bs-gray: #6e6e6e;
-  --clr-dark-gray-100: #5b646b;
-  --clr-dark-gray: #818181;
-  --bs-white: #fefefe;
-  --bs-gray-dark: #646464;
 
-  --clr-light-gray: #f3f3f3;
-  --clr-light-gray-2: #dddddd;
-  --clr-light-gray-3: #f1f1f1;
-  --clr-medium-gray: #cacaca;
-  --clr-medium-gray-2: #e1e1e1;
-  --clr-medium-gray-3: #b7b7b7;
-  // --clr-dark-gray: #818181;
+  --clr-gray-50: #f3f3f3;
+  --clr-gray-100: #dedede;
+  --clr-gray-200: #cacaca;
+  --clr-gray-300: #b5b5b5;
+  --clr-gray-400: #a0a0a0;
+  --clr-gray-500: #8c8c8c;
+  --clr-gray-600: #777777;
+  --clr-gray-700: #626262;
+  --clr-gray-800: #4e4e4e;
+  --clr-gray-900: #393939;
+
   --clr-disabled: #969696;
 
-  --fs-default: #{rem(14)};
-  --default-page-width: #{rem(900)};
+  // Font-family
+  --ff-primary: 'Red Hat Text', sans-serif;
+  --ff-secondary: 'Red Hat Display', sans-serif;
 
-  --transition: all 0.25s ease-in-out;
+  --fs-default: #{rem(16)};
+  --default-page-width: #{rem(1440)};
+
+  // ── Easing tokens ──
+  --ease-glass: cubic-bezier(0.22, 0.68, 0, 1.2);
+  --ease-liquid: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+
+  // ── Spacing scale ──
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  // ── Duration tokens ──
+  --dur-fast: 180ms;
+  --dur-mid: 360ms;
+  --dur-slow: 600ms;
+
+  // Z-index scale
+  --z-modal: 500;
+  --z-toast: 800;
+
+  interpolate-size: allow-keywords;
+
+  @media (prefers-reduced-motion: no-preference) {
+    --transition: all 0.3s ease-in-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition: none;
+  }
 }

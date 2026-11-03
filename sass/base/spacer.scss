@@ -1,0 +1,77 @@
+@use 'sass:map';
+
+@use '../util' as *;
+// BOOTSTRAP PADDING/MARGIN UTILITIES
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: rem(8) !default;
+$spacers: () !default;
+$spacers: map.merge(
+  (
+    0: 0,
+    1: (
+      $spacer,
+    ),
+    2: (
+      $spacer * 2,
+    ),
+    3: (
+      $spacer * 3,
+    ),
+    4: (
+      $spacer * 4,
+    ),
+    5: (
+      $spacer * 5,
+    ),
+  ),
+  $spacers
+);
+
+@each $prop, $abbrev in (margin: m, padding: p) {
+  @each $size, $length in $spacers {
+    .#{$abbrev}-#{$size} {
+      #{$prop}: $length !important;
+    }
+    .#{$abbrev}t-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-top: $length !important;
+    }
+    .#{$abbrev}r-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-right: $length !important;
+    }
+    .#{$abbrev}b-#{$size},
+    .#{$abbrev}y-#{$size} {
+      #{$prop}-bottom: $length !important;
+    }
+    .#{$abbrev}l-#{$size},
+    .#{$abbrev}x-#{$size} {
+      #{$prop}-left: $length !important;
+    }
+  }
+}
+
+.m-auto {
+  margin: auto !important;
+}
+.my-auto,
+.mt-auto {
+  margin-top: auto !important;
+}
+.my-auto,
+.mb-auto {
+  margin-bottom: auto !important;
+}
+.mx-auto,
+.ml-auto {
+  margin-left: auto !important;
+}
+.mx-auto,
+.mr-auto {
+  margin-right: auto !important;
+}

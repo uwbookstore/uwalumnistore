@@ -8,24 +8,35 @@
   margin-bottom: rem(50);
 }
 
+// Fix Admin Tasks Links
+a.icm-controls-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(5);
+  margin-block-end: rem(15);
+
+  br {
+    display: none;
+  }
+}
+
 #dv_Logo input#imgLogo {
-  max-width: rem(200);
+  max-inline-size: rem(200);
 }
 
 #ContainDiv {
-  margin: rem(40) 0 0;
-  padding: 0 rem(10);
+  max-inline-size: var(--default-page-width);
 
-  @include breakpoint(small) {
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  padding-block-start: rem(34);
 }
 
 #dv_Logo {
   #imgLogo {
-    max-width: rem(300);
+    max-inline-size: rem(300);
     display: block;
     margin: auto;
   }
@@ -35,65 +46,18 @@
 #fScript {
   font-family: Monaco, monospace;
   font-size: rem(14);
-  width: 100%;
+  inline-size: 100%;
 }
 
 body header:first-of-type,
-#leftSection {
+#leftSection,
+#Cart,
+#h_nav {
   display: none;
 }
 
 #contentSection {
-  width: 100%;
-}
-
-.promo {
-  &-hidden {
-    display: none !important;
-  }
-
-  &-banner {
-    line-height: rem(45);
-    min-height: rem(45);
-    background: var(--bs-primary);
-    color: #fff;
-    text-align: center;
-    font-style: italic;
-    font-size: rem(18);
-    display: block;
-
-    span {
-      font-size: rem(14);
-    }
-
-    a {
-      &:link {
-        color: #fff;
-        text-decoration: underline;
-        font-weight: 500;
-        text-underline-offset: rem(4);
-        font-style: normal;
-      }
-
-      &:hover {
-        opacity: 0.85;
-      }
-    }
-
-    &:hover,
-    &:visited {
-      text-decoration: none;
-    }
-
-    strong {
-      font-weight: 600;
-    }
-  }
-}
-
-a.promo-banner {
-  text-decoration: none;
-  color: #fff;
+  inline-size: 100%;
 }
 
 // HIDE ALL UNNECESSARY MBS ELEMENTS
@@ -124,8 +88,8 @@ footer:not(.footer) {
 input[class^='radio'] {
   & + span {
     &::before {
-      width: rem(12);
-      height: rem(12);
+      inline-size: rem(12);
+      block-size: rem(12);
       vertical-align: 0;
     }
   }
@@ -148,8 +112,8 @@ input[class^='radio'] {
   position: absolute;
   left: rem(-10000);
   top: auto;
-  width: rem(1);
-  height: rem(1);
+  inline-size: rem(1);
+  block-size: rem(1);
   overflow: hidden;
   font-size: rem(15);
   padding: rem(5);
@@ -203,4 +167,15 @@ input[class^='radio'] {
 .merchDiscount.red.top5.bold,
 .merch-gm.bold.red {
   display: none;
+}
+
+#waa-header {
+  display: block;
+}
+
+.form-control:is(:focus, :focus-visible),
+[type='button']:not(:disabled):is(:focus, :focus-visible),
+button:not(:disabled):is(:focus, :focus-visible),
+input:is(:focus, :focus-visible) {
+  box-shadow: 0 0 0 rem(2) var(--clr-gray-400);
 }

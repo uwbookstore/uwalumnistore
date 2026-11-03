@@ -4,15 +4,16 @@
   --callout-bg: var(--bs-white);
   --callout-clr: hsl(from var(--bs-black) h s 25%);
   --callout-bdr: hsl(from var(--bs-black) h s 85%);
-  --callout-bdr-rad: 0;
+  --callout-bdr-rad: 4px;
 
   // display: flex;
+  // align-items: center;
   border-radius: var(--callout-bdr-rad);
   background: var(--callout-bg);
   color: var(--callout-clr);
   border: 1px solid var(--callout-bdr);
   padding: rem(16) rem(16);
-  font-weight: 700;
+  font-weight: 500;
   font-size: rem(16);
   line-height: 1.45;
   margin-block-start: rem(15);
@@ -21,12 +22,26 @@
     margin-inline: auto;
   }
 
+  &.fw-6 {
+    font-weight: 600;
+  }
+
+  &.fw-7 {
+    font-weight: 700;
+  }
+
   &.fit-content {
     max-width: fit-content;
   }
 
+  &-light {
+    --callout-bg: hsl(from var(--bs-black) h s 98%);
+    --callout-bdr: hsl(from var(--bs-black) h s 92%);
+    --callout-clr: hsl(from var(--bs-black) h s 10%);
+  }
+
   &-dark {
-    --callout-bg: hsl(from var(--bs-black) h s 85%);
+    --callout-bg: hsl(from var(--bs-black) h s 78%);
     --callout-bdr: hsl(from var(--bs-black) h s 72%);
     --callout-clr: hsl(from var(--bs-black) h s 10%);
   }

@@ -1,0 +1,361 @@
+@use '../util' as *;
+
+.footer {
+  &__banner {
+    --inline-padding: #{rem(40)};
+    margin-block: rem(72);
+    margin-inline: auto;
+    inline-size: min(rem(1296), calc(100% - var(--inline-padding)));
+    text-align: center;
+    padding-block: rem(20);
+    border-block: rem(2) solid var(--clr-gray-200);
+
+    &-link {
+      display: inline-block;
+      font-family: var(--ff-secondary);
+      font-size: rem(12);
+      font-weight: 700;
+      letter-spacing: 5%;
+      text-transform: uppercase;
+      text-wrap: balance;
+      transition: var(--transition);
+
+      &:hover {
+        color: hsl(from var(--bs-primary) h s 30%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    background-color: hsl(from var(--bs-primary) h s l);
+    color: hsl(from var(--bs-white) h s l);
+    padding-block: rem(64);
+    text-transform: uppercase;
+    font-family: var(--ff-secondary);
+  }
+
+  &__top {
+    display: grid;
+    gap: rem(48);
+    inline-size: min(rem(1296), calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  &__logo {
+    a {
+      display: block;
+      block-size: rem(50);
+      inline-size: rem(103.82);
+      margin-inline: auto;
+    }
+
+    svg {
+      fill: hsl(from var(--bs-white) h s l);
+    }
+  }
+
+  &__membership {
+    inline-size: 100%;
+    margin-inline: auto;
+    padding: rem(20);
+    border-block: rem(2) solid hsl(from var(--bs-primary) h s 30%);
+    text-align: center;
+    letter-spacing: 5%;
+    font-size: clamp(0.75rem, 0.6486rem + 0.4324vw, 1rem);
+
+    a {
+      display: inline-block;
+      color: hsl(from var(--bs-white) h s l);
+      font-size: inherit;
+
+      span {
+        font-weight: 700;
+        display: block;
+      }
+
+      &::after {
+        display: block;
+        content: '';
+        block-size: rem(1);
+        inline-size: 100%;
+        background-color: transparent;
+        transition: var(--transition);
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        &::after {
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32);
+    padding-block: rem(48);
+  }
+
+  nav.footer-menu {
+    text-align: center;
+    font-size: rem(14);
+
+    h2 {
+      font-size: inherit;
+      font-weight: 700;
+      margin: 0;
+      margin-block-end: rem(15);
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      display: flex;
+      flex-direction: column;
+      gap: rem(12);
+
+      li {
+        line-height: 2;
+      }
+    }
+
+    a {
+      color: inherit;
+
+      &.phone {
+        background-color: var(--bs-white);
+        color: hsl(from var(--bs-primary) h s l);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline: rem(16);
+        border-radius: rem(4);
+        block-size: rem(50);
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    text-align: center;
+  }
+
+  &__copy {
+    font-size: rem(12);
+    text-transform: none;
+  }
+
+  &__social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(16);
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: block;
+      inline-size: rem(30);
+      block-size: rem(30);
+
+      a {
+        display: block;
+        inline-size: rem(30);
+        block-size: rem(30);
+
+        scale: 1;
+        transition: var(--transition);
+        svg {
+          inline-size: rem(30);
+          block-size: rem(30);
+          fill: var(--bs-white);
+        }
+
+        &:hover,
+        &:focus-visible {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    &__banner {
+      --inline-padding: #{rem(84)};
+    }
+
+    &__wrapper {
+      padding: rem(48) rem(42);
+    }
+
+    &__membership {
+      a span {
+        display: inline;
+      }
+    }
+
+    &__inner {
+      flex-direction: row;
+      justify-content: center;
+      gap: rem(24);
+    }
+
+    nav.footer-menu {
+      text-align: left;
+      inline-size: rem(185);
+
+      .footer-menu__link {
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          border-bottom: rem(1) solid hsl(from var(--bs-white) h s l);
+          inline-size: 0;
+          transition: var(--transition);
+        }
+
+        &::before {
+          right: 50%;
+        }
+
+        &::after {
+          left: 50%;
+        }
+
+        &:hover {
+          text-decoration: none;
+          &::before,
+          &::after {
+            inline-size: 50%;
+          }
+        }
+      }
+
+      a.phone {
+        display: initial;
+        background-color: transparent;
+        color: currentColor;
+        font-weight: normal;
+        padding: 0;
+        &::before {
+          content: '';
+          padding: 0;
+        }
+
+        &:hover {
+          text-decoration: none;
+          cursor: default;
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      max-inline-size: rem(586);
+      margin-inline: auto;
+      text-align: initial;
+    }
+
+    &__social {
+      li {
+        block-size: rem(20);
+        inline-size: rem(20);
+
+        a {
+          block-size: rem(20);
+          inline-size: rem(20);
+
+          svg {
+            block-size: rem(20);
+            inline-size: rem(20);
+          }
+        }
+      }
+    }
+
+    &__copy {
+      order: -1;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    &__banner {
+      --inline-padding: #{rem(144)};
+
+      padding-block: rem(24);
+      margin-block: rem(100);
+
+      &-link {
+        font-size: rem(14);
+      }
+    }
+
+    &__membership {
+      padding-block: rem(24);
+    }
+
+    &__logo {
+      a {
+        inline-size: rem(145);
+        block-size: rem(69.83);
+      }
+    }
+
+    &__wrapper {
+      font-size: rem(14);
+      padding-block: rem(72);
+    }
+
+    &__inner {
+      gap: rem(47);
+    }
+
+    nav.footer-menu {
+      font-size: rem(14);
+    }
+
+    &__bottom {
+      max-inline-size: rem(652);
+    }
+  }
+
+  @include breakpoint(large) {
+    &__banner {
+      --inline-padding: 0px;
+      margin-block: rem(128);
+
+      &-link {
+        font-size: rem(16);
+      }
+    }
+
+    &__inner {
+      margin-inline: auto;
+      justify-content: space-between;
+    }
+
+    &__bottom,
+    &__inner {
+      max-inline-size: rem(637);
+    }
+  }
+}

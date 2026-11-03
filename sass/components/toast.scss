@@ -1,0 +1,110 @@
+@use '../util' as *;
+
+.ubs-toast {
+  --toast-bg: var(--bs-white);
+  --toast-clr: hsl(from var(--bs-black) h s 25%);
+  --toast-bdr: hsl(from var(--bs-black) h s 85%);
+  --toast-shadow-clr: rgba(0, 0, 0, 0.25);
+  --toast-bdr-rad: #{rem(4)};
+  --toast-box-shadow: 0 #{rem(4)} #{rem(24)} var(--toast-shadow-clr);
+
+  &-region {
+    position: fixed;
+    top: var(--space-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: var(--z-toast);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    pointer-events: none;
+    inline-size: min(rem(360), 90vw);
+  }
+
+  border-radius: var(--toast-bdr-rad);
+  background: var(--toast-bg);
+  color: var(--toast-clr);
+  border: 1px solid var(--toast-bdr);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--toast-box-shadow);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  pointer-events: all;
+  cursor: pointer;
+  animation: toast-in var(--dur-mid) var(--ease-liquid) both;
+  transition:
+    transform var(--dur-fast) var(--ease-liquid),
+    opacity var(--dur-fast);
+
+  &:hover {
+    transform: translateX(rem(-4));
+  }
+
+  &.is-exiting {
+    animation: toast-out var(--dur-mid) var(--ease-glass) forwards;
+  }
+
+  &__icon {
+    font-size: rem(20);
+    flex-shrink: 0;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__title {
+    font-size: rem(13);
+    font-weight: 500;
+  }
+
+  &__desc {
+    font-size: rem(12);
+    opacity: 0.65;
+    margin-block-start: rem(2);
+  }
+
+  &__close {
+    opacity: 0.5;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    transition: opacity var(--dur-fast);
+  }
+
+  &:hover .toast__close {
+    opacity: 1;
+  }
+
+  &--success {
+    --toast-bg: hsl(from var(--bs-success) h s 92%);
+    --toast-bdr: hsl(from var(--bs-success) h s 85%);
+    --toast-clr: hsl(from var(--bs-success) h s 28%);
+    // --toast-shadow-clr: hsl(from var(--bs-success) h s 58%);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateX(60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    max-height: 80px;
+  }
+  to {
+    opacity: 0;
+    transform: translateX(60px) scale(0.9);
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+  }
+}

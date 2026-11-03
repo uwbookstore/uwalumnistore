@@ -1,0 +1,62 @@
+@use '../util' as *;
+
+.promo {
+  &-banner {
+    align-items: center;
+
+    position: relative;
+    text-align: center;
+    padding: rem(12);
+
+    background-color: var(--bs-primary);
+    color: var(--bs-white);
+    text-align: center;
+    font-style: italic;
+    font-size: rem(16);
+    line-height: 1;
+    overflow: clip;
+
+    .promo-code {
+      border: none;
+      background: transparent;
+      color: inherit;
+      display: inline-flex;
+      align-items: flex-end;
+      gap: rem(5);
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+
+      svg {
+        align-self: flex-start;
+        block-size: rem(18);
+        stroke: var(--bs-white);
+      }
+    }
+
+    // .container-fluid {
+    //   position: relative;
+    //   z-index: 2;
+    // }
+
+    // &::after {
+    //   position: absolute;
+    //   bottom: 0px;
+    //   right: 0;
+    //   block-size: rem(200);
+    //   inline-size: rem(150);
+    //   content: '';
+    //   opacity: 0.5;
+    //   transform: skew(135deg);
+    //   z-index: 1;
+    //   background-color: rgb(165 5 10);
+    // }
+
+    // @include breakpoint(medium) {
+    //   &::after {
+    //     right: rem(200);
+    //     inline-size: rem(200);
+    //   }
+    // }
+  }
+}
