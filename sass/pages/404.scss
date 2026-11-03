@@ -1,0 +1,66 @@
+@use '../util' as *;
+
+// TODO: Fix page height issue (push image down)
+.pnf__wrapper {
+  &-outer {
+    min-height: rem(600);
+    background-image: url(https://i.univbkstr.com/uwalumnistore/images/404_bucky_bg.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    .cloud {
+      display: none;
+    }
+
+    @include breakpoint(small) {
+      min-height: rem(800);
+    }
+
+    @include breakpoint(medium) {
+      min-height: rem(650);
+
+      .cloud {
+        display: block;
+      }
+    }
+  }
+
+  &-inner {
+    margin: rem(20) auto;
+    max-width: rem(300);
+    min-height: rem(400);
+    text-align: center;
+
+    h1 {
+      color: var(--bs-primary);
+      font-family: mrs-eaves-xl-serif, serif;
+      font-size: rem(40.5);
+      font-weight: bold;
+      font-style: italic;
+      text-shadow: inherit;
+      margin-bottom: rem(30);
+
+      &::after {
+        display: block;
+        margin: rem(30) auto;
+        position: relative;
+        height: rem(8);
+        // width: calc(#{rem(60)});
+        width: calc(rem(60));
+        background-color: var(--bs-primary);
+        content: '';
+      }
+    }
+
+    p {
+      margin-bottom: rem(20);
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(medium) {
+      margin: rem(100) auto rem(50);
+      max-width: rem(700);
+    }
+  }
+}
