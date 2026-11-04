@@ -22,7 +22,7 @@ if (confirmationText) {
   homeLink.classList.add('text-center');
   homeLink.innerHTML = `
     <a href="https://www.uwalumnistore.com/home" class="btn btn-primary mt-3">
-      HOME
+      RETURN TO HOMEPAGE
     </a>
   `;
 

@@ -10,3 +10,49 @@
   border-radius: rem(2);
   padding: rem(1);
 }
+
+.cart {
+  font-size: rem(16);
+
+  &__container {
+    text-align: center;
+    margin: 0 auto rem(20);
+    padding: rem(30) rem(10);
+    box-shadow: 0 rem(1) rem(3) rgba(0, 0, 0, 0.13);
+  }
+
+  &__icon {
+    font-size: rem(58) !important;
+  }
+
+  &__p {
+    text-transform: uppercase;
+    font-size: rem(18);
+    font-weight: 700;
+    margin: rem(25) auto;
+  }
+
+  &__btn {
+    margin-block-end: rem(20);
+  }
+
+  &__account {
+    padding: rem(15);
+    background-color: #f7f7f7;
+    border: rem(1) solid #efefef;
+    font-size: rem(18);
+
+    p {
+      margin-block-end: 0;
+    }
+  }
+
+  &_title {
+    margin: 0;
+    font-size: inherit;
+  }
+
+  .glyphicon {
+    color: var(--bs-primary);
+  }
+}

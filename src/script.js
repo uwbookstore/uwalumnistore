@@ -376,6 +376,22 @@ Array.prototype.slice
     }
   });
 
+/**
+ * Check that Cart element exists
+ * if so append cart info to custom cart
+ */
+// header cart variables
+const cart = document.getElementById('Cart');
+const itemCount = document.getElementById('ItemCount');
+const cartCount = document.getElementById('cart-count');
+
+if (cart) {
+  if (Number(itemCount.textContent) !== 0) {
+    cartCount.appendChild(itemCount);
+  }
+}
+// End of shopping cart button
+
 // SETUP BACK TO TOP BTN/FUNCTION
 const backToTopBtn = document.querySelector('.backtotop');
 
@@ -479,14 +495,6 @@ promoCodeBtn.forEach((btn) => {
     updateClipboard(promoCodeText);
   });
 });
-
-// const promoCodeText = document
-//   .querySelector('.promo-code > span')
-//   .textContent.toUpperCase();
-
-// promoCodeBtn.addEventListener('click', () => {
-//   updateClipboard(promoCodeText);
-// });
 
 // Footer copyright info
 const d = new Date();

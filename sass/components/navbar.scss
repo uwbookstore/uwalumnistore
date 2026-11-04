@@ -87,6 +87,16 @@
   }
 }
 
+.nav-link:has(p.cart-info) {
+  position: relative;
+}
+
+.cart-info {
+  position: absolute;
+  right: 3px;
+  top: 0;
+}
+
 .cart-mobile {
   padding: rem(20) rem(20);
   margin: 0;
@@ -342,7 +352,7 @@
 }
 
 // Cart - Desktop
-.cart-toggle button {
+.cart-toggle a {
   display: none;
   border: none;
   background: transparent;
