@@ -6,7 +6,7 @@
   </a>
 </div>
 
-<div role="alert" id='cyberMondayBanner' class='promo-banner'>
+<!-- <div role="alert" id='cyberMondayBanner' class='promo-banner'>
   Save **% on your entire purchase — today only! Use promo code:
   <button type="button" data-toast="success" data-toast-title="UWSHIP26 copied to clipboard" class="promo-code btn-copy"
     title="copy UWSHIP26 to clipboard">
@@ -17,7 +17,7 @@
         d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
     </svg>
   </button>
-</div>
+</div> -->
 
 <header id="waa-nav">
 
@@ -32,7 +32,7 @@
       </svg>
     </button>
 
-    <button type="button" href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart" class="cart-mobile">
+    <a href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart" class="cart-mobile">
 
       <svg class="cart--icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 31">
         <polyline points="1.7 2 6.56 2.04 14.97 23.86 33.41 23.86" />
@@ -42,7 +42,7 @@
       </svg>
 
       <span id="ItemCount-sm" class="Count hidden">0</span>
-    </button>
+    </a>
 
     <a class="navbar-brand" href="https://www.uwalumnistore.com/home">
       <img src="https://i.univbkstr.com/uwalumnistore/img/logos/logo.svg" alt="" role="presentation" class="waa-logo">
@@ -693,15 +693,15 @@
         </li>
 
         <li class="nav-item cart-toggle">
-          <button type="button" class="nav-link" href="https://www.uwalumnistore.com/shoppingcart"
-            title="Shopping Cart">
+          <a class="nav-link" href="https://www.uwalumnistore.com/shoppingcart" title="Shopping Cart">
             <svg class="cart--icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 40 31">
               <polyline class="st0" points="1.7 2 6.56 2.04 14.97 23.86 33.41 23.86" />
               <polyline class="st0" points="12.52 4.47 38.21 4.47 34.21 17.21 12.8 17.21" />
               <circle class="st1" cx="17.25" cy="28.41" r="2.06" />
               <circle class="st1" cx="30.96" cy="28.41" r="2.06" />
             </svg>
-          </button>
+            <p class="cart-info"><span id="cart-count"></span></p>
+          </a>
         </li>
       </ul>
     </div>
