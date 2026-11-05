@@ -512,7 +512,7 @@ if (window.location.href.toLowerCase().search('/logout') !== -1) {
   logoutText.style.display = 'none';
 
   const logoutHeading = document.createElement('h2');
-  logoutHeading.classList.add('heading__line-center', 'm-0');
+  logoutHeading.classList.add('heading__line-center');
   logoutHeading.textContent = `You are now logged out`;
 
   const logoutBody = document.createElement('div');
