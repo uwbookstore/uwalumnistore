@@ -1,3 +1,4 @@
+console.clear();
 (function WAAKit() {
   ('use strict');
 
@@ -202,9 +203,9 @@
   /* Automatically open sales popup only if it hasn't been shown */
   WaaModal.prototype.openIfNotShown = function () {
     const storageKey = 'salesPopupShown';
-    if (!localStorage.getItem(storageKey)) {
+    if (!sessionStorage.getItem(storageKey)) {
       this.open();
-      localStorage.setItem(storageKey, 'true');
+      sessionStorage.setItem(storageKey, 'true');
     }
   };
 
@@ -442,7 +443,6 @@ if (searchSubmit && searchInput) {
   });
 
   searchSubmit.addEventListener('click', () => {
-    console.log('click');
     searchInput.value !== '' ? search() : false;
   });
 }
@@ -487,6 +487,7 @@ function updateClipboard(newClip) {
   );
 }
 
+// Copy text button
 const promoCodeBtn = document.querySelectorAll('.btn-copy');
 promoCodeBtn.forEach((btn) => {
   const promoCodeText = btn.querySelector('span').textContent;
@@ -501,3 +502,100 @@ const d = new Date();
 const copyYear = d.getFullYear();
 const footerCopyright = document.getElementById('footer-copyright');
 footerCopyright.innerHTML = `&copy; Copyright ${copyYear}`;
+
+// Login/Logout - Account
+if (window.location.href.toLowerCase().search('/logout') !== -1) {
+  const logoutPanel = document.getElementById('logoutPanel');
+  const logoutPanelHeader = document.getElementById('logoutPanelHeader');
+  const logoutText = document.querySelector('.logoutText');
+  logoutPanelHeader.style.display = 'none';
+  logoutText.style.display = 'none';
+
+  const logoutHeading = document.createElement('h2');
+  logoutHeading.classList.add('heading__line-center', 'm-0');
+  logoutHeading.textContent = `You are now logged out`;
+
+  const logoutBody = document.createElement('div');
+  logoutBody.classList = 'login__btns';
+  logoutBody.innerHTML = `
+    <a href="https://www.uwalumnistore.com/login" class="btn btn-secondary">Log Back In </a>
+    <a href="https://www.uwalumnistore.com/home" class="btn btn-primary">UW Alumni Store</a>
+  `;
+
+  logoutPanel.append(logoutHeading);
+  logoutPanel.append(logoutBody);
+}
+
+if (window.location.href.toLowerCase().search('/customeraccount') !== -1) {
+  const accountCard = document.querySelector('.card.top10');
+  accountCard.classList.add('login-panel-act');
+}
+
+const myNavbar = document.querySelector('#myNavbar a');
+const loginContainer = document.querySelector('#login ul');
+
+if (myNavbar.textContent.toLowerCase().includes('log out')) {
+  loginContainer.innerHTML = `
+    <li>
+      <a href ="https://secure2.mbsbooks.com/CustomerProfile?s=www.uwalumnistore.com">
+        Update Your Profile
+      </a>
+    </li>
+    <li>
+      <a href ="https://secure2.mbsbooks.com/AddressBook?s=www.uwalumnistore.com">
+        Maintain Shipping Address Book
+      </a>
+    </li>
+    <li>
+      <a href ="https://secure2.mbsbooks.com/Orders?s=www.uwalumnistore.com">
+        Manage Orders
+      </a>
+    </li>
+    <li>
+      <a href ="https://www.uwalumnistore.com/logout">
+        Log Out
+      </a>
+    </li>
+  `;
+} else {
+  loginContainer.innerHTML = `
+    <li>
+      <a href ="https://secure2.mbsbooks.com//CustomerRegister?s=www.uwalumnistore.com">
+        Register
+      </a>
+    </li>
+    <li>
+      <a href ="https://www.uwalumnistore.com/login">
+        Login
+      </a>
+    </li>
+  `;
+}
+
+// Customer account page
+const accountUL = document.getElementById('accountUL');
+const accountULItems = document.querySelectorAll('#accountUL li.accountLI');
+
+if (accountUL) {
+  // Add Bootstrap list-group classes
+  accountUL.classList.add('list-group');
+  accountULItems.forEach((item) => {
+    item.classList.add('list-group-item');
+
+    if (item.textContent.toLowerCase().includes('track orders')) {
+      item.querySelector('a').textContent = 'Manage Orders';
+    }
+    if (
+      item.textContent.toLowerCase().includes('bookstore profile number') ||
+      item.textContent
+        .toLowerCase()
+        .includes('view loyalty account information') ||
+      item.textContent.toLowerCase().includes('activate and access ebooks') ||
+      item.textContent.toLowerCase().includes('gift card balance inquiry') ||
+      item.textContent.toLowerCase().includes('reload gift card') ||
+      item.textContent.toLowerCase().includes('view my buyback alert list')
+    ) {
+      item.style.display = 'none';
+    }
+  });
+}

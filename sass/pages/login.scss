@@ -1,0 +1,29 @@
+@use '../util' as *;
+
+#logoutPanel {
+  max-inline-size: rem(450);
+  margin-inline: auto;
+  border-radius: 0;
+  padding: rem(30);
+
+  .heading__line-center {
+    font-size: rem(20);
+  }
+
+  .card-body {
+    display: none;
+  }
+}
+
+.login {
+  &-panel-act {
+    max-inline-size: rem(650);
+    margin-inline: auto;
+    border-radius: 0;
+  }
+
+  &__btns {
+    display: grid;
+    gap: rem(20);
+  }
+}
