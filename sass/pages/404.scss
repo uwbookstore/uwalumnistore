@@ -1,6 +1,5 @@
 @use '../util' as *;
 
-// TODO: Fix page height issue (push image down)
 .pnf__wrapper {
   &-outer {
     min-height: rem(600);
@@ -46,7 +45,6 @@
         margin: rem(30) auto;
         position: relative;
         height: rem(8);
-        // width: calc(#{rem(60)});
         width: calc(rem(60));
         background-color: var(--bs-primary);
         content: '';
