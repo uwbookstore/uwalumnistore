@@ -2,8 +2,11 @@
 
 .form {
   &-control {
-    display: flex;
-    align-items: center;
+    &:not(.displayn) {
+      display: flex;
+      align-items: center;
+    }
+
     padding: 0 rem(15);
     block-size: rem(50);
     border-radius: 0;
