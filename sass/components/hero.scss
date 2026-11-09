@@ -6,13 +6,25 @@
   margin-inline: auto;
   margin-block-start: rem(-50);
   max-inline-size: var(--default-page-width);
-  background: #000;
 
   &__image {
     img {
       margin-inline: auto;
       inline-size: 100%;
     }
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: #000000;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 30%
+    );
+    opacity: 0.5;
   }
 
   &__body {
@@ -23,6 +35,7 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 30;
 
     h1 {
       --text-color: var(--bs-white);
@@ -56,6 +69,14 @@
       img {
         box-shadow: none;
       }
+    }
+
+    &__overlay {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0) 40%
+      );
     }
 
     &__body {
@@ -95,6 +116,7 @@
 
   @include breakpoint(large) {
     margin-block-start: rem(-56);
+
     &__body {
       max-inline-size: rem(450);
 
