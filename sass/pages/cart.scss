@@ -56,3 +56,144 @@
     color: var(--bs-primary);
   }
 }
+
+a#coShipAdd,
+a.paymentBilling-change {
+  border-radius: rem(4);
+  cursor: pointer;
+  display: block;
+  border: rem(2) solid;
+  transition: all 0.2s ease-in-out;
+  height: rem(50);
+  line-height: rem(50);
+  padding: 0 rem(20);
+  text-decoration: none;
+  font-size: rem(16);
+  background-color: var(--bs-info);
+  border-color: var(--bs-info);
+  color: var(--bs-gray-dark);
+  font-weight: 700;
+  text-align: center;
+
+  &:hover {
+    background-color: hsl(from var(--bs-info) h s 45%);
+    border-color: hsl(from var(--bs-info) h s 42%);
+    color: var(--bs-white);
+  }
+
+  &:active,
+  &:active:hover,
+  &:focus,
+  &:active:focus {
+    background-color: hsl(from var(--bs-info) h s 46%);
+    border-color: hsl(from var(--bs-info) h s 44%);
+    color: var(--bs-white);
+  }
+}
+
+a#coShipAdd {
+  @include breakpoint(medium) {
+    display: inline-block;
+    height: rem(35);
+    line-height: rem(35);
+    border-width: rem(1);
+  }
+}
+
+@include breakpoint(medium) {
+  a.paymentBilling-change {
+    display: inline-block;
+    width: auto;
+    height: rem(35);
+    line-height: rem(35);
+  }
+}
+
+h2.heading__billing {
+  font-size: rem(24);
+  text-align: center;
+  margin-block-end: rem(15);
+  padding-block-end: rem(5);
+  border-bottom: rem(1) solid var(--bs-gray-400);
+}
+
+#coShipStudentNumber-wrapper p {
+  margin-block-start: rem(-10);
+  padding: rem(10);
+  font-weight: 700;
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+.is-invalid-hide,
+.is-valid-hide {
+  border-color: #ced4da !important;
+  background-image: none !important;
+}
+
+.paymentBilling-wrapper p:last-child {
+  font-weight: 700;
+  margin-block-start: rem(10);
+  position: relative;
+  padding: rem(10) !important;
+  margin-block-end: rem(10) !important;
+  color: #055160;
+  background-color: var(--bs-alert-bg);
+  border: var(--bs-alert-border);
+  border-radius: var(--bs-alert-border-radius);
+}
+
+[class^='helpSection'] {
+  display: flex;
+  align-items: center;
+  padding-inline: rem(10);
+  gap: rem(5);
+
+  p,
+  a {
+    font-size: rem(16);
+    margin: 0;
+  }
+
+  span.fa {
+    color: var(--bs-primary);
+    font-size: rem(20);
+  }
+}
+
+a#helpSection-email {
+  display: none;
+}
+
+.coHeader {
+  font-size: rem(30);
+  margin-block-end: rem(20);
+}
+
+// MBS fixes the Place Order button
+// to the bottom of the page.
+// Very confusing to the customer,
+// This will fix it.
+.coCheckoutBtnWrap {
+  position: initial;
+}
+
+span.shippingMethod-description-span {
+  margin-inline-start: 0 !important;
+  margin-block-start: rem(-10);
+
+  div.alert {
+    font-size: rem(16);
+  }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-width: rem(3);
+  background-size: rem(25);
+}
+
+.was-validated .form-control:invalid + label,
+.form-control.is-invalid + label {
+  color: #dc3545;
+}
