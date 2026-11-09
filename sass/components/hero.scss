@@ -17,8 +17,8 @@
   &__overlay {
     position: absolute;
     inset: 0;
-    z-index: 20;
-    background: #000000;
+    z-index: 5;
+    background: transparent;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
@@ -35,7 +35,7 @@
     text-align: center;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 30;
+    z-index: 10;
 
     h1 {
       --text-color: var(--bs-white);
