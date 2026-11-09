@@ -1,4 +1,3 @@
-console.clear();
 (function WAAKit() {
   ('use strict');
 
