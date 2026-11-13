@@ -826,9 +826,10 @@ h2 {
   color: var(--bs-white);
   text-align: center;
   font-style: italic;
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 1.125rem;
+  line-height: 1.75;
   overflow: clip;
+  text-wrap: balance;
 }
 .promo-banner .promo-code {
   border: none;
@@ -845,6 +846,11 @@ h2 {
   align-self: flex-start;
   block-size: 1.125rem;
   stroke: var(--bs-white);
+}
+@media (min-width: 48em) {
+  .promo-banner {
+    font-size: 1rem;
+  }
 }
 
 .btn:not(.displayn) {
@@ -970,7 +976,6 @@ h2 {
 .btn-copy svg {
   block-size: 1rem;
   aspect-ratio: 1;
-  margin-block-start: -4px;
 }
 
 .callout {
@@ -1793,6 +1798,7 @@ select.form-control.dd-hidden {
   margin-block-end: 0.9375rem;
   font-weight: 500;
   font-size: 2.5rem;
+  text-wrap: balance;
 }
 
 .waa-modal__close {
