@@ -12,9 +12,10 @@
     color: var(--bs-white);
     text-align: center;
     font-style: italic;
-    font-size: rem(16);
-    line-height: 1;
+    font-size: rem(18);
+    line-height: 1.75;
     overflow: clip;
+    text-wrap: balance;
 
     .promo-code {
       border: none;
@@ -32,6 +33,10 @@
         block-size: rem(18);
         stroke: var(--bs-white);
       }
+    }
+
+    @include breakpoint(small) {
+      font-size: rem(16);
     }
 
     // .container-fluid {
