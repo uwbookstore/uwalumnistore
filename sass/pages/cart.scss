@@ -197,3 +197,19 @@ span.shippingMethod-description-span {
 .form-control.is-invalid + label {
   color: #dc3545;
 }
+
+.form-floating:has(input#gc-verification-checkbox) {
+  --callout-bg: hsl(from var(--bs-warning) h s 92%);
+  --callout-bdr: hsl(from var(--bs-warning) h s 85%);
+  --callout-clr: hsl(from var(--bs-warning) h s 22%);
+  --callout-bdr-rad: #{rem(4)};
+  border-radius: var(--callout-bdr-rad);
+  background: var(--callout-bg);
+  color: var(--callout-clr);
+  border: rem(1) solid var(--callout-bdr);
+  padding: rem(16);
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: 1.45;
+  margin-block-start: rem(15);
+}
